@@ -1,0 +1,8 @@
+////
+/// ## Inset content
+/// @group config/helpers
+////
+
+
+$inset-content__background-color: map-get($gray-color-steps, 100) !default;
+$inset-content__shadow: linear-gradient(to bottom, rgba(100, 100, 100, 0.125), transparent) !default;

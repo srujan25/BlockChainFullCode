@@ -1,0 +1,45 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Modal - Message" %}
+
+{% block example %}
+<button data-modal="#messageModal" class="spark-btn spark-btn--md">Open Message Modal</button>
+
+<div class="spark-modal" id="messageModal">
+
+  <div class="spark-modal__scroll">
+
+    <div class="spark-modal__content col-xs-12 col-sm-10 col-md-7 col-lg-6 col-xl-5">
+
+      <div class="spark-modal__body">
+
+        <a tabindex="0" class="spark-modal__close spark-icon-close" title="Close Modal"></a>
+
+        <div class="spark-message spark-message--lg spark-message--error spark-margin-bottom">
+          <i class="spark-message__icon spark-icon-trash spark-icon--fill"></i>
+          <div class="spark-message__content">
+            <h4 class="spark-message__heading">
+              Are you sure you want to delete this item?
+            </h4>
+            <p>
+              Some message to explain the consequences in further detail.
+            </p>
+          </div>
+        </div>
+
+        <nav class="spark-btn-group spark-margin-top--lg">
+          <button class="spark-btn spark-btn--md spark-btn--secondary spark-modal__dismiss spark-btn-group-secondary">No</button>
+          <button class="spark-btn spark-btn--md spark-btn-group-primary">Yes, I am sure</button>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/modal.js" %}
+{% endblock %}

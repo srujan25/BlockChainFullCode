@@ -1,0 +1,18 @@
+////
+/// ## Label
+/// @group components/label
+////
+
+
+/// Form input label
+.spark-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 250ms $ease-in-out-quint;
+  white-space: nowrap;
+}
+
+/// An element which should be highlighed when the label's corresponding element is selected
+.spark-label__highlight {
+  transition: color 250ms $ease-in-out-quint;
+}

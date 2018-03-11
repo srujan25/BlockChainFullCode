@@ -1,0 +1,181 @@
+////
+/// ## Splash
+/// @group components/splash-screen
+////
+
+
+/// Wrapper should always be at least the height of the viewport
+.spark-splash-screen {
+  background-color: $splash-screen__background-color;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  // Raise all direct children above the angle
+  > * {
+    position: relative;
+    z-index: 5;
+  }
+
+  // 24º angle
+  &::before {
+    background-color: $splash-screen__angle__background-color;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 15000px;
+    left: 10%;
+    position: absolute;
+    top: 100%;
+    transform: rotate(-24deg);
+    transform-origin: top left;
+    width: 15000px;
+    z-index: 0;
+  }
+
+  // Vignette
+  &::after {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%,rgba(0,0,0,0.3) 100%);
+    content: '';
+    display: block;
+    left: 0;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+/// Take up as much space as possible
+.spark-splash-screen__content {
+  align-items: center;
+  color: $splash-screen__color;
+  display: flex;
+  flex: 1 0 auto;
+  padding: 2rem;
+
+  // A panel inside of the content has a stroke
+  .spark-panel {
+    border: $splash-screen__panel__border;
+  }
+
+  // Panel content has more padding
+  > .spark-splash-screen__center > .spark-panel__content {
+    padding: 3rem;
+  }
+}
+
+/// Heading text
+.spark-splash-screen__heading {
+  color: inherit;
+  margin-top: 1rem;
+}
+
+/// Center content vertically and horizontally
+.spark-splash-screen__center {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/// Progress indicator inside splash screen
+.spark-splash-screen__progress {
+  margin: 4rem auto 0;
+  min-width: auto;
+}
+
+/// Sign-in Page
+.spark-splash-screen--sign-in {
+
+  // Additional padding for the content
+  > .spark-splash-screen__center > .spark-panel__content {
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  .spark-splash-screen__help {
+    clear: both;
+    float: left;
+  }
+
+  // A progress indicator inside a splash screen is hidden by default within a sign in screen
+  .spark-splash-screen__progress {
+    display: none;
+  }
+
+  // Show the progress indicator when loading
+  &.loading {
+    .spark-splash-screen__form {
+      display: none;
+    }
+
+    .spark-splash-screen__progress {
+      display: block;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(xs) {
+
+  // Panel content should fill the view
+  .spark-splash-screen--panel {
+    background-color: $panel__background-color;
+    border-top: .25rem solid $splash-screen__background-color;
+
+    // Hide vignette and angle
+    &::before, &::after {
+      content: none;
+    }
+
+    // No border
+    .spark-panel {
+      border: none;
+    }
+
+    // No padding
+    .spark-splash-screen__content {
+      padding: 0;
+    }
+
+    // Contains the help links
+    .spark-splash-screen__help-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+
+    // Center text on XS
+    .spark-splash-screen__help {
+      float: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  // Form submit button should have more spacing on top on mobile
+  .spark-splash-screen__form-submit {
+    margin-top: 1em;
+  }
+
+  // Panel content should take up the full screen on mobile
+  .spark-splash-screen--sign-in {
+    > .spark-splash-screen__center > .spark-panel__content {
+      width: 100%;
+    }
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+
+  // Panel content shouldn't fill the space, but it will be centered.
+  .spark-splash-screen--sign-in {
+    > .spark-splash-screen__center > .spark-panel__content {
+      width: 80%;
+    }
+  }
+}

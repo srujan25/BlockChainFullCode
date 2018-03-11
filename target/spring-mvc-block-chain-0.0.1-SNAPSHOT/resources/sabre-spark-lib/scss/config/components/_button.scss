@@ -1,0 +1,414 @@
+////
+/// ## Button Configuration
+///	@group config/components/button
+////
+
+
+/// Border radius for buttons
+/// @type	{Number}
+$btn__border-radius: .25rem !default;
+
+
+
+// Default button styles
+
+/// Default/primary button `background-color`
+/// @type {Color}
+$btn--default__background-color: $green !default;
+
+/// Default/primary button `border`
+/// @type {String}
+$btn--default__border: 1px solid map-get($green-color-steps, 600) !default;
+
+/// Default/primary button `box-shadow`
+/// @type {String}
+$btn--default__box-shadow: inset 0 -2px 0 map-get($green-color-steps, 600) !default;
+
+/// Small default/primary button `box-shadow`
+/// @type {String}
+$btn--default__box-shadow--small: inset 0 -2px 0 map-get($green-color-steps, 600) !default;
+
+/// Default/primary button `color`
+/// @type {Color}
+$btn--default__color: $white !default;
+
+/// Default/primary button `fontsize` variable
+/// @type {String}
+$btn--default__font-size: zeta !default;
+
+/// Large default/primary button `fontsize` variable
+/// @type {String}
+$btn--default__font-size--large: gamma !default;
+
+/// Small default/primary button `fontsize` variable
+/// @type {String}
+$btn--default__font-size--small: eta !default;
+
+/// Default/primary button `font-weight`
+/// @type {Number}
+$btn--default__font-weight: 700 !default;
+
+/// Default/primary button `background-color` on hover
+/// @type {Color}
+$btn--default--hover__background-color: map-get($green-color-steps, 400) !default;
+
+/// Default/primary button `color` on hover
+/// @type {Color}
+$btn--default--hover__color: $white !default;
+
+/// Default/primary button `box-shadow` on hover
+/// @type {String}
+$btn--default--focus__box-shadow: 0 0 0 4px map-get($green-color-steps, 100) !default;
+
+/// Small default/primary button `box-shadow` on hover
+/// @type {String}
+$btn--default--focus__box-shadow--small: 0 0 0 3px map-get($green-color-steps, 100) !default;
+
+/// Default/primary button `background-color` when active
+/// @type {Color}
+$btn--default--active__background-color: map-get($green-color-steps, 600) !default;
+
+/// Default/primary button `border` when active
+/// @type {String}
+$btn--default--active__border: 1px solid map-get($green-color-steps, 700) !default;
+
+/// Default/primary button `color` when active
+/// @type {Color}
+$btn--default--active__color: $white !default;
+
+/// Default/primary button `background-color` when disabled
+/// @type {Color}
+$btn--default--disabled__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Default/primary button `border` when disabled
+/// @type {String}
+$btn--default--disabled__border: 1px solid map-get($gray-color-steps, 100) !default;
+
+/// Default/primary button `color` when disabled
+/// @type {Color}
+$btn--default--disabled__color: map-get($gray-color-steps, 500) !default;
+
+
+
+// Brand button
+
+/// Brand button `background-color`
+/// @type {Color}
+$btn--brand__background-color: map-get($red-color-steps, 400) !default;
+
+/// Brand button `border`
+/// @type {String}
+$btn--brand__border: 1px solid map-get($red-color-steps, 700) !default;
+
+/// Brand button `box-shadow`
+/// @type {String}
+$btn--brand__box-shadow: inset 0 -2px 0 map-get($red-color-steps, 700) !default;
+
+/// Small brand button `box-shadow`
+/// @type {String}
+$btn--brand__box-shadow--small: inset 0 -1px 0 map-get($red-color-steps, 700) !default;
+
+/// Brand button `background-color` on hover
+/// @type {Color}
+$btn--brand--hover__background-color: map-get($red-color-steps, 500) !default;
+
+/// Brand button `background-color` when active
+/// @type {Color}
+$btn--brand--active__background-color: map-get($red-color-steps, 600) !default;
+
+/// Brand button `border` when active
+/// @type {String}
+$btn--brand--active__border: 1px solid map-get($red-color-steps, 700) !default;
+
+/// Brand button `box-shadow` when focused
+/// @type {String}
+$btn--brand--focus__box-shadow: 0 0 0 4px map-get($red-color-steps, 100) !default;
+
+
+
+// Secondary button
+
+/// Secondary button `background-color`
+/// @type {Color}
+$btn--secondary__background-color: $white !default;
+
+/// Secondary button `border`
+/// @type {String}
+$btn--secondary__border: 1px solid $green !default;
+
+/// Secondary button `box-shadow`
+/// @type {String}
+$btn--secondary__box-shadow: inset 0 -2px 0 $green !default;
+
+/// Small secondary button `box-shadow`
+/// @type {String}
+$btn--secondary__box-shadow--small: inset 0 -1px 0 $green !default;
+
+/// Secondary button `color`
+/// @type {Color}
+$btn--secondary__color: $green !default;
+
+/// Secondary button `background-color` on hover
+/// @type {Color}
+$btn--secondary--hover__background-color: $white !default;
+
+/// Secondary button `color` on hover
+/// @type {Color}
+$btn--secondary--hover__color: map-get($green-color-steps, 400) !default;
+
+/// Secondary button `border` on hover
+/// @type {String}
+$btn--secondary--hover__border: 1px solid map-get($green-color-steps, 400) !default;
+
+/// Secondary button `box-shadow` on hover
+/// @type {String}
+$btn--secondary--hover__box-shadow: inset 0 -2px 0 map-get($green-color-steps, 400) !default;
+
+/// Ssmall secondary button `box-shadow` on hover
+/// @type {String}
+$btn--secondary--hover__box-shadow--small: inset 0 -1px 0 map-get($green-color-steps, 400) !default;
+
+/// Secondary button `color` when active
+/// @type {Color}
+$btn--secondary--active__color: map-get($green-color-steps, 600) !default;
+
+/// Secondary button `border` when active
+/// @type {String}
+$btn--secondary--active__border: 1px solid map-get($green-color-steps, 600) !default;
+
+/// Secondary button `background-color` when active
+/// @type {Color}
+$btn--secondary--active__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Secondary button `box-shadow` when active
+/// @type {String}
+$btn--secondary--active__box-shadow: $btn--secondary--hover__box-shadow !default;
+
+/// Small secondary button `box-shadow` when active
+/// @type {String}
+$btn--secondary--active__box-shadow--small: $btn--secondary--hover__box-shadow--small !default;
+
+/// Secondary button `box-shadow` when focused
+/// @type {String}
+$btn--secondary--focus__box-shadow: 0 0 0 4px map-get($green-color-steps, 100) !default;
+
+/// Ssmall secondary button `box-shadow` when focused
+/// @type {String}
+$btn--secondary--focus__box-shadow--small: 0 0 0 3px map-get($green-color-steps, 100) !default;
+
+
+
+// Negative button
+
+/// Negative button `background-color`
+/// @type {Color}
+$btn--negative__background-color: $white !default;
+
+/// Negative button `border`
+/// @type {String}
+$btn--negative__border: 1px solid $red !default;
+
+/// Negative button `box-shadow`
+/// @type {String}
+$btn--negative__box-shadow: inset 0 -2px 0 $red !default;
+
+/// Small negative button `box-shadow`
+/// @type {String}
+$btn--negative__box-shadow--small: inset 0 -1px 0 $red !default;
+
+/// Negative button `color`
+/// @type {Color}
+$btn--negative__color: $red !default;
+
+/// Negative button `background-color` on hover
+/// @type {Color}
+$btn--negative--hover__background-color: $white !default;
+
+/// Negative button `color` on hover
+/// @type {Color}
+$btn--negative--hover__color: map-get($red-color-steps, 400) !default;
+
+/// Negative button `border` on hover
+/// @type {String}
+$btn--negative--hover__border: 1px solid map-get($red-color-steps, 400) !default;
+
+/// Negative button `box-shadow` on hover
+/// @type {String}
+$btn--negative--hover__box-shadow: inset 0 -2px 0 map-get($red-color-steps, 400) !default;
+
+/// Small negative button `box-shadow` on hover
+/// @type {String}
+$btn--negative--hover__box-shadow--small: inset 0 -1px 0 map-get($red-color-steps, 400) !default;
+
+/// Negative button `background-color` when active
+/// @type {Color}
+$btn--negative--active__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Negative button `border` when active
+/// @type {String}
+$btn--negative--active__border: 1px solid map-get($red-color-steps, 500) !default;
+
+/// Negative button `color` when active
+/// @type {Color}
+$btn--negative--active__color: map-get($red-color-steps, 500) !default;
+
+/// Negative button `box-shadow` when active
+/// @type {String}
+$btn--negative--active__box-shadow: inset 0 -2px 0 map-get($red-color-steps, 500) !default;
+
+/// Small negative button `box-shadow` when active
+/// @type {String}
+$btn--negative--active__box-shadow--small: inset 0 -1px 0 map-get($red-color-steps, 500) !default;
+
+/// Negative button `box-shadow` when focused
+/// @type {String}
+$btn--negative--focus__box-shadow: 0 0 0 4px map-get($red-color-steps, 100) !default;
+
+/// Small negative button `box-shadow` when focused
+/// @type {String}
+$btn--negative--focus__box-shadow--small: 0 0 0 3px map-get($red-color-steps, 100) !default;
+
+
+
+// Text Button
+
+/// Text button `color`
+/// @type {Color}
+$btn--text__color: $green !default;
+
+/// Text button `color` on hover
+/// @type {Color}
+$btn--text--hover__color: map-get($green-color-steps, 400) !default;
+
+
+
+// Icon button
+
+/// Icon button `color`
+/// @type {Color}
+$btn--icon__color: map-get($gray-color-steps, 800) !default;
+
+/// Icon button `background-color`
+/// @type {Color}
+$btn--icon__background-color: transparent !default;
+
+/// Icon button `border-radius`
+/// @type {Color}
+$btn--icon__border-radius: .25rem !default;
+
+/// Icon button `border`
+/// @type {Color}
+$btn--icon__border: 4px solid transparent !default;
+
+/// Small default/primary button `fontsize` variable
+/// @type {String}
+$btn--icon__font-size: delta !default;
+
+/// Icon button `border` on focus
+/// @type {Color}
+$btn--icon--focus__border: 4px solid map-get($gray-color-steps, 100) !default;
+
+/// Icon button `border` on focus when on a dark background
+/// @type {Color}
+$btn--icon--focus__border--darker: 4px solid map-get($gray-color-steps, 300) !default;
+
+/// Icon button `color` on hover
+/// @type {Color}
+$btn--icon--hover__color: map-get($gray-color-steps, 900) !default;
+
+/// Icon button `background-color` on hover
+/// @type {Color}
+$btn--icon--hover__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Icon button `color` on active
+/// @type {Color}
+$btn--icon--active__color: $white !default;
+
+/// Icon button `background-color` on active
+/// @type {Color}
+$btn--icon--active__background-color: $blue !default;
+
+/// Icon button `border` on focus
+/// @type {Color}
+$btn--icon--active__border: 4px solid $blue !default;
+
+/// Icon button `color` when-disabled
+/// @type {Color}
+$btn--icon--disabled__color: map-get($gray-color-steps, 500) !default;
+
+
+// View More button
+
+/// View More button `background-color`
+/// @type {Color}
+$btn--view-more__background-color: $white !default;
+
+/// View More button `border`
+/// @type {String}
+$btn--view-more__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// View More button `box-shadow`
+/// @type {String}
+$btn--view-more__box-shadow:  0 0 4px map-get($gray-color-steps, 400) !default;
+
+/// Small View More button `box-shadow`
+/// @type {String}
+$btn--view-more__box-shadow--small:  0 0 2px map-get($gray-color-steps, 400) !default;
+
+/// View More button `color`
+/// @type {Color}
+$btn--view-more__color: $blue !default;
+
+/// View More button `background-color` on hover
+/// @type {Color}
+$btn--view-more--hover__background-color: $white !default;
+
+/// View More button `color` on hover
+/// @type {Color}
+$btn--view-more--hover__color: map-get($blue-color-steps, 400) !default;
+
+/// View More button `border` on hover
+/// @type {String}
+$btn--view-more--hover__border: 1px solid map-get($gray-color-steps, 500) !default;
+
+/// View More button `box-shadow` on hover
+/// @type {String}
+$btn--view-more--hover__box-shadow: 0 0 2px map-get($gray-color-steps, 500) !default;
+
+/// Ssmall View More button `box-shadow` on hover
+/// @type {String}
+$btn--view-more--hover__box-shadow--small: 0 0 1px map-get($gray-color-steps, 500) !default;
+
+/// View More button `color` when active
+/// @type {Color}
+$btn--view-more--active__color: $blue !default;
+
+/// View More button `border` when active
+/// @type {String}
+$btn--view-more--active__border: 1px solid map-get($gray-color-steps, 500) !default;
+
+/// View More button `background-color` when active
+/// @type {Color}
+$btn--view-more--active__background-color: map-get($gray-color-steps, 100) !default;
+
+/// View More button `box-shadow` when active
+/// @type {String}
+$btn--view-more--active__box-shadow: none !default;
+
+/// Small View More button `box-shadow` when active
+/// @type {String}
+$btn--view-more--active__box-shadow--small: none !default;
+
+/// View More button `box-shadow` when focused
+/// @type {String}
+$btn--view-more--focus__box-shadow: 0 0 0 4px map-get($blue-color-steps, 100) !default;
+
+/// Ssmall View More button `box-shadow` when focused
+/// @type {String}
+$btn--view-more--focus__box-shadow--small: 0 0 0 3px map-get($blue-color-steps, 100) !default;
+
+
+
+/// Error button `box-shadow`
+/// @type {String}
+$btn--error__box-shadow: inset 0 -2px 0 map-get($red-color-steps, 400) !default;

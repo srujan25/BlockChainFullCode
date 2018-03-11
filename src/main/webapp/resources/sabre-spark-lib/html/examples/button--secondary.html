@@ -1,0 +1,10 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Button - Secondary" %}
+
+{% block example %}
+<button class="spark-btn spark-btn--md spark-btn--secondary">Secondary</button>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

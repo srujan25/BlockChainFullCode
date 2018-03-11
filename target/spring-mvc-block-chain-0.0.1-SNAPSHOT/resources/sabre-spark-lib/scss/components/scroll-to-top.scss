@@ -1,0 +1,121 @@
+////
+/// ## Scroll To Top
+/// @group components/scroll-to-top
+////
+
+/// A button that anchors itself to the bottom of the page.
+.spark-scroll-to-top {
+  background-color: $scroll-to-top__background-color;
+  border: $scroll-to-top__border;
+  border-radius: 50%;
+  bottom: 2rem;
+  box-shadow: $scroll-to-top__box-shadow;
+  cursor: pointer;
+  height: 6rem;
+  opacity: 0;
+  position: fixed;
+  right: 2rem;
+  transform: scale(0);
+  transition-duration: 100ms, 100ms, 100ms, 100ms, 100ms, 200ms, 200ms; // have to put the second 200ms here because transform gets expanded to -webkit-transform below, and w/o both values things get REALLY weird.
+  transition-property: background-color, border-color, box-shadow, opacity, visibility, transform;
+  transition-timing-function: linear;
+  visibility: hidden;
+  width: 6rem;
+  z-index: 1000;
+
+  &__icon {
+    border-top: 1px solid $scroll-to-top__color;
+    display: inline-block;
+    height: 2.5rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: border-color 100ms linear;
+    width: 2.15rem;
+
+    &::before {
+      border-left: 1px solid $scroll-to-top__color;
+      border-top: 1px solid $scroll-to-top__color;
+      content: '';
+      display: inline-block;
+      height: 1.25rem;
+      left: 50%;
+      position: absolute;
+      top: .5rem;
+      transform: translateX(-50%) rotate(45deg);
+      transition: border-color 100ms linear;
+      width: 1.25rem;
+    }
+
+    &::after {
+      background-color: $scroll-to-top__color;
+      height: 2rem;
+      content: '';
+      display: inline-block;
+      left: 50%;
+      position: absolute;
+      top: calc(.5rem - 2px);
+      transform: translateX(-50%);
+      transition: background-color 100ms linear;
+      width: 1px;
+    }
+  }
+
+  &:hover {
+    border: $scroll-to-top--hover__border;
+
+    .spark-scroll-to-top__icon {
+      border-top-color: $scroll-to-top--hover__color;
+
+      &::before {
+        border-left-color: $scroll-to-top--hover__color;
+        border-top-color: $scroll-to-top--hover__color;
+      }
+
+      &::after{
+        background-color: $scroll-to-top--hover__color;
+      }
+    }
+  }
+
+  &:focus {
+    box-shadow: $scroll-to-top--focus__box-shadow;
+    outline: 0;
+  }
+
+  &:active {
+    background-color: $scroll-to-top--active__background-color;
+    box-shadow: $scroll-to-top--active__box-shadow;
+  }
+
+  &[disabled] {
+    background-color: $scroll-to-top--disabled__background-color;
+    border: $scroll-to-top--disabled__border;
+    box-shadow: $scroll-to-top--disabled__box-shadow;
+    cursor: not-allowed;
+
+    .spark-scroll-to-top__icon {
+      border-top-color: $scroll-to-top--disabled__color;
+
+      &::before {
+        border-left-color: $scroll-to-top--disabled__color;
+        border-top-color: $scroll-to-top--disabled__color;
+      }
+
+      &::after{
+        background-color: $scroll-to-top--disabled__color;
+      }
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+
+  &.at-bottom {
+    position: absolute;
+  }
+}

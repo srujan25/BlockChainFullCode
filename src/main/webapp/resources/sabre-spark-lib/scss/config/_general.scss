@@ -1,0 +1,11 @@
+////
+/// ## General
+/// Spark general configuration defaults.
+/// These can be overridden by themes.
+/// @group config
+////
+
+
+/// Path to image files
+/// @type String
+$image-directory: '../images' !default;

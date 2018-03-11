@@ -1,0 +1,45 @@
+////
+/// ## Progress Indicator Configuration
+///	@group config/components
+////
+
+
+/// Progress indicator `background-color`
+/// @type {Color}
+$progress-indicator__background-color: $white !default;
+
+/// Progress indicator meter `background-color`
+/// @type {Color}
+$progress-indicator__meter__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Progress indicator meter `border-color`
+/// @type {Color}
+$progress-indicator__meter__border-color: map-get($gray-color-steps, 400) !default;
+
+/// Progress indicator meter `border`
+/// @type {String}
+$progress-indicator__meter__border: 1px solid $progress-indicator__meter__border-color !default;
+
+/// Progress indicator fill `background-color`
+/// @type {Color}
+$progress-indicator__fill__background-color: map-get($blue-color-steps, 200) !default;
+
+/// Progress indicator loading text `color`
+/// @type {Color}
+$progress-indicator__text__color: map-get($blue-color-steps, 900) !default;
+
+/// Progress indicator loading states `color`
+/// @type {Color}
+$progress-indicator__states__color: map-get($gray-color-steps, 900) !default;
+
+/// Interdeterminate progress indicator text `color`
+/// @type {Color}
+$progress-indicator--indeterminate__text__color: map-get($blue-color-steps, 200) !default;
+
+/// Proress indicator default track `background-color`
+/// @type {Color}
+$progress-indicator--btn--default__track__background-color: map-get($green-color-steps, 300) !default;
+
+/// Progress indicator alternate track `background-color`
+/// @type {Color}
+$progress-indicator--btn--alt__track__background-color: map-get($blue-color-steps, 400) !default;

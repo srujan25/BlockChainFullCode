@@ -1,0 +1,53 @@
+////
+/// ## Select Multiple Configuration
+///	@group config/components
+////
+
+
+/// Select input `border`
+/// @type {String}
+$select--multiple__border--input-top: calc(5rem + 3px) solid transparent !default;
+
+/// Select input `border-radius`
+/// @type	{Number}
+$select--multiple__border-radius: $input__border-radius !default;
+
+/// Select input `background-color`
+/// @type {Color}
+$select--multiple__background-color: $input__background-color !default;
+
+/// Select input `border`
+/// @type {String}
+$select--multiple__border: $input__border !default;
+
+/// Select input `color`
+/// @type {Color}
+$select--multiple__color: $input__color !default;
+
+/// Select input dropdown arrow `background-color`
+/// @type {Color}
+$select--multiple__arrow__background-color: map-get($gray-color-steps, 700) !default;
+
+/// Select input `border` on hover
+/// @type {String}
+$select--multiple--hover__border: $input--hover__border !default;
+
+/// Select input `border` when active
+/// @type {String}
+$select--multiple--active__border: $input--active__border !default;
+
+/// Select input dropdown arrow `background-color` when arrow
+/// @type {Color}
+$select--multiple--active__label__color: $input--active__label__color !default;
+
+/// Select input `background-color` when disabled
+/// @type {Color}
+$select--multiple--disabled__background-color: $input--disabled__background-color !default;
+
+/// Select input `border` when disabled
+/// @type {String}
+$select--multiple--disabled__border: $input--disabled__border !default;
+
+/// Select input `color` when disabled
+/// @type {Color}
+$select--multiple--disabled__color: $input--disabled__color !default;

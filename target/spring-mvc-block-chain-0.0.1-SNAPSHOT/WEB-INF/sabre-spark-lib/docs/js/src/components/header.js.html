@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../css/prism.min.css">
+    <link rel="stylesheet" href="../../css/index.min.css">
+    <link rel="stylesheet" href="../../css/docs.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../index.html">Main</a></li>
+            <li><a href="../../dist/components/base.js.html">dist/components/base.js</a></li>
+            <li><a href="../../dist/components/calendar-popover.js.html">dist/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/components/carousel.js.html">dist/components/carousel.js</a></li>
+            <li><a href="../../dist/components/date-input.js.html">dist/components/date-input.js</a></li>
+            <li><a href="../../dist/components/date-select.js.html">dist/components/date-select.js</a></li>
+            <li><a href="../../dist/components/date-typeahead.js.html">dist/components/date-typeahead.js</a></li>
+            <li><a href="../../dist/components/expand.js.html">dist/components/expand.js</a></li>
+            <li><a href="../../dist/components/filter-module.js.html">dist/components/filter-module.js</a></li>
+            <li><a href="../../dist/components/filter.js.html">dist/components/filter.js</a></li>
+            <li><a href="../../dist/components/header.js.html">dist/components/header.js</a></li>
+            <li><a href="../../dist/components/menu.js.html">dist/components/menu.js</a></li>
+            <li><a href="../../dist/components/modal.js.html">dist/components/modal.js</a></li>
+            <li><a href="../../dist/components/multi-select-input.js.html">dist/components/multi-select-input.js</a></li>
+            <li><a href="../../dist/components/number-selector.js.html">dist/components/number-selector.js</a></li>
+            <li><a href="../../dist/components/popover.js.html">dist/components/popover.js</a></li>
+            <li><a href="../../dist/components/progress-indicator.js.html">dist/components/progress-indicator.js</a></li>
+            <li><a href="../../dist/components/range-slider.js.html">dist/components/range-slider.js</a></li>
+            <li><a href="../../dist/components/scroll-to-top.js.html">dist/components/scroll-to-top.js</a></li>
+            <li><a href="../../dist/components/select-input.js.html">dist/components/select-input.js</a></li>
+            <li><a href="../../dist/components/slider.js.html">dist/components/slider.js</a></li>
+            <li><a href="../../dist/components/step-indicator.js.html">dist/components/step-indicator.js</a></li>
+            <li><a href="../../dist/components/table.js.html">dist/components/table.js</a></li>
+            <li><a href="../../dist/components/tabs.js.html">dist/components/tabs.js</a></li>
+            <li><a href="../../dist/components/text-input.js.html">dist/components/text-input.js</a></li>
+            <li><a href="../../dist/components/toggle-switch.js.html">dist/components/toggle-switch.js</a></li>
+            <li><a href="../../dist/components/toolbar.js.html">dist/components/toolbar.js</a></li>
+            <li><a href="../../dist/components/tooltip.js.html">dist/components/tooltip.js</a></li>
+            <li><a href="../../dist/components/typeahead.js.html">dist/components/typeahead.js</a></li>
+            <li><a href="../../dist/helpers/animation/cancel.js.html">dist/helpers/animation/cancel.js</a></li>
+            <li><a href="../../dist/helpers/animation/height.js.html">dist/helpers/animation/height.js</a></li>
+            <li><a href="../../dist/helpers/animation/request.js.html">dist/helpers/animation/request.js</a></li>
+            <li><a href="../../dist/helpers/animation/scroll-to.js.html">dist/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../dist/helpers/animation/tween.js.html">dist/helpers/animation/tween.js</a></li>
+            <li><a href="../../dist/helpers/css/transform.js.html">dist/helpers/css/transform.js</a></li>
+            <li><a href="../../dist/helpers/date/date.js.html">dist/helpers/date/date.js</a></li>
+            <li><a href="../../dist/helpers/date/parse-format.js.html">dist/helpers/date/parse-format.js</a></li>
+            <li><a href="../../dist/helpers/dom/add-class.js.html">dist/helpers/dom/add-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/breakpoint.js.html">dist/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../dist/helpers/dom/has-class.js.html">dist/helpers/dom/has-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/make-element.js.html">dist/helpers/dom/make-element.js</a></li>
+            <li><a href="../../dist/helpers/dom/offset.js.html">dist/helpers/dom/offset.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-height.js.html">dist/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-width.js.html">dist/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../dist/helpers/dom/parse-attribute.js.html">dist/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../dist/helpers/dom/remove-class.js.html">dist/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/toggle-class.js.html">dist/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/trigger-event.js.html">dist/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../dist/helpers/form/build-select.js.html">dist/helpers/form/build-select.js</a></li>
+            <li><a href="../../dist/helpers/form/form-data.js.html">dist/helpers/form/form-data.js</a></li>
+            <li><a href="../../dist/helpers/form/set-caret.js.html">dist/helpers/form/set-caret.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/append-children.js.html">dist/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/copy-attributes.js.html">dist/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/insert-before.js.html">dist/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/wrap-element.js.html">dist/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../dist/helpers/position/affix.js.html">dist/helpers/position/affix.js</a></li>
+            <li><a href="../../dist/helpers/position/box-position.js.html">dist/helpers/position/box-position.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-child.js.html">dist/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-children.js.html">dist/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-index.js.html">dist/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parent.js.html">dist/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parents.js.html">dist/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-after.js.html">dist/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-before.js.html">dist/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../dist/helpers/traversal/has-parent.js.html">dist/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/matches.js.html">dist/helpers/traversal/matches.js</a></li>
+            <li><a href="../../dist/helpers/util/debounce.js.html">dist/helpers/util/debounce.js</a></li>
+            <li><a href="../../dist/helpers/util/each.js.html">dist/helpers/util/each.js</a></li>
+            <li><a href="../../dist/helpers/util/mixin.js.html">dist/helpers/util/mixin.js</a></li>
+            <li><a href="../../dist/helpers/util/pad.js.html">dist/helpers/util/pad.js</a></li>
+            <li><a href="../../dist/helpers/util/range.js.html">dist/helpers/util/range.js</a></li>
+            <li><a href="../../dist/helpers/util/round.js.html">dist/helpers/util/round.js</a></li>
+            <li><a href="../../dist/helpers/util/trim.js.html">dist/helpers/util/trim.js</a></li>
+            <li><a href="../../dist/js/src/components/calendar-popover.js.html">dist/js/src/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/js/src/components/filter-module.js.html">dist/js/src/components/filter-module.js</a></li>
+            <li><a href="../../dist/js/src/components/filter.js.html">dist/js/src/components/filter.js</a></li>
+            <li><a href="../../dist/js/src/components/modal.js.html">dist/js/src/components/modal.js</a></li>
+            <li><a href="../../dist/js/src/components/typeahead.js.html">dist/js/src/components/typeahead.js</a></li>
+            <li><a href="../../dist/js/src/spark.js.html">dist/js/src/spark.js</a></li>
+            <li><a href="../../dist/mixins/messaging.js.html">dist/mixins/messaging.js</a></li>
+            <li><a href="../../dist/mixins/validation.js.html">dist/mixins/validation.js</a></li>
+            <li><a href="../../dist/spark.jquery.js.html">dist/spark.jquery.js</a></li>
+            <li><a href="../../dist/spark.js.html">dist/spark.js</a></li>
+            <li><a href="../../src/components/base.js.html">src/components/base.js</a></li>
+            <li><a href="../../src/components/calendar-popover.js.html">src/components/calendar-popover.js</a></li>
+            <li><a href="../../src/components/carousel.js.html">src/components/carousel.js</a></li>
+            <li><a href="../../src/components/date-input.js.html">src/components/date-input.js</a></li>
+            <li><a href="../../src/components/date-select.js.html">src/components/date-select.js</a></li>
+            <li><a href="../../src/components/date-typeahead.js.html">src/components/date-typeahead.js</a></li>
+            <li><a href="../../src/components/expand.js.html">src/components/expand.js</a></li>
+            <li class="active"><a href="../../src/components/header.js.html">src/components/header.js</a></li>
+            <li><a href="../../src/components/menu.js.html">src/components/menu.js</a></li>
+            <li><a href="../../src/components/modal.js.html">src/components/modal.js</a></li>
+            <li><a href="../../src/components/multi-select-input.js.html">src/components/multi-select-input.js</a></li>
+            <li><a href="../../src/components/number-selector.js.html">src/components/number-selector.js</a></li>
+            <li><a href="../../src/components/popover.js.html">src/components/popover.js</a></li>
+            <li><a href="../../src/components/progress-indicator.js.html">src/components/progress-indicator.js</a></li>
+            <li><a href="../../src/components/range-slider.js.html">src/components/range-slider.js</a></li>
+            <li><a href="../../src/components/scroll-to-top.js.html">src/components/scroll-to-top.js</a></li>
+            <li><a href="../../src/components/select-input.js.html">src/components/select-input.js</a></li>
+            <li><a href="../../src/components/slider.js.html">src/components/slider.js</a></li>
+            <li><a href="../../src/components/step-indicator.js.html">src/components/step-indicator.js</a></li>
+            <li><a href="../../src/components/table.js.html">src/components/table.js</a></li>
+            <li><a href="../../src/components/tabs.js.html">src/components/tabs.js</a></li>
+            <li><a href="../../src/components/text-input.js.html">src/components/text-input.js</a></li>
+            <li><a href="../../src/components/toggle-switch.js.html">src/components/toggle-switch.js</a></li>
+            <li><a href="../../src/components/toolbar.js.html">src/components/toolbar.js</a></li>
+            <li><a href="../../src/components/tooltip.js.html">src/components/tooltip.js</a></li>
+            <li><a href="../../src/components/typeahead.js.html">src/components/typeahead.js</a></li>
+            <li><a href="../../src/helpers/animation/cancel.js.html">src/helpers/animation/cancel.js</a></li>
+            <li><a href="../../src/helpers/animation/height.js.html">src/helpers/animation/height.js</a></li>
+            <li><a href="../../src/helpers/animation/request.js.html">src/helpers/animation/request.js</a></li>
+            <li><a href="../../src/helpers/animation/scroll-to.js.html">src/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../src/helpers/animation/tween.js.html">src/helpers/animation/tween.js</a></li>
+            <li><a href="../../src/helpers/css/transform.js.html">src/helpers/css/transform.js</a></li>
+            <li><a href="../../src/helpers/date/date.js.html">src/helpers/date/date.js</a></li>
+            <li><a href="../../src/helpers/date/parse-format.js.html">src/helpers/date/parse-format.js</a></li>
+            <li><a href="../../src/helpers/dom/add-class.js.html">src/helpers/dom/add-class.js</a></li>
+            <li><a href="../../src/helpers/dom/breakpoint.js.html">src/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../src/helpers/dom/has-class.js.html">src/helpers/dom/has-class.js</a></li>
+            <li><a href="../../src/helpers/dom/make-element.js.html">src/helpers/dom/make-element.js</a></li>
+            <li><a href="../../src/helpers/dom/offset.js.html">src/helpers/dom/offset.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-height.js.html">src/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-width.js.html">src/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../src/helpers/dom/parse-attribute.js.html">src/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../src/helpers/dom/remove-class.js.html">src/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../src/helpers/dom/toggle-class.js.html">src/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../src/helpers/dom/trigger-event.js.html">src/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../src/helpers/form/build-select.js.html">src/helpers/form/build-select.js</a></li>
+            <li><a href="../../src/helpers/form/form-data.js.html">src/helpers/form/form-data.js</a></li>
+            <li><a href="../../src/helpers/form/set-caret.js.html">src/helpers/form/set-caret.js</a></li>
+            <li><a href="../../src/helpers/manipulation/append-children.js.html">src/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../src/helpers/manipulation/copy-attributes.js.html">src/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../src/helpers/manipulation/insert-before.js.html">src/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../src/helpers/manipulation/wrap-element.js.html">src/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../src/helpers/position/affix.js.html">src/helpers/position/affix.js</a></li>
+            <li><a href="../../src/helpers/position/box-position.js.html">src/helpers/position/box-position.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-child.js.html">src/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-children.js.html">src/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-index.js.html">src/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parent.js.html">src/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parents.js.html">src/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-after.js.html">src/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-before.js.html">src/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../src/helpers/traversal/has-parent.js.html">src/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/matches.js.html">src/helpers/traversal/matches.js</a></li>
+            <li><a href="../../src/helpers/util/debounce.js.html">src/helpers/util/debounce.js</a></li>
+            <li><a href="../../src/helpers/util/each.js.html">src/helpers/util/each.js</a></li>
+            <li><a href="../../src/helpers/util/mixin.js.html">src/helpers/util/mixin.js</a></li>
+            <li><a href="../../src/helpers/util/pad.js.html">src/helpers/util/pad.js</a></li>
+            <li><a href="../../src/helpers/util/range.js.html">src/helpers/util/range.js</a></li>
+            <li><a href="../../src/helpers/util/round.js.html">src/helpers/util/round.js</a></li>
+            <li><a href="../../src/helpers/util/trim.js.html">src/helpers/util/trim.js</a></li>
+            <li><a href="../../src/mixins/messaging.js.html">src/mixins/messaging.js</a></li>
+            <li><a href="../../src/mixins/validation.js.html">src/mixins/validation.js</a></li>
+            <li><a href="../../src/spark.jquery.js.html">src/spark.jquery.js</a></li>
+            <li><a href="../../src/spark.js.html">src/spark.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#constructor"><i class="alert alert-success"></i><span>constructor</span></a>
+              </li>
+              <li><a href="#update"><i class="alert alert-info"></i><span>update</span></a>
+              </li>
+              <li><a href="#checkFixed"><i class="alert alert-info"></i><span>checkFixed</span></a>
+              </li>
+              <li><a href="#_cacheElements"><i class="alert alert-info"></i><span>_cacheElements</span></a>
+              </li>
+              <li><a href="#_parseParams"><i class="alert alert-info"></i><span>_parseParams</span></a>
+              </li>
+              <li><a href="#_bindEventListenerCallbacks"><i class="alert alert-info"></i><span>_bindEventListenerCallbacks</span></a>
+              </li>
+              <li><a href="#_addEventListeners"><i class="alert alert-info"></i><span>_addEventListeners</span></a>
+              </li>
+              <li><a href="#_removeEventListeners"><i class="alert alert-info"></i><span>_removeEventListeners</span></a>
+              </li>
+              <li><a href="#_getCurrentBreakpoint"><i class="alert alert-info"></i><span>_getCurrentBreakpoint</span></a>
+              </li>
+              <li><a href="#_createPlaceholder"><i class="alert alert-info"></i><span>_createPlaceholder</span></a>
+              </li>
+              <li><a href="#_removePlaceholder"><i class="alert alert-info"></i><span>_removePlaceholder</span></a>
+              </li>
+              <li><a href="#_disablePlaceholderLinkTab"><i class="alert alert-info"></i><span>_disablePlaceholderLinkTab</span></a>
+              </li>
+              <li><a href="#_createListMore"><i class="alert alert-info"></i><span>_createListMore</span></a>
+              </li>
+              <li><a href="#_determineInitialSize"><i class="alert alert-info"></i><span>_determineInitialSize</span></a>
+              </li>
+              <li><a href="#_determineMenuSize"><i class="alert alert-info"></i><span>_determineMenuSize</span></a>
+              </li>
+              <li><a href="#_listenForReadyStateChange"><i class="alert alert-info"></i><span>_listenForReadyStateChange</span></a>
+              </li>
+              <li><a href="#_isMenuBreakpoint"><i class="alert alert-info"></i><span>_isMenuBreakpoint</span></a>
+              </li>
+              <li><a href="#_getItemsToShowAndHide"><i class="alert alert-info"></i><span>_getItemsToShowAndHide</span></a>
+              </li>
+              <li><a href="#_ensureActiveAtMoreSwapIndex"><i class="alert alert-info"></i><span>_ensureActiveAtMoreSwapIndex</span></a>
+              </li>
+              <li><a href="#_addListMore"><i class="alert alert-info"></i><span>_addListMore</span></a>
+              </li>
+              <li><a href="#_removeListMore"><i class="alert alert-info"></i><span>_removeListMore</span></a>
+              </li>
+              <li><a href="#_resetMenuChildren"><i class="alert alert-info"></i><span>_resetMenuChildren</span></a>
+              </li>
+              <li><a href="#_toggleCollapsed"><i class="alert alert-info"></i><span>_toggleCollapsed</span></a>
+              </li>
+              <li><a href="#_enableTopLevelToggling"><i class="alert alert-info"></i><span>_enableTopLevelToggling</span></a>
+              </li>
+              <li><a href="#_disableTopLevelToggling"><i class="alert alert-info"></i><span>_disableTopLevelToggling</span></a>
+              </li>
+              <li><a href="#_onResize"><i class="alert alert-info"></i><span>_onResize</span></a>
+              </li>
+              <li><a href="#_onScroll"><i class="alert alert-info"></i><span>_onScroll</span></a>
+              </li>
+              <li><a href="#_onMoreClick"><i class="alert alert-info"></i><span>_onMoreClick</span></a>
+              </li>
+              <li><a href="#_onToggleClick"><i class="alert alert-info"></i><span>_onToggleClick</span></a>
+              </li>
+              <li><a href="#_onNavClick"><i class="alert alert-info"></i><span>_onNavClick</span></a>
+              </li>
+              <li><a href="#_whitelistedParams"><i class="alert alert-success"></i><span>_whitelistedParams</span></a>
+              </li>
+              <li><a href="#defaults"><i class="alert alert-success"></i><span>defaults</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>Header</h1>
+<p>A primary page header/navigation.</p></div>
+          <pre><code class="language-javascript">import BaseComponent from './base';
+import Menu from './menu';
+import toggleClass from '../helpers/dom/toggle-class';
+import addClass from '../helpers/dom/add-class';
+import removeClass from '../helpers/dom/remove-class';
+import hasClass from '../helpers/dom/has-class';
+import getIndex from '../helpers/traversal/get-index';
+import appendChildren from '../helpers/manipulation/append-children';
+import insertBefore from '../helpers/manipulation/insert-before';
+import {get as getBreakpoint} from '../helpers/dom/breakpoint';
+import getParent from '../helpers/traversal/get-parent';
+import getParents from '../helpers/traversal/get-parents';
+import {number as parseNumberAttribute} from '../helpers/dom/parse-attribute';
+
+class Header extends BaseComponent {</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">new Header(el, {
+  // Optional. Alternate breakpoint values.
+  breakpoints: {
+   xs: {
+     min: 0,
+     max: 639
+   }
+   // ...
+ }
+});</code></pre>
+          <section id="constructor">
+            <h1>constructor</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">constructor</div><span>&nbsp;</span><span>constructor()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Header constructor.</p></div>
+          <pre><code class="language-javascript">constructor(el, params = {}) {
+
+  params.elRequired = true;
+
+  if (!super(el, params)) {
+    return;
+  }
+
+  this._bindEventListenerCallbacks();
+  this._addEventListeners();
+  this._determineInitialSize();
+}</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Update the elements used.</p></div>
+          <pre><code class="language-javascript">update(el) {
+
+  this._removeEventListeners();
+  this._removePlaceholder();
+  this._cacheElements(el || this.el);
+  this._parseParams();
+  this._addEventListeners();
+  this._ensureActiveAtMoreSwapIndex();
+  this.checkFixed();
+
+  // Run on the next frame so sizes have updated
+  setTimeout(function() {
+    this._determineMenuSize();
+  }.bind(this), 0);
+
+  return this;
+}</code></pre>
+          <section id="checkFixed">
+            <h1>checkFixed</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>checkFixed()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Check of we should be fixed.</p></div>
+          <pre><code class="language-javascript">checkFixed() {
+
+  if (!this.fixed) {
+    return this;
+  }
+
+  var scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : window.document.body.scrollTop;
+  var isCondensed = scrollTop &gt; this.fixedDistance;
+  toggleClass(this.el, 'spark-header--condensed', isCondensed);
+  toggleClass(document.body, 'spark-header-condensed', isCondensed);
+
+  return this;
+}</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Store a reference to the tabs list, each tab and each panel.<br />Set which tab is active, or use the first.</p></div>
+          <pre><code class="language-javascript">_cacheElements(el) {
+
+  this.el = el;
+  this.navEl = this.el.querySelector('.spark-header__nav');
+  this.menuEl = this.navEl &amp;&amp; this.navEl.querySelector('.spark-header__menu');
+  this.listEl = this.menuEl &amp;&amp; this.menuEl.querySelector('.spark-header__list');
+  this.toggleEl = this.el.querySelector('.spark-header__toggle');
+
+  // Create a new instance of the menu component
+  if (this.menuEl) {
+    this.menu = new Menu(this.menuEl, {
+      onToggle: this._onToggleClickBound = this._onToggleClick.bind(this)
+    });
+  }
+
+  // The items in the list need to show/hide based on the width of the container.
+  // Cache these items so we can manipulate their display independent of what is
+  // currently in the DOM. Also, create the &quot;More&quot; dropdown which will be shown
+  // and hidden based on availabile space.
+  if (this.listEl &amp;&amp; this.listEl.children.length) {
+    this.listEls = Array.prototype.slice.call(this.listEl.children, 0);
+    this._createListMore();
+  }
+
+  // Create a clone of the header which will NOT be affected by changes in breakpoint.
+  // This lets us continue to measure how many list elements will fit. Since we go to the
+  // &quot;condensed&quot; view when we are at the sm/xs breakpoint OR only one item will fit in the nav,
+  // we can't rely on breakpoints alone to determine what to show. Without a cloned placeholder
+  // it is impossible to continue to measure the available space once we show the condensed view.
+  if (this.listEl) {
+    this._createPlaceholder();
+  }
+}</code></pre>
+          <section id="_parseParams">
+            <h1>_parseParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_parseParams()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Parse parameters from the elements.</p></div>
+          <pre><code class="language-javascript">_parseParams() {
+  this.fixed = this.fixed !== null ? this.fixed : hasClass(this.el, 'spark-header--fixed');
+  this.fixedDistance = this.fixedDistance !== null ? this.fixedDistance : parseNumberAttribute(this.el, 'data-fixed-distance', 10);
+}</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because the<br />function signatures won&#39;t match.</p></div>
+          <pre><code class="language-javascript">_bindEventListenerCallbacks() {
+
+  this._determineInitialSizeBound = this._determineInitialSize.bind(this);
+  this._onResizeBound = this._onResize.bind(this);
+  this._onScrollBound = this._onScroll.bind(this);
+  this._onMoreClickBound = this._onMoreClick.bind(this);
+  this._onNavClickBound = this._onNavClick.bind(this);
+}</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners for DOM events.</p></div>
+          <pre><code class="language-javascript">_addEventListeners() {
+
+  if (!this.listEl) {
+    return;
+  }
+
+  window.addEventListener('resize', this._onResizeBound);
+  window.addEventListener('orientationchange', this._onResizeBound);
+
+  if (this.listMoreEl) {
+    this.listMoreListEl.addEventListener('click', this._onMoreClickBound);
+  }
+
+  if (this.toggleEl) {
+    this.toggleEl.addEventListener('click', this._onToggleClickBound);
+  }
+
+  if (this.navEl) {
+    this.navEl.addEventListener('click', this._onNavClickBound);
+  }
+
+  if (this.fixed) {
+    window.addEventListener('scroll', this._onScrollBound);
+  }
+}</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners for DOM events..</p></div>
+          <pre><code class="language-javascript">_removeEventListeners() {
+
+  if (!this.listEl) {
+    return;
+  }
+
+  window.removeEventListener('resize', this._onResizeBound);
+  window.removeEventListener('orientationchange', this._onResizeBound);
+
+  if (this.listMoreEl) {
+    this.listMoreListEl.removeEventListener('click', this._onMoreClickBound);
+  }
+
+  if (this.toggleEl) {
+    this.toggleEl.removeEventListener('click', this._onToggleClickBound);
+  }
+
+  if (this.navEl) {
+    this.navEl.removeEventListener('click', this._onNavClickBound);
+  }
+
+  if (this.fixed) {
+    window.removeEventListener('scroll', this._onScrollBound);
+  }
+}</code></pre>
+          <section id="_getCurrentBreakpoint">
+            <h1>_getCurrentBreakpoint</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_getCurrentBreakpoint()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the current breakpoint for the header.</p></div>
+          <pre><code class="language-javascript">_getCurrentBreakpoint() {
+  this.lastBreakpoint = this.currentBreakpoint;
+  this.currentBreakpoint = getBreakpoint(this.el.clientWidth, this.breakpoints);
+  this.el.setAttribute('data-breakpoint', this.currentBreakpoint);
+}</code></pre>
+          <section id="_createPlaceholder">
+            <h1>_createPlaceholder</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_createPlaceholder()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create a placeholder for the whole header so that we can keep track<br />of the width of each child element regardless of whether or not we&#39;re<br />condensed. Condensed styles do not apply to instances of the element<br />with the placeholder class.</p></div>
+          <pre><code class="language-javascript">_createPlaceholder() {
+
+  var div = document.createElement('div');
+  div.innerHTML = this.navEl.outerHTML;
+
+  var el = div.children[0];
+  el.setAttribute('aria-hidden', true);
+
+  addClass(el, 'spark-header__placeholder');
+
+  this._disablePlaceholderLinkTab(el);
+
+  this.el.appendChild(el);
+
+  // Cache the common elements
+  this.placeholder = {
+    el: el,
+    menuEl: el.querySelector('.spark-header__menu'),
+    listEl: el.querySelector('.spark-header__list')
+  };
+
+  // Add a copy of the &quot;more&quot; button to the list so we always know what size it would be
+  if (this.listMoreEl) {
+    this.placeholder.listEl.innerHTML += this.listMoreEl.outerHTML;
+    this.placeholder.listMoreEl = this.placeholder.listEl.querySelector('.spark-header__more');
+  }
+}</code></pre>
+          <section id="_removePlaceholder">
+            <h1>_removePlaceholder</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removePlaceholder()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove the placeholder</p></div>
+          <pre><code class="language-javascript">_removePlaceholder() {
+
+  if (this.placeholder) {
+    this.placeholder.el.parentNode.removeChild(this.placeholder.el);
+    this.placeholder.menuEl.parentNode.removeChild(this.placeholder.menuEl);
+    this.placeholder.listEl.parentNode.removeChild(this.placeholder.listEl);
+  }
+
+  if (this.listMoreEl) {
+    this.placeholder.listMoreEl.parentNode.removeChild(this.placeholder.listMoreEl);
+  }
+}</code></pre>
+          <section id="_disablePlaceholderLinkTab">
+            <h1>_disablePlaceholderLinkTab</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_disablePlaceholderLinkTab()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Disable tabbing for items in the placeholder.</p></div>
+          <pre><code class="language-javascript">_disablePlaceholderLinkTab(el) {
+
+  // Set a negative tab index on each link in the placeholder
+  var links = el.querySelectorAll('.spark-menu__list-link, .spark-menu__list-expand');
+  var i = 0;
+  var len = links.length;
+
+  for (; i &lt; len; i++) {
+    links.item(i).setAttribute('tabindex', -1);
+  }
+}</code></pre>
+          <section id="_createListMore">
+            <h1>_createListMore</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_createListMore()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create a place to store overflow items of the list.<br />Also add this item to the placeholder element so we always know<br />which size it would be.</p></div>
+          <pre><code class="language-javascript">_createListMore() {
+
+  var div = document.createElement('div');
+  div.innerHTML = '&lt;li&gt;&lt;a class=&quot;spark-menu__list-link spark-menu__ignore&quot; tabindex=&quot;0&quot; title=&quot;More Items&quot;&gt;&lt;i class=&quot;spark-icon-menu-ellipsis-horizontal spark-icon--fill&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;ul class=&quot;spark-menu__list&quot;&gt;&lt;/ul&gt;&lt;/li&gt;';
+
+  var li = div.children[0];
+  addClass(li, 'spark-menu__list-item spark-header__more');
+
+  this.listMoreEl = li;
+  this.listMoreListEl = li.querySelector('ul');
+}</code></pre>
+          <section id="_determineInitialSize">
+            <h1>_determineInitialSize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_determineInitialSize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Determine the menu size..</p></div>
+          <pre><code class="language-javascript">_determineInitialSize() {
+  addClass(this.el, 'spark-header--visible');
+  this._ensureActiveAtMoreSwapIndex();
+  this._determineMenuSize();
+}</code></pre>
+          <section id="_determineMenuSize">
+            <h1>_determineMenuSize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_determineMenuSize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>isSwap</td>
+                <td>Boolean</td>
+                <td><p>Optional Is this a swapping event? If so, ignore redundancy checks.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Determine how many nav items can fit.</p></div>
+          <pre><code class="language-javascript">_determineMenuSize(isSwap) {
+
+  // Don't do anything w/o primary nav.
+  if (!this.listEls || !this.listEls.length) {
+    return;
+  }
+
+  // If we're at the XS or SM breakpoint, don't worry about this stuff.
+  if (this._isMenuBreakpoint(['xs', 'sm'])) {
+    this._removeListMore();
+    return this._toggleCollapsed(true);
+  }
+
+  // Get the items to show and hide
+  var items = this._getItemsToShowAndHide();
+
+  // Add a class saying that the size has been determined. This removes the overflow:hidden
+  // so that dropdowns will appear.
+  addClass(this.el, 'spark-header--overflow-checked');
+
+  // If there are less than two elements to show and we have hidden elements, collapse the nav.
+  if (items.show.length &lt; 2 &amp;&amp; items.hide.length) {
+    this._removeListMore();
+    return this._toggleCollapsed(true);
+  }
+
+  // We aren't at the XS breakpoint and there aren't too few items to show, so disable collapsing
+  this._toggleCollapsed(false);
+
+  // If the number of children to hide is the same as those already hidden, stop.
+  if (items.hide.length === this.listMoreListEl.children.length &amp;&amp; !isSwap) {
+
+    if (!items.hide.length) {
+      this._removeListMore();
+    }
+
+    return;
+  }
+
+  // Add the elements we're supposed to show before the &quot;more element&quot;
+  insertBefore(this.listEl, this.listMoreEl, items.show);
+
+  // If we have items to hide, append them to the more element
+  if (items.hide.length) {
+    appendChildren(this.listMoreListEl, items.hide);
+  }
+  // Otherwise, remove the more element
+  else {
+    this._removeListMore();
+  }
+}</code></pre>
+          <section id="_listenForReadyStateChange">
+            <h1>_listenForReadyStateChange</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_listenForReadyStateChange()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Listen for the ready state change and rerun the menu size determination.</p></div>
+          <pre><code class="language-javascript">_listenForReadyStateChange() {
+
+  // Already loaded
+  if (document.readyState === 'complete' || document.readyState === 'loaded') {
+    return;
+  }
+
+  // Bound listener
+  var run = function() {
+    if (document.readyState === 'complete' || document.readyState === 'loaded') {
+      this._determineMenuSize();
+      document.removeEventListener('readystatechange', run);
+    }
+  }.bind(this);
+
+  // Only run once
+  document.addEventListener('readystatechange', run);
+}</code></pre>
+          <section id="_isMenuBreakpoint">
+            <h1>_isMenuBreakpoint</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_isMenuBreakpoint()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>name</td>
+                <td>String, Array</td>
+                <td><p>A string or array of string names of breakpoints to check for</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Check the primary nav breakpoint.</p></div>
+          <pre><code class="language-javascript">_isMenuBreakpoint(name) {
+  this._getCurrentBreakpoint();
+  return name instanceof Array ? name.indexOf(this.currentBreakpoint) !== -1 : this.currentBreakpoint === 'xs';
+}</code></pre>
+          <section id="_getItemsToShowAndHide">
+            <h1>_getItemsToShowAndHide</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_getItemsToShowAndHide()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the items to show and hide.</p></div>
+          <pre><code class="language-javascript">_getItemsToShowAndHide() {
+
+  var width = this.placeholder.listEl.clientWidth;
+  var children = this.placeholder.listEl.children;
+  var i = 0;
+  var len = children.length;
+  var hideIndex = -1;
+
+  this._addListMore();
+
+  // Always include the width of the more button.
+  var childrenWidth = this.placeholder.listMoreEl.clientWidth || 0;
+
+  // Loop through the children until we hit a point where they don't fit anymore
+  for (; i &lt; len &amp;&amp; hideIndex === -1; i++) {
+    childrenWidth += children[i].clientWidth;
+    if (childrenWidth &gt; width) {
+      hideIndex = i;
+    }
+  }
+
+  // Find all the children that fit and don't fit
+  var items = {
+    show: hideIndex !== -1 ? Array.prototype.slice.call(this.listEls, 0, hideIndex) : this.listEls,
+    hide: hideIndex !== -1 ? Array.prototype.slice.call(this.listEls, hideIndex) : []
+  };
+
+  // If we have an index to swap for the last &quot;show&quot; element, replace that element
+  if (this.moreSwapIndex &gt; -1 &amp;&amp; this.moreSwapIndex &gt;= items.show.length) {
+
+    // Remove the last element from the show array
+    var toHide = items.show.splice(items.show.length - 1, 1)[0];
+
+    // Get the index to remove from the hide array. Account for the offset.
+    var toShowIndex = this.moreSwapIndex - hideIndex;
+
+    // Remove the desired element from the hide array
+    var toShow = items.hide.splice(toShowIndex, 1)[0];
+
+    // Add the toShow element to the end of the show array
+    items.show.push(toShow);
+
+    // Insert the toHide element into the hide array at the position of
+    // the element we just removed from the hide array.
+    items.hide.splice(toShowIndex, 0, toHide);
+  }
+
+  return items;
+}</code></pre>
+          <section id="_ensureActiveAtMoreSwapIndex">
+            <h1>_ensureActiveAtMoreSwapIndex</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_ensureActiveAtMoreSwapIndex()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Ensure that any active item is set to the more swap index. This ensures<br />that the active item is always visible on the screen.</p></div>
+          <pre><code class="language-javascript">_ensureActiveAtMoreSwapIndex() {
+
+  if (!this.listEls || !this.listEls.length) {
+    return;
+  }
+
+  var el = this.el.querySelector('[class*=&quot;list-item&quot;].active');
+  if (el) {
+    var parents = getParents(el, '.spark-menu__list-item', this.el);
+
+    if (parents &amp;&amp; parents[parents.length - 1]) {
+      el = parents[parents.length - 1];
+    }
+
+    var index = getIndex(this.listEls, el);
+
+    if (index !== this.moreSwapIndex) {
+      this.moreSwapIndex = index;
+    }
+  }
+}</code></pre>
+          <section id="_addListMore">
+            <h1>_addListMore</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addListMore()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add a placeholder for overflow items to the list.</p></div>
+          <pre><code class="language-javascript">_addListMore() {
+  if (this.listMoreEl.parentNode !== this.listEl) {
+    this.listEl.appendChild(this.listMoreEl);
+  }
+}</code></pre>
+          <section id="_removeListMore">
+            <h1>_removeListMore</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeListMore()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove a placeholder for overflow items from the primary nav.</p></div>
+          <pre><code class="language-javascript">_removeListMore() {
+  if (this.listMoreEl.parentNode) {
+    this.listMoreEl.parentNode.removeChild(this.listMoreEl);
+  }
+}</code></pre>
+          <section id="_resetMenuChildren">
+            <h1>_resetMenuChildren</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_resetMenuChildren()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Reset the children of the primary navigation.</p></div>
+          <pre><code class="language-javascript">_resetMenuChildren() {
+  this.moreSwapIndex = -1;
+  removeClass(this.el, 'spark-header--overflow-checked');
+  appendChildren(this.listEl, this.listEls);
+}</code></pre>
+          <section id="_toggleCollapsed">
+            <h1>_toggleCollapsed</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_toggleCollapsed()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>enable</td>
+                <td>Boolean</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Toggle the collapsed nav style.</p></div>
+          <pre><code class="language-javascript">_toggleCollapsed(enable) {
+
+  // Same collapsed state is already set
+  if (enable === this.isCollapsed) {
+    return;
+  }
+
+  // Reset children and remove a special no-animate class to top-level items when we collapse
+  if (enable) {
+    this._enableTopLevelToggling();
+    this._resetMenuChildren();
+  } else {
+    if (this.menu) {
+      this.menu._removeAllCachedLists();
+    }
+    this._disableTopLevelToggling();
+  }
+
+  this.isCollapsed = enable;
+  toggleClass(this.el, 'spark-header--collapsed', enable);
+  toggleClass(this.el, 'spark-header--visible', !enable);
+}</code></pre>
+          <section id="_enableTopLevelToggling">
+            <h1>_enableTopLevelToggling</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_enableTopLevelToggling()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Enable toggling on top-level items.</p></div>
+          <pre><code class="language-javascript">_enableTopLevelToggling() {
+
+  var i = 0;
+  var len = this.listEls.length;
+
+  for (; i &lt; len; i++) {
+    removeClass(this.listEls[i], 'spark-no-animate');
+  }
+}</code></pre>
+          <section id="_disableTopLevelToggling">
+            <h1>_disableTopLevelToggling</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_disableTopLevelToggling()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Disable toggling on top-level items.</p></div>
+          <pre><code class="language-javascript">_disableTopLevelToggling() {
+
+  var i = 0;
+  var len = this.listEls.length;
+
+  for (; i &lt; len; i++) {
+    addClass(this.listEls[i], 'spark-no-animate');
+  }
+}</code></pre>
+          <section id="_onResize">
+            <h1>_onResize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onResize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the window resizes, redetermine the size of the primary nav elements.</p></div>
+          <pre><code class="language-javascript">_onResize() {
+
+  // Ensure that any active item we may have is at the swap index
+  this._ensureActiveAtMoreSwapIndex();
+  this._determineMenuSize();
+
+  // If we are fixed, do the scroll check
+  if (this.fixed) {
+    this.checkFixed();
+  }
+}</code></pre>
+          <section id="_onScroll">
+            <h1>_onScroll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onScroll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Check to see if the header should be fixed.</p></div>
+          <pre><code class="language-javascript">_onScroll() {
+  this.checkFixed();
+}</code></pre>
+          <section id="_onMoreClick">
+            <h1>_onMoreClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onMoreClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When a link in the more list is clicked, swap it with the last element in the visible list.</p></div>
+          <pre><code class="language-javascript">_onMoreClick(e) {
+
+  // Don't do any swapping if we're in a collapsed state
+  if (this.isCollapsed) {
+    return;
+  }
+
+  // Get the index of the clicked element
+  var li = getParent(e.target, 'li', this.listMoreListEl);
+
+  // Save the index of the element to be swapped
+  this.moreSwapIndex = getIndex(this.listEls, li);
+
+  // Redetermine the primary nav size
+  this._determineMenuSize(true);
+}</code></pre>
+          <section id="_onToggleClick">
+            <h1>_onToggleClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onToggleClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the toggle is clicked, toggle the active state on the nav</p></div>
+          <pre><code class="language-javascript">_onToggleClick(e) {
+  e.preventDefault();
+  this.isActive = !this.isActive;
+  toggleClass(this.navEl, 'active', this.isActive);
+  this.menu._openActiveParents();
+}</code></pre>
+          <section id="_onNavClick">
+            <h1>_onNavClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onNavClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the nav is clicked, set to inactive.</p></div>
+          <pre><code class="language-javascript">_onNavClick(e) {
+  if (e.target === this.navEl &amp;&amp; this.isCollapsed) {
+    this.isActive = !this.isActive;
+    removeClass(this.navEl, 'active');
+  }
+}
+}</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Header.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <pre><code class="language-javascript">Header.prototype._whitelistedParams = ['breakpoints', 'fixed', 'fixedDistance'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Header.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <pre><code class="language-javascript">Header.prototype.defaults = {
+  el: null,
+  fixed: null,
+  fixedDistance: null,
+  navEl: null,
+  menuEl: null,
+  listEl: null,
+  listEls: null,
+  listMoreEl: null,
+  listMoreListEl: null,
+  placeholder: null,
+  toggleEl: null,
+  lastBreakpoint: null,
+  currentBreakpoint: null,
+  isActive: false,
+  isCollapsed: null,
+  moreSwapIndex: -1,
+  menu: null,
+  breakpoints: null,
+  _onResizeBound: null,
+  _onScrollBound: null,
+  _onMoreClickBound: null,
+  _onToggleClickBound: null,
+  _onNavClickBound: null
+};
+
+export default Header;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/mr-doc/mr-doc">Mr. Doc </a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau </a></p>
+        <p>Mr. Doc is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr </a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../js/twitter-widget.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap-transition.min.js"></script>
+    <script src="../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../js/bootstrap-affix.min.js"></script>
+    <script src="../../js/prism.min.js"></script>
+    <script src="../../js/index.min.js"></script>
+  </body>
+</html>

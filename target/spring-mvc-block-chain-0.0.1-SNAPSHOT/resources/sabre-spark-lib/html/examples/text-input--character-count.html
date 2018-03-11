@@ -1,0 +1,13 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Text Input - Character Count" %}
+
+{% block example %}
+<label class="spark-input" data-characters>
+  <input class="spark-input__field" name="example1" placeholder="Please provide a detailed description of approximately 140 characters." role="textbox">
+  <span class="spark-label">Description</span>
+</label>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/text-input.js" %}
+{% endblock %}

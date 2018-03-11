@@ -1,0 +1,188 @@
+/* sabre-spark - v2.4.4 - 2018-3-6 DO NOT MODIFY THIS FILE DIRECTLY OR YOU WILL NOT BE ABLE TO UPDATE YOUR VERSION OF SPARK. */
+.spark-badge {
+  font-size: 1.33333rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1.5rem;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 2rem;
+  min-width: 3rem;
+  padding: 0.417rem 1rem;
+  position: relative;
+  text-align: center;
+  white-space: nowrap; }
+
+.spark-badge--sm {
+  height: 2rem;
+  line-height: 1rem;
+  min-width: 2rem; }
+
+.spark-badge--info,
+.spark-badge--neutral {
+  border: 1px solid #37414d;
+  background-color: #4a5767; }
+
+.spark-badge--warning {
+  border: 1px solid #b97811;
+  background-color: #cd8511; }
+
+.spark-badge--error,
+.spark-badge--critical {
+  border: 1px solid #5e0000;
+  background-color: #ac0000; }
+
+.spark-badge--success {
+  border: 1px solid #577c10;
+  background-color: #6f991c; }
+
+.spark-badge--notification {
+  font-size: 1.08333rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  border-radius: 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  min-width: 2rem;
+  padding: 0 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: center;
+  top: 0;
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  z-index: 2; }
+  .spark-badge--notification__neutral {
+    background: #4a5767;
+    border: 1px solid #37414d;
+    color: #fff; }
+  .spark-badge--notification__light {
+    background: #fff;
+    border: 1px solid #4a5767;
+    color: #4a5767; }
+  .spark-badge--notification__critical {
+    background: #ac0000;
+    border: 1px solid #780000;
+    color: #fff; }
+  .spark-badge--notification__warning {
+    background: #cd8511;
+    border: 1px solid #b97811;
+    color: #fff; }
+  .spark-badge--notification__success {
+    background: #6f991c;
+    border: 1px solid #577c10;
+    color: #fff; }
+
+.spark-badge .spark-icon,
+.spark-badge [class^='spark-icon-'],
+.spark-badge [class*=' spark-icon-'] {
+  vertical-align: inherit; }
+
+.spark-badge--icon.spark-btn--icon {
+  overflow: visible;
+  position: relative; }
+  .spark-badge--icon.spark-btn--icon .spark-badge--notification {
+    -webkit-font-smoothing: initial; }
+
+.spark-badge.spark-popover__toggle, .spark-badge.spark-tooltip {
+  cursor: pointer; }
+
+.spark-badge.spark-badge--neutral.spark-popover__toggle:hover, .spark-badge.spark-badge--neutral.spark-tooltip:hover {
+  background-color: #37414d; }
+
+.spark-badge.spark-badge--neutral.spark-popover__toggle:active, .spark-badge.spark-badge--neutral.spark-tooltip:active {
+  background-color: #242b33; }
+
+.spark-badge.spark-badge--neutral.spark-popover__toggle:focus, .spark-badge.spark-badge--neutral.spark-tooltip:focus {
+  -webkit-box-shadow: 0 0 0 4px #a3b5cc;
+          box-shadow: 0 0 0 4px #a3b5cc;
+  outline: 0; }
+
+.spark-badge.spark-badge--warning.spark-popover__toggle:hover, .spark-badge.spark-badge--warning.spark-tooltip:hover {
+  background-color: #b2740e; }
+
+.spark-badge.spark-badge--warning.spark-popover__toggle:active, .spark-badge.spark-badge--warning.spark-tooltip:active {
+  background-color: #99630c; }
+
+.spark-badge.spark-badge--warning.spark-popover__toggle:focus, .spark-badge.spark-badge--warning.spark-tooltip:focus {
+  -webkit-box-shadow: 0 0 0 4px #ffc694;
+          box-shadow: 0 0 0 4px #ffc694;
+  outline: 0; }
+
+.spark-badge.spark-badge--critical.spark-popover__toggle:hover, .spark-badge.spark-badge--critical.spark-tooltip:hover {
+  background-color: #910000; }
+
+.spark-badge.spark-badge--critical.spark-popover__toggle:active, .spark-badge.spark-badge--critical.spark-tooltip:active {
+  background-color: #780000; }
+
+.spark-badge.spark-badge--critical.spark-popover__toggle:focus, .spark-badge.spark-badge--critical.spark-tooltip:focus {
+  -webkit-box-shadow: 0 0 0 4px #ffabab;
+          box-shadow: 0 0 0 4px #ffabab;
+  outline: 0; }
+
+.spark-badge.spark-badge--success.spark-popover__toggle:hover, .spark-badge.spark-badge--success.spark-tooltip:hover {
+  background-color: #577c10; }
+
+.spark-badge.spark-badge--success.spark-popover__toggle:active, .spark-badge.spark-badge--success.spark-tooltip:active {
+  background-color: #446600; }
+
+.spark-badge.spark-badge--success.spark-popover__toggle:focus, .spark-badge.spark-badge--success.spark-tooltip:focus {
+  -webkit-box-shadow: 0 0 0 4px #d4e5b1;
+          box-shadow: 0 0 0 4px #d4e5b1;
+  outline: 0; }
+
+.spark-header__nav:not(.spark-header__placeholder) .spark-menu__list-link:not(.spark-menu__list-link--avatar) .spark-badge--notification {
+  right: calc(2rem + 12px);
+  top: calc(2.5rem - 2px); }
+
+.spark-header.spark-header--collapsed:not(.spark-header__placeholder) .spark-menu__list-link:not(.spark-menu__list-link--avatar) .spark-badge--notification {
+  right: 2rem;
+  top: 0;
+  -webkit-transform: translate(0%, 50%);
+      -ms-transform: translate(0%, 50%);
+          transform: translate(0%, 50%); }
+
+.spark-header[data-breakpoint='xs']:not(.spark-header__placeholder) .spark-header__sign-in .spark-menu__list-link--avatar,
+.spark-header.spark-header--condensed:not(.spark-header__placeholder) .spark-header__sign-in .spark-menu__list-link--avatar,
+.spark-header__sign-in .spark-menu__list-link--avatar {
+  overflow: visible; }
+
+@font-face {
+  font-family: "spark-icon-line";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/spark/spark-icon-line.eot?#iefix') format('embedded-opentype'), url('./fonts/spark/spark-icon-line.woff') format('woff'), url('./fonts/spark/spark-icon-line.svg#spark-icon-line') format('svg'), url('./fonts/spark/spark-icon-line.ttf') format('truetype'); }
+
+@font-face {
+  font-family: "spark-icon-fill";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/spark/spark-icon-fill.eot?#iefix') format('embedded-opentype'), url('./fonts/spark/spark-icon-fill.woff') format('woff'), url('./fonts/spark/spark-icon-fill.svg#spark-icon-fill') format('svg'), url('./fonts/spark/spark-icon-fill.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('./fonts/roboto/Roboto_700.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_700.woff') format('woff'), url('./fonts/roboto/Roboto_700.woff2') format('woff2'), url('./fonts/roboto/Roboto_700.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_700.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('./fonts/roboto/Roboto_400.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_400.woff') format('woff'), url('./fonts/roboto/Roboto_400.woff2') format('woff2'), url('./fonts/roboto/Roboto_400.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_400.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url('./fonts/roboto/Roboto_300.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_300.woff') format('woff'), url('./fonts/roboto/Roboto_300.woff2') format('woff2'), url('./fonts/roboto/Roboto_300.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_300.ttf') format('truetype'); }

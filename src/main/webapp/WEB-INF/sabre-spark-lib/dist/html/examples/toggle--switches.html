@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Toggle - Switches</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<label class="spark-toggle-switch">
+  <input class="spark-toggle__input" type="checkbox">
+  <span class="spark-toggle-switch__handle"></span>
+  <span class="spark-toggle-switch__track"></span>
+</label>
+
+<br>
+
+<label class="spark-toggle-switch">
+  <input class="spark-toggle__input" type="checkbox" disabled>
+  <span class="spark-toggle-switch__handle"></span>
+  <span class="spark-toggle-switch__track"></span>
+</label>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+var toggleSwitch = document.querySelectorAll('.spark-toggle-switch');
+for(i = toggleSwitch.length - 1; i >= 0; i--) {
+  new Spark.ToggleSwitch(toggleSwitch[i]);
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

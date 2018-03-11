@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Text Input - Icon</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<label class="spark-input">
+  <input class="spark-input__field" name="example1" placeholder="Enter First Name..." role="textbox">
+  <span class="spark-label">Where are you going? <span class="spark-thin">(Optional)</span></span>
+  <div class="spark-input__addon"><i class="spark-icon-location spark-icon--md"></i></div>
+</label>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+var inputs = document.querySelectorAll('.spark-input');
+for(var i = 0, len = inputs.length; i < len; i++) {
+  new Spark.TextInput(inputs[i]);
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

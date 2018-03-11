@@ -1,0 +1,267 @@
+////
+/// ## Checkbox
+/// @group components/checkbox
+////
+
+
+/// Wrapper around the checkbox input. Generally a label so that
+/// clicking on any part of the container triggers the checkbox.
+.spark-checkbox,
+.spark-radio {
+  color: $checkbox__color;
+  display: flex;
+  touch-callout: none;
+  transition: all 250ms $ease-in-out-quint;
+  user-select: none;
+  position: relative;
+  margin-bottom: 1rem;
+
+  // Hide the actual element from view since we're going to show a replacement box.
+  .spark-checkbox__input,
+  .spark-radio__input {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
+  // When the checkbox is checked, make the checkbox gray with a check mark in it.
+  .spark-checkbox__input:checked ~ .spark-checkbox__box,
+  .spark-radio__input:checked ~ .spark-radio__box {
+    background-color: $checkbox--active__background-color;
+    border: $checkbox--active__border;
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+    }
+  }
+
+  // When the checkbox is checked, make the label darker.
+  .spark-checkbox__input:checked ~ .spark-label,
+  .spark-radio__input:checked ~ .spark-label {
+    color: $checkbox--active__color;
+  }
+
+  /// When the checkbox is checked, highlight special label copy
+  .spark-checkbox__input:checked ~ .spark-label .spark-label__highlight,
+  .spark-radio__input:checked ~ .spark-label .spark-label__highlight {
+    color: $color-state-success;
+  }
+
+  /// When the checkbox is focus, highlight special label copy
+  .spark-checkbox__input:focus ~ .spark-checkbox__box,,
+  .spark-radio__input:focus ~ .spark-radio__box {
+    background-color: $checkbox--hover__background-color;
+    border: $checkbox--hover__border;
+  }
+
+  /// When the checkbox is disabled, make the checkbox gray.
+  .spark-checkbox__input:disabled ~ .spark-checkbox__box,
+  .spark-radio__input:disabled ~ .spark-radio__box {
+    background-color: $checkbox--disabled__background-color;
+    border: $checkbox--disabled__border;
+    cursor: not-allowed;
+  }
+
+  /// When the checkbox is disabled, make the checkmark gray.
+  .spark-checkbox__input:disabled ~ .spark-checkbox__box::before {
+    border-bottom-color: $checkbox--disabled__color;
+    border-left-color: $checkbox--disabled__color;
+  }
+
+  /// When the checkbox is disabled, make the checkmark gray.
+  .spark-radio__input:disabled ~ .spark-radio__box::before {
+    background-color: $checkbox--disabled__color;
+  }
+
+  /// When the radio button is disabled, make the disc gray.
+  .spark-checkbox__input:disabled ~ .spark-checkbox__box::before {
+    border-bottom-color: $checkbox--disabled__color;
+    border-left-color: $checkbox--disabled__color;
+  }
+
+  // When the checkbox is disabled, make the label lighter.
+  .spark-checkbox__input:disabled ~ .spark-label,
+  .spark-radio__input:disabled ~ .spark-label {
+    color: $checkbox--disabled__color;
+    cursor: not-allowed;
+  }
+
+  // Make sure elements sit above the checkbox el
+  .spark-checkbox__box,
+  .spark-radio__box,
+  .spark-label {
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+  }
+
+  /// Label
+  .spark-label {
+    color: $checkbox__label__color;
+    display: inline-block;
+    line-height: 2rem;
+    white-space: normal; // change wrapping only for radio and checkbox labels
+  }
+
+  // Hover state for the checkbox
+  &:hover {
+    color: $checkbox--hover__color;
+
+    .spark-checkbox__box,
+    .spark-radio__box {
+      background-color: $checkbox--hover__background-color;
+      border: $checkbox--hover__border;
+    }
+
+    .spark-label {
+      color: $checkbox__label--hover__color;
+    }
+  }
+
+  /// When a box is followed by a label, space them out.
+  .spark-checkbox__box + .spark-label,
+  .spark-radio__box + .spark-label {
+    margin-left: 1rem;
+    vertical-align: top;
+  }
+}
+
+/// Placeholder box
+.spark-checkbox__box,
+.spark-radio__box {
+  background-color: $checkbox__background-color;
+  border-radius: $input__border-radius;
+  border: $checkbox__border;
+  display: table;
+  height: 2rem;
+  position: relative;
+  transition-duration: 250ms;
+  transition-property: background-color, border, color;
+  transition-timing-function:  $ease-in-out-quint;
+  width: 2rem;
+
+  // The check
+  &::before {
+    border-bottom: .3rem solid $checkbox--active__icon__color;
+    border-left: .3rem solid $checkbox--active__icon__color;
+    content: '';
+    display: inline-block;
+    height: .4rem;
+    left: 50%;
+    margin-left: .025rem;
+    margin-top: -.1rem;
+    position: absolute;
+    top: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+    transition: transform 250ms $ease-in-out-quint;
+    width: .75rem;
+  }
+}
+
+// Right label of check box
+.spark-checkbox__right-label,
+.spark-radio__right-label {
+  color: $checkbox__label__color;
+  margin-left: auto;
+}
+
+
+/// Small checkbox
+.spark-checkbox--sm {
+  .spark-checkbox__box {
+    height: 1rem;
+    top: 0.5rem;
+    width: 1rem;
+
+    &::before {
+      border-bottom: .15rem solid $checkbox--active__icon__color;
+      border-left: .15rem solid $checkbox--active__icon__color;
+      height: .2rem;
+      margin-left: 0;
+      margin-top: -.1rem;
+      width: .375rem;
+    }
+  }
+
+  .spark-label {
+    line-height: 2rem;
+    overflow: visible;
+  }
+}
+
+/// A group of checkboxes
+.spark-checkbox-group,
+.spark-radio-group {
+
+  // When the group has a state, show it below.
+  &[data-info],
+  &[data-error],
+  &[data-warning],
+  &[data-success] {
+    .spark-checkbox-group__message,
+    .spark-radio-group__message {
+      border-radius: $input__border-radius;
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+
+  // When the container has an error state, show it below.
+  &[data-error] {
+    .spark-checkbox__box,
+    .spark-radio__box {
+      border-color: $color-state-danger;
+    }
+
+    .spark-checkbox-group__message,
+    .spark-radio-group__message {
+      background-color: $color-state-danger;
+    }
+  }
+
+  // When the container has an warning state, show it below.
+  &[data-warning] {
+    .spark-checkbox__box,
+    .spark-radio__box {
+      border-color: $color-state-warning;
+    }
+
+    .spark-checkbox-group__message,
+    .spark-radio-group__message {
+      background-color: $color-state-warning;
+    }
+  }
+
+  // When the container has an success state, show it below.
+  &[data-success] {
+    .spark-checkbox__box,
+    .spark-radio__box {
+      border-color: $color-state-success;
+    }
+
+    .spark-checkbox-group__message,
+    .spark-radio-group__message {
+      background-color: $color-state-success;
+    }
+  }
+
+  // When the container has an info state, show it below.
+  &[data-info] {
+    .spark-checkbox__box,
+    .spark-radio__box {
+      border-color: $color-state-info;
+    }
+
+    .spark-checkbox-group__message,
+    .spark-radio-group__message {
+      background-color: $color-state-info;
+    }
+  }
+}
+
+/// The checkbox group message is the same as the input message
+.spark-checkbox-group__message,
+.spark-radio-group__message {
+  @extend %input-message;
+}

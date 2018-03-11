@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cayman.min.css">
+    <link rel="stylesheet" href="../css/prism.min.css">
+    <link rel="stylesheet" href="../css/index.min.css">
+    <link rel="stylesheet" href="../css/docs.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../index.html">Main</a></li>
+            <li><a href="../components/base.js.html">components/base.js</a></li>
+            <li><a href="../components/calendar-popover.js.html">components/calendar-popover.js</a></li>
+            <li><a href="../components/carousel.js.html">components/carousel.js</a></li>
+            <li><a href="../components/date-input.js.html">components/date-input.js</a></li>
+            <li><a href="../components/date-select.js.html">components/date-select.js</a></li>
+            <li><a href="../components/date-typeahead.js.html">components/date-typeahead.js</a></li>
+            <li><a href="../components/expand.js.html">components/expand.js</a></li>
+            <li><a href="../components/filter-module.js.html">components/filter-module.js</a></li>
+            <li class="active"><a href="../components/filter.js.html">components/filter.js</a></li>
+            <li><a href="../components/header.js.html">components/header.js</a></li>
+            <li><a href="../components/menu.js.html">components/menu.js</a></li>
+            <li><a href="../components/modal.js.html">components/modal.js</a></li>
+            <li><a href="../components/multi-select-input.js.html">components/multi-select-input.js</a></li>
+            <li><a href="../components/number-selector.js.html">components/number-selector.js</a></li>
+            <li><a href="../components/popover.js.html">components/popover.js</a></li>
+            <li><a href="../components/progress-indicator.js.html">components/progress-indicator.js</a></li>
+            <li><a href="../components/range-slider.js.html">components/range-slider.js</a></li>
+            <li><a href="../components/scroll-to-top.js.html">components/scroll-to-top.js</a></li>
+            <li><a href="../components/select-input.js.html">components/select-input.js</a></li>
+            <li><a href="../components/slider.js.html">components/slider.js</a></li>
+            <li><a href="../components/step-indicator.js.html">components/step-indicator.js</a></li>
+            <li><a href="../components/table.js.html">components/table.js</a></li>
+            <li><a href="../components/tabs.js.html">components/tabs.js</a></li>
+            <li><a href="../components/text-input.js.html">components/text-input.js</a></li>
+            <li><a href="../components/toggle-switch.js.html">components/toggle-switch.js</a></li>
+            <li><a href="../components/toolbar.js.html">components/toolbar.js</a></li>
+            <li><a href="../components/tooltip.js.html">components/tooltip.js</a></li>
+            <li><a href="../components/typeahead.js.html">components/typeahead.js</a></li>
+            <li><a href="../helpers/animation/cancel.js.html">helpers/animation/cancel.js</a></li>
+            <li><a href="../helpers/animation/height.js.html">helpers/animation/height.js</a></li>
+            <li><a href="../helpers/animation/request.js.html">helpers/animation/request.js</a></li>
+            <li><a href="../helpers/animation/scroll-to.js.html">helpers/animation/scroll-to.js</a></li>
+            <li><a href="../helpers/animation/tween.js.html">helpers/animation/tween.js</a></li>
+            <li><a href="../helpers/css/transform.js.html">helpers/css/transform.js</a></li>
+            <li><a href="../helpers/date/date.js.html">helpers/date/date.js</a></li>
+            <li><a href="../helpers/date/parse-format.js.html">helpers/date/parse-format.js</a></li>
+            <li><a href="../helpers/dom/add-class.js.html">helpers/dom/add-class.js</a></li>
+            <li><a href="../helpers/dom/breakpoint.js.html">helpers/dom/breakpoint.js</a></li>
+            <li><a href="../helpers/dom/has-class.js.html">helpers/dom/has-class.js</a></li>
+            <li><a href="../helpers/dom/make-element.js.html">helpers/dom/make-element.js</a></li>
+            <li><a href="../helpers/dom/offset.js.html">helpers/dom/offset.js</a></li>
+            <li><a href="../helpers/dom/outer-height.js.html">helpers/dom/outer-height.js</a></li>
+            <li><a href="../helpers/dom/outer-width.js.html">helpers/dom/outer-width.js</a></li>
+            <li><a href="../helpers/dom/parse-attribute.js.html">helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../helpers/dom/remove-class.js.html">helpers/dom/remove-class.js</a></li>
+            <li><a href="../helpers/dom/toggle-class.js.html">helpers/dom/toggle-class.js</a></li>
+            <li><a href="../helpers/dom/trigger-event.js.html">helpers/dom/trigger-event.js</a></li>
+            <li><a href="../helpers/form/build-select.js.html">helpers/form/build-select.js</a></li>
+            <li><a href="../helpers/form/form-data.js.html">helpers/form/form-data.js</a></li>
+            <li><a href="../helpers/form/set-caret.js.html">helpers/form/set-caret.js</a></li>
+            <li><a href="../helpers/manipulation/append-children.js.html">helpers/manipulation/append-children.js</a></li>
+            <li><a href="../helpers/manipulation/copy-attributes.js.html">helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../helpers/manipulation/insert-before.js.html">helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../helpers/manipulation/wrap-element.js.html">helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../helpers/position/affix.js.html">helpers/position/affix.js</a></li>
+            <li><a href="../helpers/position/box-position.js.html">helpers/position/box-position.js</a></li>
+            <li><a href="../helpers/traversal/get-child.js.html">helpers/traversal/get-child.js</a></li>
+            <li><a href="../helpers/traversal/get-children.js.html">helpers/traversal/get-children.js</a></li>
+            <li><a href="../helpers/traversal/get-index.js.html">helpers/traversal/get-index.js</a></li>
+            <li><a href="../helpers/traversal/get-parent.js.html">helpers/traversal/get-parent.js</a></li>
+            <li><a href="../helpers/traversal/get-parents.js.html">helpers/traversal/get-parents.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-after.js.html">helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-before.js.html">helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../helpers/traversal/has-parent.js.html">helpers/traversal/has-parent.js</a></li>
+            <li><a href="../helpers/traversal/matches.js.html">helpers/traversal/matches.js</a></li>
+            <li><a href="../helpers/util/debounce.js.html">helpers/util/debounce.js</a></li>
+            <li><a href="../helpers/util/each.js.html">helpers/util/each.js</a></li>
+            <li><a href="../helpers/util/mixin.js.html">helpers/util/mixin.js</a></li>
+            <li><a href="../helpers/util/pad.js.html">helpers/util/pad.js</a></li>
+            <li><a href="../helpers/util/range.js.html">helpers/util/range.js</a></li>
+            <li><a href="../helpers/util/round.js.html">helpers/util/round.js</a></li>
+            <li><a href="../helpers/util/trim.js.html">helpers/util/trim.js</a></li>
+            <li><a href="../mixins/messaging.js.html">mixins/messaging.js</a></li>
+            <li><a href="../mixins/validation.js.html">mixins/validation.js</a></li>
+            <li><a href="../spark.jquery.js.html">spark.jquery.js</a></li>
+            <li><a href="../spark.js.html">spark.js</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>Filter</h1>
+<p>A container for a set of form fields used to filter a data set or search results</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>module</td>
+                <td></td>
+                <td>components/filter.js</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">import BaseComponent from './base';
+import addClass from '../helpers/dom/add-class';
+import hasClass from '../helpers/dom/has-class';
+import toggleClass from '../helpers/dom/toggle-class';
+import removeClass from '../helpers/dom/remove-class';
+import FilterModule from './filter-module';
+import animateHeight from '../helpers/animation/height';
+import {get as getBreakpoint} from '../helpers/dom/breakpoint';
+
+const noop = function() {};
+
+class Filter extends BaseComponent {</code></pre>
+          <h5>Example</h5>
+          <pre><code class="language-javascript">new Filter(el);</code></pre>
+          <section id="constructor">
+            <h1>constructor</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">constructor</div><span>&nbsp;</span><span>constructor()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Filter constructor.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">constructor(el, params = {}) {
+  params.elRequired = true;
+
+  if (!super(el, params)) {
+    return;
+  }
+
+  this._bindEventListenerCallbacks();
+  this._addEventListeners();
+  this._initFilterDisplay();
+}</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Store a reference to the needed elements</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_cacheElements(el) {
+  this.el = el;
+  this.moduleEls = this.el.querySelectorAll('.spark-filter-module');
+
+  // These options are here so that the modules can communicate with the filter to do certain tasks
+  var defaultOption = {
+    onAfterExpand: this._onAfterExpand.bind(this),
+    onAfterCollapse: this._onAfterCollapse.bind(this),
+    //onShowAllComplete: this._onShowAllComplete.bind(this),
+  };
+
+  if (this.moduleEls.length &gt; 0) {
+    for(var i = 0; i &lt; this.moduleEls.length; i ++) {
+      if(typeof this.moduleOptions[i] !== 'undefined') {
+        for(var key in defaultOption) {
+          this.moduleOptions[i][key] = defaultOption[key];
+        }
+        this.moduleInsts[i] = new FilterModule(this.moduleEls[i], this.moduleOptions[i]);
+      }
+      else {
+        this.moduleInsts[i] = new FilterModule(this.moduleEls[i], defaultOption);
+      }
+    }
+  }
+
+  this._filterToggleContainer = this.el.querySelector('.spark-filter__toggle-container');
+  this._toggleFilterButton = this.el.querySelector('.spark-filter__toggle-button');
+  this._toggleFilterLabel = this.el.querySelector('.spark-filter__toggle-button span');
+  this._tagsContainer = this.el.querySelector('.spark-filter__tags-container');
+  this._tagsCounter = this.el.querySelector('.spark-filter__applied-filters-counter');
+  this._clearAllButton = this.el.querySelector('.spark-filter__clear-all');
+  this._filterContent = this.el.querySelector('.spark-filter__content');
+  this._modulesContainer = this.el.querySelector('.spark-filter__modules-container');
+  this._viewMoreButton = this.el.querySelector('.spark-filter__view-more-filters');
+  this._viewLessButton = this.el.querySelector('.spark-filter__view-less-filters');
+  this._filterFooter = this.el.querySelector('.spark-filter__footer');
+  this._buttonGroupEl = this.el.querySelector('.spark-filter__apply-btn-container');
+  this._applyFiltersButton = this.el.querySelector('.spark-filter__btn-apply');
+}</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because the<br />function signatures won&#39;t match.</p></div>
+          <pre><code class="language-javascript">_bindEventListenerCallbacks() {
+  this._onResizeBound = this._onResize.bind(this);
+  this._toggleViewBound = this._toggleView.bind(this);
+  this._toggleFilterClickBound = this.toggleFilterClick.bind(this);
+  this._onClearAllBound = this._onClearAll.bind(this);
+  this._onScrollBound = this._onScroll.bind(this);
+}</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners</p></div>
+          <pre><code class="language-javascript">_addEventListeners() {
+  window.addEventListener('resize', this._onResizeBound);
+  window.addEventListener('scroll', this._onScrollBound);
+  !this._viewMoreButton || this._viewMoreButton.addEventListener('click', this._toggleViewBound);
+  !this._viewLessButton || this._viewLessButton.addEventListener('click', this._toggleViewBound);
+  !this._toggleFilterButton || this._toggleFilterButton.addEventListener('click', this._toggleFilterClickBound);
+  !this._clearAllButton || this._clearAllButton.addEventListener('click', this._onClearAllBound);
+}</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners</p></div>
+          <pre><code class="language-javascript">_removeEventListeners() {
+  window.removeEventListener('resize', this._onResizeBound);
+  window.removeEventListener('scroll', this._onScrollBound);
+  !this._viewMoreButton || this._viewMoreButton.removeEventListener('click', this._toggleViewBound);
+  !this._viewLessButton || this._viewLessButton.removeEventListener('click', this._toggleViewBound);
+  !this._toggleFilterButton || this._toggleFilterButton.removeEventListener('click', this._toggleFilterClickBound);
+  !this._clearAllButton || this._clearAllButton.removeEventListener('click', this._onClearAllBound);
+}</code></pre>
+          <section id="_initFilterDisplay">
+            <h1>_initFilterDisplay</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initFilterDisplay()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Initialize filter</p></div>
+          <pre><code class="language-javascript">_initFilterDisplay() {
+  this.initializingFilter = true;
+
+  if (this.moduleEls.length &gt; 0) {
+    this.extraModulesExpanded = false;
+  }
+
+  addClass(this.el, 'spark-filter--initializing');
+
+  this._determineFilterLayout();
+}</code></pre>
+          <section id="_determineFilterLayout">
+            <h1>_determineFilterLayout</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_determineFilterLayout()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Determine which filter layout should be displayed i.e. Expand/Collapse view or Wide view</p></div>
+          <pre><code class="language-javascript">_determineFilterLayout() {
+  this.currentBreakpoint = getBreakpoint(window.innerWidth);
+
+  switch (this.currentBreakpoint) {
+    case 'xs':
+      this._curCol = 1;
+      break;
+    case 'sm':
+      this._curCol = 2;
+      break;
+    case 'md':
+      this._curCol = 3;
+      break;
+    default:
+      this._curCol = 4;
+      break;
+  }
+
+  if (this._curCol &lt;= 1) {
+    // Display expand-collapse filter
+    if(!this._isDropdownState) {
+      this._applyExpandCollapseLayout();
+      this._showModule();
+    }
+  }
+  else {
+    // Display wide-screen filter
+    if(this._expandCollapseState) {
+      this._removeExpandCollapseLayout();
+    }
+
+    if ( hasClass(this._buttonGroupEl, 'is-fixed') ) {
+      clearTimeout(this._timeout);
+      this._filterFooter.removeAttribute('style');
+      this._buttonGroupEl.removeAttribute('style');
+      removeClass(this._buttonGroupEl, 'is-fixed');
+    }
+
+    this._showModule();
+
+    if (!this.extraModulesExpanded) {
+      this._hideModule(this._curCol, this._maxCol - 1);
+    }
+  }
+
+  // Determine whether to show or hide View More/Less buttons
+  if (!this._isDropdownState) {
+    let hiddenModules = document.querySelectorAll('.spark-filter-module.hide');
+
+    if (!this.extraModulesExpanded &amp;&amp; hiddenModules.length === 0) {
+      addClass(this._viewMoreButton, 'hide');
+    }
+    else if (!this.extraModulesExpanded &amp;&amp; hiddenModules.length &gt; 0) {
+      removeClass(this._viewMoreButton, 'hide');
+    }
+  }
+}</code></pre>
+          <section id="_updateFilterLayout">
+            <h1>_updateFilterLayout</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_updateFilterLayout()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update the filter layout as necessary</p></div>
+          <pre><code class="language-javascript">_updateFilterLayout() {
+  this._determineFilterLayout();
+}</code></pre>
+          <section id="_toggleView">
+            <h1>_toggleView</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_toggleView()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Expand or collapse extra filters</p></div>
+          <pre><code class="language-javascript">_toggleView() {
+  if (this._isFilterExpanded &amp;&amp; !this.extraModulesExpanded) {
+    this._showModule();
+    this._dispatchVisibilityEvent();
+  }
+  else if (this._isFilterExpanded &amp;&amp; this.extraModulesExpanded) {
+    this._hideModule(this._curCol, this._maxCol - 1);
+  }
+
+  this.extraModulesExpanded = !this.extraModulesExpanded;
+  toggleClass(this._viewMoreButton, 'hide');
+  toggleClass(this._viewLessButton, 'hide');
+}</code></pre>
+          <section id="toggleFilterClick">
+            <h1>toggleFilterClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>toggleFilterClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Handle click event when filter toggles are clicked</p></div>
+          <pre><code class="language-javascript">toggleFilterClick(){
+  if (this.initializingFilter) {
+    this.initializingFilter = false;
+  }
+
+  this.toggleFilter();
+}</code></pre>
+          <section id="toggleFilter">
+            <h1>toggleFilter</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>toggleFilter()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>To hide or show filter module</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">toggleFilter(option, noStateChange) {
+  if (hasClass(this.el, 'spark-filter--initializing') &amp;&amp; !this.initializingFilter) {
+    removeClass(this.el, 'spark-filter--initializing');
+    addClass(this.el, 'spark-filter--initialized');
+  }
+
+  if (option === 'expand') {
+    if (!this.initializingFilter) {
+      removeClass(this._filterContent, 'hide');
+
+      animateHeight({
+        el: this.el,
+        toggleEl: '.spark-filter__content',
+        toggleClass: 'filter-expanded',
+        action: 'expand'
+      });
+
+      this._toggleFilterLabel.innerHTML = 'Hide';
+    }
+    else {
+      removeClass(this._filterContent, 'hide');
+    }
+
+    if (!noStateChange) {
+      this._isFilterExpanded = true;
+    }
+  }
+  else if(option === 'collapse'){
+    if (!this.initializingFilter) {
+      addClass(this._filterContent, 'hide');
+
+      animateHeight({
+        el: this.el,
+        toggleEl: '.spark-filter__content',
+        toggleClass: 'filter-expanded',
+        action: 'collapse'
+      });
+
+      this._toggleFilterLabel.innerHTML = 'Show';
+    }
+    else {
+      addClass(this._filterContent, 'hide');
+    }
+
+    if (!noStateChange) {
+      this._isFilterExpanded = false;
+    }
+  }
+  else {
+    toggleClass(this._filterContent, 'hide');
+
+    if (hasClass(this.el, 'filter-expanded')) {
+      animateHeight({
+        el: this.el,
+        toggleEl: '.spark-filter__content',
+        toggleClass: 'filter-expanded',
+        action: 'collapse',
+      });
+
+      this._toggleFilterLabel.innerHTML = 'Show';
+    }
+    else {
+      animateHeight({
+        el: this.el,
+        toggleEl: '.spark-filter__content',
+        toggleClass: 'filter-expanded',
+        action: 'expand',
+      });
+
+      this._toggleFilterLabel.innerHTML = 'Hide';
+    }
+
+    if (!noStateChange) {
+      this._isFilterExpanded = !this._isFilterExpanded;
+
+      if ( hasClass(this.el, 'spark-filter--dropdown') &amp;&amp; ( !(hasClass(this._filterContent, 'hide')) ) ) {
+        this._calculateApplyBtnPosition();
+      }
+    }
+  }
+
+  if ( !(hasClass(this.el, 'spark-filter--dropdown')) &amp;&amp; hasClass(this._buttonGroupEl, 'is-fixed') ){
+    clearTimeout(this._timeout);
+    this._filterFooter.removeAttribute('style');
+    this._buttonGroupEl.removeAttribute('style');
+    removeClass(this._buttonGroupEl, 'is-fixed');
+  }
+
+  this._dispatchVisibilityEvent();
+}</code></pre>
+          <section id="_onResize">
+            <h1>_onResize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onResize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>On-resize handler that updates layout as needed based on screen dimensions</p></div>
+          <pre><code class="language-javascript">_onResize() {
+  this._updateFilterLayout();
+}</code></pre>
+          <section id="_onScroll">
+            <h1>_onScroll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onScroll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>On-scroll handler that determines Apply button positioning at the xs breakpoint</p></div>
+          <pre><code class="language-javascript">_onScroll() {
+  if(this._isDropdownState) {
+    this._timeout = setTimeout(this._calculateApplyBtnPosition.bind(this), 300);
+  }
+}</code></pre>
+          <section id="_onAfterExpand">
+            <h1>_onAfterExpand</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onAfterExpand()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Callback triggered after the expansion of a module at the xs breakpoint</p></div>
+          <pre><code class="language-javascript">_onAfterExpand() {
+  if ( !(hasClass(this._buttonGroupEl, 'is-fixed')) ) {
+    this._timeout = setTimeout(this._calculateApplyBtnPosition.bind(this), 300);
+  }
+}</code></pre>
+          <section id="_onAfterCollapse">
+            <h1>_onAfterCollapse</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onAfterCollapse()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Callback triggered after the collapse of a module at the xs breakpoint</p></div>
+          <pre><code class="language-javascript">_onAfterCollapse() {
+  this._timeout = setTimeout(this._calculateApplyBtnPosition.bind(this), 300);
+}</code></pre>
+          <div class="description"><p>Callback triggered after Show all is complete at the xs breakpoint</p></div>
+          <div class="description"><p>TODO: This is not required anymore as show all is not available at the xs breakpoint anymore<br />  _onShowAllComplete() {<br />    if(this._isDropdownState) {<br />      this._timeout = setTimeout(this._calculateApplyBtnPosition.bind(this), 300);<br />    }<br />  }</p></div>
+          <section id="_dispatchVisibilityEvent">
+            <h1>_dispatchVisibilityEvent</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_dispatchVisibilityEvent()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Dispatch a custom event so content inside the Filter can respond</p></div>
+          <pre><code class="language-javascript">_dispatchVisibilityEvent() {
+  var e = document.createEvent('Event');
+  e.initEvent('spark.visible-children', true, true);
+  this.el.dispatchEvent(e);
+}</code></pre>
+          <section id="_calculateApplyBtnPosition">
+            <h1>_calculateApplyBtnPosition</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_calculateApplyBtnPosition()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Calculate the position of the Apply button at the xs breakpoint</p></div>
+          <pre><code class="language-javascript">_calculateApplyBtnPosition() {
+
+  let filterOffsets = this.el.getBoundingClientRect();
+
+  if ( filterOffsets.height &gt; 255 ) { // 3 collapsed module heights + filter header height = 255
+    let windowHeight = window.innerHeight;
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    let filterHiddenBefore = scrollTop - (filterOffsets.top + document.body.scrollTop);
+    let filterHiddenAfter = (filterOffsets.top + document.body.scrollTop + filterOffsets.height) - (scrollTop + windowHeight);
+
+    if (!((scrollTop &gt; (filterOffsets.top + document.body.scrollTop) + filterOffsets.height) || ((filterOffsets.top + document.body.scrollTop) &gt; scrollTop + window.innerHeight))) {
+      var percentInView = 100;
+      var inViewport;
+      var hiddenBefore = 0;
+      var hiddenAfter = 0;
+
+      if (filterHiddenBefore &gt; 0) {
+          percentInView -= (filterHiddenBefore * 100) / filterOffsets.height;
+          hiddenBefore = filterHiddenBefore;
+      }
+
+      if (filterHiddenAfter &gt; 0) {
+          percentInView -= (filterHiddenAfter * 100) / filterOffsets.height;
+          hiddenAfter = filterHiddenAfter;
+      }
+
+      inViewport = ((filterOffsets.height - (hiddenAfter + hiddenBefore)) / windowHeight)*100;
+    }
+
+    if (( filterOffsets.bottom &gt; (window.innerHeight || document.documentElement.clientHeight) ) &amp;&amp; (percentInView &gt; 45 || inViewport &gt; 50)) {
+      let buttonGroupHeight = this._buttonGroupEl.offsetHeight;
+      let filterWidth = filterOffsets.width;
+
+      this._filterFooter.style.height = buttonGroupHeight + 'px';
+      addClass(this._buttonGroupEl, 'is-fixed');
+      this._buttonGroupEl.style.width = (filterWidth - 2) + 'px'; // accounting for border width
+      this._buttonGroupEl.style.left = (filterOffsets.left + 1) + 'px'; // accounting for left border
+
+      this._applyBtnPositionFixed();
+    }
+    else {
+      this._applyBtnPositionRelative();
+    }
+  }
+}</code></pre>
+          <section id="_applyBtnPositionRelative">
+            <h1>_applyBtnPositionRelative</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_applyBtnPositionRelative()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set position:relative for the Apply button</p></div>
+          <pre><code class="language-javascript">_applyBtnPositionRelative() {
+
+  //function attachApplyBtn(){
+  let currentButtonPosition = parseInt( getComputedStyle(this._buttonGroupEl).bottom );
+  let listBottom = this._modulesContainer.getBoundingClientRect().bottom;
+  let viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  let buttonGroupHeight = this._buttonGroupEl.getBoundingClientRect().height;
+  let distanceToMove = viewportHeight - (listBottom + buttonGroupHeight);
+
+  if ( !(isNaN(currentButtonPosition)) ) {
+    var animationListener = function(){
+      this._filterFooter.removeAttribute('style');
+      this._buttonGroupEl.removeAttribute('style');
+      removeClass(this._buttonGroupEl, 'is-fixed');
+      removeClass(this._buttonGroupEl, 'spark-filter__apply-btn-container--animate');
+      this._buttonGroupEl.removeEventListener('animationend', animationListener);
+    };
+
+    this._buttonGroupEl.addEventListener('animationend', animationListener.bind(this), false);
+
+    let keyframe = '-webkit-transform: translateY(-' + distanceToMove + 'px); transform: translateY(-' + distanceToMove + 'px);';
+
+    this._buttonGroupEl.setAttribute('style', this._buttonGroupEl.getAttribute('style') + ' ' + keyframe);
+    addClass(this._buttonGroupEl, 'spark-filter__apply-btn-container--animate');
+  }
+}</code></pre>
+          <section id="_applyBtnPositionFixed">
+            <h1>_applyBtnPositionFixed</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_applyBtnPositionFixed()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set position:fixed for the Apply button</p></div>
+          <pre><code class="language-javascript">_applyBtnPositionFixed() {
+  var requestID = requestAnimationFrame( moveApplyBtn.bind(this) );
+  var incrementer = .1;
+
+  function moveApplyBtn() {
+    incrementer += .01;
+    var currentButtonPosition = parseInt( getComputedStyle(this._buttonGroupEl).bottom );
+    var buttonHeight = parseInt( getComputedStyle(this._buttonGroupEl).height );
+
+    if (currentButtonPosition &lt; (buttonHeight * -1)) {
+      currentButtonPosition = (buttonHeight * -1);
+    }
+
+    if ( currentButtonPosition &gt; -1 ) {
+      this._buttonGroupEl.style.bottom = '0px';
+      cancelAnimationFrame(requestID);
+    }
+    else if (currentButtonPosition &lt; 0) {
+      currentButtonPosition += (1 / incrementer);
+      this._buttonGroupEl.style.bottom = currentButtonPosition + 'px';
+      requestAnimationFrame( moveApplyBtn.bind(this) );
+    }
+  }
+}</code></pre>
+          <section id="_onClearAll">
+            <h1>_onClearAll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onClearAll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Callback for Clear all</p></div>
+          <pre><code class="language-javascript">_onClearAll() {
+  (this.onClearAll || noop)();
+}</code></pre>
+          <section id="_showModule">
+            <h1>_showModule</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_showModule()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Show all modules</p></div>
+          <pre><code class="language-javascript">_showModule() {
+  for(var i = 0; i &lt; this.moduleEls.length; i++) {
+    removeClass(this.moduleEls[i], 'hide');
+  }
+}</code></pre>
+          <section id="_hideModule">
+            <h1>_hideModule</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_hideModule()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Hide certain modules</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>start</td>
+                <td>Number</td>
+                <td><p>index</p></td>
+              </tr>
+              <tr>
+                <td>end</td>
+                <td>Number</td>
+                <td><p>index</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_hideModule(start, end) {
+  end = end || this.moduleEls.length - 1;
+  for(var i = start; i &lt;= end; i++) {
+    addClass(this.moduleEls[i], 'hide');
+  }
+}</code></pre>
+          <section id="_applyExpandCollapseLayout">
+            <h1>_applyExpandCollapseLayout</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_applyExpandCollapseLayout()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Apply Expand/Collapse layout for the filter<br />Used when the filter gets to the xs breakpoint</p></div>
+          <pre><code class="language-javascript">_applyExpandCollapseLayout() {
+  addClass(this.el,'spark-filter--dropdown');
+  this._expandCollapseState = true;
+
+  let tags = this._tagsContainer.querySelectorAll('.spark-filter__tag');
+  if (tags.length &gt; 0) {
+    for(var i = 0; i &lt; tags.length; i++) {
+      addClass(tags[i], 'hide');
+    }
+    removeClass(this._tagsCounter, 'hide');
+  }
+
+  addClass(this._viewMoreButton, 'hide');
+  addClass(this._viewLessButton, 'hide');
+
+  if (this._applyFiltersButton) {
+    removeClass(this._applyFiltersButton, 'spark-btn--sm');
+    addClass(this._applyFiltersButton, 'spark-btn--block');
+  }
+
+  for(var j = 0; j &lt; this.moduleInsts.length; j++) {
+    this.moduleInsts[j]._applyExpand();
+  }
+
+  this._isDropdownState = true;
+  this._timeout = setTimeout(this._calculateApplyBtnPosition.bind(this), 300);
+}</code></pre>
+          <section id="_removeExpandCollapseLayout">
+            <h1>_removeExpandCollapseLayout</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeExpandCollapseLayout()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove Expand/Collapse layout and apply the horizontal layout for the filter<br />Used when the screen size is larger than the xs breakpoint</p></div>
+          <pre><code class="language-javascript">_removeExpandCollapseLayout() {
+
+  removeClass(this.el,'spark-filter--dropdown');
+  this._expandCollapseState = false;
+  this._filterFooter.removeAttribute('style');
+  this._buttonGroupEl.removeAttribute('style');
+  removeClass(this._buttonGroupEl, 'is-fixed');
+
+  let tags = this._tagsContainer.querySelectorAll('.spark-filter__tag');
+  if (tags.length &gt; 0) {
+    for(var i = 0; i &lt; tags.length; i++) {
+      removeClass(tags[i], 'hide');
+    }
+    addClass(this._tagsCounter, 'hide');
+  }
+
+  if (this.extraModulesExpanded) {
+    removeClass(this._viewLessButton, 'hide');
+  }
+  else {
+    removeClass(this._viewMoreButton, 'hide');
+  }
+
+  if(this._applyFiltersButton) {
+    addClass(this._applyFiltersButton, 'spark-btn--sm');
+    removeClass(this._applyFiltersButton, 'spark-btn--block');
+  }
+
+  for(var j = 0; j &lt; this.moduleInsts.length; j++) {
+    this.moduleInsts[j]._disapplyExpand();
+  }
+  this._isDropdownState = false;
+}</code></pre>
+          <section id="createTagEl">
+            <h1>createTagEl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>createTagEl()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Generate a tag element in filter, which will be directly posted inside <code>.spark-filter__tags-container</code></p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>string</td>
+                <td><p>name - Name of the input to allow any callbacks to target input specifically</p></td>
+              </tr>
+              <tr>
+                <td>tag</td>
+                <td>string</td>
+                <td><p>label - The label to be displayed in the tag. This could be the input&#39;s label or another user defined label</p></td>
+              </tr>
+              <tr>
+                <td>callback</td>
+                <td>function</td>
+                <td><p>function for <code>X</code> button</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">createTagEl(input, label, clearCallback) {
+  var tagEl = document.createElement('div');
+  tagEl.className = hasClass(this.el,'spark-filter--dropdown') ? 'spark-filter__tag hide' : 'spark-filter__tag';
+  tagEl.setAttribute('data-filter-name', input);
+  tagEl.innerHTML = '&lt;span class=&quot;spark-filter__tag__label&quot;&gt;'+ label +
+                    '&lt;/span&gt;&lt;i class=&quot;spark-icon spark-filter__tag__close&quot;&gt;&lt;/i&gt;';
+
+  this._tagsContainer.insertBefore(tagEl, this._clearAllButton);
+
+  // create event listener after adding element to DOM
+  tagEl.querySelector('.spark-filter__tag__close').addEventListener('click', (clearCallback || noop));
+
+  removeClass(this._clearAllButton, 'hide');
+
+  // Show tag count if on small screen and this is initial application of filters
+  if ( hasClass(this.el,'spark-filter--dropdown') ) removeClass(this._tagsCounter, 'hide');
+}</code></pre>
+          <section id="clearAllTagEls">
+            <h1>clearAllTagEls</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>clearAllTagEls()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove all tags</p></div>
+          <pre><code class="language-javascript">clearAllTagEls() {
+  var tags = this._tagsContainer.querySelectorAll('.spark-filter__tag');
+  for(var i=0; i &lt; tags.length; i ++) {
+    this._tagsContainer.removeChild(tags[i]);
+  }
+
+  // Reset counter
+  var counter = this._tagsContainer.querySelector('span');
+  counter.innerHTML = '0';
+
+  addClass(this._clearAllButton, 'hide');
+  addClass(this._tagsCounter, 'hide');
+}</code></pre>
+          <section id="showModuleClearButton">
+            <h1>showModuleClearButton</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>showModuleClearButton()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Show Module Clear Button</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>moduleName</td>
+                <td>Element</td>
+                <td><p>An identifier for the module being targeted</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">showModuleClearButton(moduleName) {
+  for(var i = 0; i &lt; this.moduleInsts.length; i++) {
+    if (this.moduleInsts[i].el.getAttribute('data-filter-module') === moduleName) {
+      this.moduleInsts[i].enableClearBtn();
+    }
+  }
+}</code></pre>
+          <section id="disableModuleClearButton">
+            <h1>disableModuleClearButton</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>disableModuleClearButton()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Disable Module Clear Button</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>moduleName</td>
+                <td>Element</td>
+                <td><p>An identifier for the module being targeted</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">disableModuleClearButton(moduleName) {
+  for(var i = 0; i &lt; this.moduleInsts.length; i++) {
+    if (this.moduleInsts[i].el.getAttribute('data-filter-module') === moduleName) {
+      this.moduleInsts[i].disableClearBtn();
+    }
+  }
+}</code></pre>
+          <section id="hideModuleClearButton">
+            <h1>hideModuleClearButton</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>hideModuleClearButton()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Hide Module Clear Button</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>moduleName</td>
+                <td>Element</td>
+                <td><p>An identifier for the module being targeted</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">hideModuleClearButton(moduleName) {
+  for(var i = 0; i &lt; this.moduleInsts.length; i++) {
+    if (this.moduleInsts[i].el.getAttribute('data-filter-module') === moduleName) {
+      this.moduleInsts[i].hideClearBtn();
+    }
+  }
+}</code></pre>
+          <section id="moduleClearButtonStatus">
+            <h1>moduleClearButtonStatus</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>moduleClearButtonStatus()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get Module Clear button status</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>moduleName</td>
+                <td>Element</td>
+                <td><p>An identifier for the module being targeted</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">moduleClearButtonStatus(moduleName) {
+  for(var i = 0; i &lt; this.moduleInsts.length; i++) {
+    if (this.moduleInsts[i].el.getAttribute('data-filter-module') === moduleName) {
+      return this.moduleInsts[i].getClearButtonStatus();
+    }
+  }
+}
+}</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Filter.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">Filter.prototype._whitelistedParams = ['onClearAll', 'moduleOptions'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Filter.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">Filter.prototype.defaults = {
+  el: null,
+  moduleEls: [],
+  _filterToggleContainer: null,
+  _toggleFilterButton: null,
+  _toggleFilterLabel: null,
+  _tagsContainer: null,
+  _tagsCounter: null,
+  _clearAllButton: null,
+  _filterContent: null,
+  _modulesContainer: null,
+  _viewMoreButton: null,
+  _viewLessButton: null,
+  _filterFooter: null,
+  _buttonGroupEl: null,
+  _applyFiltersButton: null,
+  moduleInsts: [],
+  moduleOptions: [],
+  maxCol: 4,
+  onClearAll: noop,
+  extraModulesExpanded: false,
+  _isFilterExpanded: false,
+  _isDropdownState: false,
+  _isModuleExpand: true,
+  _curCol: 4,
+  _onResizeBound: null,
+  _toggleViewBound: null,
+  _toggleFilterClickBound: null,
+  _onClearAllBound: null,
+  _onScrollBound: null,
+};
+
+export default Filter;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with<a href="https://github.com/mr-doc/mr-doc">Mr. Doc</a> created by<a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau</a></p>
+        <p>Mr. Doc is sponsored by<a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr</a> and<a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../js/twitter-widget.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap-transition.min.js"></script>
+    <script src="../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../js/bootstrap-dropdown.min.js"></script>
+    <script src="../js/bootstrap-collapse.min.js"></script>
+    <script src="../js/bootstrap-affix.min.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script src="../js/index.min.js"></script>
+  </body>
+</html>

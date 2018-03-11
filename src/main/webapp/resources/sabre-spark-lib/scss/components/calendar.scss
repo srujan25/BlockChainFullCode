@@ -1,0 +1,461 @@
+////
+/// ## Calendar
+/// A calendar popup.
+/// @group components/calendar
+////
+
+
+/// Calendar date selection.
+.spark-calendar {
+  background-color: $calendar__background-color;
+  color: $calendar__color;
+  display: inline-block;
+  max-width: 100%;
+  padding: 0;
+  transition-duration: 300ms, 300ms, 0ms, 100ms, 100ms;
+
+  &[data-visible-count="2"] .spark-calendar__content {
+    max-width: 62rem;
+
+    .spark-calendar__month {
+      max-width: calc(50% + 1rem);
+    }
+  }
+
+  &[data-visible-count="3"] .spark-calendar__content {
+    max-width: 92rem;
+
+    .spark-calendar__month {
+      max-width: calc(33.333333333% + 1rem);
+    }
+  }
+
+  &[data-prepend-count] .spark-calendar__content,
+  &.no-animate  .spark-calendar__content {
+    transition-duration: 0ms;
+  }
+
+  &[data-prepend-count="1"] .spark-calendar__content,
+  &[data-append-count="1"] .spark-calendar__content {
+    transform: translateX(-30rem);
+  }
+
+  &[data-prepend-count="2"] .spark-calendar__content,
+  &[data-append-count="2"] .spark-calendar__content {
+    transform: translateX(-60rem);
+  }
+
+  &.spark-calendar__fixed {
+    border: 0;
+    height: 100%;
+    margin-top: 0;
+
+    .spark-popover__caret {
+      display: none;
+    }
+  }
+}
+
+/// Hide overflow content
+.spark-calendar__overflow {
+  overflow: hidden;
+}
+
+/// Holds the months
+.spark-calendar__content {
+  display: flex;
+  max-width: 32rem;
+  position: relative;
+  transform: translateX(0);
+  transition: transform 100ms ease-in-out;
+  width: 100%;
+}
+
+/// An item affixed to the screen
+.spark-calendar__fixed {
+  border-radius: 0;
+  left: 0;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+
+  .spark-input__field,
+  .spark-input__fields,
+  &.spark-input__field,
+  &.spark-input__fields {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+
+  .spark-calendar__content {
+    max-width: 100%;
+  }
+}
+
+/// Calendar month navigation.
+.spark-calendar__nav {
+  color: $calendar__nav__color;
+  position: relative;
+  z-index: 5;
+}
+
+/// Back and forward arrows.
+.spark-calendar__previous,
+.spark-calendar__next {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 4rem;
+  opacity: 1;
+  position: absolute;
+  top: 1rem;
+  transition-duration: $calendar__transition-duration;
+  transition-property: opacity;
+  width: 4rem;
+
+  &:disabled {
+    opacity: 0;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::before {
+    font-family: $icon__font-family--line;
+  }
+}
+
+.spark-calendar__previous {
+  left: 1rem;
+
+  &::before {
+    content: '\f110';
+  }
+}
+
+.spark-calendar__next {
+  right: 1rem;
+
+  &::before {
+    content: '\f111';
+  }
+}
+
+/// A grouping of days.
+.spark-calendar__month {
+  flex: 1 0 auto;
+  min-width: 32rem;
+  max-width: 100%;
+  padding: 2rem;
+  width: 32rem;
+
+  @include media-breakpoint-only(xs) {
+    min-width: auto;
+  }
+  // When a month follows another, it should have a negative left margin so we don't get double padding.
+  + .spark-calendar__month {
+    margin-left: -2rem;
+  }
+}
+
+/// The title for a calendar month.
+.spark-calendar__month-title {
+  color: $calendar__month-title__color;
+  @include fontsize($calendar__month-title__font-size);
+  @include useFont($heading__font-family);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/// Select inputs used for quick advancement through months.
+.spark-calendar__select {
+  line-height: 4rem;
+  margin: -1rem 0 -.5rem 0;
+  width: auto;
+
+  .spark-select__input {
+    border: $calendar__month-title__border;
+    border-radius: 0;
+    color: $calendar__month-title__color;
+    @include useFont($weight: $body__font-weight--normal);
+    line-height: 2rem;
+    padding: 1rem 2rem 1rem 1rem;
+
+    &:focus {
+      border-color: $calendar__month-title__color;
+    }
+  }
+
+  &::after {
+    border-color: transparent;
+    border-style: solid;
+    border-top-color: $calendar__month-title__color;
+    border-width: .425rem;
+    border-top-width: .55rem;
+    content: '';
+    display: inline-block;
+    margin-top: .25rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    z-index: 15;
+
+    .spark-select__input:not([disabled]) {
+      border: $calendar__month-title--hover__border;
+    }
+  }
+
+  &:first-child {
+    .spark-select__input {
+      border-radius: .25rem 0 0 .25rem;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: -1px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    .spark-select__input {
+      border-radius: 0 .25rem .25rem 0;
+    }
+  }
+}
+
+/// Groups of days.
+.spark-calendar__days-of-week,
+.spark-calendar__days {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1px;
+  margin-right: 1px;
+  position: relative;
+}
+
+/// Days and their placeholders should flex.
+.spark-calendar__day-of-week,
+.spark-calendar__day {
+  display: inline-block;
+  flex: 1 0 auto;
+  justify-content: center;
+  width: (100% / 7);
+}
+
+/// Days of the week (M, T, W, etc.)
+.spark-calendar__days-of-week {
+
+}
+
+.spark-calendar__day-of-week {
+  color: $calendar__day-of-week__color;
+  @include useFont($weight: $calendar__day-of-week__font-weight);
+  line-height: 3rem;
+  text-align: center;
+}
+
+/// The list of calendar days
+.spark-calendar__days {
+
+}
+
+/// A single calendar day. Selectable
+.spark-calendar__day {
+  border: $calendar__day__border;
+  color: $calendar__day__color;
+  @include fontsize($calendar__day__font-size, all);
+  line-height: 0;
+  margin-bottom: -1px;
+  margin-right: -1px;
+  position: relative;
+  transition-delay: 0ms;
+  transition-duration: 100ms;
+  transition-property: color, border, z-index, background-color;
+  z-index: 5;
+
+  // Pushes the content to be the same height and width.
+  &::after {
+    content: '';
+    display: block;
+    float: left;
+    padding-top: 100%;
+  }
+
+  span {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  // A disabled day
+  &--disabled {
+    color: $calendar__day--disabled__color;
+    text-decoration: none;
+
+    &:hover {
+      color: $calendar__day--disabled__color;
+    }
+  }
+
+  // Inactive days
+  &--inactive,
+  &--inactive.spark-calendar__day--disabled {
+    background-color: $calendar__day--inactive__background-color;
+    color: $calendar__day--inactive__color !important;
+  }
+
+  // Today's date
+  &--today {
+
+    // A circle to indicate the current day
+    &::before {
+      border: $calendar__day__today-border;
+      border-radius: 50%;
+      box-sizing: border-box;
+      content: '';
+      display: block;
+      height: 80%;
+      left: 10%;
+      position: absolute;
+      top: 10%;
+      width: 80%;
+      z-index: -5;
+    }
+  }
+
+  // On hover or focus
+  &:hover:not(.spark-calendar__day--disabled),
+  &:focus:not(.spark-calendar__day--disabled) {
+    border: $calendar__day--hover__border;
+    color: $calendar__day--hover__color;
+    z-index: 10;
+  }
+
+  // On focus, don't adopt the bottom border of an anchor
+  &:focus {
+    border-bottom: $calendar__day__border;
+    padding-bottom: 0;
+  }
+}
+
+/// A note that accompanies a day button
+.spark-calendar__day-note {
+  bottom: 0;
+  @include fontsize($calendar__day-note__font-size, all);
+  @include useFont($weight: $calendar__day-note__font-weight);
+  left: 0;
+  line-height: 1.5rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/// A selected day or the start or end of a range
+.spark-calendar__day--selected {
+  background-color: $calendar__day--selected__background-color;
+  border: $calendar__day--selected__border;
+  color: $calendar__day--selected__color;
+  z-index: 7;
+
+  &.spark-calendar__day--inactive.spark-calendar__day--disabled {
+    background-color: $calendar__day--inactive__background-color;
+    border: $calendar__day__border;
+  }
+
+  &:hover:not(.spark-calendar__day--disabled),
+  &:focus:not(.spark-calendar__day--disabled) {
+    color: $calendar__day--selected__color;
+  }
+
+  // A circle to indicate the current day
+  &::before {
+    border-color: $white;
+  }
+}
+
+%calendar-range-highlight {
+  background-color: $calendar__day--range__background-color;
+}
+
+%calendar-range-highlight--disabled {
+  background-color: transparent;
+}
+
+/// When a month has both the start and end of a range.
+.range-start.range-end,
+.range-start.range-middle {
+  .spark-calendar__range-start ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__range-end):not(.spark-calendar__day--inactive) {
+    @extend %calendar-range-highlight;
+  }
+  .spark-calendar__range-end ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--inactive):not([bump]),
+  .spark-calendar__range-last:not(.hover-start) ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--inactive):not([bump]),
+  .hover-end ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--inactive):not([bump]) {
+    @extend %calendar-range-highlight--disabled;
+  }
+}
+
+/// When a month has the start of a range but the value is on another month.
+.range-start.value-after,
+.range-start.range-middle {
+  .spark-calendar__range-start ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--inactive) {
+    @extend %calendar-range-highlight;
+  }
+}
+
+/// When a month has the end of a range but the value is on another month.
+.range-end.value-before {
+  .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--inactive):not(.spark-calendar__day--selected) {
+    @extend %calendar-range-highlight;
+  }
+  .spark-calendar__range-end ~ .spark-calendar__day:not(.spark-calendar__day--inactive) {
+    @extend %calendar-range-highlight--disabled;
+  }
+}
+
+.hover-start:not(.spark-calendar__day--inactive):not(.spark-calendar__day--disabled):not(.spark-calendar__day--selected),
+.hover-start ~ .spark-calendar__day:not(.spark-calendar__day--inactive):not(.spark-calendar__day--disabled):not(.spark-calendar__day--selected) {
+  @extend %calendar-range-highlight;
+}
+
+.hover-end ~ .spark-calendar__day:not(.spark-calendar__day--inactive):not(.spark-calendar__day--disabled):not(.spark-calendar__day--selected) {
+  @extend %calendar-range-highlight--disabled;
+}
+
+/// When a month has values before and after it, highlight everything!
+.value-before.value-after:not(.has-value) {
+  .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--disabled):not(.spark-calendar__day--inactive) {
+    @extend %calendar-range-highlight;
+  }
+}
+
+.value-before:not(.hover) ~ .has-value:not(.hover),
+.value-before:not(.hover).has-value {
+  .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--disabled):not(.spark-calendar__day--inactive) {
+    @extend %calendar-range-highlight;
+  }
+  .spark-calendar__range-last:not(.hover-start) ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--disabled):not(.spark-calendar__day--inactive),
+  .hover-end ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--disabled):not(.spark-calendar__day--inactive) {
+    @extend %calendar-range-highlight--disabled;
+  }
+}
+
+/// When a month has both a selection and end of a range.
+.range-middle.range-end {
+  .spark-calendar__range-middle ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__range-end):not(.spark-calendar__day--inactive) {
+    @extend %calendar-range-highlight;
+  }
+  .spark-calendar__range-end ~ .spark-calendar__day:not(.spark-calendar__day--selected):not(.spark-calendar__day--inactive):not([bump]) {
+    @extend %calendar-range-highlight--disabled;
+  }
+}

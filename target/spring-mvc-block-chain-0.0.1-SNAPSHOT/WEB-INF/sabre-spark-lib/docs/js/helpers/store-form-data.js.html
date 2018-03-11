@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cayman.min.css">
+    <link rel="stylesheet" href="../css/prism.min.css">
+    <link rel="stylesheet" href="../css/index.min.css">
+    <link rel="stylesheet" href="../css/docs.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../index.html">Main</a></li>
+            <li><a href="../components/base.js.html">components/base.js</a></li>
+            <li><a href="../components/calendar-popover.js.html">components/calendar-popover.js</a></li>
+            <li><a href="../components/date-input.js.html">components/date-input.js</a></li>
+            <li><a href="../components/expand.js.html">components/expand.js</a></li>
+            <li><a href="../components/header.js.html">components/header.js</a></li>
+            <li><a href="../components/menu.js.html">components/menu.js</a></li>
+            <li><a href="../components/modal.js.html">components/modal.js</a></li>
+            <li><a href="../components/number-picker.js.html">components/number-picker.js</a></li>
+            <li><a href="../components/number-selector.js.html">components/number-selector.js</a></li>
+            <li><a href="../components/popover.js.html">components/popover.js</a></li>
+            <li><a href="../components/progress-indicator.js.html">components/progress-indicator.js</a></li>
+            <li><a href="../components/range-slider.js.html">components/range-slider.js</a></li>
+            <li><a href="../components/scroll-to-top.js.html">components/scroll-to-top.js</a></li>
+            <li><a href="../components/select-input.js.html">components/select-input.js</a></li>
+            <li><a href="../components/slider.js.html">components/slider.js</a></li>
+            <li><a href="../components/step-indicator.js.html">components/step-indicator.js</a></li>
+            <li><a href="../components/table.js.html">components/table.js</a></li>
+            <li><a href="../components/tabs.js.html">components/tabs.js</a></li>
+            <li><a href="../components/text-input.js.html">components/text-input.js</a></li>
+            <li><a href="../components/toggle-switch.js.html">components/toggle-switch.js</a></li>
+            <li><a href="../components/toolbar.js.html">components/toolbar.js</a></li>
+            <li><a href="../helpers/animate-height.js.html">helpers/animate-height.js</a></li>
+            <li><a href="../helpers/build-select.js.html">helpers/build-select.js</a></li>
+            <li><a href="../helpers/date-select.js.html">helpers/date-select.js</a></li>
+            <li><a href="../helpers/date-typeahead.js.html">helpers/date-typeahead.js</a></li>
+            <li><a href="../helpers/date.js.html">helpers/date.js</a></li>
+            <li><a href="../helpers/debounce.js.html">helpers/debounce.js</a></li>
+            <li><a href="../helpers/each.js.html">helpers/each.js</a></li>
+            <li><a href="../helpers/outer-height.js.html">helpers/outer-height.js</a></li>
+            <li><a href="../helpers/pad-number.js.html">helpers/pad-number.js</a></li>
+            <li><a href="../helpers/parse-date-format.js.html">helpers/parse-date-format.js</a></li>
+            <li><a href="../helpers/set-caret.js.html">helpers/set-caret.js</a></li>
+            <li class="active"><a href="../helpers/store-form-data.js.html">helpers/store-form-data.js</a></li>
+            <li><a href="../helpers/transform.js.html">helpers/transform.js</a></li>
+            <li><a href="../helpers/typeahead.js.html">helpers/typeahead.js</a></li>
+            <li><a href="../index.js.html">index.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#findAll"><i class="alert alert-info"></i><span>findAll</span></a>
+              </li>
+              <li><a href="#store"><i class="alert alert-info"></i><span>store</span></a>
+              </li>
+              <li><a href="#restore"><i class="alert alert-info"></i><span>restore</span></a>
+              </li>
+              <li><a href="#clear"><i class="alert alert-info"></i><span>clear</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>Store Form Data</h1>
+<p>Store the data of form fields inline so it can be reverted.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>module</td>
+                <td></td>
+                <td>helper/store-form-data.js</td>
+              </tr>
+            </tbody>
+          </table>
+          <h5>Example</h5>
+          <pre><code class="language-javascript">formData.store(el);
+formData.revert(el);</code></pre>
+          <section id="findAll">
+            <h1>findAll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>findAll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Find all the form elements inside a given element and run a callback on each.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>cb</td>
+                <td>Function</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">function findAll(el, cb) {
+
+  var inputs = el.querySelectorAll('input, select, textarea');
+  var i = 0;
+  var len = inputs.length;
+
+  for (; i &lt; len; i++) {
+    cb(inputs[i]);
+  }
+}
+
+return {</code></pre>
+          <section id="store">
+            <h1>store</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>store()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Find all the form elements inside a given element and store their current<br />value as a data attribute.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">store: function(el) {
+
+  findAll(el, function(input) {
+
+    var name = input.nodeName.toLowerCase();
+    var value;
+
+    switch (name) {
+      case 'select':
+        value = input.selectedIndex;
+        break;
+      default:
+        value = encodeURI(input.value);
+        break;
+    }
+
+    input.setAttribute('data-stored-value', value);
+  });
+},</code></pre>
+          <section id="restore">
+            <h1>restore</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>restore()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Revert all the form elements inside of a given element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">restore: function(el) {
+
+  findAll(el, function(input) {
+
+    var name = input.nodeName.toLowerCase();
+    var value = input.getAttribute('data-stored-value');
+
+    // No stored value
+    if (!value &amp;&amp; value !== '') {
+      return;
+    }
+
+    switch (name) {
+      case 'select':
+        input.options[value].selected = true;
+        break;
+      default:
+        input.value = decodeURI(value);
+        break;
+    }
+
+    input.removeAttribute('data-stored-value');
+  });
+},</code></pre>
+          <section id="clear">
+            <h1>clear</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>clear()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Clear the stored data on all the form elements inside of a given element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">clear: function(el) {
+  findAll(el, function(input) {
+    input.removeAttribute('data-stored-value');
+  });
+}
+  };
+}));</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with<a href="https://github.com/mr-doc/mr-doc">Mr. Doc</a> created by<a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau</a></p>
+        <p>Mr. Doc is sponsored by<a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr</a> and<a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../js/twitter-widget.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap-transition.min.js"></script>
+    <script src="../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../js/bootstrap-dropdown.min.js"></script>
+    <script src="../js/bootstrap-collapse.min.js"></script>
+    <script src="../js/bootstrap-affix.min.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script src="../js/index.min.js"></script>
+  </body>
+</html>

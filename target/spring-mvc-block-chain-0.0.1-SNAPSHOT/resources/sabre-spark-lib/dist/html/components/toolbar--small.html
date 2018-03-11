@@ -1,0 +1,129 @@
+
+<style>
+  /* example styles */
+
+  .spark-toolbar-example {
+    background: #fff;
+  }
+
+  .spark-toolbar-example h4 {
+    margin: 0;
+    line-height: 60px;
+  }
+
+  .spark-toolbar-example .spark-toolbar {
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    right: 0;
+  }
+</style>
+<div class="container">
+  <div class="spark-toolbar-example row">
+    <div class="col-xs-10 col-md-10">
+      <h3>Heading</h3>
+    </div>
+    <div class="col-xs-2 col-md-2">
+      <div class="spark-toolbar" role="menubar" tabindex="0">
+        <div class="spark-toolbar__container--visible">
+          <div class="spark-toolbar__item" label="Filter Results" aria-label="Filter Results" role="menuitem" tabindex="-1">
+            <div class="spark-toolbar__item--content spark-toolbar__item--content__container ">
+              <h6>Number of Tickets</h6>
+              <div class="spark-slider--integrated">
+                <input type="number" min="1" max="30" value="4">
+                <div class="spark-slider__controls">
+                  <button class="spark-slider__handle"></button>
+                  <span class="spark-slider__track">
+      <span class="spark-slider__track-fill"></span>
+                  </span>
+                </div>
+              </div>
+              <h6>Price Per Ticket</h6>
+              <div class="spark-range-slider">
+                <input type="number" min="1" max="5000" value="100" title="Start">
+                <span class="spark-range-slider__input-divider"></span>
+                <input type="number" min="1" max="5000" value="3000" title="End">
+                <div class="spark-slider__controls">
+                  <button class="spark-slider__handle" title="Start"></button>
+                  <button class="spark-slider__handle" title="End"></button>
+                  <span class="spark-slider__track">
+                    <span class="spark-slider__track-fill"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="spark-icon-sliders spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="View Map" aria-label="View Map" role="menuitem" tabindex="-1">
+            <div class="spark-icon-map spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Share Your Journey" aria-label="Share Your Journey" role="menuitem" tabindex="-1">
+            <div class="spark-icon-share spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Settings" aria-label="Settings" data-priority="3" data-order="1" role="menuitem" tabindex="-1">
+            <div class="spark-toolbar__item--content">
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li tabindex="0">Save Results</li>
+                <li tabindex="0">Export to Excel</li>
+                <li tabindex="0">Create an Alert</li>
+              </ul>
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li>Modify Search</li>
+                <li>Advanced Search</li>
+              </ul>
+              <ul class="spark-toolbar__list spark-toolbar__list--checkboxes" role="menu">
+                <li role="menuitem">
+                  <label>
+                    <input type="checkbox" />
+                    <span class="spark-toolbar__list--checkboxes--helper"></span>
+                    <span class="spark-toolbar__list--checkboxes--content">Airline</span>
+                  </label>
+                </li>
+                <li role="menuitem">
+                  <label>
+                    <input type="checkbox" checked="checked" />
+                    <span class="spark-toolbar__list--checkboxes--helper"></span>
+                    <span class="spark-toolbar__list--checkboxes--content">Departure Time</span>
+                  </label>
+                </li>
+                <li role="menuitem">
+                  <label>
+                    <input type="checkbox" />
+                    <span class="spark-toolbar__list--checkboxes--helper"></span>
+                    <span class="spark-toolbar__list--checkboxes--content">Arrival Time</span>
+                  </label>
+                </li>
+                <li role="menuitem">
+                  <label>
+                    <input type="checkbox" />
+                    <span class="spark-toolbar__list--checkboxes--helper"></span>
+                    <span class="spark-toolbar__list--checkboxes--content">Price</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="spark-icon-cog spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Find a Hotel" aria-label="Find a Hotel" role="menuitem" tabindex="-1">
+            <div class="spark-icon-hotel-bed spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Find a Rental Car" aria-label="Find a Rental Car" role="menuitem" tabindex="-1">
+            <div class="spark-icon-car-rental spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Print Journey Summary" aria-label="Print Journey Summary" role="menuitem" tabindex="-1">
+            <div class="spark-icon-print spark-toolbar__item-helper"></div>
+          </div>
+        </div>
+        <div class="spark-toolbar__show-more" tabindex="-1">
+          <i class="spark-icon-menu-ellipsis-vertical"></i>
+        </div>
+        <!-- All items should be placed in .spark-toolbar__container-shown -->
+        <div class="spark-toolbar__container--hidden">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  
+</style>

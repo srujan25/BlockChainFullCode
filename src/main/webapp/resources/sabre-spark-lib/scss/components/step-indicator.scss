@@ -1,0 +1,423 @@
+////
+/// ## Step Indicator
+/// @group components/step-indicator
+////
+
+/// Step indicator.
+.spark-step-indicator {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// title of step indicator
+.spark-step-indicator__title {
+  background-color: $step-indicator__title__background-color;
+  color: $step-indicator__title__color;
+  flex-shrink: 0;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+// Body of step-indicator
+.spark-step-indicator__body{
+  background-color: $step-indicator__body__background-color;
+  border: $step-indicator__body__border;
+  border-top: 0;
+  overflow: auto;
+  padding: 2rem 2rem 2.5rem 2rem;
+}
+
+// Variation without border
+.spark-step-indicator__body--no-border {
+  background-color: transparent;
+  border: 0;
+}
+
+// Sub-title
+.spark-step-indicator__subtitle {
+  color: $step-indicator__subtitle__color;
+  @include useFont($weight: 700);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+// A list of step nodes
+.spark-step-indicator__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.spark-step-indicator__list--left {
+  justify-content: flex-start;
+}
+
+// A link indicate single step
+.spark-step-indicator__item {
+  align-items: center;
+  border-bottom: 0;
+  color: $step-indicator__item__color;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 15.333333333rem;
+  min-width: 10.333333333rem;
+  padding: 0 1rem;
+
+  // Connect line
+  &::after {
+    background-color: $step-indicator__icon__connection-line__color;
+    content: '';
+    height: .0833333333rem;
+    left: calc(50% + 2.5rem);
+    position: absolute;
+    top: 1.5rem;
+    width: calc(100% - 5rem);
+  }
+
+  // For JS to manipulate connect line
+  &.noline::after {
+    display:none;
+  }
+
+  // Remove next connection line of last step
+  &:last-child::after {
+    display:none;
+  }
+
+  &:not(.spark-step-indicator__item--disabled):not(.spark-step-indicator__item--dropdown__header):focus {
+    border-bottom: 0;
+    color: $step-indicator__item--focus__color;
+
+    // Create a outline when focus
+    .spark-step-indicator__icon {
+      box-shadow: $step-indicator__icon--focus__box-shadow;
+    }
+
+    .spark-step-indicator__text {
+      text-decoration: underline;
+    }
+  }
+
+  &:not(.spark-step-indicator__item--disabled):hover {
+    color: $step-indicator__item--hover__color;
+
+    // icon style when hover
+    .spark-step-indicator__icon {
+      border: $step-indicator__icon--hover__border;
+    }
+  }
+
+  // Remove line-through from disabled node
+  &[disabled] {
+    text-decoration: none;
+  }
+}
+
+// Completed state of node
+.spark-step-indicator__item--completed {
+  .spark-step-indicator__icon {
+    background-color: $step-indicator__icon--completed__background-color;
+    border-color: $step-indicator__icon--completed__border-color;
+    font-size: 0;
+
+    // Check icon of completed node
+    &::after {
+      @include fontsize(zeta);
+      color: $step-indicator__icon--completed__color;
+      content:"\f121";
+      font-family: $icon__font-family--line;
+      left: 0;
+      text-indent: 0;
+      top: 0;
+
+    }
+  }
+
+  .spark-step-indicator__text {
+    color: $step-indicator__text--completed__color;
+  }
+}
+
+
+// Current state of node
+.spark-step-indicator__item--current {
+  .spark-step-indicator__icon {
+    background-color: $step-indicator__icon--current__background-color;
+    border-color: $step-indicator__icon--current__border-color;
+    color: $step-indicator__icon--current__color;
+    @include useFont($weight: 700);
+  }
+
+  // Change text color and make text bold;
+  .spark-step-indicator__text {
+    color: $step-indicator__text--current__color;
+    @include useFont($weight: 700);
+  }
+}
+
+// Disabled state of node
+.spark-step-indicator__item--disabled {
+
+  cursor: default;
+
+  &:focus {
+    border-bottom: 0;
+  }
+
+  .spark-step-indicator__icon {
+    border-color: $step-indicator__icon--disabled__border-color;
+    color: $step-indicator__icon--disabled__color;
+  }
+
+  .spark-step-indicator__text {
+    color: $step-indicator__text--disabled__color;
+  }
+}
+
+// A circle icon of each step
+.spark-step-indicator__icon {
+  align-items: center;
+  background-color: $step-indicator__icon__background-color;
+  border: $step-indicator__icon__border;
+  border-radius: $step-indicator__icon__border-radius;
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+}
+
+// Primary text of each step
+.spark-step-indicator__text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+// Subtext of each step
+.spark-step-indicator__subtext{
+}
+
+// Condensed variation
+.spark-step-indicator__list--condensed {
+  @include fontsize(eta);
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .spark-step-indicator__item {
+    @extend %tooltip;
+    flex-grow: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 6rem;
+    width: 6rem;
+
+    // Connect line of condensed variation
+    &::after {
+      left: 5rem;
+      top: 1rem;
+      width: 2rem;
+    }
+
+    // Show the tooltip content when we're hover
+    &:hover {
+      .spark-step-indicator__text {
+        @extend %tooltip-active-content;
+      }
+    }
+  }
+
+  .spark-step-indicator__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .spark-step-indicator__text {
+    @extend %tooltip-content;
+    @extend %tooltip-content-bottom;
+    color: $tooltip__color;
+    display: none;
+    opacity: 1;
+    text-transform: capitalize;
+
+    &::after {
+      @extend %tooltip-caret;
+      @extend %tooltip-caret-top;
+    }
+  }
+}
+
+// Dropdown variation
+.spark-step-indicator__body--dropdown {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  z-index: 999;
+
+  // Hide subtitle
+  .spark-step-indicator__subtitle {
+    display: none;
+  }
+
+  .spark-step-indicator__list{
+    align-items: flex-start;
+    background-color: $step-indicator__list--dropdown__background-color;
+    border: $step-indicator__list--dropdown__border;
+    border-top: 0;
+    box-shadow: $step-indicator__list--dropdown__box-shadow;
+    display: block;
+    max-height: 23rem;
+    overflow: auto;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    transition: all 200ms ease-out;
+    width: 100%;
+
+    &.collapse {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      border: 0;
+    }
+
+    .spark-step-indicator__item {
+      flex-direction: row;
+      flex-grow: 0;
+      justify-content: flex-start;
+      max-width: none;
+      margin: 0;
+      min-width: none;
+      padding: 1rem;
+      width: 100%;
+
+      // Remove connect line
+      &::after {
+        display: none;
+      }
+
+      &:not(.spark-step-indicator__item--disabled):hover {
+        background-color: $step-indicator__item--dropdown--hover__background-color;
+      }
+
+      .spark-step-indicator__text {
+        flex-direction: row;
+        margin: 0 0 0 1rem;
+      }
+
+      .spark-step-indicator__subtext {
+        margin: 0 0 0 .5rem;
+      }
+    }
+  }
+}
+
+// Header of dropdown variation, element is created by JS
+.spark-step-indicator__item--dropdown__header {
+  background-color: $step-indicator__list--dropdown__background-color;
+  border: $step-indicator__item--dropdown__header__border;
+  flex-direction: row;
+  flex-shrink: 0;
+  margin: 0;
+  max-height: none;
+  max-width: 100%;
+  padding: 1rem;
+  width: 100%;
+
+  &:hover {
+    border: $step-indicator__list--dropdown--hover__border;
+  }
+
+  &:focus,
+  &:hover:focus {
+    border: $step-indicator__list--dropdown--focus__border;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  .spark-step-indicator__text {
+    margin: 0 0 0 1rem;
+  }
+
+  &.expand {
+    background-color: $step-indicator__item--dropdown--expand__background-color;
+    border: $step-indicator__list--dropdown__border;
+
+    &:hover {
+      border: $step-indicator__list--dropdown--hover__border;
+    }
+
+    &:focus,
+    &:hover:focus {
+      border: $step-indicator__list--dropdown--focus__border;
+    }
+
+    .spark-step-indicator__notice {
+      display: inline;
+      line-height: 3rem;
+    }
+
+    // Hide the element
+    .spark-step-indicator__icon{
+      display: none;
+    }
+
+    .spark-step-indicator__text {
+      display: none;
+    }
+
+    .spark-stpe-indicator__subtext {
+      display: none;
+    }
+
+    .spark-step-indicator__label--dropdown {
+      visibility: hidden;
+
+      &::after {
+        border-bottom-color: $spark-step-indicator__label--dropdown__arrow__border-color;
+        border-bottom-width: .5rem;
+        border-top-color: transparent;
+        border-width: .5rem;
+        top: -1rem;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// Dropdown variation: 'Select a Step'
+.spark-step-indicator__notice {
+  display: none;
+}
+
+.spark-step-indicator__label--dropdown {
+  @include fontsize(eta);
+  // For IE10
+  float: right;
+  margin-left: auto;
+  padding-right: 1rem;
+
+  // Small arrow
+  &::after {
+    border-color: transparent;
+    border-style: solid;
+    border-top-color: $spark-step-indicator__label--dropdown__arrow__border-color;
+    border-width: .5rem;
+    content: '';
+    left: 1rem;
+    position: relative;
+    top: 1rem;
+  }
+}
