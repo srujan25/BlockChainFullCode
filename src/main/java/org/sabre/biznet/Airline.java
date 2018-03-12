@@ -1,6 +1,9 @@
-package bean;
+package org.sabre.biznet;
 
 public class Airline {
+    private String carrierCode;
+    private String fullName;
+    private String address;
 
     public String getCarrierCode() {
         return carrierCode;
@@ -25,8 +28,4 @@ public class Airline {
     public void setAddress(String address) {
         this.address = address;
     }
-
-    private String carrierCode;
-    private String fullName;
-    private String address;
 }
