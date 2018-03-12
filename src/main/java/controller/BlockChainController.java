@@ -68,6 +68,8 @@ public class BlockChainController {
         componentMap.put("addressType", airline.getAddressType());
         componentMap.put("phonenumber", airline.getPhonenumber());
         componentMap.put("phoneType", airline.getPhoneType());
+
+
         restTemplate.postForEntity( AIRLINE_URL,componentMap,String.class );
         return "airline";
     }
@@ -80,7 +82,25 @@ public class BlockChainController {
     @RequestMapping(path={"/vendorSave"},method=RequestMethod.POST)
     public String saveVendor(@ModelAttribute("vendor") Vendor vendor) {
 
-        return "vendorSave";
+        RestTemplate restTemplate = new RestTemplate();
+
+        Map<String, String> componentMap = new HashMap<String, String>();
+        componentMap.put("$class","org.sabre.biznet.Vendor");
+        componentMap.put("address", vendor.getAddress());
+        componentMap.put("regnNo", vendor.getRegnNo());
+        componentMap.put("vendorName", vendor.getVendorName());
+        componentMap.put("state", vendor.getState());
+        componentMap.put("zipcode", vendor.getZipcode());
+        componentMap.put("city", vendor.getCity());
+        componentMap.put("country", vendor.getCountry());
+        componentMap.put("addressType", vendor.getAddressType());
+        componentMap.put("phonenumber", vendor.getPhonenumber());
+        componentMap.put("phoneType", vendor.getPhoneType());
+
+
+        restTemplate.postForEntity( VENDOR_URL,componentMap,String.class );
+
+        return "vendor";
     }
 
     @RequestMapping(path={"/servicerequestSave"},method=RequestMethod.POST)
