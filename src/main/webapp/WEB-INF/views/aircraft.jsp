@@ -14,9 +14,9 @@
 
 
     <div class="container container-spacing">
-        <div class="heading-content-container container sb-full-max-width spark-padding-top--sm spark-padding-bottom--sm"><div class="row"><div class="col-xs-12 property-id-container spark-text-right spark-bold"><div class="property-id-sub-container"><span class="property-id spark-padding-left title-spacing">Hi Srujan!!</span></div></div></div></div>
-
-        <div class="pms-page-title title-spacing"><h3>Aircraft Componet</h3></div>
+        <div class="heading-content-container container sb-full-max-width spark-padding-top--sm spark-padding-bottom--sm">
+        <div class="row"><div class="col-xs-12 property-id-container spark-text-right spark-bold">
+        <div class="pms-page-title title-spacing"><h3>Aircraft Component</h3></div>
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
             <label class="spark-input">
@@ -26,7 +26,7 @@
 
             <label class="spark-input">
                 <input class="spark-input__field" name="flightNo" id="flightNo" role="textbox" value="">
-                <span class="spark-label">flight No</span>
+                <span class="spark-label">Flight No</span>
             </label>
 
             <label class="spark-input">
@@ -60,52 +60,9 @@
             <!--expriry component-->
 
 
-                        <label class="spark-input">
-                            <input class="spark-input__field" name="compoentServiceOverDate" id="compoentServiceOverDate" role="textbox" value="">
-                            <span class="spark-label">Compoent Service Over Date</span>
-                        </label>
-
-                        <label class="spark-input">
-                            <input class="spark-input__field" name="componentNextServiceDate" id="componentNextServiceDate" role="textbox" value="">
-                            <span class="spark-label">Component Next Service Date</span>
-                        </label>
-
-
-
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="componentServiceProvider" id="componentServiceProvider" role="textbox" value="">
-                <span class="spark-label">Component Service Provider</span>
-            </label>
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="componentServiceEngineer" id="componentServiceEngineer" role="textbox" value="">
-                <span class="spark-label">Component Service Engineer</span>
-            </label>
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="transactionType" id="transactionType" role="textbox" value="">
-                <span class="spark-label">Transaction Type</span>
-            </label>
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="serviceRequestFor" id="serviceRequestFor" role="textbox" value="">
-                <span class="spark-label">Service Request For</span>
-            </label>
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="serviceVerifiedBy" id="serviceVerifiedBy" role="textbox" value="">
-                <span class="spark-label">Service Verified By</span>
-            </label>
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="designation" id="designation" role="textbox" value="">
-                <span class="spark-label">Designation</span>
-            </label>
-
             <div class="spark-margin-top">
                 <label class="spark-select">
-                    <select name="airline" lass="spark-select__input"> <!-- This has to be before .spark-label! -->
+                    <select name="airline" class="spark-select__input"> <!-- This has to be before .spark-label! -->
                         <option></option>
                         <option>LH</option>
                         <option>EY</option>
@@ -114,26 +71,6 @@
                     <span class="spark-label">Select Airline</span>
                 </label>
             </div>
-
-
-            <div class="spark-margin-top">
-                <label class="spark-select">
-                    <select componentName="vendor" class="spark-select__input"> <!-- This has to be before .spark-label! -->
-                        <option></option>
-                        <option>Srujan</option>
-                        <option>Ajay</option>
-                        <option>Hasan</option>
-                        <option>Basha</option>
-                    </select>
-                    <span class="spark-label">Select Vendor</span>
-                </label>
-            </div>
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="comments" id="comments" role="textbox" value="">
-                <span class="spark-label">Comments</span>
-            </label>
-
 
         </div>
     </div>

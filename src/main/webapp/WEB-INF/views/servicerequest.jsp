@@ -22,18 +22,18 @@
 
 
                 <label class="spark-input">
-                    <input class="spark-input__field" name="serviceRequestFor" id="serviceRequestId" role="textbox" value="">
-                    <span class="spark-label">service Request Id</span>
+                    <input class="spark-input__field" name="serviceRequestId" id="serviceRequestId" role="textbox" value="">
+                    <span class="spark-label">Service Request Id</span>
                 </label>
 
                 <label class="spark-input">
                     <input class="spark-input__field" name="serviceRequestFor" id="serviceRequestFor" role="textbox" value="">
-                    <span class="spark-label">service Request For</span>
+                    <span class="spark-label">Service Request For</span>
                 </label>
 
                 <div class="spark-select-group spark-margin-top">
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceRequestMonth" class="spark-select__input">
                             <option></option>
                             <option>Jan</option>
                             <option>Feb</option>
@@ -51,7 +51,7 @@
                         <span class="spark-label">Month</span>
                     </label>
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceRequestDay" class="spark-select__input">
                             <option></option>
                             <option>1</option>
                             <option>2</option>
@@ -88,7 +88,7 @@
                         <span class="spark-label">Day</span>
                     </label>
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceRequestYear" class="spark-select__input">
                             <option></option>
                             <option>1967</option>
                             <option>1968</option>
@@ -153,7 +153,7 @@
 
                 <div class="spark-select-group spark-margin-top">
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceOverMonth" class="spark-select__input">
                             <option></option>
                             <option>Jan</option>
                             <option>Feb</option>
@@ -171,7 +171,7 @@
                         <span class="spark-label">Month</span>
                     </label>
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceOverDay" class="spark-select__input">
                             <option></option>
                             <option>1</option>
                             <option>2</option>
@@ -271,7 +271,7 @@
 
                 <div class="spark-select-group spark-margin-top">
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceOverMonth" class="spark-select__input">
                             <option></option>
                             <option>Jan</option>
                             <option>Feb</option>
@@ -289,7 +289,7 @@
                         <span class="spark-label">Month</span>
                     </label>
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceOverDay" class="spark-select__input">
                             <option></option>
                             <option>1</option>
                             <option>2</option>
@@ -326,7 +326,7 @@
                         <span class="spark-label">Day</span>
                     </label>
                     <label class="spark-select">
-                        <select class="spark-select__input">
+                        <select name="serviceOverYear" class="spark-select__input">
                             <option></option>
                             <option>1967</option>
                             <option>1968</option>
@@ -388,7 +388,7 @@
 
 
                 <label class="spark-input">
-                    <input class="spark-input__field" name="serviceRequestFor" id="serviceProvider" role="textbox" value="">
+                    <input class="spark-input__field" name="serviceProvider" id="serviceProvider" role="textbox" value="">
                     <span class="spark-label">service Provider</span>
                 </label>
 
@@ -398,12 +398,8 @@
                 </label>
 
                 <label class="spark-input">
-                    <input class="spark-input__field" name="serviceRequestFor" id="comments" role="textbox" value="">
+                    <input class="spark-input__field" name="comments" id="comments" role="textbox" value="">
                     <span class="spark-label">Comments</span>
-                </label>
-                <label class="spark-input">
-                    <input class="spark-input__field" name="serviceRequestFor" id="transactionType" role="textbox" value="">
-                    <span class="spark-label">Transaction Type</span>
                 </label>
 
                 <label class="spark-input">
@@ -421,7 +417,7 @@
 
                 <div class="spark-margin-top">
                     <label class="spark-select">
-                        <select class="spark-select__input"> <!-- This has to be before .spark-label! -->
+                        <select name="airline" class="spark-select__input"> <!-- This has to be before .spark-label! -->
                             <option></option>
                             <option>LH</option>
                             <option>EY</option>
@@ -433,7 +429,7 @@
 
                 <div class="spark-margin-top">
                     <label class="spark-select">
-                        <select class="spark-select__input"> <!-- This has to be before .spark-label! -->
+                        <select name="aircraftComponent" id="aircraftComponent" class="spark-select__input"> <!-- This has to be before .spark-label! -->
                             <option></option>
                             <option>Tyres1</option>
                             <option>Tyrpes2</option>
@@ -445,7 +441,7 @@
 
                 <div class="spark-margin-top">
                     <label class="spark-select">
-                        <select class="spark-select__input"> <!-- This has to be before .spark-label! -->
+                        <select name="vendor" class="spark-select__input"> <!-- This has to be before .spark-label! -->
                             <option></option>
                             <option>LH</option>
                             <option>EY</option>

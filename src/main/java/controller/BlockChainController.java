@@ -1,8 +1,6 @@
 package controller;
 
-import org.sabre.biznet.Airline;
-import org.sabre.biznet.User;
-import org.sabre.biznet.Vendor;
+import org.sabre.biznet.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,18 +36,27 @@ public class BlockChainController {
 
 
     @RequestMapping(path={"/aircraftsave"},method=RequestMethod.POST)
-    public String saveAirCraft(Model model) {
-        return "aircraftSave";
+    public String saveAirCraft(@ModelAttribute("aircraft") AircraftComponents aircraft) {
+        RestTemplate restTemplate = new RestTemplate();
+
+        Map<String, String> componentMap = new HashMap<String, String>();
+        componentMap.put("$class","org.sabre.biznet.AircraftComponents");
+        componentMap.put("serialNo", aircraft.getSerialNo());
+        componentMap.put("flightNo", aircraft.getFlightNo());
+        componentMap.put("flightMode", aircraft.getFlightMode());
+        componentMap.put("componentName", aircraft.getComponentName());
+        componentMap.put("componentModel", aircraft.getComponentModel());
+        componentMap.put("componentManufacturer", aircraft.getComponentManufacturer());
+        componentMap.put("componentManufacturingDate", aircraft.getComponentManufacturingDate());
+        componentMap.put("componentExpiryDate", aircraft.getComponentExpiryDate());
+        componentMap.put("airline", "org.sabre.biznet.Airline#"+aircraft.getAirline());
+        restTemplate.postForEntity(COMPONENT_URL,componentMap,String.class );
+        return "aircraft";
     }
 
     @RequestMapping(path={"/airline"},method=RequestMethod.GET)
     public String getAirline(Model model) {
         return "airline";
-    }
-
-    @RequestMapping(path={"/airlineMain"},method=RequestMethod.GET)
-    public String getAirlineMain(Model model) {
-        return "airlineMain";
     }
 
     @RequestMapping(path={"/airlineSave"},method=RequestMethod.POST)
@@ -104,11 +112,40 @@ public class BlockChainController {
     }
 
     @RequestMapping(path={"/servicerequestSave"},method=RequestMethod.POST)
-    public String saveServiceRequest(Model model) {
+    public String saveServiceRequest(@ModelAttribute("serviceTransaction") ServiceTransaction serviceTransaction) {
 
-        model.addAttribute("message","Hello Spring MVC!");
-        model.addAttribute("date", "today");
-        return "servicerequestSave";
+        RestTemplate restTemplate = new RestTemplate();
+        Map<String, String> componentMap = new HashMap<String, String>();
+        componentMap.put("$class","org.sabre.biznet.ServiceTransaction");
+        componentMap.put("serialNo", serviceTransaction.getSerialNo());
+        componentMap.put("flightNo", serviceTransaction.getFlightNo());
+        componentMap.put("componentName", serviceTransaction.getComponentName());
+        componentMap.put("componentModel", serviceTransaction.getComponentModel());
+        componentMap.put("componentManufacturer", serviceTransaction.getComponentModel());
+        componentMap.put("componentManufacturingDate", serviceTransaction.getComponentManufacturingDate());
+        componentMap.put("componentExpiryDate", serviceTransaction.getComponentExpiryDate());
+        componentMap.put("serviceRequestId", serviceTransaction.getServiceRequestId());
+        componentMap.put("serviceRequestDate", serviceTransaction.getServiceRequestDay()+"/"
+                +serviceTransaction.getServiceRequestMonth() +"/"+serviceTransaction.getServiceRequestYear());
+        componentMap.put("nextServiceDate", serviceTransaction.getNextServiceDay()+"/"
+                +serviceTransaction.getNextServiceMonth() +"/"+serviceTransaction.getNextServiceYear());
+
+        componentMap.put("serviceOverDate", serviceTransaction.getServiceOverDay()+"/"
+                +serviceTransaction.getServiceOverMonth() +"/"+serviceTransaction.getServiceOverYear());
+
+        componentMap.put("serviceEngineer", serviceTransaction.getServiceEngineer());
+        componentMap.put("comments", serviceTransaction.getComments());
+        componentMap.put("transactionType", "ServiceRequest");
+        componentMap.put("serviceVerifiedBy", serviceTransaction.getServiceVerifiedBy());
+        componentMap.put("designation", serviceTransaction.getDesignation());
+        componentMap.put("airline", "org.sabre.biznet.Airline#"+serviceTransaction.getAirline());
+        componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponent#"+serviceTransaction.getAircraftComponent());
+        componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
+        componentMap.put("transactionId", "");
+        componentMap.put("timestamp", new Date().toString());
+
+        restTemplate.postForEntity( SERVICE_URL,componentMap,String.class );
+        return "servicerequest";
     }
 
     @RequestMapping(path={"/servicerequest"},method=RequestMethod.GET)
