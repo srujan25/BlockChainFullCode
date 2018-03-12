@@ -1,0 +1,50 @@
+////
+/// ## Grid
+///	@group config
+////
+
+
+/// Default grid breakpoints.
+/// @type {Map}
+/// @prop {Number} xs [0] - Extra small screen / phone
+/// @prop {Number} sm [544px] - Small screen / phone
+/// @prop {Number} md [796px] - Medium screen / tablet
+/// @prop {Number} lg [1024px] - Large screen / desktop
+/// @prop {Number} xl [1800px] - Extra large screen / wide desktop
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 796px,
+  lg: 1048px,
+  xl: 1800px
+);
+
+/// Number of columns in the grid.
+/// @type {Number}
+$grid-columns: 12;
+
+/// Padding between columns. Gets divided in half for the left and right.
+/// @type {Number}
+$grid-gutter-width: 2rem;
+
+/// Container sizes
+/// Define the maximum width of `.container` for different screen sizes.
+/// @type {Map}
+/// @prop {Number} sm
+/// @prop {Number} md
+/// @prop {Number} lg
+/// @prop {Number} xl
+$container-max-widths: (
+  sm: 768px,
+  md: 1008px,
+  lg: 1368px,
+  xl: 1920px
+);
+
+/// Enable the Bootstrap flexible grid
+/// @type {Boolean}
+$enable-flex: true;
+
+/// Enable classes for the Bootsrap grid building
+/// @type {Boolean}
+$enable-grid-classes: true;

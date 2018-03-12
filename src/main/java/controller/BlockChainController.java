@@ -1,10 +1,11 @@
 package controller;
 
+import bean.Airline;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author imssbora
@@ -55,11 +56,11 @@ public class BlockChainController {
     }
 
     @RequestMapping(path={"/airlineSave"},method=RequestMethod.POST)
-    public String saveAirline(Model model) {
+    public String saveAirline(@ModelAttribute("airline") Airline airline) {
 
-        model.addAttribute("message","Hello Spring MVC!");
-        model.addAttribute("date", "today");
-        return "airlineSave";
+        //model.addAttribute("message","Hello Spring MVC!");
+        //model.addAttribute("date", "today");
+        return "airline";
     }
 
     @RequestMapping(path={"/vendor"},method=RequestMethod.GET)

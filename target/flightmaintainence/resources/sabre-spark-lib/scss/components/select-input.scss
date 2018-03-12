@@ -1,0 +1,342 @@
+////
+/// ## Select input
+/// @group components/select-input
+////
+
+
+/// Wrapper for a select element. Generally should be a `<label>`.
+.spark-select {
+  background-color: $select__background-color;
+  border-radius: $select__border-radius;
+  color: $select__color;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0;
+  position: relative;
+  transition-duration: 100ms;
+  transition-property: border;
+  transition-timing-function: $ease-in-out-quint;
+  width: 100%;
+
+  // On hover
+  &:hover {
+    background-color: $select--hover__background-color;
+
+    .spark-label {
+      &::after {
+        border-top-color: $select--hover__arrow__background-color;
+      }
+    }
+
+    .spark-select__input:not([disabled]) {
+      border: $select--hover__border;
+      color: $select--hover__color;
+    }
+  }
+
+  // When we are active
+  &.active {
+    background-color: $select--active__background-color;
+
+    .spark-select__input {
+      border: $select--active__border;
+      color: $select--active__color;
+    }
+
+    .spark-label {
+      color: $select--active__label__color;
+    }
+
+    // Used with multiple selects to create a fill behind the label text
+    .spark-select__input[multiple] ~ .spark-label::before {
+      background-color: $select--active__background-color;
+    }
+  }
+
+  // When the container has a state, show it below.
+  &[data-error],
+  &[data-info],
+  &[data-success],
+  &[data-warning] {
+    border-radius: $select__border-radius $select__border-radius 0 0;
+
+    .spark-select__input {
+      border-radius: $select__border-radius $select__border-radius 0 0;
+    }
+
+    // Fade in and scale up the message.
+    .spark-select__message {
+      display: block;
+      opacity: 1;
+      position: relative;
+      transform: scaleY(1);
+      transition-delay: 100ms, 0ms, 0ms;
+      transition-duration: 0ms, 100ms, 100ms;
+    }
+
+    &:hover:not(.has-value) {
+      .spark-label {
+        color: $select--state__label__color;
+      }
+    }
+  }
+
+  @include inputMessageStates('select');
+
+  // When the container has an error state, show it below.
+  &[data-error] {
+    .spark-select__input,
+    .spark-select__input:hover {
+      border-color: $color-state-danger;
+      color: $color-state-danger;
+    }
+  }
+
+  // When the container has an warning state, show it below.
+  &[data-warning] {
+    .spark-select__input,
+    .spark-select__input:hover {
+      border-color: $color-state-warning;
+      color: $color-state-warning;
+    }
+  }
+
+  // When the container has an success state, show it below.
+  &[data-success] {
+    .spark-select__input,
+    .spark-select__input:hover {
+      border-color: $color-state-success;
+      color: $color-state-success;
+    }
+  }
+
+  // When the container has an info state, show it below.
+  &[data-info] {
+    .spark-select__input,
+    .spark-select__input:hover {
+      border-color: $color-state-info;
+      color: $color-state-info;
+    }
+  }
+}
+
+/// Remove the default styling from a select box
+.spark-select__input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: $select__border;
+  border-radius: $select__border-radius;
+  color: $select__selected-option__color;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  height: 5rem;
+  line-height: 1.35rem;
+  margin: 0;
+  padding: 1.75rem 1rem;
+  position: relative;
+  transition-duration: 100ms;
+  transition-property: color;
+  transition-timing-function: $ease-in-out-quint;
+  width: 100%;
+  z-index: 5;
+
+  @include media-breakpoint-up(xl) {
+    line-height: 1.5rem; // Adjust line-height to match body font-size at XL which prevents descender cut-off
+  }
+
+  // Remove outline on focus
+  &:focus {
+    outline: 0;
+  }
+
+  // Remove inner focus dotted line from Firefox
+  &::-moz-focus-inner {
+    border: 0;
+    outline: 0;
+  }
+
+  // Remove IE caret
+  &::-ms-expand {
+    display: none;
+  }
+
+  // A basic version of the select w/o a label
+  .spark-select--no-label & {
+    padding: 1rem 2rem 1rem 1rem !important;
+    line-height: 2rem;
+  }
+}
+
+/// When disabled, gray out the select input.
+.spark-select.disabled .spark-select__input,
+.spark-select__input:disabled {
+  background-color: $select--disabled__background-color;
+  border: $select--disabled__border;
+  color: $select--disabled__color;
+  cursor: not-allowed;
+}
+
+/// When disabled, make the label non-actionable.
+.spark-select.disabled .spark-label,
+.spark-select__input:disabled ~ .spark-label {
+  color: $select--disabled__color;
+  cursor: not-allowed;
+  z-index: 10;
+
+  &::after {
+    border-top-color: $select--disabled__color;
+  }
+}
+
+
+
+/// Labels inside of a group or select
+.spark-select,
+.spark-select-group {
+
+  // Position the label below the actual select box
+  .spark-label {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: $select__label__color;
+    @include useFont($weight: $select__font-weight);
+    height: 5rem;
+    left: 0;
+    padding: 1.375rem 2rem 0 1rem;
+    position: absolute;
+    top: 0;
+    transition-duration: 100ms;
+    transition-property: font-size, color, padding;
+    transition-timing-function: $ease-in-out-quint;
+    z-index: 0;
+    width: 100%;
+
+    // Add the caret
+    &::after {
+      border-color: transparent;
+      border-style: solid;
+      border-top-color: $select__arrow__background-color;
+      border-width: .5rem;
+      border-top-width: .75rem;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 1rem;
+      top: 1.55em;
+      transition-duration: 100ms;
+      transition-property: color, top;
+      transition-timing-function: $ease-in-out-quint;
+    }
+  }
+}
+
+// A basic version of the select w/o a label
+.spark-select--no-label .spark-label {
+  height: 4rem;
+}
+
+/// The select message is the same as the input message
+.spark-select__message {
+  @extend %input-message;
+}
+
+/// Adjust the padding on inputs inside of active selects or a select group
+.spark-select-group,
+.spark-select.active,
+.spark-select.has-value {
+
+  // Add padding on the top so the label has somewhere to sit
+  .spark-select__input:not([multiple]) {
+    padding: 2.25rem 2rem .75rem 1rem;
+  }
+
+  // Slide the label up
+  .spark-label {
+    @include fontsize(eta);
+    padding-top: .5rem;
+
+    &::after {
+      border-top-color: $select--has-value__arrow__background-color;
+      top: 2.1rem;
+    }
+  }
+}
+
+/// A group of select inputs should fit all its content
+.spark-select-group {
+  display: flex;
+  position: relative;
+
+  // Flex each input.
+  .spark-select {
+    flex: 1;
+    margin-bottom: 0;
+
+    // Don't slide the label text up
+    .spark-label {
+      color: $select__label__color;
+      font-size: inherit;
+      line-height: 1.1rem;
+      padding: 2.75rem 2rem .75rem 1rem;
+
+      // Scale the caret
+      &::after {
+        top: 2.75rem;
+        transform: scale(.75);
+      }
+    }
+
+    // Add borders to the first and last two select elements (to account for a label)
+    &:first-child:not(:hover):not(.active) .spark-select__input:not([disabled]) {
+      border-left: $select__border;
+    }
+
+    &:last-child:not(:hover):not(.active) .spark-select__input:not([disabled]),
+    &:nth-last-child(2):not(:hover):not(.active) .spark-select__input:not([disabled]) {
+      border-right: $select__border;
+    }
+
+    // Round the edges of the first and last select
+    &:first-child .spark-select__input {
+      border-radius: $select__border-radius 0 0 $select__border-radius;
+    }
+
+    &:last-child .spark-select__input,
+    &:nth-last-child(2) .spark-select__input {
+      border-radius: 0 $select__border-radius $select__border-radius 0;
+    }
+
+    // Hide the label of an input when that input has a value. We have to do this
+    // because
+    &.has-value {
+      .spark-label {
+        color: transparent;
+        transition-duration: 0ms;
+      }
+    }
+  }
+
+  // Remove borders from the inputs
+  .spark-select__input {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 0;
+    padding-top: 2.25rem;
+  }
+
+  // The top-level label should have no caret
+  > .spark-label {
+    &::after {
+      display: none;
+    }
+  }
+
+  // A top-level label that follows any select that is active
+  .spark-select.active ~ .spark-label {
+    color: $select--active__label__color;
+  }
+}

@@ -1,0 +1,791 @@
+/* sabre-spark - v2.4.4 - 2018-3-6 DO NOT MODIFY THIS FILE DIRECTLY OR YOU WILL NOT BE ABLE TO UPDATE YOUR VERSION OF SPARK. */
+.expanded.spark-table-expand .spark-expand__content {
+  display: block; }
+
+.expanded.spark-table-expand .spark-expand__hide--expanded {
+  display: none !important; }
+
+.expanded.spark-table-expand .spark-expand__show--expanded {
+  display: block !important; }
+
+.expanded.spark-table-expand .spark-expand__toggle-caret {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+
+.spark-table .spark-table-heading__piece[data-sort='desc']::after,
+.spark-table .spark-table-heading__piece[data-sort='asc']::after,
+.spark-table th[data-sort='desc']::after,
+.spark-table th[data-sort='asc']::after {
+  display: inline-block;
+  font-family: "spark-icon-line";
+  font-style: normal;
+  font-weight: normal;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: normal !important;
+  speak: none;
+  text-transform: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.spark-table .spark-table-heading__piece[data-sort='desc']::after,
+.spark-table .spark-table-heading__piece[data-sort='asc']::after,
+.spark-table th[data-sort='desc']::after,
+.spark-table th[data-sort='asc']::after {
+  font-family: "spark-icon-fill";
+  font-style: normal;
+  font-weight: normal; }
+
+.spark-table table {
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  width: 100%; }
+
+.spark-table .spark-table-heading__piece,
+.spark-table th,
+.spark-table td {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+  vertical-align: middle; }
+  .spark-table .spark-table-heading__piece.wrap,
+  .spark-table th.wrap,
+  .spark-table td.wrap {
+    white-space: normal; }
+  .spark-table .spark-table-heading__piece:last-child,
+  .spark-table th:last-child,
+  .spark-table td:last-child {
+    padding-right: 1.5rem; }
+  .spark-table .spark-table-heading__piece .spark-icon--lg,
+  .spark-table th .spark-icon--lg,
+  .spark-table td .spark-icon--lg {
+    margin: -1rem 0; }
+  .spark-table .spark-table-heading__piece input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table .spark-table-heading__piece select,
+  .spark-table th input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table th select,
+  .spark-table td input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table td select {
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit; }
+    .spark-table .spark-table-heading__piece input:not([type="checkbox"]):not(.spark-input__field):focus,
+    .spark-table .spark-table-heading__piece select:focus,
+    .spark-table th input:not([type="checkbox"]):not(.spark-input__field):focus,
+    .spark-table th select:focus,
+    .spark-table td input:not([type="checkbox"]):not(.spark-input__field):focus,
+    .spark-table td select:focus {
+      outline: 0; }
+  .spark-table .spark-table-heading__piece[data-error], .spark-table .spark-table-heading__piece[data-info], .spark-table .spark-table-heading__piece[data-warning], .spark-table .spark-table-heading__piece[data-success],
+  .spark-table th[data-error],
+  .spark-table th[data-info],
+  .spark-table th[data-warning],
+  .spark-table th[data-success],
+  .spark-table td[data-error],
+  .spark-table td[data-info],
+  .spark-table td[data-warning],
+  .spark-table td[data-success] {
+    padding-left: 5rem;
+    position: relative; }
+    .spark-table .spark-table-heading__piece[data-error] .spark-table__status-icon, .spark-table .spark-table-heading__piece[data-info] .spark-table__status-icon, .spark-table .spark-table-heading__piece[data-warning] .spark-table__status-icon, .spark-table .spark-table-heading__piece[data-success] .spark-table__status-icon,
+    .spark-table th[data-error] .spark-table__status-icon,
+    .spark-table th[data-info] .spark-table__status-icon,
+    .spark-table th[data-warning] .spark-table__status-icon,
+    .spark-table th[data-success] .spark-table__status-icon,
+    .spark-table td[data-error] .spark-table__status-icon,
+    .spark-table td[data-info] .spark-table__status-icon,
+    .spark-table td[data-warning] .spark-table__status-icon,
+    .spark-table td[data-success] .spark-table__status-icon {
+      font-family: "spark-icon-fill";
+      font-size: 2rem;
+      left: 2rem;
+      line-height: 5rem;
+      position: absolute;
+      top: 0; }
+    .spark-table .spark-table-heading__piece[data-error] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table .spark-table-heading__piece[data-error] .spark-table__status-wrapper select, .spark-table .spark-table-heading__piece[data-info] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table .spark-table-heading__piece[data-info] .spark-table__status-wrapper select, .spark-table .spark-table-heading__piece[data-warning] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table .spark-table-heading__piece[data-warning] .spark-table__status-wrapper select, .spark-table .spark-table-heading__piece[data-success] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table .spark-table-heading__piece[data-success] .spark-table__status-wrapper select,
+    .spark-table th[data-error] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table th[data-error] .spark-table__status-wrapper select,
+    .spark-table th[data-info] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table th[data-info] .spark-table__status-wrapper select,
+    .spark-table th[data-warning] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table th[data-warning] .spark-table__status-wrapper select,
+    .spark-table th[data-success] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table th[data-success] .spark-table__status-wrapper select,
+    .spark-table td[data-error] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table td[data-error] .spark-table__status-wrapper select,
+    .spark-table td[data-info] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table td[data-info] .spark-table__status-wrapper select,
+    .spark-table td[data-warning] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table td[data-warning] .spark-table__status-wrapper select,
+    .spark-table td[data-success] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table td[data-success] .spark-table__status-wrapper select {
+      margin-left: .75rem;
+      margin-top: calc(1px + .25rem);
+      width: calc(100% - 1.5rem); }
+    .spark-table .spark-table-heading__piece[data-error] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table .spark-table-heading__piece[data-error] select:focus ~ .spark-table__status-message, .spark-table .spark-table-heading__piece[data-info] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table .spark-table-heading__piece[data-info] select:focus ~ .spark-table__status-message, .spark-table .spark-table-heading__piece[data-warning] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table .spark-table-heading__piece[data-warning] select:focus ~ .spark-table__status-message, .spark-table .spark-table-heading__piece[data-success] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table .spark-table-heading__piece[data-success] select:focus ~ .spark-table__status-message,
+    .spark-table th[data-error] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table th[data-error] select:focus ~ .spark-table__status-message,
+    .spark-table th[data-info] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table th[data-info] select:focus ~ .spark-table__status-message,
+    .spark-table th[data-warning] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table th[data-warning] select:focus ~ .spark-table__status-message,
+    .spark-table th[data-success] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table th[data-success] select:focus ~ .spark-table__status-message,
+    .spark-table td[data-error] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table td[data-error] select:focus ~ .spark-table__status-message,
+    .spark-table td[data-info] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table td[data-info] select:focus ~ .spark-table__status-message,
+    .spark-table td[data-warning] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table td[data-warning] select:focus ~ .spark-table__status-message,
+    .spark-table td[data-success] input:not([type="checkbox"]):not(.spark-input__field):focus ~ .spark-table__status-message,
+    .spark-table td[data-success] select:focus ~ .spark-table__status-message {
+      display: block; }
+  .spark-table .spark-table-heading__piece[data-info] .spark-table__status-icon,
+  .spark-table th[data-info] .spark-table__status-icon,
+  .spark-table td[data-info] .spark-table__status-icon {
+    color: #4a5767; }
+    .spark-table .spark-table-heading__piece[data-info] .spark-table__status-icon::before,
+    .spark-table th[data-info] .spark-table__status-icon::before,
+    .spark-table td[data-info] .spark-table__status-icon::before {
+      content: '\f188'; }
+  .spark-table .spark-table-heading__piece[data-info] .spark-table__status-message,
+  .spark-table th[data-info] .spark-table__status-message,
+  .spark-table td[data-info] .spark-table__status-message {
+    background-color: #4a5767;
+    color: #fff; }
+  .spark-table .spark-table-heading__piece[data-warning] .spark-table__status-icon,
+  .spark-table th[data-warning] .spark-table__status-icon,
+  .spark-table td[data-warning] .spark-table__status-icon {
+    color: #cd8511; }
+    .spark-table .spark-table-heading__piece[data-warning] .spark-table__status-icon::before,
+    .spark-table th[data-warning] .spark-table__status-icon::before,
+    .spark-table td[data-warning] .spark-table__status-icon::before {
+      content: '\f104'; }
+  .spark-table .spark-table-heading__piece[data-warning] .spark-table__status-message,
+  .spark-table th[data-warning] .spark-table__status-message,
+  .spark-table td[data-warning] .spark-table__status-message {
+    background-color: #cd8511;
+    color: #fff; }
+  .spark-table .spark-table-heading__piece[data-error] .spark-table__status-icon,
+  .spark-table th[data-error] .spark-table__status-icon,
+  .spark-table td[data-error] .spark-table__status-icon {
+    color: #ac0000; }
+    .spark-table .spark-table-heading__piece[data-error] .spark-table__status-icon::before,
+    .spark-table th[data-error] .spark-table__status-icon::before,
+    .spark-table td[data-error] .spark-table__status-icon::before {
+      content: '\f11a'; }
+  .spark-table .spark-table-heading__piece[data-error] .spark-table__status-message,
+  .spark-table th[data-error] .spark-table__status-message,
+  .spark-table td[data-error] .spark-table__status-message {
+    background-color: #ac0000;
+    color: #fff; }
+  .spark-table .spark-table-heading__piece[data-success] .spark-table__status-icon,
+  .spark-table th[data-success] .spark-table__status-icon,
+  .spark-table td[data-success] .spark-table__status-icon {
+    color: #6f991c; }
+    .spark-table .spark-table-heading__piece[data-success] .spark-table__status-icon::before,
+    .spark-table th[data-success] .spark-table__status-icon::before,
+    .spark-table td[data-success] .spark-table__status-icon::before {
+      content: '\f178'; }
+  .spark-table .spark-table-heading__piece[data-success] .spark-table__status-message,
+  .spark-table th[data-success] .spark-table__status-message,
+  .spark-table td[data-success] .spark-table__status-message {
+    background-color: #6f991c;
+    color: #fff; }
+
+.spark-table:not(.spark-table--spreadsheet) th input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet) td input:not([type="checkbox"]):not(.spark-input__field) {
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin: -1rem -1.25rem;
+  padding: 1.25rem 1rem;
+  width: calc(100% + 2.5rem); }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-error] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-error] > select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-info] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-info] > select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-warning] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-warning] > select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-success] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-success] > select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-error] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-error] > select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-info] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-info] > select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-warning] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-warning] > select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-success] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-success] > select {
+  margin-left: -4.25rem;
+  width: calc(100% + 5.5rem); }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-error] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-error] select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-info] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-info] select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-warning] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-warning] select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-success] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-success] select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-error] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-error] select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-info] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-info] select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-warning] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-warning] select, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-success] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-success] select {
+  padding-left: 4rem; }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-error] .spark-table__status-message, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-info] .spark-table__status-message, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-warning] .spark-table__status-message, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) th[data-success] .spark-table__status-message, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-error] .spark-table__status-message, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-info] .spark-table__status-message, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-warning] .spark-table__status-message, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--condensed) td[data-success] .spark-table__status-message {
+  border-radius: 0 0 .25rem .25rem;
+  margin-left: .75rem;
+  margin-top: -.5rem;
+  padding: .75rem;
+  width: calc(100% - 1.5rem); }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing th input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing td input:not([type="checkbox"]):not(.spark-input__field) {
+  border: 1px solid #ccc; }
+  .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td input:not([type="checkbox"]):not(.spark-input__field):hover,
+  .spark-table.spark-table--edit-rows .editing th input:not([type="checkbox"]):not(.spark-input__field):hover,
+  .spark-table.spark-table--edit-rows .editing td input:not([type="checkbox"]):not(.spark-input__field):hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #a1a1a1;
+    color: #333; }
+  .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th input:not([type="checkbox"]):not(.spark-input__field):focus:not([readonly]), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td input:not([type="checkbox"]):not(.spark-input__field):focus:not([readonly]),
+  .spark-table.spark-table--edit-rows .editing th input:not([type="checkbox"]):not(.spark-input__field):focus:not([readonly]),
+  .spark-table.spark-table--edit-rows .editing td input:not([type="checkbox"]):not(.spark-input__field):focus:not([readonly]) {
+    background-color: #eee;
+    border: 1px solid #666;
+    color: #222; }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-error] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-error] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-error] input:not([type="checkbox"]):not(.spark-input__field):focus, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-error] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-error] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-error] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing th[data-error] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing th[data-error] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing th[data-error] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing td[data-error] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing td[data-error] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing td[data-error] input:not([type="checkbox"]):not(.spark-input__field):focus {
+  border-color: #ac0000; }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-warning] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-warning] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-warning] input:not([type="checkbox"]):not(.spark-input__field):focus, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-warning] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-warning] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-warning] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing th[data-warning] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing th[data-warning] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing th[data-warning] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing td[data-warning] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing td[data-warning] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing td[data-warning] input:not([type="checkbox"]):not(.spark-input__field):focus {
+  border-color: #cd8511; }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-success] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-success] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-success] input:not([type="checkbox"]):not(.spark-input__field):focus, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-success] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-success] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-success] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing th[data-success] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing th[data-success] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing th[data-success] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing td[data-success] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing td[data-success] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing td[data-success] input:not([type="checkbox"]):not(.spark-input__field):focus {
+  border-color: #6f991c; }
+
+.spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-info] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-info] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) th[data-info] input:not([type="checkbox"]):not(.spark-input__field):focus, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-info] input:not([type="checkbox"]):not(.spark-input__field), .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-info] input:not([type="checkbox"]):not(.spark-input__field):hover, .spark-table:not(.spark-table--spreadsheet):not(.spark-table--edit-rows) td[data-info] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing th[data-info] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing th[data-info] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing th[data-info] input:not([type="checkbox"]):not(.spark-input__field):focus,
+.spark-table.spark-table--edit-rows .editing td[data-info] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table.spark-table--edit-rows .editing td[data-info] input:not([type="checkbox"]):not(.spark-input__field):hover,
+.spark-table.spark-table--edit-rows .editing td[data-info] input:not([type="checkbox"]):not(.spark-input__field):focus {
+  border-color: #4a5767; }
+
+.spark-table thead {
+  background-color: #555; }
+  .spark-table thead tr {
+    border-bottom: 1px solid #333; }
+
+.spark-table tbody {
+  position: relative; }
+  .spark-table tbody tr {
+    cursor: pointer; }
+    .spark-table tbody tr:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e2eaf3), to(#e2eaf3));
+      background: -o-linear-gradient(top, #e2eaf3 0, #e2eaf3 100%);
+      background: linear-gradient(to bottom, #e2eaf3 0, #e2eaf3 100%);
+      color: #555; }
+    .spark-table tbody tr.active {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), to(#eee));
+      background: -o-linear-gradient(top, #eee 0, #eee 100%);
+      background: linear-gradient(to bottom, #eee 0, #eee 100%);
+      border-bottom: 1px double #555;
+      border-top: 1px double #555;
+      color: #333; }
+      .spark-table tbody tr.active td {
+        border-right-color: #555; }
+    .spark-table tbody tr:first-child:not(:hover):not(.active) {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1rem, transparent));
+      background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0, transparent 1rem);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, transparent 1rem);
+      border-bottom: transparent; }
+
+.spark-table .spark-table-heading__piece,
+.spark-table th {
+  border-right: 1px solid #333;
+  color: #fff;
+  cursor: default;
+  font-size: 1.08333rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap; }
+
+.spark-table .spark-table-heading__piece,
+.spark-table th[data-sort] {
+  cursor: pointer; }
+
+.spark-table th[data-sort]:hover,
+.spark-table .spark-table-heading__piece[data-sort]:hover,
+.spark-table .spark-table__select-all:hover {
+  background-color: #333; }
+
+.spark-table .spark-table-heading__piece[data-sort='desc'],
+.spark-table .spark-table-heading__piece[data-sort='asc'],
+.spark-table th[data-sort='desc'],
+.spark-table th[data-sort='asc'] {
+  font-weight: 700; }
+  .spark-table .spark-table-heading__piece[data-sort='desc']::after,
+  .spark-table .spark-table-heading__piece[data-sort='asc']::after,
+  .spark-table th[data-sort='desc']::after,
+  .spark-table th[data-sort='asc']::after {
+    content: '\f10b'; }
+
+.spark-table .spark-table-heading__piece[data-sort='desc']::after,
+.spark-table th[data-sort='desc']::after {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg); }
+
+.spark-table .spark-table-heading__piece[data-sort="asc"]::after,
+.spark-table th[data-sort="asc"]::after {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg); }
+
+.spark-table tr {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; }
+  .spark-table tr td:first-child, .spark-table tr th:first-child, .spark-table tr .spark-table-heading__piece:first-child {
+    border-left: 1px solid transparent; }
+  .spark-table tr td:last-child, .spark-table tr th:last-child, .spark-table tr .spark-table-heading__piece:last-child {
+    border-right: 1px solid transparent; }
+
+.spark-table th.spark-table-heading {
+  padding: 0; }
+  .spark-table th.spark-table-heading[colspan="2"] .spark-table-heading__piece {
+    width: 50%; }
+
+.spark-table .spark-table-heading__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center; }
+
+.spark-table .spark-table-heading__full {
+  background-color: #333;
+  border-right: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-weight: 400;
+  height: 50%;
+  text-transform: none;
+  width: 100%; }
+
+.spark-table .spark-table-heading__piece {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 50%; }
+  .spark-table .spark-table-heading__piece:last-child {
+    border-right: none; }
+
+.spark-table__no-border {
+  border: none !important; }
+
+.spark-table__header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+  .spark-table__header .spark-table__title {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .spark-table__header .spark-table__nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+
+.spark-table__scroll {
+  overflow-x: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+  .spark-table__scroll.spark-panel__content {
+    padding: 0; }
+
+.spark-table__checkbox {
+  line-height: 1;
+  width: 1rem; }
+
+.spark-table__row--align-top td {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  vertical-align: top; }
+
+.spark-table__actions,
+.spark-table__actions--icons {
+  white-space: nowrap;
+  width: 2rem; }
+  .spark-table__actions [class*='spark-btn'],
+  .spark-table__actions--icons [class*='spark-btn'] {
+    cursor: pointer; }
+
+.spark-table__actions--icons .spark-btn--icon {
+  margin: -1rem 0;
+  line-height: 3rem; }
+
+.spark-table__edit-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  min-height: calc(5rem - 1px);
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition-duration: 100ms;
+       -o-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  -o-transition-property: opacity, transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  width: auto; }
+  .spark-table__edit-actions::before {
+    background: -webkit-gradient(linear, right top, left top, from(rgba(100, 100, 100, 0.5)), to(transparent));
+    background: -o-linear-gradient(right, rgba(100, 100, 100, 0.5), transparent);
+    background: linear-gradient(to left, rgba(100, 100, 100, 0.5), transparent);
+    content: '';
+    display: block;
+    height: 100%;
+    left: -.5rem;
+    position: absolute;
+    width: 1rem;
+    z-index: 0; }
+  .spark-table__edit-actions .spark-btn {
+    border: none;
+    border-radius: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    height: 100%;
+    margin: 0;
+    min-width: 6rem; }
+    .spark-table__edit-actions .spark-btn::before {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+
+.spark-table-heading {
+  padding: 0; }
+  .spark-table-heading[colspan="2"] .spark-table-heading__piece {
+    width: 50%; }
+  .spark-table-heading[colspan="3"] .spark-table-heading__piece {
+    width: 33.33333%; }
+  .spark-table-heading[colspan="4"] .spark-table-heading__piece {
+    width: 25%; }
+  .spark-table-heading[colspan="5"] .spark-table-heading__piece {
+    width: 20%; }
+  .spark-table-heading[colspan="6"] .spark-table-heading__piece {
+    width: 16.66667%; }
+  .spark-table-heading[colspan="7"] .spark-table-heading__piece {
+    width: 14.28571%; }
+  .spark-table-heading[colspan="8"] .spark-table-heading__piece {
+    width: 12.5%; }
+  .spark-table-heading[colspan="9"] .spark-table-heading__piece {
+    width: 11.11111%; }
+
+.spark-table__status-wrapper {
+  display: block;
+  height: 100%;
+  left: -5rem;
+  position: relative;
+  width: calc(100% + 7rem); }
+
+.spark-table__status-message {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 15; }
+
+.spark-table__resize {
+  cursor: ew-resize;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 1rem;
+  z-index: 5; }
+  .spark-table__resize--left {
+    left: -1px; }
+  .spark-table__resize--right {
+    right: -1px; }
+
+.spark-table__checkbox .spark-table__resize,
+.spark-table__checkbox + th .spark-table__resize--left {
+  display: none; }
+
+@media (max-width: 795px) {
+  .spark-table__resize {
+    display: none; } }
+
+.spark-table--condensed table,
+.spark-table--spreadsheet table {
+  margin-bottom: 4rem; }
+
+.spark-table--condensed th,
+.spark-table--spreadsheet th {
+  height: 4rem;
+  padding: 1rem; }
+
+.spark-table--condensed td,
+.spark-table--spreadsheet td {
+  border-right: 1px solid #ccc;
+  font-size: 1.08333rem;
+  height: 3rem;
+  padding: 1rem;
+  line-height: 1.5rem; }
+  .spark-table--condensed td[data-error], .spark-table--condensed td[data-info], .spark-table--condensed td[data-warning], .spark-table--condensed td[data-success],
+  .spark-table--spreadsheet td[data-error],
+  .spark-table--spreadsheet td[data-info],
+  .spark-table--spreadsheet td[data-warning],
+  .spark-table--spreadsheet td[data-success] {
+    padding-left: 3rem; }
+    .spark-table--condensed td[data-error] .spark-table__status-icon, .spark-table--condensed td[data-info] .spark-table__status-icon, .spark-table--condensed td[data-warning] .spark-table__status-icon, .spark-table--condensed td[data-success] .spark-table__status-icon,
+    .spark-table--spreadsheet td[data-error] .spark-table__status-icon,
+    .spark-table--spreadsheet td[data-info] .spark-table__status-icon,
+    .spark-table--spreadsheet td[data-warning] .spark-table__status-icon,
+    .spark-table--spreadsheet td[data-success] .spark-table__status-icon {
+      font-size: 1.5rem;
+      font-family: "spark-icon-line";
+      left: 1rem;
+      line-height: 3rem;
+      position: absolute; }
+
+.spark-table--condensed.spark-table--condensed--large-font td,
+.spark-table--spreadsheet.spark-table--condensed--large-font td {
+  font-size: 1.33333rem; }
+
+.spark-table--condensed tr th:last-child, .spark-table--condensed tr td:last-child,
+.spark-table--spreadsheet tr th:last-child,
+.spark-table--spreadsheet tr td:last-child {
+  padding-right: 1rem; }
+
+.spark-table--condensed .spark-table__edit-actions,
+.spark-table--spreadsheet .spark-table__edit-actions {
+  min-height: calc(3rem - 1px); }
+
+.spark-table--condensed:not(.spark-table--spreadsheet) th > input:not([type="checkbox"]):not(.spark-input__field), .spark-table--condensed:not(.spark-table--spreadsheet) td > input:not([type="checkbox"]):not(.spark-input__field) {
+  margin: -.5rem -.75rem;
+  width: calc(100% + 1.5rem); }
+
+.spark-table--condensed:not(.spark-table--spreadsheet) th input:not([type="checkbox"]):not(.spark-input__field), .spark-table--condensed:not(.spark-table--spreadsheet) td input:not([type="checkbox"]):not(.spark-input__field) {
+  padding: .5rem .75rem; }
+
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] > select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] > select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] > select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] > select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] > select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] > select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] > select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] > input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] > select {
+  margin-left: -2.75rem;
+  width: calc(100% + 3.5rem); }
+
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] select {
+  padding-left: 2.5rem; }
+
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] .spark-table__status-wrapper, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] .spark-table__status-wrapper, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] .spark-table__status-wrapper, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] .spark-table__status-wrapper, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] .spark-table__status-wrapper, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] .spark-table__status-wrapper, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] .spark-table__status-wrapper, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] .spark-table__status-wrapper {
+  left: -3rem;
+  width: calc(100% + 4rem); }
+  .spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] .spark-table__status-wrapper select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] .spark-table__status-wrapper select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] .spark-table__status-wrapper select, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] .spark-table__status-wrapper select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] .spark-table__status-wrapper select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] .spark-table__status-wrapper select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] .spark-table__status-wrapper select, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+  .spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] .spark-table__status-wrapper select {
+    margin-left: .25rem;
+    margin-top: .25rem;
+    width: calc(100% - .5rem); }
+
+.spark-table--condensed:not(.spark-table--spreadsheet) th[data-error] .spark-table__status-message, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-info] .spark-table__status-message, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-warning] .spark-table__status-message, .spark-table--condensed:not(.spark-table--spreadsheet) th[data-success] .spark-table__status-message, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-error] .spark-table__status-message, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-info] .spark-table__status-message, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-warning] .spark-table__status-message, .spark-table--condensed:not(.spark-table--spreadsheet) td[data-success] .spark-table__status-message {
+  border-radius: 0 0 .25rem .25rem;
+  margin-left: .25rem;
+  margin-top: -.5rem;
+  padding: .5rem .75rem;
+  width: calc(100% - .5rem); }
+
+.spark-table--spreadsheet td input:not([type="checkbox"]):not(.spark-input__field),
+.spark-table--spreadsheet td select {
+  border: none;
+  margin: -1.25rem -1rem;
+  padding: 1.25rem 1rem;
+  width: calc(100% + 2rem); }
+  .spark-table--spreadsheet td input:not([type="checkbox"]):not(.spark-input__field)[readonly]::-moz-selection,
+  .spark-table--spreadsheet td select[readonly]::-moz-selection {
+    background: transparent; }
+  .spark-table--spreadsheet td input:not([type="checkbox"]):not(.spark-input__field)[readonly]::selection,
+  .spark-table--spreadsheet td select[readonly]::selection {
+    background: transparent; }
+
+.spark-table--spreadsheet td select {
+  left: .5rem;
+  position: relative;
+  width: calc(100% + 1rem); }
+
+.spark-table--spreadsheet td.focus:not(.editing) {
+  color: #222;
+  position: relative; }
+  .spark-table--spreadsheet td.focus:not(.editing)::before {
+    background-color: inherit;
+    -webkit-box-shadow: 0 0 1px 2px #ddd;
+            box-shadow: 0 0 1px 2px #ddd;
+    border: 1px solid #a1a1a1; }
+
+.spark-table--spreadsheet td.editing, .spark-table--spreadsheet td.focus {
+  color: #222;
+  position: relative; }
+  .spark-table--spreadsheet td.editing::before, .spark-table--spreadsheet td.focus::before {
+    background-color: #eee;
+    border: 1px solid #666;
+    content: '';
+    display: block;
+    height: 100%;
+    left: -1px;
+    min-height: calc(3rem - 1px);
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    z-index: 0; }
+  .spark-table--spreadsheet td.editing > *:not(.spark-table__status-icon):not(.spark-table__status-message), .spark-table--spreadsheet td.focus > *:not(.spark-table__status-icon):not(.spark-table__status-message) {
+    position: relative;
+    z-index: 5; }
+
+.spark-table--spreadsheet td.hover {
+  color: #333; }
+  .spark-table--spreadsheet td.hover::before {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #a1a1a1; }
+
+.spark-table--spreadsheet td[data-error], .spark-table--spreadsheet td[data-info], .spark-table--spreadsheet td[data-warning], .spark-table--spreadsheet td[data-success] {
+  height: auto; }
+  .spark-table--spreadsheet td[data-error] .spark-table__status-wrapper, .spark-table--spreadsheet td[data-info] .spark-table__status-wrapper, .spark-table--spreadsheet td[data-warning] .spark-table__status-wrapper, .spark-table--spreadsheet td[data-success] .spark-table__status-wrapper {
+    height: calc(3rem - 1px);
+    left: -3rem;
+    margin: 0;
+    width: calc(100% + 4rem); }
+    .spark-table--spreadsheet td[data-error] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table--spreadsheet td[data-error] .spark-table__status-wrapper select, .spark-table--spreadsheet td[data-info] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table--spreadsheet td[data-info] .spark-table__status-wrapper select, .spark-table--spreadsheet td[data-warning] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table--spreadsheet td[data-warning] .spark-table__status-wrapper select, .spark-table--spreadsheet td[data-success] .spark-table__status-wrapper input:not([type="checkbox"]):not(.spark-input__field),
+    .spark-table--spreadsheet td[data-success] .spark-table__status-wrapper select {
+      margin: calc(-.35rem - 1px) 0;
+      padding: 1.25rem 1rem 1.25rem 3.25rem;
+      width: 100%; }
+  .spark-table--spreadsheet td[data-error] .spark-table__status-message, .spark-table--spreadsheet td[data-info] .spark-table__status-message, .spark-table--spreadsheet td[data-warning] .spark-table__status-message, .spark-table--spreadsheet td[data-success] .spark-table__status-message {
+    -webkit-box-shadow: 0 0 1px 2px #ddd;
+            box-shadow: 0 0 1px 2px #ddd;
+    padding: .5rem; }
+
+.spark-table--edit-rows.editing tbody tr:not(.editing) {
+  opacity: .5; }
+
+.spark-table--edit-rows tr.editing .spark-table__actions > *:not(.spark-table__edit-actions),
+.spark-table--edit-rows tr.editing .spark-table__actions--icons > *:not(.spark-table__edit-actions) {
+  display: none; }
+
+.spark-table--edit-rows tr.editing .spark-table__edit-actions {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
+
+.spark-table tr.spark-table__disabled-row, .spark-table tr.spark-table__disabled-row:hover, .spark-table tr.spark-table__disabled-row.active {
+  background-color: #fff;
+  color: #a1a1a1; }
+
+.spark-table tr.spark-table__disabled-row button, .spark-table tr.spark-table__disabled-row button:hover, .spark-table tr.spark-table__disabled-row button:focus {
+  color: #a1a1a1; }
+
+.spark-table td.spark-table__disabled-cell input,
+.spark-table td input[disabled] {
+  color: #a1a1a1; }
+
+.spark-table th.spark-table__disabled-column, .spark-table th.spark-table__disabled-column:hover {
+  color: #a1a1a1; }
+
+@font-face {
+  font-family: "spark-icon-line";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/spark/spark-icon-line.eot?#iefix') format('embedded-opentype'), url('./fonts/spark/spark-icon-line.woff') format('woff'), url('./fonts/spark/spark-icon-line.svg#spark-icon-line') format('svg'), url('./fonts/spark/spark-icon-line.ttf') format('truetype'); }
+
+@font-face {
+  font-family: "spark-icon-fill";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/spark/spark-icon-fill.eot?#iefix') format('embedded-opentype'), url('./fonts/spark/spark-icon-fill.woff') format('woff'), url('./fonts/spark/spark-icon-fill.svg#spark-icon-fill') format('svg'), url('./fonts/spark/spark-icon-fill.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('./fonts/roboto/Roboto_700.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_700.woff') format('woff'), url('./fonts/roboto/Roboto_700.woff2') format('woff2'), url('./fonts/roboto/Roboto_700.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_700.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('./fonts/roboto/Roboto_400.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_400.woff') format('woff'), url('./fonts/roboto/Roboto_400.woff2') format('woff2'), url('./fonts/roboto/Roboto_400.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_400.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url('./fonts/roboto/Roboto_300.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_300.woff') format('woff'), url('./fonts/roboto/Roboto_300.woff2') format('woff2'), url('./fonts/roboto/Roboto_300.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_300.ttf') format('truetype'); }

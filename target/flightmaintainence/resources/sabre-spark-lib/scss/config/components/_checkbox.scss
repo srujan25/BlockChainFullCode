@@ -1,0 +1,78 @@
+////
+/// ## Checkbox Configuration
+/// These styles are also used for radio buttons.
+///	@group config/components/checkbox
+////
+
+
+/// Checkbox `background-color`
+/// @type {Color}
+$checkbox__background-color: $white !default;
+
+/// Checkbox `border`
+/// @type {String}
+$checkbox__border: 1px solid map-get($gray-color-steps, 500) !default;
+
+/// Checkbox `color`
+/// @type {Color}
+$checkbox__color: map-get($gray-color-steps, 500) !default;
+
+/// Checkbox label `color`
+/// @type {Color}
+$checkbox__label__color: map-get($gray-color-steps, 800) !default;
+
+/// Checkbox label `color` on hover
+/// @type {Color}
+$checkbox__label--hover__color: map-get($gray-color-steps, 900) !default;
+
+/// Checkbox check icon `color`
+/// @type {Color}
+$checkbox__icon__color: transparent !default;
+
+/// Checkbox `background-color` on hover
+/// @type {Color}
+$checkbox--hover__background-color: $white !default;
+
+/// Checkbox `border` on hover
+/// @type {String}
+$checkbox--hover__border: 1px solid map-get($gray-color-steps, 800) !default;
+
+/// Checkbox `color` on hover
+/// @type {Color}
+$checkbox--hover__color: map-get($gray-color-steps, 800) !default;
+
+/// Checkbox check icon `color` on hover
+/// @type {Color}
+$checkbox--hover__icon__color: transparent !default;
+
+/// Checkbox `background-color` when active
+/// @type {Color}
+$checkbox--active__background-color: $white !default;
+
+/// Checkbox `border` when active
+/// @type {String}
+$checkbox--active__border: 1px solid map-get($gray-color-steps, 900) !default;
+
+/// Checkbox `color` when active
+/// @type {Color}
+$checkbox--active__color: map-get($gray-color-steps, 900) !default;
+
+/// Checkbox check icon `color` when active
+/// @type {Color}
+$checkbox--active__icon__color: map-get($blue-color-steps, 200) !default;
+
+/// Checkbox `background-color` when diabled
+/// @type {Color}
+$checkbox--disabled__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Checkbox `border` when disabled
+/// @type {String}
+$checkbox--disabled__border: 1px solid map-get($gray-color-steps, 100) !default;
+
+/// Checkbox `color` when disabled
+/// @type {Color}
+$checkbox--disabled__color: map-get($gray-color-steps, 500) !default;
+
+/// Checkbox check icon `color` when disabled
+/// @type {Color}
+$checkbox--disabled__icon__color: transparent !default;

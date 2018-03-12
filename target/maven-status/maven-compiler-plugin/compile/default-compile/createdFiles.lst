@@ -1,4 +1,5 @@
+controller/BlockChainController.class
+bean/Airline.class
 MyWebAppInitializer.class
-controller\BlockChainController.class
 WebConfig.class
 RootConfig.class

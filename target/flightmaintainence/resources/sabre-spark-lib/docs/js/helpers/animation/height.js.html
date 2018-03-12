@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../css/prism.min.css">
+    <link rel="stylesheet" href="../../css/index.min.css">
+    <link rel="stylesheet" href="../../css/docs.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../index.html">Main</a></li>
+            <li><a href="../../components/base.js.html">components/base.js</a></li>
+            <li><a href="../../components/calendar-popover.js.html">components/calendar-popover.js</a></li>
+            <li><a href="../../components/carousel.js.html">components/carousel.js</a></li>
+            <li><a href="../../components/date-input.js.html">components/date-input.js</a></li>
+            <li><a href="../../components/date-select.js.html">components/date-select.js</a></li>
+            <li><a href="../../components/date-typeahead.js.html">components/date-typeahead.js</a></li>
+            <li><a href="../../components/expand.js.html">components/expand.js</a></li>
+            <li><a href="../../components/filter-module.js.html">components/filter-module.js</a></li>
+            <li><a href="../../components/filter.js.html">components/filter.js</a></li>
+            <li><a href="../../components/header.js.html">components/header.js</a></li>
+            <li><a href="../../components/menu.js.html">components/menu.js</a></li>
+            <li><a href="../../components/modal.js.html">components/modal.js</a></li>
+            <li><a href="../../components/multi-select-input.js.html">components/multi-select-input.js</a></li>
+            <li><a href="../../components/number-selector.js.html">components/number-selector.js</a></li>
+            <li><a href="../../components/popover.js.html">components/popover.js</a></li>
+            <li><a href="../../components/progress-indicator.js.html">components/progress-indicator.js</a></li>
+            <li><a href="../../components/range-slider.js.html">components/range-slider.js</a></li>
+            <li><a href="../../components/scroll-to-top.js.html">components/scroll-to-top.js</a></li>
+            <li><a href="../../components/select-input.js.html">components/select-input.js</a></li>
+            <li><a href="../../components/slider.js.html">components/slider.js</a></li>
+            <li><a href="../../components/step-indicator.js.html">components/step-indicator.js</a></li>
+            <li><a href="../../components/table.js.html">components/table.js</a></li>
+            <li><a href="../../components/tabs.js.html">components/tabs.js</a></li>
+            <li><a href="../../components/text-input.js.html">components/text-input.js</a></li>
+            <li><a href="../../components/toggle-switch.js.html">components/toggle-switch.js</a></li>
+            <li><a href="../../components/toolbar.js.html">components/toolbar.js</a></li>
+            <li><a href="../../components/tooltip.js.html">components/tooltip.js</a></li>
+            <li><a href="../../components/typeahead.js.html">components/typeahead.js</a></li>
+            <li><a href="../../helpers/animation/cancel.js.html">helpers/animation/cancel.js</a></li>
+            <li class="active"><a href="../../helpers/animation/height.js.html">helpers/animation/height.js</a></li>
+            <li><a href="../../helpers/animation/request.js.html">helpers/animation/request.js</a></li>
+            <li><a href="../../helpers/animation/scroll-to.js.html">helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../helpers/animation/tween.js.html">helpers/animation/tween.js</a></li>
+            <li><a href="../../helpers/css/transform.js.html">helpers/css/transform.js</a></li>
+            <li><a href="../../helpers/date/date.js.html">helpers/date/date.js</a></li>
+            <li><a href="../../helpers/date/parse-format.js.html">helpers/date/parse-format.js</a></li>
+            <li><a href="../../helpers/dom/add-class.js.html">helpers/dom/add-class.js</a></li>
+            <li><a href="../../helpers/dom/breakpoint.js.html">helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../helpers/dom/has-class.js.html">helpers/dom/has-class.js</a></li>
+            <li><a href="../../helpers/dom/make-element.js.html">helpers/dom/make-element.js</a></li>
+            <li><a href="../../helpers/dom/offset.js.html">helpers/dom/offset.js</a></li>
+            <li><a href="../../helpers/dom/outer-height.js.html">helpers/dom/outer-height.js</a></li>
+            <li><a href="../../helpers/dom/outer-width.js.html">helpers/dom/outer-width.js</a></li>
+            <li><a href="../../helpers/dom/parse-attribute.js.html">helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../helpers/dom/remove-class.js.html">helpers/dom/remove-class.js</a></li>
+            <li><a href="../../helpers/dom/toggle-class.js.html">helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../helpers/dom/trigger-event.js.html">helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../helpers/form/build-select.js.html">helpers/form/build-select.js</a></li>
+            <li><a href="../../helpers/form/form-data.js.html">helpers/form/form-data.js</a></li>
+            <li><a href="../../helpers/form/set-caret.js.html">helpers/form/set-caret.js</a></li>
+            <li><a href="../../helpers/manipulation/append-children.js.html">helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../helpers/manipulation/copy-attributes.js.html">helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../helpers/manipulation/insert-before.js.html">helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../helpers/manipulation/wrap-element.js.html">helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../helpers/position/affix.js.html">helpers/position/affix.js</a></li>
+            <li><a href="../../helpers/position/box-position.js.html">helpers/position/box-position.js</a></li>
+            <li><a href="../../helpers/traversal/get-child.js.html">helpers/traversal/get-child.js</a></li>
+            <li><a href="../../helpers/traversal/get-children.js.html">helpers/traversal/get-children.js</a></li>
+            <li><a href="../../helpers/traversal/get-index.js.html">helpers/traversal/get-index.js</a></li>
+            <li><a href="../../helpers/traversal/get-parent.js.html">helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../helpers/traversal/get-parents.js.html">helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../helpers/traversal/get-sibling-after.js.html">helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../helpers/traversal/get-sibling-before.js.html">helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../helpers/traversal/has-parent.js.html">helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../helpers/traversal/matches.js.html">helpers/traversal/matches.js</a></li>
+            <li><a href="../../helpers/util/debounce.js.html">helpers/util/debounce.js</a></li>
+            <li><a href="../../helpers/util/each.js.html">helpers/util/each.js</a></li>
+            <li><a href="../../helpers/util/mixin.js.html">helpers/util/mixin.js</a></li>
+            <li><a href="../../helpers/util/pad.js.html">helpers/util/pad.js</a></li>
+            <li><a href="../../helpers/util/range.js.html">helpers/util/range.js</a></li>
+            <li><a href="../../helpers/util/round.js.html">helpers/util/round.js</a></li>
+            <li><a href="../../helpers/util/trim.js.html">helpers/util/trim.js</a></li>
+            <li><a href="../../mixins/messaging.js.html">mixins/messaging.js</a></li>
+            <li><a href="../../mixins/validation.js.html">mixins/validation.js</a></li>
+            <li><a href="../../spark.jquery.js.html">spark.jquery.js</a></li>
+            <li><a href="../../spark.js.html">spark.js</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>Animate Height</h1>
+<p>Animate the height of an element since we can&#39;t do this w/ pure CSS. Sigh.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>module</td>
+                <td></td>
+                <td>helpers/animation/height.js</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">import outerHeight from '../dom/outer-height';
+import addClass from '../dom/add-class';
+import removeClass from '../dom/remove-class';
+import hasClass from '../dom/has-class';
+import toggleClass from '../dom/toggle-class';
+
+const noop = function() {};
+const runningAnimations = {
+  els: [],
+  completeCallbacks: []
+};</code></pre>
+          <h5>Example</h5>
+          <pre><code class="language-javascript">animateHeight({
+  el: ...,
+  toggleEl: ...,
+  // Optional params
+  action: 'collapse'|'expand',
+  heightAnimationClass: 'spark-animate-height',
+  opacityAnimationClass: 'spark-animate-opacity',
+  toggleProperty: 'display'|'overflow'|'visibility',
+  toggleValue: 'block'|'none'|'visible'|'hidden',
+  animationDuration: 250
+});</code></pre>
+          <section id="getInverseToggleValue">
+            <h1>getInverseToggleValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>getInverseToggleValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the inverse toggle value</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>property</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>originalValue</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">function getInverseToggleValue(el, property, originalValue) {
+
+  // Get the value to toggle to for the given property
+  switch (property) {
+    case 'overflow':
+    case 'visibility':
+      return originalValue === 'visible' ? 'hidden' : 'visible';
+    default:
+      return originalValue === 'block' || originalValue === 'inline-block' ? 'none' : 'block';
+  }
+}</code></pre>
+          <section id="onComplete">
+            <h1>onComplete</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>onComplete()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When an animation is complete, clean up and run the callback.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">function onComplete(params) {
+
+  // Reset toggle el visibility
+  if (params.toggleClassName) {
+    toggleClass(params.el, params.toggleClassName, !params.collapse);
+  }
+  else {
+    params.toggleEl.style[params.toggleProperty] = '';
+
+  }
+
+  // Remove the height property
+  params.el.style.height = '';
+  params.toggleEl.style.height = '';
+  params.toggleEl.style.marginBottom = '';
+  params.toggleEl.style.marginTop = '';
+
+  // Remove the spark-animate-height class so the transitions no longer apply
+  removeClass(params.el, params.heightAnimationClass);
+  removeClass(params.toggleEl, params.heightAnimationClass);
+
+  // Run the callback
+  params.onComplete();
+
+  // Remove the element and callback from their respective arrays
+  let runningIndex = runningAnimations.els.indexOf(params.el);
+  runningAnimations.els.splice(runningIndex, 1);
+  runningAnimations.completeCallbacks.splice(runningIndex, 1);
+}</code></pre>
+          <section id="animateHeight">
+            <h1>animateHeight</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>animateHeight()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">function animateHeight(params) {
+
+  params = params || {};
+
+  let el = params.el;
+
+  if (!el) {
+    return;
+  }
+
+  let collapse = params.action &amp;&amp; params.action === 'collapse';
+  let heightAnimationClass = params.heightAnimationClass || 'spark-animate-height';
+
+  // Allow for elements to be passed or selector strings
+  let toggleEl = typeof params.toggleEl === 'string' ? el.querySelector(params.toggleEl) : params.toggleEl;
+
+  // No element to be switching with toggling so we can't determine the desired height to animate to.
+  if (!toggleEl || hasClass(el, 'spark-no-animate')) {
+    return;
+  }
+
+  let toggleClassName = params.toggleClass;
+
+  // The style property to use when toggling visibility
+  let toggleProperty = params.toggleProperty || 'display';
+  let toggleStyles = window.getComputedStyle(toggleEl);
+  let originalToggleValue = toggleStyles[toggleProperty];
+  let toggleValue = params.toggleValue || getInverseToggleValue(toggleProperty, originalToggleValue);
+
+  // If we are already animating, stop now.
+  let runningIndex = runningAnimations.els.indexOf(el);
+  if (runningIndex !== -1) {
+
+    let completeCallback = runningAnimations.completeCallbacks[runningIndex];
+    if (completeCallback) {
+      clearTimeout(completeCallback);
+    }
+
+    onComplete({
+      el: el,
+      toggleEl: toggleEl,
+      onComplete: params.onComplete || noop,
+      collapse: collapse,
+      toggleProperty: toggleProperty,
+      toggleClassName: toggleClassName,
+      toggleValue: toggleValue,
+      heightAnimationClass: heightAnimationClass
+    });
+  }
+
+  // Store the current height
+  let originalHeight = outerHeight(el);
+
+  // Toggle the visible property
+  if (toggleClassName) {
+    toggleClass(el, toggleClassName, !collapse);
+  }
+  else {
+    toggleEl.style[toggleProperty] = toggleValue;
+  }
+
+  // When measuring the size for a collapse, we have to wait a tic for it to be
+  // accurate. Not sure why. Ugh.
+  if (collapse) {
+    setTimeout(runAnimation, 0);
+  }
+  else {
+    runAnimation();
+  }
+
+  function runAnimation() {
+
+    // Now that the toggle el is taking up space, get the new height which we will be animating to
+    let targetElHeight = outerHeight(el);
+
+    // We need to store the original and target toggle element heights. They differ depending on
+    // whether we are going to expand or collapse.
+    let targetToggleElHeight;
+    let originalToggleElHeight;
+
+    // If we are collapsing, reset the toggle style and set it when we're done. Set the height so
+    // that we can animate down to 0 or up to the target height.
+    if (collapse) {
+
+      if (toggleClassName) {
+        removeClass(el, toggleClassName);
+      }
+      else {
+        toggleEl.style[toggleProperty] = originalToggleValue;
+      }
+
+      originalToggleElHeight = outerHeight(toggleEl, toggleStyles);
+      targetToggleElHeight = 0;
+    }
+    else {
+      targetToggleElHeight = outerHeight(toggleEl, toggleStyles);
+      originalToggleElHeight = 0;
+    }
+
+    // Set the original height
+    el.style.height = originalHeight + 'px';
+    toggleEl.style.height = originalToggleElHeight + 'px';
+    toggleEl.style.marginBottom = '0px';
+    toggleEl.style.marginTop = '0px';
+
+    // Add the spark-animate-height class which will setup the transition-property and duration
+    addClass(el, heightAnimationClass);
+    addClass(toggleEl, heightAnimationClass);
+
+    runningAnimations.els.push(el);
+
+    // We need to wait a tick to toggle the height or else the animation class won't function
+    setTimeout(function() {
+
+      // Set the height to the target height
+      el.style.height = targetElHeight + 'px';
+      toggleEl.style.height = targetToggleElHeight + 'px';
+
+      // Remove inline styles after the animation is complete
+      runningAnimations.completeCallbacks.push(setTimeout(function() {
+        onComplete({
+          el: el,
+          toggleEl: toggleEl,
+          onComplete: params.onComplete || noop,
+          collapse: collapse,
+          toggleProperty: toggleProperty,
+          toggleClassName: toggleClassName,
+          toggleValue: toggleValue,
+          heightAnimationClass: heightAnimationClass
+        });
+      }, params.animationDuration !== undefined ? params.animationDuration : 201));
+    }, 0);
+  }
+}
+
+export default animateHeight;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with<a href="https://github.com/mr-doc/mr-doc">Mr. Doc</a> created by<a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau</a></p>
+        <p>Mr. Doc is sponsored by<a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr</a> and<a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../js/twitter-widget.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap-transition.min.js"></script>
+    <script src="../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../js/bootstrap-affix.min.js"></script>
+    <script src="../../js/prism.min.js"></script>
+    <script src="../../js/index.min.js"></script>
+  </body>
+</html>

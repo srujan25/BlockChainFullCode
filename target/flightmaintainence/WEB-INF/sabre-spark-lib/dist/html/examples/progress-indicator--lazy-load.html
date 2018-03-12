@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Progress Indicator - Lazy Load</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<button data-action="view-more-example4" class="spark-btn spark-btn--md spark-btn--view-more">Load More Results</button>
+
+<hr />
+
+<div class="spark-progress spark-progress--horizontal spark-progress--xs spark-progress--lazy-load" role="progressbar">
+  <progress></progress>
+  <span class="spark-progress__text" role="status">Loading More...</span>
+  <span class="spark-progress__meter"></span>
+</div>
+
+<hr />
+
+<div class="spark-progress spark-progress--horizontal spark-progress--xs spark-progress--lazy-load spark-progress--disabled" role="progressbar">
+  <progress></progress>
+  <span class="spark-progress__text" role="status">No More Results</span>
+  <span class="spark-progress__meter"></span>
+</div>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+// $('[data-modal]').sparkModal();
+var modal = document.querySelectorAll('[data-modal]');
+for(var i = 0, len = modal.length; i < len; i++) {
+  new Spark.Modal(modal[i]);
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Progress Indicator - Extra Small Indetermiante" %}
+
+{% block example %}
+<button class="spark-btn spark-btn--sm spark-progress">
+  <progress></progress>
+  <span class="spark-progress__meter"></span>
+  Loading
+</button>
+
+<hr />
+
+<button class="spark-btn spark-btn--sm spark-btn--secondary spark-progress">
+  <progress></progress>
+  <span class="spark-progress__meter"></span>
+  Loading
+</button>
+
+<hr />
+
+<button class="spark-btn spark-btn--sm spark-btn--alt spark-progress">
+  <progress></progress>
+  <span class="spark-progress__meter"></span>
+  Loading
+</button>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/modal.js" %}
+{% endblock %}
