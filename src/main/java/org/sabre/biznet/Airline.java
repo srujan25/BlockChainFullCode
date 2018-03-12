@@ -28,4 +28,11 @@ public class Airline {
     public void setAddress(String address) {
         this.address = address;
     }
+    private String state;
+    private String zipcode;
+    private String country;
+    private String city;
+    private String addressType;
+    private String phonenumber;
+    private String phoneType;
 }
