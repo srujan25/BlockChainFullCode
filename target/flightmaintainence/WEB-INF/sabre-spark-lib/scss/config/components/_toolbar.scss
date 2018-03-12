@@ -1,0 +1,67 @@
+/// Toolbar label font-family
+/// @type {String}
+$spark-toolbar-label-font-family: $body__font-family !default;
+
+/// Toolbar label font-weight
+/// @type {Number}
+$spark-toolbar-label-font-weight: $body__font-weight--bold !default;
+
+/// Toolbar dropdown font-weight
+/// @type {Number}
+$spark-toolbar-dropdown-font-weight: $body__font-weight--normal !default;
+
+/// Toolbar active background
+/// @type {Color}
+$spark-toolbar-active-background: map-get($blue-color-steps, 200) !default;
+
+/// Toolbar default color
+/// @type {Color}
+$spark-toolbar-color: map-get($gray-color-steps, 800) !default;
+
+/// Toolbar active color
+/// @type {Color}
+$spark-toolbar-active-color: #fff !default;
+
+/// Toolbar default background
+/// @type {Color}
+$spark-toolbar-background: #fff !default;
+
+/// Toolbar dropdown default background
+/// @type {Color}
+$spark-toolbar-dropdown-background: $popover__background-color;
+
+/// Toolbar dropdown default color
+/// @type {Color}
+$spark-toolbar-dropdown-color: $spark-toolbar-color;
+
+/// Toolbar item content list background hover
+/// @type {Color}
+$spark-toolbar-item-hover-background: map-get($gray-color-steps, 200) !default;
+
+/// Toolbar dropdown border (used for show more dropdown, as well)
+/// @type {Color}
+$spark-toolbar-dropdown-border: $popover__border;
+
+/// Toolbar dropdown border-radius (used for show more dropdown, as well)
+/// @type {Number}
+$spark-toolbar-dropdown-border-radius: $popover__border-radius;
+
+/// Toolbar dropdown box-shadow (used for show more dropdown, as well)
+/// @type {String}
+$spark-toolbar-dropdown-box-shadow: $popover__box-shadow;
+
+/// Toolbar show more dropdown items background
+/// @type {Color}
+$spark-toolbar-dropdown-background-hidden: map-get($gray-color-steps, 100) !default;
+
+/// Toolbar show more dropdown items border color
+/// @type {Color}
+$spark-toolbar-dropdown-border-hidden: map-get($gray-color-steps, 400);
+
+/// Toolbar show more dropdown items background
+/// @type {Color}
+$spark-toolbar-hover-background: map-get($gray-color-steps, 100) !default;
+
+/// Toolbar active, open state hover-color (for icon buttons only)
+/// @type {Color}
+$spark-toolbar-active-hover-color: map-get($gray-color-steps, 100) !default;

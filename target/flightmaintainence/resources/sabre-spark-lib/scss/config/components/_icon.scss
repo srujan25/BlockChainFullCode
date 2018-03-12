@@ -1,0 +1,14 @@
+////
+/// ## Icon Configuration
+/// Define the fonts used for icons.
+/// @group config/components
+////
+
+
+/// The name of the family to use for icons
+/// @type {String}
+$icon__font-family--line: 'spark-icon-line' !default;
+
+/// The name of the family to use for a filled version of the icons
+/// @type {String}
+$icon__font-family--fill: 'spark-icon-fill' !default;

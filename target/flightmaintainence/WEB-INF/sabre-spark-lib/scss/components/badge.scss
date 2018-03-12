@@ -1,0 +1,223 @@
+////
+/// ## Badge
+/// @group components/badge
+////
+
+// Badge defaults
+.spark-badge {
+  @include fontsize(zeta);
+  @include useFont($body__font-family, 400);
+  align-items: center;
+  border-radius: 1.5rem;
+  color: $white;
+  display: inline-flex;
+  height: 3rem;
+  justify-content: center;
+  line-height: 2rem;
+  min-width: 3rem;
+  padding: 0.417rem 1rem;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.spark-badge--sm {
+  height: 2rem;
+  line-height: 1rem;
+  min-width: 2rem;
+}
+
+// Neutral badge
+.spark-badge--info, // Remove in v3.0.0 - Adding this class for backwards compatibility with initial class used during early development
+.spark-badge--neutral {
+  border: $badge--neutral__border;
+  background-color: $badge--neutral__background-color;
+}
+
+// Warning badge
+.spark-badge--warning {
+  border: $badge--warning__border;
+  background-color: $badge--warning__background-color;
+}
+
+// Critical badge
+.spark-badge--error, // Remove in v3.0.0 - Adding this class for backwards compatibility with initial class used during early development
+.spark-badge--critical {
+  border: $badge--critical__border;
+  background-color: $badge--critical__background-color;
+}
+
+// Success badge
+.spark-badge--success {
+  border: $badge--success__border;
+  background-color: $badge--success__background-color;
+}
+
+// Notification Badges
+.spark-badge--notification {
+  @include fontsize(eta);
+  @include useFont($body__font-family, 400);
+  border-radius: 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  min-width: 2rem;
+  padding: 0 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: center;
+  top: 0;
+  transform: translate(100%, -50%);
+  z-index: 2;
+
+  &__neutral {
+    background: $badge-counter--neutral__background-color;
+    border: $badge-counter--neutral__border;
+    color: $white;
+  }
+
+  &__light {
+    background: $white;
+    border: $badge-counter--light__border;
+    color: $badge-counter--light__color;
+  }
+
+  &__critical {
+    background: $badge-counter--critical__background-color;
+    border: $badge-counter--critical__border;
+    color: $white;
+  }
+
+  &__warning {
+    background: $badge-counter--warning__background-color;
+    border: $badge-counter--warning__border;
+    color: $white;
+  }
+
+  &__success {
+    background: $badge-counter--success__background-color;
+    border: $badge-counter--success__border;
+    color: $white;
+  }
+}
+
+// Icons in badges and icons as badges
+.spark-badge {
+  .spark-icon,
+  [class^='spark-icon-'],
+  [class*=' spark-icon-'] {
+    vertical-align: inherit;
+  }
+}
+
+// User Notification Badges on Icon Buttons
+.spark-badge--icon {
+  &.spark-btn--icon {
+    overflow: visible; // This fixes what looks like default IE overflow:hidden behavior
+    position: relative;
+
+    .spark-badge--notification {
+      -webkit-font-smoothing: initial;
+    }
+  }
+}
+
+// Badges with Tooltips or Popovers
+.spark-badge {
+  &.spark-popover__toggle,
+  &.spark-tooltip {
+    cursor: pointer;
+  }
+
+  &.spark-badge--neutral.spark-popover__toggle,
+  &.spark-badge--neutral.spark-tooltip {
+    &:hover {
+      background-color: $badge--neutral--hover__background-color;
+    }
+
+    &:active {
+      background-color: $badge--neutral--active__background-color;
+    }
+
+    &:focus {
+      box-shadow: $badge--neutral__box-shadow;
+      outline: 0;
+    }
+  }
+
+  &.spark-badge--warning.spark-popover__toggle,
+  &.spark-badge--warning.spark-tooltip {
+    &:hover {
+      background-color: $badge--warning--hover__background-color;
+    }
+
+    &:active {
+      background-color: $badge--warning--active__background-color;
+    }
+
+    &:focus {
+      box-shadow: $badge--warning__box-shadow;
+      outline: 0;
+    }
+  }
+
+  &.spark-badge--critical.spark-popover__toggle,
+  &.spark-badge--critical.spark-tooltip {
+    &:hover {
+      background-color: $badge--critical--hover__background-color;
+    }
+
+    &:active {
+      background-color: $badge--critical--active__background-color;
+    }
+
+    &:focus {
+      box-shadow: $badge--critical__box-shadow;
+      outline: 0;
+    }
+  }
+
+  &.spark-badge--success.spark-popover__toggle,
+  &.spark-badge--success.spark-tooltip {
+    &:hover {
+      background-color: $badge--success--hover__background-color;
+    }
+
+    &:active {
+      background-color: $badge--success--active__background-color;
+    }
+
+    &:focus {
+      box-shadow: $badge--success__box-shadow;
+      outline: 0;
+    }
+  }
+}
+
+// Badges appearing in Header navigation
+.spark-header__nav:not(.spark-header__placeholder) {
+  .spark-menu__list-link:not(.spark-menu__list-link--avatar) {
+    .spark-badge--notification {
+      // This is to offset padding set on the header icon links
+      right: calc(2rem + 12px);
+      top: calc(2.5rem - 2px);
+    }
+  }
+}
+
+.spark-header.spark-header--collapsed:not(.spark-header__placeholder) {
+  .spark-menu__list-link:not(.spark-menu__list-link--avatar) {
+    .spark-badge--notification {
+      right: 2rem;
+      top: 0;
+      transform: translate(0%, 50%);
+    }
+  }
+}
+
+.spark-header[data-breakpoint='xs']:not(.spark-header__placeholder) .spark-header__sign-in,
+.spark-header.spark-header--condensed:not(.spark-header__placeholder) .spark-header__sign-in,
+.spark-header__sign-in {
+  .spark-menu__list-link--avatar {
+    overflow: visible; // This is to allow notification badge to overlay properly
+  }
+}

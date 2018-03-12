@@ -1,0 +1,10 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Avatar - Photo on Light Background" %}
+
+{% block example %}
+
+<a href="#" onclick="return false;" class="spark-avatar spark-avatar--light spark-avatar--image">
+  <img src="../../images/profile-pic.jpg" alt="Laurence Traveler" />
+</a>
+
+{% endblock %}

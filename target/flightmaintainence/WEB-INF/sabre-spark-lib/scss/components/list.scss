@@ -1,0 +1,49 @@
+////
+/// ## Bulleted Lists
+/// @group components/list
+////
+
+
+/// Unordered list
+ul {
+  li {
+    list-style-type: disc;
+  }
+}
+
+/// Ordered list
+ol {
+  li {
+    list-style-type: decimal;
+  }
+}
+
+/// Style list items
+ul,
+ol {
+  li {
+    line-height: 2rem;
+    list-style-position: outside;
+    margin: 1rem 0;
+    ///
+    /// TODO: Investigate if this can be made to work on Chrome in the future.
+    /// Currently causes bad indentation in Chrome and IE but works ok on Firefox
+    /// and Safari.
+    ///
+    /// list-style-position: inside;
+    /// padding-left: 1rem;
+    /// text-indent: -1rem;
+  }
+}
+
+/// Hide the bullet on an item
+.spark-list-item--no-bullet {
+  @extend %list-item-no-bullet;
+}
+
+/// Hide the bullets on a whole list
+.spark-list--no-bullets {
+  li {
+    @extend %list-item-no-bullet;
+  }
+}

@@ -1,0 +1,2491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../css/prism.min.css">
+    <link rel="stylesheet" href="../../css/index.min.css">
+    <link rel="stylesheet" href="../../css/docs.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../index.html">Main</a></li>
+            <li><a href="../../dist/components/base.js.html">dist/components/base.js</a></li>
+            <li><a href="../../dist/components/calendar-popover.js.html">dist/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/components/carousel.js.html">dist/components/carousel.js</a></li>
+            <li><a href="../../dist/components/date-input.js.html">dist/components/date-input.js</a></li>
+            <li><a href="../../dist/components/date-select.js.html">dist/components/date-select.js</a></li>
+            <li><a href="../../dist/components/date-typeahead.js.html">dist/components/date-typeahead.js</a></li>
+            <li><a href="../../dist/components/expand.js.html">dist/components/expand.js</a></li>
+            <li><a href="../../dist/components/filter-module.js.html">dist/components/filter-module.js</a></li>
+            <li><a href="../../dist/components/filter.js.html">dist/components/filter.js</a></li>
+            <li><a href="../../dist/components/header.js.html">dist/components/header.js</a></li>
+            <li><a href="../../dist/components/menu.js.html">dist/components/menu.js</a></li>
+            <li><a href="../../dist/components/modal.js.html">dist/components/modal.js</a></li>
+            <li><a href="../../dist/components/multi-select-input.js.html">dist/components/multi-select-input.js</a></li>
+            <li><a href="../../dist/components/number-selector.js.html">dist/components/number-selector.js</a></li>
+            <li><a href="../../dist/components/popover.js.html">dist/components/popover.js</a></li>
+            <li><a href="../../dist/components/progress-indicator.js.html">dist/components/progress-indicator.js</a></li>
+            <li><a href="../../dist/components/range-slider.js.html">dist/components/range-slider.js</a></li>
+            <li><a href="../../dist/components/scroll-to-top.js.html">dist/components/scroll-to-top.js</a></li>
+            <li><a href="../../dist/components/select-input.js.html">dist/components/select-input.js</a></li>
+            <li><a href="../../dist/components/slider.js.html">dist/components/slider.js</a></li>
+            <li><a href="../../dist/components/step-indicator.js.html">dist/components/step-indicator.js</a></li>
+            <li><a href="../../dist/components/table.js.html">dist/components/table.js</a></li>
+            <li><a href="../../dist/components/tabs.js.html">dist/components/tabs.js</a></li>
+            <li><a href="../../dist/components/text-input.js.html">dist/components/text-input.js</a></li>
+            <li><a href="../../dist/components/toggle-switch.js.html">dist/components/toggle-switch.js</a></li>
+            <li><a href="../../dist/components/toolbar.js.html">dist/components/toolbar.js</a></li>
+            <li><a href="../../dist/components/tooltip.js.html">dist/components/tooltip.js</a></li>
+            <li><a href="../../dist/components/typeahead.js.html">dist/components/typeahead.js</a></li>
+            <li><a href="../../dist/helpers/animation/cancel.js.html">dist/helpers/animation/cancel.js</a></li>
+            <li><a href="../../dist/helpers/animation/height.js.html">dist/helpers/animation/height.js</a></li>
+            <li><a href="../../dist/helpers/animation/request.js.html">dist/helpers/animation/request.js</a></li>
+            <li><a href="../../dist/helpers/animation/scroll-to.js.html">dist/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../dist/helpers/animation/tween.js.html">dist/helpers/animation/tween.js</a></li>
+            <li><a href="../../dist/helpers/css/transform.js.html">dist/helpers/css/transform.js</a></li>
+            <li><a href="../../dist/helpers/date/date.js.html">dist/helpers/date/date.js</a></li>
+            <li><a href="../../dist/helpers/date/parse-format.js.html">dist/helpers/date/parse-format.js</a></li>
+            <li><a href="../../dist/helpers/dom/add-class.js.html">dist/helpers/dom/add-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/breakpoint.js.html">dist/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../dist/helpers/dom/has-class.js.html">dist/helpers/dom/has-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/make-element.js.html">dist/helpers/dom/make-element.js</a></li>
+            <li><a href="../../dist/helpers/dom/offset.js.html">dist/helpers/dom/offset.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-height.js.html">dist/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-width.js.html">dist/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../dist/helpers/dom/parse-attribute.js.html">dist/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../dist/helpers/dom/remove-class.js.html">dist/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/toggle-class.js.html">dist/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/trigger-event.js.html">dist/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../dist/helpers/form/build-select.js.html">dist/helpers/form/build-select.js</a></li>
+            <li><a href="../../dist/helpers/form/form-data.js.html">dist/helpers/form/form-data.js</a></li>
+            <li><a href="../../dist/helpers/form/set-caret.js.html">dist/helpers/form/set-caret.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/append-children.js.html">dist/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/copy-attributes.js.html">dist/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/insert-before.js.html">dist/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/wrap-element.js.html">dist/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../dist/helpers/position/affix.js.html">dist/helpers/position/affix.js</a></li>
+            <li><a href="../../dist/helpers/position/box-position.js.html">dist/helpers/position/box-position.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-child.js.html">dist/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-children.js.html">dist/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-index.js.html">dist/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parent.js.html">dist/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parents.js.html">dist/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-after.js.html">dist/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-before.js.html">dist/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../dist/helpers/traversal/has-parent.js.html">dist/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/matches.js.html">dist/helpers/traversal/matches.js</a></li>
+            <li><a href="../../dist/helpers/util/debounce.js.html">dist/helpers/util/debounce.js</a></li>
+            <li><a href="../../dist/helpers/util/each.js.html">dist/helpers/util/each.js</a></li>
+            <li><a href="../../dist/helpers/util/mixin.js.html">dist/helpers/util/mixin.js</a></li>
+            <li><a href="../../dist/helpers/util/pad.js.html">dist/helpers/util/pad.js</a></li>
+            <li><a href="../../dist/helpers/util/range.js.html">dist/helpers/util/range.js</a></li>
+            <li><a href="../../dist/helpers/util/round.js.html">dist/helpers/util/round.js</a></li>
+            <li><a href="../../dist/helpers/util/trim.js.html">dist/helpers/util/trim.js</a></li>
+            <li><a href="../../dist/js/src/components/calendar-popover.js.html">dist/js/src/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/js/src/components/filter-module.js.html">dist/js/src/components/filter-module.js</a></li>
+            <li><a href="../../dist/js/src/components/filter.js.html">dist/js/src/components/filter.js</a></li>
+            <li><a href="../../dist/js/src/components/modal.js.html">dist/js/src/components/modal.js</a></li>
+            <li><a href="../../dist/js/src/components/typeahead.js.html">dist/js/src/components/typeahead.js</a></li>
+            <li><a href="../../dist/js/src/spark.js.html">dist/js/src/spark.js</a></li>
+            <li><a href="../../dist/mixins/messaging.js.html">dist/mixins/messaging.js</a></li>
+            <li><a href="../../dist/mixins/validation.js.html">dist/mixins/validation.js</a></li>
+            <li><a href="../../dist/spark.jquery.js.html">dist/spark.jquery.js</a></li>
+            <li><a href="../../dist/spark.js.html">dist/spark.js</a></li>
+            <li><a href="../../src/components/base.js.html">src/components/base.js</a></li>
+            <li><a href="../../src/components/calendar-popover.js.html">src/components/calendar-popover.js</a></li>
+            <li><a href="../../src/components/carousel.js.html">src/components/carousel.js</a></li>
+            <li><a href="../../src/components/date-input.js.html">src/components/date-input.js</a></li>
+            <li><a href="../../src/components/date-select.js.html">src/components/date-select.js</a></li>
+            <li><a href="../../src/components/date-typeahead.js.html">src/components/date-typeahead.js</a></li>
+            <li><a href="../../src/components/expand.js.html">src/components/expand.js</a></li>
+            <li><a href="../../src/components/header.js.html">src/components/header.js</a></li>
+            <li><a href="../../src/components/menu.js.html">src/components/menu.js</a></li>
+            <li><a href="../../src/components/modal.js.html">src/components/modal.js</a></li>
+            <li><a href="../../src/components/multi-select-input.js.html">src/components/multi-select-input.js</a></li>
+            <li><a href="../../src/components/number-selector.js.html">src/components/number-selector.js</a></li>
+            <li><a href="../../src/components/popover.js.html">src/components/popover.js</a></li>
+            <li><a href="../../src/components/progress-indicator.js.html">src/components/progress-indicator.js</a></li>
+            <li><a href="../../src/components/range-slider.js.html">src/components/range-slider.js</a></li>
+            <li><a href="../../src/components/scroll-to-top.js.html">src/components/scroll-to-top.js</a></li>
+            <li><a href="../../src/components/select-input.js.html">src/components/select-input.js</a></li>
+            <li><a href="../../src/components/slider.js.html">src/components/slider.js</a></li>
+            <li><a href="../../src/components/step-indicator.js.html">src/components/step-indicator.js</a></li>
+            <li class="active"><a href="../../src/components/table.js.html">src/components/table.js</a></li>
+            <li><a href="../../src/components/tabs.js.html">src/components/tabs.js</a></li>
+            <li><a href="../../src/components/text-input.js.html">src/components/text-input.js</a></li>
+            <li><a href="../../src/components/toggle-switch.js.html">src/components/toggle-switch.js</a></li>
+            <li><a href="../../src/components/toolbar.js.html">src/components/toolbar.js</a></li>
+            <li><a href="../../src/components/tooltip.js.html">src/components/tooltip.js</a></li>
+            <li><a href="../../src/components/typeahead.js.html">src/components/typeahead.js</a></li>
+            <li><a href="../../src/helpers/animation/cancel.js.html">src/helpers/animation/cancel.js</a></li>
+            <li><a href="../../src/helpers/animation/height.js.html">src/helpers/animation/height.js</a></li>
+            <li><a href="../../src/helpers/animation/request.js.html">src/helpers/animation/request.js</a></li>
+            <li><a href="../../src/helpers/animation/scroll-to.js.html">src/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../src/helpers/animation/tween.js.html">src/helpers/animation/tween.js</a></li>
+            <li><a href="../../src/helpers/css/transform.js.html">src/helpers/css/transform.js</a></li>
+            <li><a href="../../src/helpers/date/date.js.html">src/helpers/date/date.js</a></li>
+            <li><a href="../../src/helpers/date/parse-format.js.html">src/helpers/date/parse-format.js</a></li>
+            <li><a href="../../src/helpers/dom/add-class.js.html">src/helpers/dom/add-class.js</a></li>
+            <li><a href="../../src/helpers/dom/breakpoint.js.html">src/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../src/helpers/dom/has-class.js.html">src/helpers/dom/has-class.js</a></li>
+            <li><a href="../../src/helpers/dom/make-element.js.html">src/helpers/dom/make-element.js</a></li>
+            <li><a href="../../src/helpers/dom/offset.js.html">src/helpers/dom/offset.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-height.js.html">src/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-width.js.html">src/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../src/helpers/dom/parse-attribute.js.html">src/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../src/helpers/dom/remove-class.js.html">src/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../src/helpers/dom/toggle-class.js.html">src/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../src/helpers/dom/trigger-event.js.html">src/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../src/helpers/form/build-select.js.html">src/helpers/form/build-select.js</a></li>
+            <li><a href="../../src/helpers/form/form-data.js.html">src/helpers/form/form-data.js</a></li>
+            <li><a href="../../src/helpers/form/set-caret.js.html">src/helpers/form/set-caret.js</a></li>
+            <li><a href="../../src/helpers/manipulation/append-children.js.html">src/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../src/helpers/manipulation/copy-attributes.js.html">src/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../src/helpers/manipulation/insert-before.js.html">src/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../src/helpers/manipulation/wrap-element.js.html">src/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../src/helpers/position/affix.js.html">src/helpers/position/affix.js</a></li>
+            <li><a href="../../src/helpers/position/box-position.js.html">src/helpers/position/box-position.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-child.js.html">src/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-children.js.html">src/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-index.js.html">src/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parent.js.html">src/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parents.js.html">src/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-after.js.html">src/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-before.js.html">src/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../src/helpers/traversal/has-parent.js.html">src/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/matches.js.html">src/helpers/traversal/matches.js</a></li>
+            <li><a href="../../src/helpers/util/debounce.js.html">src/helpers/util/debounce.js</a></li>
+            <li><a href="../../src/helpers/util/each.js.html">src/helpers/util/each.js</a></li>
+            <li><a href="../../src/helpers/util/mixin.js.html">src/helpers/util/mixin.js</a></li>
+            <li><a href="../../src/helpers/util/pad.js.html">src/helpers/util/pad.js</a></li>
+            <li><a href="../../src/helpers/util/range.js.html">src/helpers/util/range.js</a></li>
+            <li><a href="../../src/helpers/util/round.js.html">src/helpers/util/round.js</a></li>
+            <li><a href="../../src/helpers/util/trim.js.html">src/helpers/util/trim.js</a></li>
+            <li><a href="../../src/mixins/messaging.js.html">src/mixins/messaging.js</a></li>
+            <li><a href="../../src/mixins/validation.js.html">src/mixins/validation.js</a></li>
+            <li><a href="../../src/spark.jquery.js.html">src/spark.jquery.js</a></li>
+            <li><a href="../../src/spark.js.html">src/spark.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#constructor"><i class="alert alert-success"></i><span>constructor</span></a>
+              </li>
+              <li><a href="#disableCell"><i class="alert alert-info"></i><span>disableCell</span></a>
+              </li>
+              <li><a href="#enableCell"><i class="alert alert-info"></i><span>enableCell</span></a>
+              </li>
+              <li><a href="#disableRow"><i class="alert alert-info"></i><span>disableRow</span></a>
+              </li>
+              <li><a href="#enableRow"><i class="alert alert-info"></i><span>enableRow</span></a>
+              </li>
+              <li><a href="#disableColumn"><i class="alert alert-info"></i><span>disableColumn</span></a>
+              </li>
+              <li><a href="#enableColumn"><i class="alert alert-info"></i><span>enableColumn</span></a>
+              </li>
+              <li><a href="#remove"><i class="alert alert-info"></i><span>remove</span></a>
+              </li>
+              <li><a href="#activateRow"><i class="alert alert-info"></i><span>activateRow</span></a>
+              </li>
+              <li><a href="#activateRows"><i class="alert alert-info"></i><span>activateRows</span></a>
+              </li>
+              <li><a href="#deactivateRow"><i class="alert alert-info"></i><span>deactivateRow</span></a>
+              </li>
+              <li><a href="#deactivateRows"><i class="alert alert-info"></i><span>deactivateRows</span></a>
+              </li>
+              <li><a href="#getActiveRows"><i class="alert alert-info"></i><span>getActiveRows</span></a>
+              </li>
+              <li><a href="#update"><i class="alert alert-info"></i><span>update</span></a>
+              </li>
+              <li><a href="#_cacheElements"><i class="alert alert-info"></i><span>_cacheElements</span></a>
+              </li>
+              <li><a href="#_parseParams"><i class="alert alert-info"></i><span>_parseParams</span></a>
+              </li>
+              <li><a href="#_bindEventListenerCallbacks"><i class="alert alert-info"></i><span>_bindEventListenerCallbacks</span></a>
+              </li>
+              <li><a href="#_addEventListeners"><i class="alert alert-info"></i><span>_addEventListeners</span></a>
+              </li>
+              <li><a href="#_removeEventListeners"><i class="alert alert-info"></i><span>_removeEventListeners</span></a>
+              </li>
+              <li><a href="#_addResizeListeners"><i class="alert alert-info"></i><span>_addResizeListeners</span></a>
+              </li>
+              <li><a href="#_removeResizeListeners"><i class="alert alert-info"></i><span>_removeResizeListeners</span></a>
+              </li>
+              <li><a href="#_toggleRowActive"><i class="alert alert-info"></i><span>_toggleRowActive</span></a>
+              </li>
+              <li><a href="#_makeRowActive"><i class="alert alert-info"></i><span>_makeRowActive</span></a>
+              </li>
+              <li><a href="#_makeRowInActive"><i class="alert alert-info"></i><span>_makeRowInActive</span></a>
+              </li>
+              <li><a href="#_toggleRowsActive"><i class="alert alert-info"></i><span>_toggleRowsActive</span></a>
+              </li>
+              <li><a href="#_toggleSelectAll"><i class="alert alert-info"></i><span>_toggleSelectAll</span></a>
+              </li>
+              <li><a href="#_uncheckSelectAll"><i class="alert alert-info"></i><span>_uncheckSelectAll</span></a>
+              </li>
+              <li><a href="#_deactivateAllInputs"><i class="alert alert-info"></i><span>_deactivateAllInputs</span></a>
+              </li>
+              <li><a href="#_deactivateInputs"><i class="alert alert-info"></i><span>_deactivateInputs</span></a>
+              </li>
+              <li><a href="#_deactivateInput"><i class="alert alert-info"></i><span>_deactivateInput</span></a>
+              </li>
+              <li><a href="#_activateInputs"><i class="alert alert-info"></i><span>_activateInputs</span></a>
+              </li>
+              <li><a href="#_activateInput"><i class="alert alert-info"></i><span>_activateInput</span></a>
+              </li>
+              <li><a href="#_activateInputOrFocusDown"><i class="alert alert-info"></i><span>_activateInputOrFocusDown</span></a>
+              </li>
+              <li><a href="#_disableRowsColumnsCells"><i class="alert alert-info"></i><span>_disableRowsColumnsCells</span></a>
+              </li>
+              <li><a href="#_focusUp"><i class="alert alert-info"></i><span>_focusUp</span></a>
+              </li>
+              <li><a href="#_focusDown"><i class="alert alert-info"></i><span>_focusDown</span></a>
+              </li>
+              <li><a href="#_focusUpDown"><i class="alert alert-info"></i><span>_focusUpDown</span></a>
+              </li>
+              <li><a href="#_focusLeft"><i class="alert alert-info"></i><span>_focusLeft</span></a>
+              </li>
+              <li><a href="#_focusRight"><i class="alert alert-info"></i><span>_focusRight</span></a>
+              </li>
+              <li><a href="#_focusLeftRight"><i class="alert alert-info"></i><span>_focusLeftRight</span></a>
+              </li>
+              <li><a href="#_checkDoubleClick"><i class="alert alert-info"></i><span>_checkDoubleClick</span></a>
+              </li>
+              <li><a href="#_clearClicked"><i class="alert alert-info"></i><span>_clearClicked</span></a>
+              </li>
+              <li><a href="#_editRow"><i class="alert alert-info"></i><span>_editRow</span></a>
+              </li>
+              <li><a href="#_cancelRow"><i class="alert alert-info"></i><span>_cancelRow</span></a>
+              </li>
+              <li><a href="#_saveRow"><i class="alert alert-info"></i><span>_saveRow</span></a>
+              </li>
+              <li><a href="#_deleteRow"><i class="alert alert-info"></i><span>_deleteRow</span></a>
+              </li>
+              <li><a href="#_confirmDelete"><i class="alert alert-info"></i><span>_confirmDelete</span></a>
+              </li>
+              <li><a href="#_updateBindings"><i class="alert alert-info"></i><span>_updateBindings</span></a>
+              </li>
+              <li><a href="#_initResize"><i class="alert alert-info"></i><span>_initResize</span></a>
+              </li>
+              <li><a href="#_initRows"><i class="alert alert-info"></i><span>_initRows</span></a>
+              </li>
+              <li><a href="#_sizeColumns"><i class="alert alert-info"></i><span>_sizeColumns</span></a>
+              </li>
+              <li><a href="#_initExpands"><i class="alert alert-info"></i><span>_initExpands</span></a>
+              </li>
+              <li><a href="#_onBeforeExpand"><i class="alert alert-info"></i><span>_onBeforeExpand</span></a>
+              </li>
+              <li><a href="#_onClick"><i class="alert alert-info"></i><span>_onClick</span></a>
+              </li>
+              <li><a href="#_onChange"><i class="alert alert-info"></i><span>_onChange</span></a>
+              </li>
+              <li><a href="#_onFocus"><i class="alert alert-info"></i><span>_onFocus</span></a>
+              </li>
+              <li><a href="#_onBlur"><i class="alert alert-info"></i><span>_onBlur</span></a>
+              </li>
+              <li><a href="#_onKeydown"><i class="alert alert-info"></i><span>_onKeydown</span></a>
+              </li>
+              <li><a href="#_onTouchstart"><i class="alert alert-info"></i><span>_onTouchstart</span></a>
+              </li>
+              <li><a href="#_onTouchend"><i class="alert alert-info"></i><span>_onTouchend</span></a>
+              </li>
+              <li><a href="#_onTouchHold"><i class="alert alert-info"></i><span>_onTouchHold</span></a>
+              </li>
+              <li><a href="#_onMouseDown"><i class="alert alert-info"></i><span>_onMouseDown</span></a>
+              </li>
+              <li><a href="#_onMouseMove"><i class="alert alert-info"></i><span>_onMouseMove</span></a>
+              </li>
+              <li><a href="#_onMouseUp"><i class="alert alert-info"></i><span>_onMouseUp</span></a>
+              </li>
+              <li><a href="#_whitelistedParams"><i class="alert alert-success"></i><span>_whitelistedParams</span></a>
+              </li>
+              <li><a href="#defaults"><i class="alert alert-success"></i><span>defaults</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>Table</h1>
+</div>
+          <pre><code class="language-javascript">import BaseComponent from './base';
+import Expand from './expand';
+import setCaret from '../helpers/form/set-caret';
+import {clear as clearFormData, store as storeFormData, restore as restoreFormData} from '../helpers/form/form-data';
+import each from '../helpers/util/each';
+import hasClass from '../helpers/dom/has-class';
+import toggleClass from '../helpers/dom/toggle-class';
+import addClass from '../helpers/dom/add-class';
+import removeClass from '../helpers/dom/remove-class';
+import getParent from '../helpers/traversal/get-parent';
+import getIndex from '../helpers/traversal/get-index';
+import getSiblingBefore from '../helpers/traversal/get-sibling-before';
+import getSiblingAfter from '../helpers/traversal/get-sibling-after';
+import matches from '../helpers/traversal/matches';
+
+const noop = function() {};
+
+class Table extends BaseComponent {</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">new Table(el);</code></pre>
+          <section id="constructor">
+            <h1>constructor</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">constructor</div><span>&nbsp;</span><span>constructor()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Table constructor.</p></div>
+          <pre><code class="language-javascript">constructor(el, params = {}) {
+
+  params.elRequired = true;
+
+  if (!super(el, params)) {
+    return;
+  }
+
+  this._bindEventListenerCallbacks();
+  this._addEventListeners();
+
+  this._initRows();
+
+  if (this.isSpreadsheet || this.isEditRows) {
+    this._deactivateAllInputs();
+  }
+
+  if (this.isResizable) {
+    this._initResize();
+  }
+
+  this._disableRowsColumnsCells();
+
+  this._initExpands();
+}</code></pre>
+          <section id="disableCell">
+            <h1>disableCell</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>disableCell()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Disable the form field in a table cell.</p></div>
+          <pre><code class="language-javascript">disableCell(el) {
+  el.disabled = true;
+  addClass(getParent(el, 'td'), 'spark-table__disabled-cell');
+  return this;
+}</code></pre>
+          <section id="enableCell">
+            <h1>enableCell</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>enableCell()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Enable the form field in a table cell.</p></div>
+          <pre><code class="language-javascript">enableCell(el) {
+  el.disabled = false;
+  removeClass(getParent(el, 'td'), 'spark-table__disabled-cell');
+  return this;
+}</code></pre>
+          <section id="disableRow">
+            <h1>disableRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>disableRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Disable a row and all the cells inside of it.</p></div>
+          <pre><code class="language-javascript">disableRow(el) {
+  addClass(el, 'spark-table__disabled-row');
+  each(el.querySelectorAll('input, button, a'), function(i) {
+    i.disabled = true;
+  });
+  return this;
+}</code></pre>
+          <section id="enableRow">
+            <h1>enableRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>enableRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Enable a row and all the cells inside of it.</p></div>
+          <pre><code class="language-javascript">enableRow(el) {
+  removeClass(el, 'spark-table__disabled-row');
+  each(el.querySelectorAll('input, button, a'), function(i) {
+    i.disabled = false;
+  });
+  return this;
+}</code></pre>
+          <section id="disableColumn">
+            <h1>disableColumn</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>disableColumn()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Disable a column and all the cells inside of it.</p></div>
+          <pre><code class="language-javascript">disableColumn(el) {
+
+  var index = getIndex(el.parentNode.children, el);
+
+  each(this.tableEl.querySelectorAll('tbody tr'), function(row) {
+    this.disableCell(row.children[index].querySelector('input'));
+  }.bind(this));
+
+  addClass(el, 'spark-table__disabled-column');
+
+  return this;
+}</code></pre>
+          <section id="enableColumn">
+            <h1>enableColumn</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>enableColumn()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Enable a column and all the cells inside of it.</p></div>
+          <pre><code class="language-javascript">enableColumn(el) {
+
+  var index = getIndex(el.parentNode.children, el);
+
+  each(this.tableEl.querySelectorAll('tbody tr'), function(row) {
+    this.enableCell(row.children[index].querySelector('input'));
+  }.bind(this));
+
+  removeClass(el, 'spark-table__disabled-column');
+
+  return this;
+}</code></pre>
+          <section id="remove">
+            <h1>remove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>remove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>leaveElement</td>
+                <td>Boolean</td>
+                <td><p>Leave the element intact.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Remove the table anc cleanup.</p></div>
+          <pre><code class="language-javascript">remove(leaveElement) {
+  each(this._expands, function(e) {
+    e.remove(leaveElement);
+  });
+  return super.remove(leaveElement);
+}</code></pre>
+          <section id="activateRow">
+            <h1>activateRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>activateRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Number, Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Activate a row.</p></div>
+          <pre><code class="language-javascript">activateRow(row) {
+  row = typeof row === 'number' ? this.tableEl.querySelectorAll('tbody tr')[row] : row;
+  if (row) this._makeRowActive(row);
+  return this;
+}</code></pre>
+          <section id="activateRows">
+            <h1>activateRows</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>activateRows()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>rows</td>
+                <td>Array</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Activate multiple rows.</p></div>
+          <pre><code class="language-javascript">activateRows(rows) {
+  each(rows, this.activateRow.bind(this));
+  return this;
+}</code></pre>
+          <section id="deactivateRow">
+            <h1>deactivateRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>deactivateRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Number, Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Deactivate a row.</p></div>
+          <pre><code class="language-javascript">deactivateRow(row) {
+  row = typeof row === 'number' ? this.tableEl.querySelectorAll('tbody tr')[row] : row;
+  if (row) this._makeRowInActive(row);
+  return this;
+}</code></pre>
+          <section id="deactivateRows">
+            <h1>deactivateRows</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>deactivateRows()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>rows</td>
+                <td>Array</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Deactivate multiple rows.</p></div>
+          <pre><code class="language-javascript">deactivateRows(rows) {
+  each(rows, this.deactivateRow.bind(this));
+  return this;
+}</code></pre>
+          <section id="getActiveRows">
+            <h1>getActiveRows</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>getActiveRows()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get an array of currently active rows.</p></div>
+          <pre><code class="language-javascript">getActiveRows() {
+
+  var arr = [];
+
+  each(this.el.querySelectorAll('tbody tr.active'), function(tr) {
+    arr.push(tr);
+  });
+
+  return arr;
+}</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Update the component to use a new element or reparse from<br />the existing element.</p></div>
+          <pre><code class="language-javascript">update(el) {
+
+  this._removeEventListeners();
+
+  this._cacheElements(el || this.el);
+  this._parseParams();
+
+  this._addEventListeners();
+
+  this._initRows();
+
+  if (this.isSpreadsheet || this.isEditRows) {
+    this._deactivateAllInputs();
+  }
+
+  if (this.isResizable) {
+    this._initResize();
+  }
+
+  this._disableRowsColumnsCells();
+
+  this._initExpands();
+
+  return this;
+}</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Store a reference to the tabs list, each tab and each panel.<br />Set which tab is active, or use the first.</p></div>
+          <pre><code class="language-javascript">_cacheElements(el) {
+  this.el = el;
+  this.tableEl = el.querySelector('table');
+}</code></pre>
+          <section id="_parseParams">
+            <h1>_parseParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_parseParams()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Parse parameters from the elements.</p></div>
+          <pre><code class="language-javascript">_parseParams() {
+
+  if (!this.tableEl) {
+    return;
+  }
+
+  this.isSpreadsheet = this.isSpreadsheet !== null ? this.isSpreadsheet : (hasClass(this.el, 'spark-table--spreadsheet') ? true : false);
+  this.isEditRows = this.isEditRows !== null ? this.isEditRows : (hasClass(this.el, 'spark-table--edit-rows') ? true : false);
+  this.isResizable = this.isResizable !== null ? this.isResizable : (hasClass(this.el, 'spark-table--resizable') ? true : false);
+}</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because the<br />function signatures won&#39;t match.</p></div>
+          <pre><code class="language-javascript">_bindEventListenerCallbacks() {
+
+  this._onClickBound = this._onClick.bind(this);
+  this._onChangeBound = this._onChange.bind(this);
+  this._onFocusBound = this._onFocus.bind(this);
+  this._onBlurBound = this._onBlur.bind(this);
+
+  this._onTouchstartBound = this._onTouchstart.bind(this);
+  this._onTouchendBound = this._onTouchend.bind(this);
+  this._onKeydownBound = this._onKeydown.bind(this);
+
+  this._onMouseDownBound = this._onMouseDown.bind(this);
+  this._onMouseMoveBound = this._onMouseMove.bind(this);
+  this._onMouseUpBound = this._onMouseUp.bind(this);
+}</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners for DOM events.</p></div>
+          <pre><code class="language-javascript">_addEventListeners() {
+
+  this.el.addEventListener('click', this._onClickBound, false);
+  this.el.addEventListener('change', this._onChangeBound, false);
+  this.el.addEventListener('focus', this._onFocusBound, true);
+  this.el.addEventListener('blur', this._onBlurBound, true);
+
+  if (this.isSpreadsheet) {
+    this.el.addEventListener('touchstart', this._onTouchstartBound, false);
+    this.el.addEventListener('touchend', this._onTouchendBound, false);
+    this.el.addEventListener('keydown', this._onKeydownBound, false);
+  }
+
+  if (this.isResizable) {
+    this.tableEl.addEventListener('mousedown', this._onMouseDownBound, false);
+  }
+}</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners for DOM events..</p></div>
+          <pre><code class="language-javascript">_removeEventListeners() {
+
+  this.el.removeEventListener('click', this._onClickBound);
+  this.el.removeEventListener('change', this._onChangeBound);
+  this.el.removeEventListener('focus', this._onFocusBound);
+  this.el.removeEventListener('blur', this._onBlurBound);
+
+  this.el.removeEventListener('touchstart', this._onTouchstartBound);
+  this.el.removeEventListener('touchend', this._onTouchendBound);
+  this.el.removeEventListener('keydown', this._onKeydownBound);
+
+  this.tableEl.removeEventListener('mousedown', this._onMouseDownBound);
+
+  this._removeResizeListeners();
+}</code></pre>
+          <section id="_addResizeListeners">
+            <h1>_addResizeListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addResizeListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add listeners for mousemove and mouseup events.</p></div>
+          <pre><code class="language-javascript">_addResizeListeners() {
+  window.addEventListener('mousemove', this._onMouseMoveBound, false);
+  window.addEventListener('mouseup', this._onMouseUpBound, false);
+}</code></pre>
+          <section id="_removeResizeListeners">
+            <h1>_removeResizeListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeResizeListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove listeners for mosuemove and mouseup.</p></div>
+          <pre><code class="language-javascript">_removeResizeListeners() {
+  window.removeEventListener('mousemove', this._onMouseMoveBound);
+  window.removeEventListener('mouseup', this._onMouseUpBound);
+}</code></pre>
+          <section id="_toggleRowActive">
+            <h1>_toggleRowActive</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_toggleRowActive()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Toggle the active state on a row.</p></div>
+          <pre><code class="language-javascript">_toggleRowActive(row) {
+
+  if (hasClass(row, 'active')) {
+    this._makeRowInActive(row);
+    this._uncheckSelectAll();
+  } else {
+    this._makeRowActive(row);
+  }
+}</code></pre>
+          <section id="_makeRowActive">
+            <h1>_makeRowActive</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_makeRowActive()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Make a row active</p></div>
+          <pre><code class="language-javascript">_makeRowActive(row) {
+  addClass(row, 'active');
+  (row.querySelector('input[type=&quot;checkbox&quot;]:not([disabled])') || {}).checked = true;
+}</code></pre>
+          <section id="_makeRowInActive">
+            <h1>_makeRowInActive</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_makeRowInActive()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Make a row active</p></div>
+          <pre><code class="language-javascript">_makeRowInActive(row) {
+  removeClass(row, 'active');
+  (row.querySelector('input[type=&quot;checkbox&quot;]:not([disabled])') || {}).checked = false;
+}</code></pre>
+          <section id="_toggleRowsActive">
+            <h1>_toggleRowsActive</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_toggleRowsActive()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>rows</td>
+                <td>NodeList</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>active</td>
+                <td>Boolean</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Toggle active on each row.</p></div>
+          <pre><code class="language-javascript">_toggleRowsActive(rows, active) {
+
+  var func = active ? '_makeRowActive' : '_makeRowInActive';
+  var i = 0;
+  var len = rows.length;
+
+  for (; i &lt; len; i++) {
+    this[func](rows[i]);
+  }
+}</code></pre>
+          <section id="_toggleSelectAll">
+            <h1>_toggleSelectAll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_toggleSelectAll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Toggle whether everything should be selected. Find the checkbox input inside of the<br />given element and invert its state.</p></div>
+          <pre><code class="language-javascript">_toggleSelectAll(el) {
+
+  var checkbox = el.querySelector('input[type=&quot;checkbox&quot;]');
+
+  if (!checkbox) {
+    return;
+  }
+
+  this._toggleRowsActive(this.el.querySelectorAll('tbody tr'), !checkbox.checked);
+
+  checkbox.checked = !checkbox.checked;
+}</code></pre>
+          <section id="_uncheckSelectAll">
+            <h1>_uncheckSelectAll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_uncheckSelectAll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Uncheck the select all checkboxes.</p></div>
+          <pre><code class="language-javascript">_uncheckSelectAll() {
+
+  var checkboxes = this.el.querySelectorAll('.spark-table__select-all input[type=&quot;checkbox&quot;]');
+  var i = 0;
+  var len = checkboxes.length;
+
+  for (; i &lt; len; i++) {
+    checkboxes[i].checked = false;
+  }
+}</code></pre>
+          <section id="_deactivateAllInputs">
+            <h1>_deactivateAllInputs</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_deactivateAllInputs()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Deactivate editing in all input fields.</p></div>
+          <pre><code class="language-javascript">_deactivateAllInputs() {
+
+  if (!this.tableEl) {
+    return;
+  }
+
+  this._deactivateInputs(this.tableEl);
+}</code></pre>
+          <section id="_deactivateInputs">
+            <h1>_deactivateInputs</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_deactivateInputs()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Deactivate all the inputs inside an element</p></div>
+          <pre><code class="language-javascript">_deactivateInputs(el) {
+
+  var inputs = el.querySelectorAll('input:not([type=&quot;checkbox&quot;])');
+  var i = 0;
+
+  var len = inputs.length;
+
+  for (; i &lt; len; i++) {
+    this._deactivateInput(inputs[i]);
+  }
+}</code></pre>
+          <section id="_deactivateInput">
+            <h1>_deactivateInput</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_deactivateInput()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Make an input field readonly.</p></div>
+          <pre><code class="language-javascript">_deactivateInput(input) {
+  input.setAttribute('readonly', '');
+  removeClass(input.parentNode, 'editing');
+}</code></pre>
+          <section id="_activateInputs">
+            <h1>_activateInputs</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_activateInputs()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Activate all the inputs inside an element</p></div>
+          <pre><code class="language-javascript">_activateInputs(el) {
+
+  var inputs = el.querySelectorAll('input:not([type=&quot;checkbox&quot;])');
+  var i = 0;
+
+  var len = inputs.length;
+
+  for (; i &lt; len; i++) {
+    this._activateInput(inputs[i]);
+  }
+}</code></pre>
+          <section id="_activateInput">
+            <h1>_activateInput</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_activateInput()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Make an input field readable.</p></div>
+          <pre><code class="language-javascript">_activateInput(input) {
+  input.removeAttribute('readonly');
+  addClass(input.parentNode, 'editing');
+  if (input.type !== 'checkbox' &amp;&amp; input.type !== 'radio') {
+    setCaret(input, -1);
+  }
+}</code></pre>
+          <section id="_activateInputOrFocusDown">
+            <h1>_activateInputOrFocusDown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_activateInputOrFocusDown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Activate an input, unless it&#39;s already enabled in which case<br />the focus should move down a row.</p></div>
+          <pre><code class="language-javascript">_activateInputOrFocusDown(input) {
+
+  // Currently readonly
+  if (input.getAttribute('readonly') === '') {
+    this._activateInput(input);
+    return;
+  }
+
+  this._focusDown(input, true);
+}</code></pre>
+          <section id="_disableRowsColumnsCells">
+            <h1>_disableRowsColumnsCells</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_disableRowsColumnsCells()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Find all the rows, columns and cells that should be disabled.</p></div>
+          <pre><code class="language-javascript">_disableRowsColumnsCells() {
+  each(this.tableEl.querySelectorAll('td input[disabled]'), this.disableCell.bind(this));
+  each(this.tableEl.querySelectorAll('.spark-table__disabled-row'), this.disableRow.bind(this));
+  each(this.tableEl.querySelectorAll('.spark-table__disabled-column'), this.disableColumn.bind(this));
+}</code></pre>
+          <section id="_focusUp">
+            <h1>_focusUp</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_focusUp()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>force</td>
+                <td>Boolean</td>
+                <td><p>Force the move even if the element is active.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Move our focus up a row from the given element.</p></div>
+          <pre><code class="language-javascript">_focusUp(input, force) {
+  return this._focusUpDown(input, 'up', force);
+}</code></pre>
+          <section id="_focusDown">
+            <h1>_focusDown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_focusDown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>force</td>
+                <td>Boolean</td>
+                <td><p>Force the move even if the element is active.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Move our focus down a row from the given element.</p></div>
+          <pre><code class="language-javascript">_focusDown(input, force) {
+  return this._focusUpDown(input, 'down', force);
+}</code></pre>
+          <section id="_focusUpDown">
+            <h1>_focusUpDown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_focusUpDown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>direction</td>
+                <td>String</td>
+                <td><p>up|down</p></td>
+              </tr>
+              <tr>
+                <td>force</td>
+                <td>Boolean</td>
+                <td><p>Force the move even if the element is active.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Focus on a row up or down from the given element.</p></div>
+          <pre><code class="language-javascript">_focusUpDown(input, direction, force) {
+
+  // If we're not being told to force and the item is not read only
+  if (!force &amp;&amp; input.getAttribute('readonly') === null) {
+    return;
+  }
+
+  this._deactivateInput(input);
+  var td = getParent(input, 'td', this.el);
+
+  if (!td) {
+    return;
+  }
+
+  var index = getIndex(td.parentNode.children, td);
+  var nextRow = (direction === 'up' ? getSiblingBefore : getSiblingAfter)(td.parentNode, 'tr');
+
+  if (!nextRow) {
+    return;
+  }
+
+  var newTd = nextRow.children[index];
+
+  if (!newTd) {
+    return;
+  }
+
+  var newInput = newTd.querySelector('input:not([type=&quot;checkbox&quot;]), select');
+
+  if (newInput) {
+    if (newInput.disabled) {
+      this._focusUpDown(newInput, direction, force);
+    } else {
+      newInput.focus();
+    }
+  }
+}</code></pre>
+          <section id="_focusLeft">
+            <h1>_focusLeft</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_focusLeft()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>force</td>
+                <td>Boolean</td>
+                <td><p>Force the move even if the element is active.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Move our focus left a cell from the given element.</p></div>
+          <pre><code class="language-javascript">_focusLeft(input, force) {
+  return this._focusLeftRight(input, 'left', force);
+}</code></pre>
+          <section id="_focusRight">
+            <h1>_focusRight</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_focusRight()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>force</td>
+                <td>Boolean</td>
+                <td><p>Force the move even if the element is active.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Move our focus right a cell from the given element.</p></div>
+          <pre><code class="language-javascript">_focusRight(input, force) {
+  return this._focusLeftRight(input, 'right', force);
+}</code></pre>
+          <section id="_focusLeftRight">
+            <h1>_focusLeftRight</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_focusLeftRight()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>input</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>direction</td>
+                <td>String</td>
+                <td><p>up|down</p></td>
+              </tr>
+              <tr>
+                <td>force</td>
+                <td>Boolean</td>
+                <td><p>Force the move even if the element is active.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Focus on a cell left or down from the given element.</p></div>
+          <pre><code class="language-javascript">_focusLeftRight(input, direction, force) {
+
+  // If we're not being told to force and the item is not read only
+  if (!force &amp;&amp; input.getAttribute('readonly') === null) {
+    return;
+  }
+
+  this._deactivateInput(input);
+  var td = getParent(input, 'td', this.el);
+
+  if (!td) {
+    return;
+  }
+
+  var newTd = (direction === 'left' ? getSiblingBefore : getSiblingAfter)(td, 'td');
+
+  if (!newTd) {
+    return;
+  }
+
+  var newInput = newTd.querySelector('input:not([type=&quot;checkbox&quot;]), select');
+
+  if (newInput) {
+    if (newInput.disabled) {
+      this._focusLeftRight(newInput, direction, force);
+    } else {
+      newInput.focus();
+    }
+  }
+}</code></pre>
+          <section id="_checkDoubleClick">
+            <h1>_checkDoubleClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_checkDoubleClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Check for two click events on the same element in short succession.</p></div>
+          <pre><code class="language-javascript">_checkDoubleClick(el) {
+
+  var now = Date.now();
+  var lastTime = this._lastClickTime;
+  var lastEl = this._lastClickEl;
+
+  this._lastClickTime = now;
+  this._lastClickEl = el;
+
+  if (el === lastEl &amp;&amp; now - 500 &lt; lastTime) {
+    return true;
+  }
+
+  return false;
+}</code></pre>
+          <section id="_clearClicked">
+            <h1>_clearClicked</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_clearClicked()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Unset the last clicked element.</p></div>
+          <pre><code class="language-javascript">_clearClicked() {
+  this._lastClickEl = null;
+}</code></pre>
+          <section id="_editRow">
+            <h1>_editRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_editRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Enable editing on a row.</p></div>
+          <pre><code class="language-javascript">_editRow(row) {
+
+  if (!row) {
+    return;
+  }
+
+  this._editingCount++;
+
+  this._activateInputs(row);
+  storeFormData(row);
+  addClass(row, 'editing');
+  this._updateBindings();
+}</code></pre>
+          <section id="_cancelRow">
+            <h1>_cancelRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cancelRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Cancel editing a row.</p></div>
+          <pre><code class="language-javascript">_cancelRow(row) {
+
+  if (!row) {
+    return;
+  }
+
+  this._editingCount--;
+
+  this._deactivateInputs(row);
+  restoreFormData(row);
+  removeClass(row, 'editing');
+  this._updateBindings();
+}</code></pre>
+          <section id="_saveRow">
+            <h1>_saveRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_saveRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Save a row.</p></div>
+          <pre><code class="language-javascript">_saveRow(row) {
+
+  if (!row) {
+    return;
+  }
+
+  this._editingCount--;
+
+  this._deactivateInputs(row);
+  clearFormData(row);
+  removeClass(row, 'editing');
+  this._updateBindings();
+
+  (this.onRowSave || noop)(getIndex(row.parentNode.children, row), row);
+}</code></pre>
+          <section id="_deleteRow">
+            <h1>_deleteRow</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_deleteRow()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Delete a row.</p></div>
+          <pre><code class="language-javascript">_deleteRow(row) {
+
+  if (!row) {
+    return;
+  }
+
+  (this.onRowDelete || noop)(getIndex(row.parentNode.children, row), row);
+  row.parentNode.removeChild(row);
+}</code></pre>
+          <section id="_confirmDelete">
+            <h1>_confirmDelete</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_confirmDelete()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>row</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Confirm the deletion of a row.</p></div>
+          <pre><code class="language-javascript">_confirmDelete(row) {
+
+  if (!this.confirmDelete || typeof this.confirmDelete !== 'function') {
+    this._deleteRow(row);
+  } else {
+    this.confirmDelete(row, this._deleteRow);
+  }
+}</code></pre>
+          <section id="_updateBindings">
+            <h1>_updateBindings</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_updateBindings()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update data bindings.</p></div>
+          <pre><code class="language-javascript">_updateBindings() {
+  toggleClass(this.el, 'editing', this._editingCount);
+}</code></pre>
+          <section id="_initResize">
+            <h1>_initResize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initResize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add handles to the header that can be grabbed for resizing.</p></div>
+          <pre><code class="language-javascript">_initResize() {
+
+  this._resizeEls = [];
+
+  var ths = this.tableEl.querySelectorAll('thead th');
+
+  each(ths, function(th) {
+    th.innerHTML = '&lt;span class=&quot;spark-table__resize spark-table__resize--left&quot;&gt;&lt;/span&gt;' + th.innerHTML + '&lt;span class=&quot;spark-table__resize spark-table__resize--right&quot;&gt;&lt;/span&gt;';
+    this._resizeEls.push(th);
+  }.bind(this));
+}</code></pre>
+          <section id="_initRows">
+            <h1>_initRows</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initRows()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Initialize rows active states.</p></div>
+          <pre><code class="language-javascript">_initRows() {
+
+  each(this.tableEl.querySelectorAll('td.spark-table__checkbox input:checked'), function(c) {
+    this._makeRowActive(getParent(c, 'tr'));
+  }.bind(this));
+}</code></pre>
+          <section id="_sizeColumns">
+            <h1>_sizeColumns</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_sizeColumns()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>unit</td>
+                <td>String</td>
+                <td><p>Optional</p></td>
+              </tr>
+              <tr>
+                <td>force</td>
+                <td>Boolean</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Set the size of each column as a percentage so it can be adjusted<br />while cells are resized.</p></div>
+          <pre><code class="language-javascript">_sizeColumns(unit, force) {
+
+  unit = unit || '%';
+
+  if (this._sizeColumnsRun &amp;&amp; !force) {
+    return;
+  }
+
+  var width = this.tableEl.offsetWidth;
+
+  each(this.tableEl.querySelectorAll('thead th'), function(th) {
+    if (unit === '%')
+      th.style.width = (Math.round(th.offsetWidth / width * 100000) / 100000) * 100 + '%';
+    else
+      th.style.width = th.offsetWidth + 'px';
+  }.bind(this));
+
+  this._sizeColumnsRun = true;
+}</code></pre>
+          <section id="_initExpands">
+            <h1>_initExpands</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initExpands()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Initialize expand/collapse rows.</p></div>
+          <pre><code class="language-javascript">_initExpands() {
+
+  var expands = this.tableEl.querySelectorAll('.spark-table-expand');
+
+  this._expands = [];
+
+  each(expands, function(e) {
+    this._expands.push(new Expand(e, {
+      onBeforeExpand: this._onBeforeExpand.bind(this)
+    }));
+  }.bind(this));
+}</code></pre>
+          <section id="_onBeforeExpand">
+            <h1>_onBeforeExpand</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onBeforeExpand()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Before an expand is called, size all the columns so that<br />the expand does cause width changes.</p></div>
+          <pre><code class="language-javascript">_onBeforeExpand() {
+  this._sizeColumns();
+}</code></pre>
+          <section id="_onClick">
+            <h1>_onClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When we are clicked determine the proper action to take.</p></div>
+          <pre><code class="language-javascript">_onClick(e) {
+
+  var target = e.target || e.srcElement;
+  var row;
+  var selectAll;
+  var actionTaken = false;
+  var clearClicked = true;
+
+  // Select all rows checkbox
+  if ((selectAll = getParent(target, '.spark-table__select-all', this.el)) &amp;&amp; !matches(target, 'input[type=&quot;checkbox&quot;]')) {
+    this._toggleSelectAll(selectAll);
+    actionTaken = true;
+  }
+  // Editable field
+  else if (matches(target, 'input:not([type=&quot;checkbox&quot;]), select')) {
+
+    if (!target.disabled) {
+
+      // Listen for double clicks on a spreadsheet
+      if (this.isSpreadsheet) {
+        clearClicked = false;
+        if (this._checkDoubleClick(target)) {
+          clearClicked = true;
+          this._activateInput(target);
+        }
+      }
+
+      actionTaken = true;
+    }
+  }
+  // Edit button
+  else if (matches(target, '.spark-table__edit-row')) {
+    this._editRow(getParent(target, 'tr', this.el));
+    actionTaken = true;
+  }
+  // Delete button
+  else if (matches(target, '.spark-table__delete-row')) {
+    this._confirmDelete(getParent(target, 'tr', this.el));
+    actionTaken = true;
+  }
+  // Save button
+  else if (matches(target, '.spark-table__edit-row-save')) {
+    this._saveRow(getParent(target, 'tr', this.el));
+    actionTaken = true;
+  }
+  // Cancel button
+  else if (matches(target, '.spark-table__edit-row-cancel')) {
+    this._cancelRow(getParent(target, 'tr', this.el));
+    actionTaken = true;
+  }
+  // Select a row
+  else if (!getParent(target, 'button, a', this.el) &amp;&amp; !matches(target, 'input[type=&quot;checkbox&quot;]') &amp;&amp; (row = getParent(target, 'tbody tr', this.el))) {
+    if (!(row.querySelector('input[type=&quot;checkbox&quot;]') || {}).disabled) {
+      this._toggleRowActive(row);
+      actionTaken = true;
+    }
+  }
+
+  if (clearClicked) {
+    this._clearClicked();
+  }
+
+  if (actionTaken) {
+    e.preventDefault();
+  }
+}</code></pre>
+          <section id="_onChange">
+            <h1>_onChange</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onChange()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the change event fires on our element.</p></div>
+          <pre><code class="language-javascript">_onChange(e) {
+
+  var target = e.target || e.srcElement;
+  var row;
+  var selectAll;
+
+  // Select all rows checkbox. We have to invert the checked value here because it
+  // get toggled back in the select all call.
+  if ((selectAll = getParent(target, '.spark-table__select-all', this.el))) {
+    target.checked = !target.checked;
+    this._toggleSelectAll(selectAll);
+  }
+  // Checkbox for a row
+  else if (matches(target, 'input[type=&quot;checkbox&quot;]') &amp;&amp; (row = getParent(target, 'tbody tr', this.el))) {
+    this._toggleRowActive(row);
+  }
+}</code></pre>
+          <section id="_onFocus">
+            <h1>_onFocus</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onFocus()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>If this is a spreadsheet, whenever a field gains focus, highlight its parent.</p></div>
+          <pre><code class="language-javascript">_onFocus(e) {
+
+  var target = e.target || e.srcElement;
+
+  if (!this.isSpreadsheet || !matches(target, 'input:not([type=&quot;checkbox&quot;]), select')) {
+    return;
+  }
+
+  var td = getParent(target, 'td', this.el);
+  addClass(td, 'focus');
+}</code></pre>
+          <section id="_onBlur">
+            <h1>_onBlur</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onBlur()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>If this is a spreadsheet, whenever a field gains focus, highlight its parent.</p></div>
+          <pre><code class="language-javascript">_onBlur(e) {
+
+  if (!this.isSpreadsheet) {
+    return;
+  }
+
+  var target = e.target || e.srcElement;
+  var td = getParent(target, 'td', this.el);
+  removeClass(td, 'focus');
+  this._deactivateInput(target);
+}</code></pre>
+          <section id="_onKeydown">
+            <h1>_onKeydown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onKeydown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When a key is pressed, if this is a spreadsheet then we should detect<br />enter or arrow keys.</p></div>
+          <pre><code class="language-javascript">_onKeydown(e) {
+
+  var target = e.target || e.srcElement;
+
+  if (!this.isSpreadsheet || !matches(target, 'input:not([type=&quot;checkbox&quot;]), select')) {
+    return;
+  }
+
+  var code = e.keyCode || e.which;
+
+  switch (code) {
+    case this._keyCodes.ENTER:
+      this._activateInputOrFocusDown(target);
+      break;
+    case this._keyCodes.ESCAPE:
+      this._deactivateInput(target);
+      break;
+    case this._keyCodes.DOWN:
+      this._focusDown(target);
+      break;
+    case this._keyCodes.UP:
+      this._focusUp(target);
+      break;
+    case this._keyCodes.LEFT:
+      this._focusLeft(target);
+      break;
+    case this._keyCodes.RIGHT:
+      this._focusRight(target);
+      break;
+  }
+}</code></pre>
+          <section id="_onTouchstart">
+            <h1>_onTouchstart</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTouchstart()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Listen for a touch and hold on an input.</p></div>
+          <pre><code class="language-javascript">_onTouchstart(e) {
+
+  var target = e.target || e.srcElement;
+
+  if (!this.isSpreadsheet || !matches(target, 'input:not([type=&quot;checkbox&quot;])')) {
+    return;
+  }
+
+  this._touchStartEl = target;
+  this._touchStartTime = Date.now();
+  this._touchStartTimer = setTimeout(this._onTouchHold.bind(this), 1000);
+}</code></pre>
+          <section id="_onTouchend">
+            <h1>_onTouchend</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTouchend()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Listen for the end of a touch to cancel the hold timer.</p></div>
+          <pre><code class="language-javascript">_onTouchend(e) {
+
+  var target = e.target || e.srcElement;
+
+  if (!this._touchStartEl || target !== this._touchStartEl) {
+    return;
+  }
+
+  this._touchStartEl = null;
+  this._touchStartTime = null;
+  clearTimeout(this._touchStartTimer);
+}</code></pre>
+          <section id="_onTouchHold">
+            <h1>_onTouchHold</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTouchHold()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the user has held on an input for the defined amount of time.</p></div>
+          <pre><code class="language-javascript">_onTouchHold() {
+
+  this._activateInput(this._touchStartEl);
+
+  this._touchStartEl = null;
+  this._touchStartTime = null;
+  clearTimeout(this._touchStartTimer);
+}</code></pre>
+          <section id="_onMouseDown">
+            <h1>_onMouseDown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onMouseDown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the mouse is depressed.</p></div>
+          <pre><code class="language-javascript">_onMouseDown(e) {
+
+  var target = e.target || e.srcElement;
+
+  if (!this.isResizable || !matches(target, '.spark-table__resize')) {
+    return;
+  }
+
+  e.preventDefault();
+
+  this._lastScreenX = e.screenX;
+
+  this._sizeColumns('px', true);
+
+  this._resizingEl = target.parentNode;
+  var index = this._resizeEls.indexOf(this._resizingEl);
+
+  if (hasClass(target, 'spark-table__resize--left')) {
+    this._resizingEl = this._resizeEls[index - 1];
+  }
+
+  if (!this._resizingEl) {
+    return;
+  }
+
+  this._addResizeListeners();
+}</code></pre>
+          <section id="_onMouseMove">
+            <h1>_onMouseMove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onMouseMove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the mouse moves after being depressed, resize the columns.</p></div>
+          <pre><code class="language-javascript">_onMouseMove(e) {
+
+  var x = e.screenX;
+  var d = x - this._lastScreenX;
+
+  // No delta change
+  if (!d) {
+    return;
+  }
+
+  e.preventDefault();
+
+  var w = this._resizingEl.offsetWidth;
+  var tW = this.tableEl.offsetWidth;
+  var newW = w + d;
+  var newTW = tW + d;
+
+  this._resizingEl.style.width = newW + 'px';
+  this.tableEl.style.width = newTW + 'px';
+
+  // Size was not affected because we're too small
+  if (this._resizingEl.offsetWidth === w || this.tableEl.offsetWidth &lt; this.tableEl.parentNode.offsetWidth) {
+    this._resizingEl.style.width = w + 'px';
+    this.tableEl.style.width = tW + 'px';
+  }
+
+  this._lastScreenX = x;
+}</code></pre>
+          <section id="_onMouseUp">
+            <h1>_onMouseUp</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onMouseUp()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the mouse is released, stop tracking mouse move events and<br />convert table sizes to percentages.</p></div>
+          <pre><code class="language-javascript">_onMouseUp() {
+  this._sizeColumns('%', true);
+  this.tableEl.style.width = (this.tableEl.offsetWidth / this.tableEl.parentNode.offsetWidth * 100) + '%';
+  this._removeResizeListeners();
+}
+}</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Table.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <pre><code class="language-javascript">Table.prototype._whitelistedParams = ['isSpreadsheet', 'isEditRows', 'isResizable', 'confirmDelete', 'onRowSave', 'onRowDelete'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Table.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <pre><code class="language-javascript">Table.prototype.defaults = {
+  el: null,
+  tableEl: null,
+  isSpreadsheet: null,
+  isEditRows: null,
+  isResizable: null,
+  onRowSave: null,
+  onRowDelete: null,
+  confirmDelete: null,
+  _expands: null,
+  _keyCodes: {
+    ENTER: 13,
+    UP: 38,
+    DOWN: 40,
+    LEFT: 37,
+    RIGHT: 39,
+    ESCAPE: 27
+  },
+  _editingCount: 0,
+  _lastClickTime: 0,
+  _lastClickEl: null,
+  _lastScreenX: 0,
+  _touchStartTime: 0,
+  _touchStartEl: null,
+  _resizeEls: null,
+  _resizingEl: null,
+  _sizeColumnsRun: false,
+  _onClickBound: null,
+  _onChangeBound: null,
+  _onFocusBound: null,
+  _onBlurBound: null,
+  _onKeydownBound: null,
+  _onTouchstartBound: null,
+  _onTouchendBound: null,
+  _onMouseDownBound: null,
+  _onMouseMoveBound: null,
+  _onMouseUpBound: null
+};
+
+export default Table;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/mr-doc/mr-doc">Mr. Doc </a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau </a></p>
+        <p>Mr. Doc is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr </a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../js/twitter-widget.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap-transition.min.js"></script>
+    <script src="../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../js/bootstrap-affix.min.js"></script>
+    <script src="../../js/prism.min.js"></script>
+    <script src="../../js/index.min.js"></script>
+  </body>
+</html>

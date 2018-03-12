@@ -1,0 +1,20 @@
+////
+/// ## Modal Configuration
+/// @group config/components
+////
+
+
+/// Modal `background-color`
+/// @type {Color}
+$modal__background-color: $white !default;
+
+/// Modal `border-radius`
+/// @type {Number}
+$modal__border-radius: .25rem !default;
+
+/// Modal close button `color`
+/// @type {Color}
+$modal__close__color: $white !default;
+
+$modal--fullscreen-xs__close__color: map-get($gray-color-steps, 700) !default;
+$modal--fullscreen-xs__border: 1px solid map-get($gray-color-steps, 400) !default;

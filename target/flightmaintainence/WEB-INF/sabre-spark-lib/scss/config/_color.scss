@@ -1,0 +1,153 @@
+////
+/// ## Color
+/// @group config
+////
+
+
+/// Primary red
+/// @type {Color}
+$red: #e50000 !default;
+
+/// Red color steps
+/// @type {Map}
+$red-color-steps: (100:#ffabab, 200:$red, 300:#d80000, 400:#ac0000, 500:#910000, 600:#780000, 700:#5e0000) !default;
+
+/// Primary blue
+/// @type {Color}
+$blue: #4a5767 !default;
+
+/// Blue color steps
+/// @type {Map}
+$blue-color-steps: (50:#e2eaf3, 100:#a3b5cc, 150:#6e8199, 200:$blue, 250:#4a5767, 300:#424e5c, 400:#37414d, 500:#242b33) !default;
+
+/// Primary green
+/// @type {Color}
+$green: #23826F !default;
+
+/// Green color steps
+/// @type {Map}
+$green-color-steps: (100:#abded4, 200:$green, 300:#378676, 400:#207866, 500:#1d6b5b, 600:#195e51, 700:#13453b) !default;
+
+/// Primary light blue
+/// @type {Color}
+$lightblue: #006ba8 !default;
+
+/// Light blue color steps
+/// @type {Map}
+$lightblue-color-steps: (100:#79caf2, 200:#4cbeff, 300:$lightblue, 400:#2d86b3, 500:#005688, 600:#1a4d66, 700:#5c6c80, 800:#199ae4) !default;
+
+/// Primary gray
+/// @type {Color}
+$gray: #e4e4e4 !default;
+
+/// Gray color steps
+/// @type {Map}
+$gray-color-steps: (100:#eee, 200:$gray, 300:#ddd, 400:#ccc, 500:#a1a1a1, 600:#767676, 700:#666, 800:#555, 900:#333, 1000:#222) !default;
+
+/// Primary black
+/// @type {Color}
+$black: #000 !default;
+
+/// Primary white
+/// @type {Color}
+$white: #fff !default;
+
+/// Primary orange
+/// @type {Color}
+$orange: #ff8d2e !default;
+
+/// Orange color steps
+/// @type {Map}
+$orange-color-steps: (100:#ffc694, 200:$orange, 300:#cc7025, 400:#b2740e, 500:#99630c) !default;
+
+/// Primary cyan
+/// @type {Color}
+$cyan: #5fe9ea !default;
+
+/// Cyan color steps
+/// @type {Map}
+$cyan-color-steps: (100:$cyan, 200:#099c9d, 300:#074849) !default;
+
+/// Primary lime green
+/// @type {Color}
+$lime-green: #b0ea3b !default;
+
+/// Lime green color steps
+/// @type {Map}
+$lime-green-color-steps: (100:#d4e5b1, 200:#bfe573, 300:$lime-green, 400:#8ed600, 500:#7ebd00, 600:#6f991c, 700:#577c10, 800:#446600, 900:#334c00, 1000:#2e3d10, 1100:#223300) !default;
+
+/// Primary purple
+/// @type {Color}
+$purple: #804f92 !default;
+
+/// Purple color steps
+/// @type {Map}
+$purple-color-steps: (100:#d0abde, 200:$purple, 300:#53335e) !default;
+
+
+
+// State Colors
+
+/// Info color
+/// @type {Color}
+$color-state-info: map-get($blue-color-steps, 200) !default;
+
+/// Success color
+/// @type {Color}
+$color-state-success: map-get($lime-green-color-steps, 600) !default;
+
+/// Success dark color
+/// @type {Color}
+$color-state-success--dark: map-get($lime-green-color-steps, 700) !default;
+
+/// Success text color
+/// @type {Color}
+$color-state-success--text: #63871a !default;
+
+/// Warning color
+/// @type {Color}
+$color-state-warning: #cd8511 !default;
+
+/// Warning dark color
+/// @type {Color}
+$color-state-warning--dark: #b97811 !default;
+
+/// Warning text color
+/// @type {Color}
+$color-state-warning--text: #b3740e !default;
+
+/// Danger color
+/// @type {Color}
+$color-state-danger: map-get($red-color-steps, 400) !default;
+
+/// Danger dark color
+/// @type {Color}
+$color-state-danger--dark: map-get($red-color-steps, 500) !default;
+
+
+
+// General Colors
+
+/// Body copy color
+/// @type {Color}
+$color-body: map-get($gray-color-steps, 900) !default;
+
+/// Body background color
+/// @type {Color}
+$color-body__background-color: $gray !default;
+
+/// Alternate body copy color
+/// @type {Color}
+$color-body--alt: $white !default;
+
+/// Caption color
+/// @type {Color}
+$color-caption: #bdc8cc !default;
+
+/// Code sample background-color
+/// @type {Color}
+$color-code__background-color: #f5f4f2 !default;
+
+/// Heading color
+/// @type {Color}
+$color-heading: $blue !default;

@@ -59,6 +59,57 @@ public class BlockChainController {
         return "aircraft";
     }
 
+    @RequestMapping(path={"/transactionHistoryObjects"},method=RequestMethod.POST)
+    @ResponseBody
+    public String getTransactionHistoryObjects(Model model) {
+        ServiceTransaction[] serviceTransactions = new ServiceTransaction[1];
+        ServiceTransaction serviceTransaction= new ServiceTransaction();
+        serviceTransaction.setAircraftComponent("comp");
+        serviceTransaction.setFlightNo("12");
+
+        serviceTransactions[0] = serviceTransaction;
+
+        if(serviceTransactions == null || serviceTransactions.length == 0 )
+        {
+            return "";
+        }
+
+        JSONArray array = new JSONArray();
+        JSONObject json;
+        for (int i = 0; i < serviceTransactions.length; i++) {
+            json = new JSONObject();
+            /*json.put("$class","org.sabre.biznet.airlines[i]");
+            json.put("serialNo", serviceTransactions[i].getSerialNo());*/
+            json.put("flightNo", serviceTransactions[i].getFlightNo());
+           /* json.put("componentName", serviceTransactions[i].getComponentName());
+            json.put("componentModel", serviceTransactions[i].getComponentModel());
+            json.put("componentManufacturer", serviceTransactions[i].getComponentModel());
+            json.put("componentManufacturingDate", serviceTransactions[i].getComponentManufacturingDate());
+            json.put("componentExpiryDate", serviceTransactions[i].getComponentExpiryDate());
+            json.put("serviceRequestId", serviceTransactions[i].getServiceRequestId());
+            json.put("serviceRequestDate", serviceTransactions[i].getServiceRequestDay()+"/"
+                    +serviceTransactions[i].getServiceRequestMonth() +"/"+serviceTransactions[i].getServiceRequestYear());
+            json.put("nextServiceDate", serviceTransactions[i].getNextServiceDay()+"/"
+                    +serviceTransactions[i].getNextServiceMonth() +"/"+serviceTransactions[i].getNextServiceYear());
+
+            json.put("serviceOverDate", serviceTransactions[i].getServiceOverDay()+"/"
+                    +serviceTransactions[i].getServiceOverMonth() +"/"+serviceTransactions[i].getServiceOverYear());
+
+            json.put("serviceEngineer", serviceTransactions[i].getServiceEngineer());
+            json.put("comments", serviceTransactions[i].getComments());
+            json.put("transactionType", "ServiceRequest");
+            json.put("serviceVerifiedBy", serviceTransactions[i].getServiceVerifiedBy());
+            json.put("designation", serviceTransactions[i].getDesignation());
+            json.put("airline", "org.sabre.biznet.Airline#"+serviceTransactions[i].getAirline());*/
+            json.put("aircraftComponent", "org.sabre.biznet.AircraftComponent#"+serviceTransactions[i].getAircraftComponent());
+            /*json.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransactions[i].getVendor());
+            json.put("transactionId", "");*/
+            array.add(json);
+        }
+
+        return array.toJSONString();
+    }
+
     @RequestMapping(path={"/vendors"},method=RequestMethod.POST)
     @ResponseBody
     public String getVendors(Model model) {

@@ -1,0 +1,55 @@
+////
+/// ## Link
+/// Link placeholders.
+/// @group placeholders/link
+////
+
+@import '../mixins/add-placeholder';
+
+@include addPlaceholder(link) {
+  border-bottom: $link--default__border;
+  color: $link--default__color;
+  cursor: pointer;
+  @include useFont($weight: $body__font-weight--normal);
+  position: relative;
+  text-decoration: none;
+  transition: color 150ms, background-color 150ms, padding-bottom 150ms, border-bottom 150ms;
+
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+}
+
+@include addPlaceholder(link-hover) {
+  color: $link--default--hover__color;
+}
+
+@include addPlaceholder(link-focus) {
+  border-bottom: $link--default--focus__border;
+  outline: 0;
+
+  &:hover,
+  &.hover {
+    border-bottom-color: $link--default--hover__color;
+  }
+
+  &:active,
+  &.active {
+    border-bottom-color: $link--default--active__color;
+  }
+}
+
+@include addPlaceholder(link-active) {
+  color: $link--default--active__color;
+}
+
+@include addPlaceholder(link-disabled) {
+  color: $link--disabled__color !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+
+    &:focus,
+    &.focus {
+      border-bottom: $link--disabled--focus__border;
+    }
+}

@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Pagination</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<nav class="spark-pagination" aria-label="Pagination navigation">
+
+  <div class="spark-pagination__pages">
+    <a class="spark-pagination__arrow spark-pagination__arrow--previous" aria-label="Previous page" disabled>
+      <span class="spark-pagination__arrow-text">Previous</span>
+    </a>
+    <a class="spark-pagination__item spark-pagination__item--active" aria-current="true"  aria-label="Go to page 1" href="javascript: void(0);">
+      1
+    </a>
+    <a class="spark-pagination__item" href="javascript: void(0);" aria-label="Go to page 2">
+      2
+    </a>
+    <a class="spark-pagination__item" href="javascript: void(0);" aria-label="Go to page 3">
+      3
+    </a>
+    <a class="spark-pagination__item" href="javascript: void(0);" aria-label="Go to page 4">
+      4
+    </a>
+    <a class="spark-pagination__item" href="javascript: void(0);" aria-label="Go to page 5">
+      5
+    </a>
+    <a class="spark-pagination__arrow spark-pagination__arrow--next" href="javascript: void(0);" aria-label="Next page">
+      <span class="spark-pagination__arrow-text">Next</span>
+    </a>
+  </div>
+
+  <div class="spark-pagination__results">
+
+    <div class="spark-pagination__per-page">
+      <label class=" spark-select spark-select--no-label">
+        <select class="spark-select__input" title="Results Per Page">
+          <option>10 results</option>
+          <option>25 results</option>
+          <option>50 results</option>
+          <option>100 results</option>
+        </select>
+        <span class="spark-label"></span>
+      </label>
+    </div>
+
+    <div class="spark-pagination__summary">
+      1-10 of 147 results
+    </div>
+
+  </div>
+
+</nav>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

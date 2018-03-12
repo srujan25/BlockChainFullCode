@@ -1,0 +1,97 @@
+////
+/// ## Toggle Configuration
+///	@group config/components
+////
+
+
+/// Toggle `background-color`
+/// @type {Color}
+$toggle__background-color: $white !default;
+
+/// Toggle `border`
+/// @type {String}
+$toggle__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Toggle `color`
+/// @type {Color}
+$toggle__color: map-get($gray-color-steps, 800) !default;
+
+/// Toggle track `background-color`
+/// @type {Color}
+$toggle__track__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Toggle track `border`
+/// @type {String}
+$toggle__track__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Toggle handle `background-color`
+/// @type {Color}
+$toggle__handle__background-color: $white !default;
+
+/// Toggle handle `border`
+/// @type {String}
+$toggle__handle__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Toggle handle `box-shadow`
+/// @type {String}
+$toggle__handle__box-shadow: inset 0 -1px 0 map-get($gray-color-steps, 400) !default;
+
+/// Toggle focus box-shadow
+/// @type {String}
+$toggle--focus__box-shadow:  0 0 0 4px map-get($blue-color-steps, 100) !default;
+
+/// Toggle `background-color` when active
+/// @type {Color}
+$toggle--active__background-color: map-get($blue-color-steps, 200) !default;
+
+/// Toggle `border-color` when active
+/// @type {Color}
+$toggle--active__border-color: map-get($blue-color-steps, 400) !default;
+
+/// Toggle `color` when active
+/// @type {Color}
+$toggle--active__color: $white !default;
+
+/// Toggle track `background-color` when active
+/// @type {Color}
+$toggle--active__track__background-color: map-get($blue-color-steps, 200)!default;
+
+/// Toggle track `border` when active
+/// @type {String}
+$toggle--active__track__border: 1px solid map-get($green-color-steps, 400) !default;
+
+/// Toggle handle `border` when active
+/// @type {String}
+$toggle--active__handle__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Toggle handle `box-shadow` when active
+/// @type {String}
+$toggle--active__handle__box-shadow: inset 0 -1px 0 map-get($gray-color-steps, 100) !default;
+
+/// Toggle `background-color` when disabled
+/// @type {Color}
+$toggle--disabled__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Toggle `border` when disabled
+/// @type {String}
+$toggle--disabled__border: 1px solid $white !default;
+
+/// Toggle `color` when disabled
+/// @type {Color}
+$toggle--disabled__color: map-get($gray-color-steps, 500) !default;
+
+/// Toggle track `background-color` when disabled
+/// @type {Color}
+$toggle--disabled__track__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Toggle track `border` when disabled
+/// @type {String}
+$toggle--disabled__track__border: 1px solid map-get($gray-color-steps, 100) !default;
+
+/// Toggle handle `background-color` when disabled
+/// @type {Color}
+$toggle--disabled__handle__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Toggle handle `border` when disabled
+/// @type {String}
+$toggle--disabled__handle__border: 1px solid $white !default;

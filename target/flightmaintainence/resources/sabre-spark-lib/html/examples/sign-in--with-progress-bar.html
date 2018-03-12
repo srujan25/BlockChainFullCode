@@ -1,0 +1,159 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Sign In - Progress Bar" %}
+{% set bodyClass = "spark-content--sticky-footer" %}
+
+{% block example %}
+<div class="spark-content__wrapper--sticky-footer">
+
+  <article class="spark-splash-screen spark-splash-screen--panel spark-splash-screen--sign-in spark-main--sticky-footer" id="sign-in-progress-bar-example">
+    <section class="spark-splash-screen__content">
+      <div class="spark-panel spark-splash-screen__center col-xs-12 col-md-10 col-lg-8 col-xl-6">
+        <div class="spark-panel__content">
+          <i class="spark-logo spark-logo--sabre spark-logo--md spark-logo--sabre-red">Sabre</i>
+          <h3 class="spark-splash-screen__heading">Enterprise Design Language</h3>
+
+          <div class="spark-progress spark-progress--integrated spark-progress--lg spark-splash-screen__progress" role="progressbar" data-progress-defer>
+            <progress value="0"></progress>
+            <span class="spark-progress__text">
+              <span class="spark-progress__value" role="status">0%</span>
+              <ul class="spark-progress__states" role="note">
+                <li data-value="0" class="active">Applying Policy Rules</li>
+                <li data-value="20">Sorting Options</li>
+                <li data-value="40">Generating Jobs</li>
+                <li data-value="60">Perturbing Matrices</li>
+                <li data-value="80">Reticulating Splines</li>
+                <li data-value="100">All done!</li>
+              </ul>
+            </span>
+            <span class="spark-progress__meter"></span>
+          </div>
+
+          <form class="spark-splash-screen__form spark-text-left">
+            <p class="spark-margin-top--lg spark-margin-bottom">
+              Sign In to Product Name.
+            </p>
+            <label class="spark-input">
+              <input class="spark-input__field" name="example1" placeholder="Enter Username..." role="textbox">
+              <span class="spark-label">Username</span>
+            </label>
+            <label class="spark-input">
+              <input type="password" class="spark-input__field" name="example1" placeholder="What is your password?" role="textbox" required>
+              <span class="spark-label">Password</span>
+              <span class="spark-input__addon spark-input__password-toggle">
+                <i class="spark-input__password-show spark-icon-password-view"></i>
+                <i class="spark-input__password-hide spark-icon-password-hide"></i>
+              </span>
+            </label>
+            <fieldset class="row">
+              <label class="col-xs-12 spark-checkbox">
+                <input class="spark-checkbox__input" type="checkbox">
+                <span class="spark-checkbox__box"></span>
+                <span class="spark-label">Stay signed in</span>
+              </label>
+            </fieldset>
+            <div class="row">
+              <div class="col-xs-12 spark-margin-top">
+                <a href="#" class="spark-btn spark-btn--md spark-btn--primary spark-block--lte-sm spark-margin-bottom--md spark-pull-right--gte-sm">Sign In</a>
+                <div class="spark-splash-screen__help-container spark-pull-left--gte-sm">
+                  <a href="javascript: void(0);" class="spark-splash-screen__help spark-margin-bottom--sm">Forgot Username or Password?</a>
+                  <a href="javascript: void(0);" class="spark-splash-screen__help spark-margin-bottom--sm">Create a new account</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <footer class="spark-footer">
+    <div class="container">
+      <a class="spark-footer__logo spark-hidden--lte-sm" title="Sabre"><i class="spark-logo spark-logo--sabre spark-logo--xs"></i></a>
+      <div class="spark-footer__content">
+        <div class="spark-footer__copyright">
+          © 2015-16 Sabre <span class="spark-hidden--lte-md">Curabitur blandit tempus porttitor.</span>
+        </div>
+        <ul class="spark-footer__list">
+          <li class="spark-footer__list-item">
+            <a class="spark-footer__list-link" href="javascript: void(0);">
+              Legal Policy
+            </a>
+          </li>
+          <li class="spark-footer__list-item">
+            <a class="spark-footer__list-link" href="javascript: void(0);">
+              Contact Us
+            </a>
+          </li>
+          <li class="spark-footer__list-item">
+            <a class="spark-footer__list-link" href="javascript: void(0);">
+              Support
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="spark-footer__list spark-footer__list--right spark-footer__list--icons">
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="Twitter">
+            <i class="spark-icon-social-twitter spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="Facebook">
+            <i class="spark-icon-social-facebook spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="LinkedIn">
+            <i class="spark-icon-social-linkedin spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="Instagram">
+            <i class="spark-icon-social-instagram spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="YouTube">
+            <i class="spark-icon-social-youtube spark-icon--fill"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+function incrementProgress(obj, val, stop) {
+  val = val || 0.01;
+  stop = stop || 1;
+  obj.set(Math.min(val, 1));
+  if (val < 1 && val < stop) {
+    window.setTimeout(function() {
+      incrementProgress(obj, val + 0.01, stop);
+    }, 50);
+  }
+  else if (val >= stop) {
+    // STOP THE MADNESS
+    return;
+  }
+  else {
+    window.setTimeout(function() {
+      obj.set(0);
+      window.setTimeout(function() {
+        incrementProgress(obj, 0);
+      }, 500);
+    }, 2000);
+  }
+}
+
+var signInProgress = document.getElementById('sign-in-progress-bar-example');
+signInProgress.querySelector('.spark-btn--primary').addEventListener('click', function() {
+  signInProgress.className += ' loading';
+  incrementProgress(new Spark.ProgressIndicator(signInProgress.querySelector('.spark-progress')));
+});
+
+{% include "examples/partials/scripts/text-input.js" %}
+{% endblock %}
