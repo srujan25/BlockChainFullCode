@@ -10,27 +10,28 @@
 
 </head>
 <body>
-<form action="airlineSave" method="post" commandName="somedata" style="form-spacing">
+<form action="vendorSave" method="post" commandName="somedata" style="form-spacing">
 
 
     <div class="container container-spacing">
-        <div class="heading-content-container container sb-full-max-width spark-padding-top--sm spark-padding-bottom--sm"><div class="row"><div class="col-xs-12 property-id-container spark-text-right spark-bold"><div class="property-id-sub-container"><span class="property-id spark-padding-left title-spacing">Hi Srujan!!</span></div></div></div></div>
+        <div class="heading-content-container container sb-full-max-width spark-padding-top--sm spark-padding-bottom--sm">
+        <div class="row"><div class="col-xs-12 property-id-container spark-text-right spark-bold">
 
         <div class="pms-page-title title-spacing"><h3>Vendor</h3></div>
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <section>
                 <label class="spark-input">
-                    <input class="spark-input__field" name="serialNo" id="serialNo" role="textbox" value="">
+                    <input class="spark-input__field" name="regnNo" id="regnNo" role="textbox" value="">
                     <span class="spark-label">Reg No</span>
                 </label>
 
                 <div class="spark-margin-top">
                     <label class="spark-select">
-                        <select class="spark-select__input"> <!-- This has to be before .spark-label! -->
+                        <select name="vendorName" class="spark-select__input"> <!-- This has to be before .spark-label! -->
                             <option></option>
-                            <option>LH</option>
-                            <option>EY</option>
-                            <option>VS</option>
+                            <option>Tata Motors</option>
+                            <option>HAL</option>
+                            <option>L&T</option>
                         </select>
                         <span class="spark-label">Select Vendor</span>
                     </label>
@@ -44,15 +45,16 @@
                             <div class="row">
 
                                 <div class="col-xs-3"><label
-                                        class="spark-select spark-select--no-label rsv-guest-details-info-address__label"><select
+                                        class="spark-select spark-select--no-label rsv-guest-details-info-address__label">
+                                        <select name="phoneType"
                                         class="spark-select__input rsv-guest-details-info-address__select">
-                                    <option value="V1">VOICE1</option>
-                                    <option value="V2">VOICE2</option>
+                                    <option value="V2">LANDLINE</option>
                                     <option value="M">MOBILE</option>
                                     <option value="F">FAX</option>
                                 </select><span class="spark-label"></span></label></div>
 
-                                <div class="col-xs-6 rsv-guest-details-info__phone-input"><label class="spark-input"><input
+                                <div class="col-xs-6 rsv-guest-details-info__phone-input">
+                                <label class="spark-input"><input
                                         class="spark-input__field" name="phonenumber" role="textbox" value="" maxlength="25"><span
                                         class="spark-label">Vendor Phone</span></label></div>
                                 <div class="col-xs-4"></div>
@@ -67,7 +69,8 @@
                         <div class="container rsv-guest-details-info__address">
                             <div class="row">
                                 <div class="col-xs-3"><label
-                                        class="spark-select spark-select--no-label rsv-guest-details-info-address__label"><select
+                                        class="spark-select spark-select--no-label rsv-guest-details-info-address__label">
+                                        <select name="addressType"
                                         class="spark-select__input rsv-guest-details-info-address__select">
                                     <option value="H">PERSONAL</option>
                                     <option value="B">BUSINESS</option>
@@ -84,7 +87,7 @@
                             <div class="row">
                                 <div class="col-xs-3"></div>
                                 <div class="col-xs-6 rsv-guest-details-info-address-street"><label class="spark-input"><input
-                                        class="spark-input__field" name="address" role="textbox" maxlength="400" value=""><span
+                                        class="spark-input__field" name="city" role="textbox" maxlength="400" value=""><span
                                         class="spark-label">City</span></label></div>
                             </div>
                         </div>

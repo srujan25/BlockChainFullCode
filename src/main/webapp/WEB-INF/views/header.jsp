@@ -23,10 +23,10 @@
                            <a href="airline" class="spark-menu__list-link">Airlines</a>
                         </li>
                         <li class="spark-menu__list-item" role="menuitem">
-                           <a href="#" class="spark-menu__list-link">Service Participants</a>
+                           <a href="vendor" class="spark-menu__list-link">Vendor</a>
                         </li>
                         <li class="spark-menu__list-item" role="menuitem">
-                             <a href="#" class="spark-menu__list-link">Grounds Man</a>
+                             <a href="#" class="spark-menu__list-link">Groundsman</a>
                         </li>
                      </ul>
                   </li>
