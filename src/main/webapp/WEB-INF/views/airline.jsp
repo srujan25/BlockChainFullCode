@@ -98,7 +98,7 @@
                             <div class="row">
                                 <div class="col-xs-3"></div>
                                 <div class="col-xs-2 rsv-guest-details-info-address-state"><label class="spark-input">
-                                <input name=""
+                                <input
                                         class="spark-input__field" name="state" role="textbox" maxlength="2" value=""><span
                                         class="spark-label">State</span></label></div>
                                 <div class="col-xs-4 rsv-guest-details-info-address-zipcode"><label class="spark-input">

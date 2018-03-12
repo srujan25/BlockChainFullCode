@@ -1,6 +1,7 @@
 package controller;
 
 import org.sabre.biznet.Airline;
+import org.sabre.biznet.User;
 import org.sabre.biznet.Vendor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -56,6 +57,7 @@ public class BlockChainController {
         RestTemplate restTemplate = new RestTemplate();
 
         Map<String, String> componentMap = new HashMap<String, String>();
+        componentMap.put("$class","org.sabre.biznet.Airline");
         componentMap.put("carrierCode", airline.getCarrierCode());
         componentMap.put("address", airline.getAddress());
         componentMap.put("fullName", airline.getFullName());
@@ -66,10 +68,7 @@ public class BlockChainController {
         componentMap.put("addressType", airline.getAddressType());
         componentMap.put("phonenumber", airline.getPhonenumber());
         componentMap.put("phoneType", airline.getPhoneType());
-
-
-        ResponseEntity<String> response = restTemplate.postForEntity( AIRLINE_URL, componentMap, String.class );
-
+        restTemplate.postForEntity( AIRLINE_URL,componentMap,String.class );
         return "airline";
     }
 
