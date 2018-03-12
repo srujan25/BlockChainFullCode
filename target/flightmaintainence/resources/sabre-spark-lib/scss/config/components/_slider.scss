@@ -1,0 +1,231 @@
+////
+/// ## Slider Configuration
+///	@group config/components
+////
+
+
+// Primary
+
+/// Slider track `background-color`
+/// @type {Color}
+$slider__track__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Slider track `border`
+/// @type {String}
+$slider__track__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Slider track value fill `background-color`
+/// @type {Color}
+$slider__track-fill__background-color: map-get($green-color-steps, 600) !default;
+
+/// Slider track value fill `border`
+/// @type {String}
+$slider__track-fill__border: 1px solid map-get($green-color-steps, 700) !default;
+
+/// Slider handle `background-color`
+/// @type {Color}
+$slider__handle__background-color: $green !default;
+
+/// Slider handle `border`
+/// @type {String}
+$slider__handle__border: 1px solid map-get($green-color-steps, 600) !default;
+
+/// Slider handle `box-shadow`
+/// @type {String}
+$slider__handle__box-shadow: inset 0 -1px 0 map-get($green-color-steps, 600) !default;
+
+/// Slider handle `color`
+/// @type {Color}
+$slider__handle__color: $white !default;
+
+/// Slider handle `background-color` on hover
+/// @type {Color}
+$slider--hover__handle__background-color: map-get($green-color-steps, 400) !default;
+
+/// Slider handle `border` on hover
+/// @type {String}
+$slider--hover__handle__border: 1px solid map-get($green-color-steps, 600) !default;
+
+/// Slider handle `box-shadow` on hover
+/// @type {String}
+$slider--hover__handle__box-shadow: inset 0 -1px 0 map-get($green-color-steps, 600) !default;
+
+/// Slider handle `color` on hover
+/// @type {Color}
+$slider--hover__handle__color: $white !default;
+
+/// Slider label `color`
+/// @type {Color}
+$slider__label__color: map-get($gray-color-steps, 800) !default;
+
+/// Slider label `color`
+/// @type {Color}
+$slider__label__font-size: zeta !default;
+
+/// Slider label `font-weight`
+/// @type {Number}
+$slider__label__font-weight: 400 !default;
+
+/// Slider handle `background-color` when active
+/// @type {Color}
+$slider--active__handle__background-color: map-get($green-color-steps, 400) !default;
+
+/// Slider handle `border` when active
+/// @type {String}
+$slider--active__handle__border: 1px solid map-get($green-color-steps, 700) !default;
+
+/// Slider handle `box-shadow` when active
+/// @type {String}
+$slider--active__handle__box-shadow: inset 0 -1px 0 1px map-get($green-color-steps, 700) !default;
+
+/// Slider handle `box-shadow` when focused
+/// @type {String}
+$slider--default--focus__box-shadow: 0 0 0 4px map-get($green-color-steps, 100) !default;
+
+/// Slider handle `color` when active
+/// @type {Color}
+$slider--active__handle__color: $slider__handle__color !default;
+
+/// Slider handle disc `color` when active
+/// @type {Color}
+$slider--active__handle__disc__background-color: map-get($green-color-steps, 500) !default;
+
+/// Slider track `background-color` when disabled
+/// @type {Color}
+$slider--disabled__track__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Slider handle `border` when disabled
+/// @type {String}
+$slider--disabled__track__border: 1px solid map-get($gray-color-steps, 100) !default;
+
+/// Slider `color` when disabled
+/// @type {Color}
+$slider--disabled__color: map-get($gray-color-steps, 500) !default;
+
+
+
+// Secondary
+
+/// Secondary slider track `background-color`
+/// @type {Color}
+$slider--secondary__track__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Secondary slider track `border`
+/// @type {String}
+$slider--secondary__track__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Secondary slider track value fill `background-color`
+/// @type {Color}
+$slider--secondary__track-fill__background-color: map-get($blue-color-steps, 200) !default;
+
+/// Secondary slider track value fill `border`
+/// @type {String}
+$slider--secondary__track-fill__border: 1px solid map-get($blue-color-steps, 400) !default;
+
+/// Secondary slider handle `background-color`
+/// @type {Color}
+$slider--secondary__handle__background-color: $white !default;
+
+/// Secondary slider handle `border`
+/// @type {String}
+$slider--secondary__handle__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Secondary slider handle `box-shadow`
+/// @type {String}
+$slider--secondary__handle__box-shadow: inset 0 -1px 0 map-get($gray-color-steps, 400) !default;
+
+/// Secondary slider handle `color`
+/// @type {Color}
+$slider--secondary__handle__color: map-get($gray-color-steps, 800) !default;
+
+/// Secondary slider handle `background-color` on hover
+/// @type {Color}
+$slider--secondary--hover__handle__background-color: $white !default;
+
+/// Secondary slider handle `border` on hover
+/// @type {String}
+$slider--secondary--hover__handle__border: 1px solid map-get($gray-color-steps, 800) !default;
+
+/// Secondary slider handle `box-shadow` on hover
+/// @type {String}
+$slider--secondary--hover__handle__box-shadow: inset 0 -1px 0 transparent !default;
+
+/// Secondary slider handle `color` on hover
+/// @type {Color}
+$slider--secondary--hover__handle__color: map-get($gray-color-steps, 700) !default;
+
+/// Secondary slider handle `background-color` when active
+/// @type {Color}
+$slider--secondary--active__handle__background-color: $gray !default;
+
+/// Secondary slider handle `border` when active
+/// @type {String}
+$slider--secondary--active__handle__border: 1px solid map-get($gray-color-steps, 700) !default;
+
+/// Secondary slider handle `box-shadow` when active
+/// @type {String}
+$slider--secondary--active__handle__box-shadow: inset 0 -1px 0 transparent !default;
+
+/// Secondary slider handle `color` when active
+/// @type {Color}
+$slider--secondary--active__handle__color: map-get($gray-color-steps, 900) !default;
+
+/// Secondary slider handle disc `color` when active
+/// @type {Color}
+$slider--secondary--active__handle__disc__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Secondary slider track `background-color` when disabled
+/// @type {Color}
+$slider--secondary--disabled__track__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Secondary slider track `border` when disabled
+/// @type {String}
+$slider--secondary--disabled__track__border: 1px solid map-get($gray-color-steps, 100) !default;
+
+/// Secondary slider `color` when disabled
+/// @type {Color}
+$slider--secondary--disabled__color: map-get($gray-color-steps, 500) !default;
+
+
+
+// Integrated
+
+/// Integrated slider handle `box-shadow` on hover
+/// @type {String}
+$slider--integrated--hover__handle__box-shadow: inset 0 -2px 0 $green !default;
+
+/// Integrated slider handle `box-shadow` when active
+/// @type {String}
+$slider--integrated--active__handle__box-shadow: inset 0 -2px 0 transparent !default;
+
+
+
+// States
+
+/// Slider track error `background-color`
+/// @type {Color}
+$slider--error__track__background-color: map-get($red-color-steps, 500) !default;
+
+/// Slider track error `border-color`
+/// @type {Color}
+$slider--error__track__border-color: map-get($red-color-steps, 600) !default;
+
+/// Slider handle error `background-color`
+/// @type {Color}
+$slider--error__handle__background-color: map-get($red-color-steps, 400) !default;
+
+/// Slider handle error `border`
+/// @type {String}
+$slider--error__handle__border-color: map-get($red-color-steps, 600) !default;
+
+/// Slider input error `border`
+/// @type {String}
+$slider--error__input__border-color: map-get($red-color-steps, 400) !default;
+
+/// Slider handle error `box-shadow`
+/// @type {String}
+$slider--error__handle__box-shadow: inset 0 -1px 0 map-get($red-color-steps, 700) !default;
+
+/// Slider handle error `box-shadow` when focused
+/// @type {String}
+$slider--error--focus__box-shadow: 0 0 0 4px map-get($red-color-steps, 100) !default;

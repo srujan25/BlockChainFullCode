@@ -1,0 +1,131 @@
+////
+/// Load specific weights of a font.
+/// @group mixins/load-font
+////
+
+/// A list of the fonts already added.
+/// @type {List}
+$fontsLoaded: () !global !default;
+
+/// A queue of fonts to add.
+/// @type {List}
+$fontsQueued: () !global !default;
+
+/// Define the styles for the font to be used, and queue it for loading if it has not been loaded already.
+/// @param {String} $family
+/// @param {Number|String} $weight
+/// @param {String} $style
+/// @output Font styles
+@mixin useFont($family: null, $weight: null, $style: null) {
+
+  // Default family value
+  @if ($family) {
+    font-family: $family;
+  }
+  @else {
+    $family: $body__font-family;
+  }
+
+  // Default family value
+  @if ($style) {
+    font-style: $style;
+  }
+  @else {
+    $style: normal;
+  }
+
+  // Default weight value
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @else {
+    $weight: $body__font-weight--normal;
+  }
+
+  // Try to queue the font for loading. This is a noop if it's already been loaded or queued.
+  @include queueFont($family, $weight, $style);
+}
+
+
+/// Queue a font to be loaded.
+/// @param {String} $name
+/// @param {Number|String} $weight
+/// @param {String} $style
+/// @param {Map} $list The font list to pull from
+@mixin queueFont($name, $weight, $style, $list: $font-list) {
+
+  // Unique name to use in the loaded fonts store.
+  $key: $name + '-' + $weight + '-' + $style;
+
+  // Only load a font weight and style once.
+  @if index($fontsLoaded, $key) == null {
+
+    @if (type-of($name) == 'list') {
+      $name: nth($name, 1);
+    }
+
+    // Get the family, weights and particular style.
+    $family: map-get($list, $name);
+    $weights: map-get($family, $weight);
+    $sources: map-get($weights, $style);
+
+    // This is the src property of the @font-face declaration.
+    $src: unquote('');
+
+    // Loop through each source.
+    @each $k, $v in $sources {
+
+      // Sanity check. Sometimes this is null.
+      @if ($k) {
+
+        // We already have an entry, so add a comma to the end.
+        @if ($src != '') {
+          $src: $src + unquote(', ');
+        }
+
+        // Special case for the local key.
+        @if ($k == 'local') {
+          @each $l in $v {
+            @if ($src != '') {
+              $src: $src + unquote(', ');
+            }
+            $src: $src + unquote('local(\'#{$l}\')');
+          }
+        }
+        @else {
+          $src: $src + unquote('url(\'#{$font-directory + $v}\') format(\'#{$k}\')'),
+        }
+      }
+    }
+
+    // Store this key so we don't load it a second time later.
+    $fontsLoaded: append($fontsLoaded, $key) !global;
+
+    // Add this to the queue.
+    $fontsQueued: append($fontsQueued, (
+      family: $name,
+      style: $style,
+      weight: $weight,
+      src: $src
+    )) !global;
+  }
+}
+
+
+
+/// Flush the font queue
+@mixin flushFontQueue() {
+
+  // Add a font-face for each file.
+  @each $font in $fontsQueued {
+    @font-face {
+      font-family: map-get($font, family);
+      font-style: map-get($font, style);
+      font-weight: map-get($font, weight);
+      src: map-get($font, src);
+    }
+  }
+
+  // Clear the queue.
+  $fontsQueued: () !global;
+}

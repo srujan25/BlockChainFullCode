@@ -1,0 +1,60 @@
+////
+/// ## Popover Configuration
+/// @group config/components
+////
+
+/// Popover `background-color`
+/// @type {Color}
+$popover__background-color: $white !default;
+
+/// Popover `border`
+/// @type {String}
+$popover__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Popover `border-radius`
+/// @type {Number}
+$popover__border-radius: .25rem !default;
+
+/// Popover `box-shadow`
+/// @type {String}
+$popover__box-shadow: 0 5px 5px rgba(0, 0, 0, .1) !default;
+
+/// Popover `color`
+/// @type {Color}
+$popover__color: map-get($gray-color-steps, 800) !default;
+
+/// Popover `fontsize` variable
+/// @type {String}
+$popover__font-size: eta !default;
+
+/// Popover `background-color` on hover
+/// @type {Color}
+$popover--hover__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Popover `color` on hover
+/// @type {Color}
+$popover--hover__color: map-get($gray-color-steps, 900) !default;
+
+/// Popover Close Button `background-color` on hover
+/// @type {Color}
+$popover-close-btn--hover__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Popover Close Button `background-color` on active
+/// @type {Color}
+$popover-close-btn--active__background-color: map-get($blue-color-steps, 250) !default;
+
+/// Popover Close Button default `border`
+/// @type {Color}
+$popover-close-btn__border: 4px solid transparent !default;
+
+/// Popover Close Button `border` on hover
+/// @type {Color}
+$popover-close-btn--hover__border: 4px solid map-get($gray-color-steps, 100) !default;
+
+/// Popover Close Button `border` on focus
+/// @type {Color}
+$popover-close-btn--focus__border: 4px solid map-get($gray-color-steps, 100) !default;
+
+/// Popover Close Button `border` on active
+/// @type {Color}
+$popover-close-btn--active__border: 4px solid map-get($blue-color-steps, 250) !default;

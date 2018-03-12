@@ -1,0 +1,12 @@
+////
+/// ## Default Styles
+/// Default, whitelabel stylesheet for EDL.
+////
+
+
+@import 'config/index';
+@import 'themes/whitelabel/config/index';
+@import 'style';
+@import 'themes/whitelabel/index';
+
+@include flushFontQueue();

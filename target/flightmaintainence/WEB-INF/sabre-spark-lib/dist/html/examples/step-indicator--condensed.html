@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Step Indicator - Condensed</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+  <div class="spark-step-indicator" data-type="condensed">
+
+    <h4 class="spark-step-indicator__title">Default</h4>
+
+    <div class="spark-step-indicator__body">
+
+      <div class="spark-step-indicator__subtitle">
+        2. Choose a Flight
+      </div>
+
+      <div class="spark-step-indicator__list">
+
+        <a aria-labelledby="step-1" href="javascript:void(0)" class="spark-step-indicator__item spark-step-indicator__item--completed">
+          <span class="spark-step-indicator__icon" aria-hidden="true">1</span>
+          <span id="step-1" class="spark-step-indicator__text">
+            Step 1
+          </span>
+        </a>
+
+        <a aria-labelledby="step-2" href="javascript:void(0)" class="spark-step-indicator__item spark-step-indicator__item--current">
+          <span class="spark-step-indicator__icon" aria-hidden="true">2</span>
+          <span id="step-2" class="spark-step-indicator__text">
+            Step 2
+          </span>
+        </a>
+
+        <a aria-labelledby="step-3" href="javascript:void(0)" class="spark-step-indicator__item">
+          <span class="spark-step-indicator__icon" aria-hidden="true">3</span>
+          <span id="step-3" class="spark-step-indicator__text">
+            Step 3
+            <small class="spark-step-indicator__subtext">(Sublabel)</small>
+          </span>
+        </a>
+
+        <a aria-labelledby="step-4" href="javascript:void(0)" class="spark-step-indicator__item">
+          <span class="spark-step-indicator__icon" aria-hidden="true">4</span>
+          <span id="step-4" class="spark-step-indicator__text">
+            Step 4
+          </span>
+        </a>
+
+        <a aria-labelledby="step-5" href="javascript:void(0)" class="spark-step-indicator__item">
+          <span class="spark-step-indicator__icon" aria-hidden="true">5</span>
+          <span id="step-5" class="spark-step-indicator__text">
+            Step 5
+          </span>
+        </a>
+
+        <a aria-labelledby="step-6" href="javascript:void(0)" class="spark-step-indicator__item spark-step-indicator__item--disabled" tabindex="-1">
+          <span class="spark-step-indicator__icon" aria-hidden="true">6</span>
+          <span id="step-6" class="spark-step-indicator__text">
+            Step 6
+          </span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+var stepIndicators = document.querySelectorAll('.spark-step-indicator');
+for (var i = 0, len = stepIndicators.length; i < len; i++) {
+  new Spark.StepIndicator(stepIndicators[i]);
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,21 @@
+////
+/// ## Menu Configuration
+/// @group themes/whitelabel/config/components/menu
+////
+
+
+/// Lighten the menu header to match the page header treatment
+/// @type {Color}
+$menu__header__background-color: map-get($gray-color-steps, 100);
+
+/// Darken type since it is now on a light background
+/// @type {Color}
+$menu__header__color: map-get($gray-color-steps, 800);
+
+/// Toggle background color to match header
+/// @type {Color}
+$menu__header__toggle__background-color: $menu__header__background-color;
+
+/// Toggle type color to match header
+/// @type {Color}
+$menu__header__toggle__color: $menu__header__color;

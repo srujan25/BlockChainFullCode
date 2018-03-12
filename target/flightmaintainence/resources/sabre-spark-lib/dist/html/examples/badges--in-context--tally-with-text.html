@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Badges - Tally Count with Text in Context</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<style>
+  /* Example styles to prevent text wrapping */
+  .nowrap-text { white-space: nowrap; }
+</style>
+<section class="spark-table col-xs-12">
+  <header class="spark-table__header">
+    <h4 class="spark-table__title">
+      Table Title
+    </h4>
+  </header>
+  <div class="spark-table__scroll">
+    <table role="grid">
+      <thead>
+        <tr>
+          <th class="spark-text-center">
+            Icon
+          </th>
+          <th data-sort="asc">
+            Flight No.
+          </th>
+          <th data-sort>
+            Departure <span class="spark-hidden--lte-md">Time</span>
+          </th>
+          <th data-sort>
+            Arrival <span class="spark-hidden--lte-md">Time</span>
+          </th>
+          <th class="spark-text-center">
+            Availability
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="spark-text-center">
+            <i class="spark-icon-airplane spark-icon--lg"></i>
+          </td>
+          <td>
+            DL0431
+          </td>
+          <td>
+            <time datetime="2015-12-07T13:51:54.195Z">December 7, 2017 at 1:51 PM</time>
+          </td>
+          <td>
+            <time datetime="2015-12-08T02:10:51.195Z">December 8, 2017 at 2:10 AM</time>
+          </td>
+          <td class="spark-text-center">
+            <p class="nowrap-text">
+              <span class="spark-badge spark-badge--neutral">6</span><span class="spark-mar-l-1">Seats Available</span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="spark-text-center">
+            <i class="spark-icon-airplane spark-icon--lg"></i>
+          </td>
+          <td>
+            AA1321
+          </td>
+          <td>
+            <time datetime="2015-12-06T09:23:54.195Z">December 6, 2017 at 9:23 AM</time>
+          </td>
+          <td>
+            <time datetime="2015-12-06T11:10:51.195Z">December 6, 2017 at 11:10 AM</time>
+          </td>
+          <td class="spark-text-center">
+            <p class="nowrap-text">
+              <span class="spark-badge spark-badge--warning">3</span><span class="spark-mar-l-1">Seats Available</span>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+// $('.spark-table').sparkTable();
+var table = document.querySelectorAll('.spark-table');
+for(var i = 0, len = table.length; i < len; i++) {
+  new Spark.Table(table[i]);
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

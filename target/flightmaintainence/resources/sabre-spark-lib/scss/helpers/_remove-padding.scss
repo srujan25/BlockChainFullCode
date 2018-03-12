@@ -1,0 +1,12 @@
+////
+/// ## Remove-padding
+/// Hide elements based on screen size
+/// @group helpers/remove-padding
+////
+
+
+/// Remove the padding of a column at all breakpoints
+/// @deprecated Remove in 3.0.0
+@include make-media-queries(".container .row .spark-remove-padding","Remove the padding of a column"){
+  padding-left: 0; padding-right:0;
+};

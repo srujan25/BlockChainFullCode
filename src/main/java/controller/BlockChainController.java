@@ -1,16 +1,27 @@
 package controller;
 
+import org.sabre.biznet.Airline;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author imssbora
  */
 @Controller
 public class BlockChainController {
+
+    private static final String COMPONENT_URL = "http://localhost:3000/api/AircraftComponents";
+    private static final String AIRLINE_URL = "http://localhost:3000/api/Airline";
+    private static final String SERVICE_URL = "http://localhost:3000/api/ServiceTransaction";
+    private static final String VENDOR_URL = "http://localhost:3000/api/Vendor";
 
    /* @RequestMapping(path={"/"},method=RequestMethod.GET)
     public String sayHello(Model model) {
@@ -56,6 +67,23 @@ public class BlockChainController {
 
     @RequestMapping(path={"/airlineSave"},method=RequestMethod.POST)
     public String saveAirline(@ModelAttribute("airline") Airline airline) {
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        Map<String, String> componentMap = new HashMap<String, String>();
+        componentMap.put("carrierCode", airline.getCarrierCode());
+        componentMap.put("address", airline.getAddress());
+        componentMap.put("fullName", airline.getFullName());
+        componentMap.put("state", airline.getState());
+        componentMap.put("zipcode", airline.getZipcode());
+        componentMap.put("city", airline.getCity());
+        componentMap.put("country", airline.getCountry());
+        componentMap.put("addressType", airline.getAddressType());
+        componentMap.put("phonenumber", airline.getPhonenumber());
+        componentMap.put("phoneType", airline.getPhoneType());
+
+
+        ResponseEntity<String> response = restTemplate.postForEntity( AIRLINE_URL, componentMap, String.class );
 
         //model.addAttribute("message","Hello Spring MVC!");
         //model.addAttribute("date", "today");

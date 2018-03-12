@@ -1,0 +1,164 @@
+////
+/// ## Pagination
+/// @group components/pagination
+////
+
+
+/// Pagination navigation
+.spark-pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  // List of pages
+  &__pages {
+    display: flex;
+    flex: 0 1 auto;
+    margin: 1rem;
+  }
+
+  // Items in the pages list
+  &__item,
+  &__ellipsis,
+  &__arrow {
+    align-items: center;
+    border: 3px solid transparent;
+    color: $pagination__item__color;
+    display: flex;
+    flex-wrap: wrap;
+    @include useFont($weight: 400);
+    height: 3rem;
+    padding: 0;
+    position: relative;
+    text-indent: 0;
+    transition-property: color, background-color, border-color;
+    z-index: 5;
+
+    &[disabled] {
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $pagination__item--hover__color;
+    }
+
+    &:focus,
+    &:active,
+    &:focus:active,
+    &:focus:hover {
+      &:not([disabled]) {
+        border: 3px solid $pagination__item--focus__border-color;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  // A page link
+  &__item {
+    background-color: $pagination__item__background-color;
+    border-radius: 1.5rem;
+    flex: 0 0 auto;
+    height: 3rem;
+    justify-content: center;
+    min-width: 3rem;
+    padding: 0 .5rem;
+
+    &--active {
+      background-color: $pagination__item--active__background-color;
+      color: $pagination__item--active__color;
+      @include useFont($weight: 500);
+
+      &:hover {
+        color: $pagination__item--active__color;
+      }
+    }
+  }
+
+  // Truncation mark
+  &__ellipsis {
+    color: inherit;
+    z-index: 0;
+  }
+
+  // Directional arrow
+  &__arrow {
+    border-radius: .25rem;
+    flex: 0 1 auto;
+    overflow: hidden;
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      align-items: center;
+      display: flex;
+      flex: 1 0 auto;
+      font-family: $icon__font-family--line;
+      height: 100%;
+    }
+
+    &--previous {
+      margin-left: -4px;
+
+      &::before {
+        content: '\f10c';
+        justify-content: flex-end;
+        margin-right: .5rem;
+      }
+    }
+
+    &--next {
+      align-content: flex-end;
+      flex-wrap: wrap-reverse;
+      margin-right: -4px;
+
+      &::after {
+        content: '\f10d';
+        justify-content: flex-start;
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  // Text inside an arrow to hide when we run out of room
+  &__arrow-text {
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto;
+    height: 100%;
+  }
+
+  &__results {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+  }
+
+  // Select input of results
+  &__per-page {
+    flex: 0 0 auto;
+    margin: 0 1rem;
+
+    .spark-select {
+      margin-bottom: 0;
+    }
+  }
+
+  // Results summary
+  &__summary {
+    flex: 0 0 auto;
+    margin: 1rem;
+  }
+}
+
+/// Space ellipsis around active items
+.spark-pagination__ellipsis + .spark-pagination__item--active {
+  margin-left: 1rem;
+}
+
+
+@include media-breakpoint-down(sm) {
+  .spark-pagination__arrow-text {
+    display: none;
+  }
+}

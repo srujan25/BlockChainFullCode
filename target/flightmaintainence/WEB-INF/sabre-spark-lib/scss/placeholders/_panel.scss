@@ -1,0 +1,32 @@
+////
+/// ## Panel
+/// Panel placeholders.
+/// @group placeholders/panel
+////
+
+@import '../mixins/add-placeholder';
+
+@include addPlaceholder(panel) {
+  background-color: $panel__background-color;
+  border: $panel__border;
+  border-radius: $panel__border-radius;
+  padding: 0 !important;
+  width: 100%;
+
+  // Don't round the top corners when we're a list of tab panels
+  &.spark-tabs__panels {
+    border-radius: 0 0 $panel__border-radius $panel__border-radius;
+    border: $tabs--active__border;
+    border-top: none;
+  }
+}
+
+@include addPlaceholder(panel-header) {
+  padding: 1.5rem 2rem;
+  position: relative;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+}

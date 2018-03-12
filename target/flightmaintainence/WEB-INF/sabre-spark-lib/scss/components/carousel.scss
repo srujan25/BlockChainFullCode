@@ -1,0 +1,534 @@
+////
+/// ## Carousel
+/// @group components/carousel
+////
+
+
+///Carousel
+.spark-carousel {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  visibility: hidden;
+  user-select: none;
+
+  //hide the element until setup is complete
+  &.ready {
+    visibility: visible;
+  }
+
+  //remove controls and cursor interaction indicator when we are not allowing interactions
+  &.noscroll {
+    .spark-carousel__controls {
+      display: none;
+    }
+    .spark-carousel__container {
+      cursor: default;
+    }
+    .spark-carousel__container {
+      .spark-carousel__item {
+        &.selected {
+          .spark-carousel__panel::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  //swap icon when paused
+  &.pause {
+    .spark-carousel__pause i::before {
+      content: '\f169';
+    }
+  }
+
+  //increase opacity when hovered for the pause button
+  &:hover {
+    .spark-carousel__pause {
+      opacity: .7 !important;
+    }
+  }
+
+  //remove controls and display navigation dots on small-down screens
+  @include media-breakpoint-down(sm) {
+    .spark-carousel__controls {
+      .spark-carousel__forward, .spark-carousel__back {
+        display: none;
+      }
+      .spark-carousel__dots {
+        visibility: visible;
+      }
+    }
+  }
+
+  //disable selected item shadowing and navigation dots for edge configuration
+  &[data-spark-carousel-edge] {
+    .spark-carousel__container {
+      .spark-carousel__item {
+        .spark-carousel__panel {
+          &::after {
+            opacity: 0 !important;
+          }
+        }
+      }
+    }
+    .spark-carousel__controls {
+      .spark-carousel__dots {
+        visibility: hidden;
+      }
+    }
+  }
+
+  //styling for KPI configuration
+  &.spark-carousel--kpi {
+    background: $spark-carousel-panel-background;
+    border-radius: $spark-carousel-panel-border-radius;
+    border: $spark-carousel-panel-border;
+    padding: 0 0 2rem 0;
+    .spark-carousel__outer-container {
+      padding: 0 4rem;
+    }
+    @include media-breakpoint-down(xs) {
+      .spark-carousel__outer-container {
+        padding: 0;
+      }
+    }
+    .spark-carousel__item {
+      .spark-carousel__item--content {
+        border-radius: .25rem;
+        display: block;
+        margin: .5rem;
+        overflow: hidden;
+      }
+      &:focus {
+        outline: 0 none;
+        border-radius: 0;
+        overflow: visible;
+        .spark-carousel__item--content {
+          overflow: visible;
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            height: 100%;
+            width: 100%;
+            border: 4px solid $spark-carousel-focus-outline-color;
+            border-radius: .25rem;
+          }
+        }
+      }
+    }
+
+    .spark-carousel__container {
+      .spark-carousel__item {
+        .spark-carousel__item--content {
+          border-radius: .25rem;
+          display: block;
+          margin: .5rem;
+          overflow: hidden;
+        }
+      }
+    }
+    .spark-carousel__controls {
+      .spark-carousel__dots {
+        display: none;
+      }
+      .spark-carousel__back {
+        box-shadow: 11px 0px 8px -7px rgba(0, 0, 0, .3);
+      }
+      .spark-carousel__forward {
+        box-shadow: -11px 0px 8px -7px rgba(0, 0, 0, .3);
+      }
+      .spark-carousel__back, .spark-carousel__forward {
+        height: 100%;
+        width: 4rem;
+        background: $spark-carousel-panel-background;
+        &:hover {
+          i::before {
+            opacity: 1;
+          }
+        }
+        i::before {
+          position: absolute;
+          top: calc(50% - 1.5rem);
+          opacity: .7;
+        }
+      }
+    }
+    &.rightbound {
+      .spark-carousel__controls {
+        .spark-carousel__back {
+          box-shadow: none;
+        }
+      }
+    }
+    &.leftbound {
+      .spark-carousel__controls {
+        .spark-carousel__forward {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  //Styling for hero configurations
+  &[data-spark-carousel-hero-dark], &[data-spark-carousel-hero-light] {
+    .spark-carousel__container {
+      .spark-carousel__item {
+        width: 100%;
+        img {
+          min-width: 100%;
+          min-height: 100%;
+          max-width: none;
+        }
+      }
+    }
+    .spark-carousel__controls {
+      height: 0;
+      .spark-carousel__dots {
+        align-self: flex-end;
+        bottom: 1rem;
+        div {
+          box-shadow: none;
+        }
+      }
+      .spark-carousel__back, .spark-carousel__forward {
+        opacity: .7;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .spark-carousel__back {
+        bottom: calc(50% - 1rem);
+        left: 2rem;
+      }
+      .spark-carousel__forward {
+        bottom: calc(50% - 1rem);
+        right: 2rem;
+      }
+      .spark-carousel__pause {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        cursor: pointer;
+        opacity: .2;
+        &:hover {
+          opacity: 1 !important;
+        }
+        i::before {
+          line-height: 2rem;
+          font-size: 2rem;
+        }
+      }
+    }
+    .spark-carousel__container {
+      .spark-carousel__item {
+        max-width: 100%;
+      }
+    }
+  }
+
+  //set colors for light treatment
+  &[data-spark-carousel-hero-light] {
+    .spark-carousel__controls {
+      .spark-carousel__back, .spark-carousel__forward {
+        color: $white;
+        opacity: .7;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .spark-carousel__pause {
+        color: $white;
+      }
+      .spark-carousel__dots {
+        div {
+          border: 1px solid $white;
+          &.selected {
+            background: $white;
+          }
+        }
+      }
+    }
+  }
+
+  //panel treatment styles
+  &[data-spark-carousel-panel] {
+    background: $spark-carousel-panel-background;
+    border-radius: $spark-carousel-panel-border-radius;
+    border: $spark-carousel-panel-border;
+    padding: 0 0 2rem 0;
+    .spark-carousel__outer-container {
+      padding: 0 4rem;
+    }
+    //on xs-down we want to remove padding around the carousel to maximize space for items
+    @include media-breakpoint-down(xs) {
+      .spark-carousel__outer-container {
+        padding: 0;
+      }
+    }
+    .spark-carousel__item {
+      .spark-carousel__item--content {
+        border-radius: .25rem;
+        display: block;
+        margin: .5rem;
+        overflow: hidden;
+      }
+      //focus state for items - achieved with a border on a pseudo-element
+      &:focus {
+        outline: 0 none;
+        border-radius: 0;
+        overflow: visible;
+        .spark-carousel__item--content {
+          overflow: visible;
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            height: 100%;
+            width: 100%;
+            border: 4px solid $spark-carousel-focus-outline-color;
+            border-radius: .25rem;
+          }
+        }
+      }
+    }
+    .spark-carousel__container {
+      .spark-carousel__item {
+        .spark-carousel__item--content {
+          border-radius: .25rem;
+          display: block;
+          margin: .5rem;
+          overflow: hidden;
+        }
+      }
+    }
+    .spark-carousel__controls {
+      //hide dots for panel configuration
+      .spark-carousel__dots {
+        display: none;
+      }
+      //set shadows for back/forwards buttons to shade item area
+      .spark-carousel__back {
+        box-shadow: 11px 0px 8px -7px rgba(0, 0, 0, .3);
+      }
+      .spark-carousel__forward {
+        box-shadow: -11px 0px 8px -7px rgba(0, 0, 0, .3);
+      }
+      .spark-carousel__back, .spark-carousel__forward {
+        height: 100%;
+        width: 4rem;
+        background: $spark-carousel-panel-background;
+        &:hover {
+          i::before {
+            opacity: 1;
+          }
+        }
+        i::before {
+          position: absolute;
+          top: calc(50% - 1.5rem);
+          opacity: .7;
+        }
+      }
+    }
+    //if we are at the limit then don't show the shadow
+    &.rightbound {
+      .spark-carousel__controls {
+        .spark-carousel__back {
+          box-shadow: none;
+        }
+      }
+    }
+    //if we are at the limit then don't show the shadow
+    &.leftbound {
+      .spark-carousel__controls {
+        .spark-carousel__forward {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  //if we are at the limit then don't show the control
+  &.rightbound {
+    .spark-carousel__controls {
+      .spark-carousel__back {
+        cursor: default;
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+
+  //if we are at the limit then don't show the control
+  &.leftbound {
+    .spark-carousel__controls {
+      .spark-carousel__forward {
+        cursor: default;
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//styling for the header area on panel
+.spark-carousel__header {
+  padding: 2rem;
+  h4 {
+    margin: 0;
+  }
+}
+
+//contains controls
+.spark-carousel__outer-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+//contains container
+.spark-carousel__container-mask {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+//controls styling
+.spark-carousel__controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  //set icon sizing and positioning
+  .spark-carousel__forward , .spark-carousel__back {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    i::before {
+      font-size: 2rem;
+      line-height: 2rem;
+      margin-left: .5rem;
+      border-radius: .25rem;
+    }
+  }
+  .spark-carousel__back {
+    left: 0;
+  }
+  .spark-carousel__forward {
+    right: 0;
+  }
+  //each div inside the .spark-carousel__dots is a dot that corresponds to an item
+  .spark-carousel__dots {
+    position: relative;
+    div {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin: .5rem;
+      border-radius: 50%;
+      border: 1px solid $spark-carousel-dots-color;
+      box-shadow: 1px 1px 2px 0px #aaa;
+      cursor: pointer;
+      //when selected fill the dot
+      &.selected {
+        background: $spark-carousel-dots-color;
+      }
+    }
+  }
+}
+
+//container for the items this is where transforms are applied
+.spark-carousel__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  flex: 1 0 100%;
+  text-align: center;
+  //need this to prevent firefox from flickering items as positions are updated
+  transform: translate3d(0,0,0);
+  will-change: transform;
+
+  a.spark-carousel__item {
+    padding: 0;
+  }
+}
+
+//Carousel item default styles
+.spark-carousel__item {
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+  overflow: hidden;
+  border: 0 none;
+  align-self: center;
+  //need this to prevent firefox from flickering items as positions are updated
+  transform: translate3d(0,0,0);
+  will-change: transform;
+  .spark-carousel__item--content {
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  &.selected .spark-carousel__panel::after {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: 0 none;
+    border-radius: 0;
+    overflow: visible;
+    .spark-carousel__item--content {
+      overflow: visible;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        height: 100%;
+        width: 100%;
+        border: 4px solid $spark-carousel-focus-outline-color;
+        border-radius: .25rem;
+      }
+    }
+  }
+}
+
+//the optional panel div enclosed in an .spark-carousel__item
+//applies the panel appearance to items
+.spark-carousel__panel {
+  position: relative;
+  padding: 2rem !important;
+  margin: 1rem;
+  background: $spark-carousel-panel-background;
+  border-radius: $spark-carousel-panel-border-radius;
+  border: $spark-carousel-panel-border;
+  //box shadow treatment for the selected item, hidden until the item is given .selected
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: $spark-carousel-panel-box-shadow;
+    opacity: 0;
+    transition: opacity 200ms ease;
+    transform: translateZ(0);
+  }
+}

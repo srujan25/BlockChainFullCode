@@ -1,0 +1,786 @@
+////
+/// ## Button
+/// @group components/button
+////
+
+
+/// Default button. Considered to be the "medium" button. However, applying the `.spark-btn--md` class is necessary
+/// or else no "corner pocket" is added to the button.
+.spark-btn {
+  background-color: $btn--default__background-color;
+  border: $btn--default__border;
+  border-radius: $btn__border-radius;
+  color: $btn--default__color;
+  cursor: pointer;
+  display: inline-block;
+  @include fontsize($btn--default__font-size, all);
+  @include useFont($body__font-family, $btn--default__font-weight);
+  -webkit-font-smoothing: antialiased;
+  line-height: 2rem;
+  overflow: hidden;
+  padding: 1.5rem 3.25rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition-duration: 100ms;
+  transition-property: background-color, color, border-color, box-shadow;
+  transition-timing-function: ease-in-out;
+  white-space: nowrap;
+
+  // Stick the box shadow in a before element so it can go on top of the "pocket" if it exists
+  &:not(.spark-btn--icon)::before {
+    box-shadow: $btn--default__box-shadow;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: top 100ms $ease-in-out-quint;
+    width: 100%;
+    z-index: 5;
+  }
+
+  // Hover state
+  &.hover,
+  &:hover {
+    background-color: $btn--default--hover__background-color;
+    color: $btn--default--hover__color;
+  }
+
+  // When button has focus, set the focus padding to override anchor styles
+  &.focus,
+  &:focus {
+    box-shadow: $btn--default--focus__box-shadow;
+    outline: 0;
+  }
+
+  // When the button is active
+  &.active,
+  &:active {
+    background-color: $btn--default--active__background-color;
+    border: $btn--default--active__border;
+    box-shadow: none !important;
+    color: $btn--default--active__color;
+
+    // Slide the box shadow down
+    &::before {
+      top: 2px;
+    }
+  }
+
+  // Disabled state. Should also kill hover stuff.
+  &:disabled,
+  &.disabled,
+  &:disabled:hover,
+  &.disabled:hover,
+  &:disabled:hover:focus,
+  &.disabled:hover:focus,
+  &:disabled:hover:active,
+  &.disabled:hover:active,
+  &:disabled:focus,
+  &.disabled:focus,
+  &:disabled:active,
+  &.disabled:active {
+    background-color: $btn--default--disabled__background-color;
+    border: $btn--default--disabled__border;
+    color: $btn--default--disabled__color;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    &::before {
+      box-shadow: none;
+    }
+  }
+
+  // Remove inner focus dotted line from Firefox
+  &::-moz-focus-inner {
+    border: 0;
+    outline: 0;
+  }
+}
+
+/// Icons should go first and have some spacing
+.spark-btn__icon {
+  margin-right: .25rem;
+  line-height: .75rem;
+}
+
+
+
+/// A large button
+.spark-btn--lg {
+  @include fontsize($btn--default__font-size--large, all);
+  @include useFont($heading__font-family, $heading__font-weight--light);
+  line-height: 2rem;
+  padding: 2rem 2.625rem;
+  text-transform: uppercase;
+}
+
+/// A small or extra small button
+.spark-btn--sm,
+.spark-btn--xs {
+  line-height: 1rem;
+
+  // Shift the bottom border down 1px so it seems only 1px high. Easier
+  // than rewriting the box shadow for each color variation of sm and xs buttons.
+  &::before {
+    top: 1px;
+  }
+
+  // Add the default glow on focus
+  &:focus {
+    box-shadow: $btn--default--focus__box-shadow--small;
+  }
+
+  // Add a glow that corresponds to the secondary color on focus
+  &.spark-btn--secondary {
+    &::before {
+      box-shadow: $btn--secondary__box-shadow;
+    }
+
+    &:focus {
+      box-shadow: $btn--secondary--focus__box-shadow--small;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &.spark-btn--secondary {
+      &::before {
+        box-shadow: none;
+      }
+    }
+  }
+
+  // Add a glow that corresponds to the view more color on focus
+  &.spark-btn--view-more {
+    &::before {
+      box-shadow: none;
+    }
+    &:focus {
+      box-shadow: $btn--view-more--focus__box-shadow--small;
+    }
+  }
+}
+
+/// A small button
+.spark-btn--sm {
+  padding: 1rem 2.25rem;
+}
+
+/// An extra small button
+.spark-btn--xs {
+  @include fontsize($btn--default__font-size--small, all);
+  padding: .5rem 1rem;
+}
+
+
+
+/// A primary colored brand button
+.spark-btn--brand {
+  background-color: $btn--brand__background-color;
+  border: $btn--brand__border;
+
+  // Color the bottom border
+  &::before {
+    box-shadow: $btn--brand__box-shadow;
+  }
+
+  // Change text color on hover
+  &.hover,
+  &:hover {
+    background-color: $btn--brand__background-color;
+    color: $btn--default__color;
+  }
+
+  // Add a glow on focus
+  &.focus,
+  &:focus {
+    box-shadow: $btn--brand--focus__box-shadow;
+  }
+
+  // Darken the border when active
+  &.active,
+  &:active {
+    border: $btn--brand--active__border;
+  }
+}
+
+/// A secondary button
+.spark-btn--secondary {
+  background-color: $btn--secondary__background-color;
+  border: $btn--secondary__border;
+  color: $btn--secondary__color;
+
+  // Darken on hover
+  &.hover,
+  &:hover {
+    background-color: $btn--secondary--hover__background-color;
+    border: $btn--secondary--hover__border;
+    color: $btn--secondary--hover__color;
+
+    &::before {
+      box-shadow: $btn--secondary--hover__box-shadow;
+    }
+  }
+
+  // Glow on focus
+  &.focus,
+  &:focus,
+  &.focus:hover,
+  &:focus:hover {
+    box-shadow: $btn--secondary--focus__box-shadow;
+  }
+
+  // Darken further when active
+  &.active,
+  &:active,
+  &.active:hover,
+  &:active:hover {
+    background-color: $btn--secondary--active__background-color;
+    border: $btn--secondary--active__border;
+    color: $btn--secondary--active__color;
+
+    &::before {
+      box-shadow: $btn--secondary--active__box-shadow;
+    }
+  }
+}
+
+/// A view-more button
+.spark-btn--view-more {
+  background-color: $btn--view-more__background-color;
+  border: $btn--view-more__border;
+  box-shadow: $btn--view-more__box-shadow;
+  color: $btn--view-more__color;
+  margin: 4px;
+  min-width: 200px;
+  text-align: center;
+
+  // Corresponding bottom border color
+  &::before {
+    box-shadow: none;
+  }
+
+  // Darken on hover
+  &.hover,
+  &:hover {
+    background-color: $btn--view-more--hover__background-color;
+    border: $btn--view-more--hover__border;
+    box-shadow: $btn--view-more--hover__box-shadow;
+    color: $btn--view-more--hover__color;
+
+    &::before {
+     box-shadow: none;
+   }
+ }
+
+  // Glow on focus
+  &.focus,
+  &:focus,
+  &.focus:hover,
+  &:focus:hover {
+      box-shadow: $btn--view-more--focus__box-shadow;
+  }
+
+  // Darken further when active
+  &.active,
+  &:active,
+  &.active:hover,
+  &:active:hover {
+    background-color: $btn--view-more--active__background-color;
+    border: $btn--view-more--active__border;
+    box-shadow: $btn--view-more--active__box-shadow;
+    color: $btn--view-more--active__color;
+
+    &::before {
+      box-shadow: none;
+    }
+  }
+}
+
+/// A negative button treatment
+.spark-btn--negative {
+  background-color: $btn--negative__background-color;
+  border: $btn--negative__border;
+  color: $btn--negative__color;
+
+  // Corresponding bottom border color
+  &:not(.spark-btn--icon)::before {
+    box-shadow: $btn--negative__box-shadow;
+  }
+
+  // Remove box shadow when disabled
+  &.disabled::before,
+  &:disabled::before,
+  &.disabled:hover::before,
+  &:disabled:hover::before {
+    box-shadow: none;
+  }
+
+  // Darken on hover
+  &.hover,
+  &:hover {
+    background-color: $btn--negative--hover__background-color;
+    border: $btn--negative--hover__border;
+    color: $btn--negative--hover__color;
+
+    &::before {
+      box-shadow: $btn--negative--hover__box-shadow;
+    }
+  }
+
+  // Glow on focus
+  &.focus,
+  &:focus,
+  &.focus:hover,
+  &:focus:hover {
+    box-shadow: $btn--negative--focus__box-shadow;
+  }
+
+  // Darken further when active
+  &.active,
+  &:active,
+  &.active:hover,
+  &:active:hover {
+    background-color: $btn--negative--active__background-color;
+    border: $btn--negative--active__border;
+    color: $btn--negative--active__color;
+
+    &::before {
+      box-shadow: $btn--negative--active__box-shadow;
+    }
+  }
+}
+
+/// Text and icon buttons
+.spark-btn--text,
+.spark-btn--icon {
+  background-color: transparent;
+  border: none;
+  @include useFont($weight: 700);
+  padding: 0;
+}
+
+/// A button that looks like highlight text
+.spark-btn--text {
+  color: $btn--text__color;
+
+  // No bottom border
+  &:not(.spark-btn--icon)::before {
+    box-shadow: none;
+  }
+
+  // Darken on hover
+  &.hover,
+  &:hover {
+    color: $btn--text--hover__color;
+  }
+
+  // Change color when focused
+  &.focus,
+  &:focus,
+  &.focus:hover,
+  &:focus:hover {
+    color: $btn--text__color;
+    padding-bottom: 0;
+  }
+
+  // Don't add an active border
+  &:active {
+    border: none;
+  }
+
+  // No background color or border like a normal button
+  &:hover,
+  &.hover,
+  &.focus,
+  &:focus,
+  &.focus:hover,
+  &:focus:hover,
+  &.disabled,
+  &:disabled,
+  &.disabled:hover,
+  &:disabled:hover {
+    background-color: transparent;
+    border: none;
+  }
+
+  // Small text buttons should maintain their size
+  &.spark-btn--sm {
+    @include fontsize(eta);
+  }
+}
+
+/// A button that is an icon
+.spark-btn--icon.spark-icon {
+  background-color: $btn--icon__background-color;
+  border-radius: $btn--icon__border-radius;
+  border: $btn--icon__border;
+  color: $btn--icon__color;
+  cursor: pointer;
+  @include fontsize($btn--icon__font-size);
+  line-height: 2rem;
+  padding: .5rem;
+  transition-duration: 250ms;
+  transition-property: border-color, color, background-color;
+
+  &:focus,
+  &.focus {
+    border: $btn--icon--focus__border;
+    outline: none;
+  }
+
+  &:hover,
+  &.hover {
+    background-color: $btn--icon--hover__background-color;
+    color: $btn--icon--hover__color;
+  }
+
+  &:active,
+  &.active {
+    background-color: $btn--icon--active__background-color;
+    border: $btn--icon--active__border;
+    color: $btn--icon--active__color;
+  }
+
+  &:disabled,
+  &.disabled,
+  &:disabled:hover,
+  &.disabled:hover {
+    background-color: transparent;
+    color: $btn--icon--disabled__color;
+    cursor: not-allowed;
+  }
+}
+
+/// A link button
+.spark-btn--link {
+  @extend %link;
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+
+  // Hovers like a link
+  &.hover,
+  &:hover {
+    @extend %link-hover;
+  }
+
+  // Focuses like a link
+  &.focus,
+  &:focus,
+  &.focus:hover,
+  &:focus:hover {
+    @extend %link-focus;
+  }
+
+  // Active like a link
+  &:active {
+    @extend %link-active;
+  }
+}
+
+
+/// Large and medium buttons have a corner pocket
+.spark-btn--lg,
+.spark-btn--md {
+  overflow: hidden;
+  z-index: 5;
+
+  // A little sliver of darker color
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 1500px;
+    position: absolute;
+    transition-duration: 100ms;
+    transition-property: transform;
+    transition-timing-function: $ease-in-out-quint;
+    width: 1500px;
+    z-index: -5;
+  }
+
+  // Default button color
+  &.spark-btn {
+    &::before {
+      box-shadow: $btn--default__box-shadow;
+    }
+
+    // A little sliver of darker color
+    &::after{
+      background-color: $btn--default--hover__background-color;
+    }
+
+    // On active, slide the pocket all the way up.
+    &.active,
+    &:active,
+    &.active:hover,
+    &:active:hover {
+      background-color: $btn--default--active__background-color;
+
+      &::after {
+        background-color: $btn--default--active__background-color;
+      }
+    }
+
+    // On hover, slide the pocket up a bit.
+    &.hover,
+    &:hover {
+      background-color: $btn--default__background-color;
+
+      &::after {
+      }
+    }
+  }
+
+  // No pocket for secondary stuff
+  &.spark-btn--secondary {
+    &::before {
+      box-shadow: $btn--secondary__box-shadow;
+    }
+
+    // Don't show any "corner pockets"
+    &::after {
+      display: none;
+    }
+
+    // Don't change the background color on hover
+    &.focus,
+    &:focus,
+    &.focus:hover,
+    &:focus:hover {
+      background-color: $btn--secondary__background-color;
+
+      &::after {
+        background-color: $btn--secondary__background-color;
+      }
+    }
+
+    // Darken the background when active
+    &.active,
+    &:active,
+    &.active:hover,
+    &:active:hover {
+      background-color: $btn--secondary--active__background-color;
+    }
+
+    // Darken the background on hover
+    &.hover,
+    &:hover {
+      background-color: $btn--secondary__background-color;
+
+      &::before {
+        box-shadow: $btn--secondary--hover__box-shadow;
+      }
+    }
+  }
+
+  // No pocket for view more stuff
+  &.spark-btn--view-more {
+    box-shadow: $btn--view-more__box-shadow;
+
+    &::before {
+      box-shadow: none;
+    }
+
+    // Don't show any "corner pockets"
+    &::after {
+      display: none;
+    }
+
+    // Don't change the background color on hover
+    &.focus,
+    &:focus,
+    &.focus:hover,
+    &:focus:hover {
+      background-color: $btn--view-more__background-color;
+      box-shadow: $btn--view-more--focus__box-shadow;
+
+      &::after {
+        background-color: $btn--view-more__background-color;
+      }
+    }
+
+    // Darken the background when active
+    &.active,
+    &:active,
+    &.active:hover,
+    &:active:hover {
+      background-color: $btn--view-more--active__background-color;
+    }
+
+    // Darken the background on hover
+    &.hover,
+    &:hover {
+      background-color: $btn--view-more__background-color;
+      box-shadow: $btn--view-more--hover__box-shadow;
+
+      &::before {
+        box-shadow: none;
+      }
+    }
+  }
+
+  // Brand button color
+  &.spark-btn--brand {
+    &::before {
+      box-shadow: $btn--brand__box-shadow;
+    }
+
+    // A little sliver of darker color
+    &::after {
+      background-color: $btn--brand--hover__background-color;
+    }
+
+    // On active, slide the pocket all the way up.
+    &.active,
+    &:active,
+    &.active:hover,
+    &:active:hover {
+      background-color: $btn--brand--active__background-color;
+
+      &::after {
+        background-color: $btn--brand--active__background-color;
+      }
+    }
+
+    // On hover, slide the pocket up a bit.
+    &.hover,
+    &:hover {
+      background-color: $btn--brand__background-color;
+
+      &::after {
+      }
+    }
+  }
+
+  // When disabled, hide the extra corner stuff.
+  &.disabled,
+  &:disabled,
+  &.disabled:hover,
+  &:disabled:hover {
+    background-color: $btn--default--disabled__background-color;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+/// A large button
+.spark-btn--lg {
+
+  // Position the corner pocket
+  &::after {
+    transform: translate(-29%, -2%) rotate(-24deg);
+  }
+
+  // Slide up the corner pocket
+  &.active,
+  &:active,
+  &.active:hover,
+  &:active:hover {
+    &::after {
+      transform: translate(-70%, -2%) rotate(-24deg);
+    }
+  }
+
+  // Slide up the corner pocket part way
+  &.hover,
+  &:hover {
+    &::after {
+      transform: translate(-33%, -2%) rotate(-24deg);
+    }
+  }
+}
+
+/// A medium button
+.spark-btn--md {
+
+  // Position the corner pocket
+  &::after {
+    transform: translate(-28%, -3%) rotate(-24deg);
+  }
+
+  // Slide up the corner pocket
+  &.active,
+  &:active,
+  &.active:hover,
+  &:active:hover {
+    &::after {
+      transform: translate(-70%, -3%) rotate(-24deg);
+    }
+  }
+
+  // Slide up the corner pocket part way
+  &.hover,
+  &:hover {
+    &::after {
+      transform: translate(-31%, -3%) rotate(-24deg);
+    }
+  }
+}
+
+/// A button which is a circle or square
+.spark-btn--square,
+.spark-btn--circle {
+  height: 5rem;
+  padding: 1.75rem;
+  width: 5rem;
+}
+
+/// A button which is a circle
+.spark-btn--circle {
+  border-radius: 50%;
+
+  // Round the bottom border as well
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+/// A button that is display block and takes up as much space as it can.
+.spark-btn--block {
+  display: block;
+  width: 100%;
+}
+
+/// Buttons that are display:block to take up as much space as possible at specific breakpoints
+@mixin makeBlockButtons {
+
+  $breakpoints: map-keys($grid-breakpoints);
+
+  @each $breakpoint in $breakpoints {
+
+    @include media-breakpoint-only($breakpoint) {
+      .spark-btn--block-#{$breakpoint} {
+        display: block;
+        width: 100%;
+        }
+    }
+
+    @if $breakpoint != 'xs' {
+      @include media-breakpoint-down($breakpoint) {
+        .spark-btn--block-lte-#{$breakpoint} {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    @if ($breakpoint != 'xs') and ($breakpoint != 'xl') {
+      @include media-breakpoint-up($breakpoint) {
+        .spark-btn--block-gte-#{$breakpoint} {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include makeBlockButtons();

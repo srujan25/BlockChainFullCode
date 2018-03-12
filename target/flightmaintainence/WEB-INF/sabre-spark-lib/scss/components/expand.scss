@@ -1,0 +1,39 @@
+////
+/// ## Expand
+/// @group components/expand
+////
+
+
+/// Expand container
+.spark-expand {
+  @extend %expand;
+}
+
+/// Expand content
+.spark-expand__content {
+  display: none;
+}
+
+/// Show when expand is expanded, but hide by default
+.spark-expand__show--expanded {
+  display: none !important;
+}
+
+/// The caret to show inside a toggle. This gets spun when expanded.
+.spark-expand__toggle-caret {
+  color: inherit;
+  display: inline-block;
+  font-size: .75em;
+  margin-left: .25rem;
+  position: relative;
+  top: -.1rem;
+  transform: rotate(0deg);
+  transition: transform 100ms $ease-in-out-quint;
+
+  &::before {
+    @extend %icon;
+    @extend %icon-fill;
+    content: '\f118';
+    font-size: .75em !important;
+  }
+}

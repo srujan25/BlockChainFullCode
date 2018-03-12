@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cayman.min.css">
+    <link rel="stylesheet" href="../css/prism.min.css">
+    <link rel="stylesheet" href="../css/index.min.css">
+    <link rel="stylesheet" href="../css/docs.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../index.html">Main</a></li>
+            <li><a href="../components/base.js.html">components/base.js</a></li>
+            <li><a href="../components/calendar-popover.js.html">components/calendar-popover.js</a></li>
+            <li><a href="../components/carousel.js.html">components/carousel.js</a></li>
+            <li><a href="../components/date-input.js.html">components/date-input.js</a></li>
+            <li><a href="../components/date-select.js.html">components/date-select.js</a></li>
+            <li><a href="../components/date-typeahead.js.html">components/date-typeahead.js</a></li>
+            <li><a href="../components/expand.js.html">components/expand.js</a></li>
+            <li><a href="../components/filter-module.js.html">components/filter-module.js</a></li>
+            <li><a href="../components/filter.js.html">components/filter.js</a></li>
+            <li><a href="../components/header.js.html">components/header.js</a></li>
+            <li><a href="../components/menu.js.html">components/menu.js</a></li>
+            <li><a href="../components/modal.js.html">components/modal.js</a></li>
+            <li><a href="../components/multi-select-input.js.html">components/multi-select-input.js</a></li>
+            <li><a href="../components/number-selector.js.html">components/number-selector.js</a></li>
+            <li><a href="../components/popover.js.html">components/popover.js</a></li>
+            <li class="active"><a href="../components/progress-indicator.js.html">components/progress-indicator.js</a></li>
+            <li><a href="../components/range-slider.js.html">components/range-slider.js</a></li>
+            <li><a href="../components/scroll-to-top.js.html">components/scroll-to-top.js</a></li>
+            <li><a href="../components/select-input.js.html">components/select-input.js</a></li>
+            <li><a href="../components/slider.js.html">components/slider.js</a></li>
+            <li><a href="../components/step-indicator.js.html">components/step-indicator.js</a></li>
+            <li><a href="../components/table.js.html">components/table.js</a></li>
+            <li><a href="../components/tabs.js.html">components/tabs.js</a></li>
+            <li><a href="../components/text-input.js.html">components/text-input.js</a></li>
+            <li><a href="../components/toggle-switch.js.html">components/toggle-switch.js</a></li>
+            <li><a href="../components/toolbar.js.html">components/toolbar.js</a></li>
+            <li><a href="../components/tooltip.js.html">components/tooltip.js</a></li>
+            <li><a href="../components/typeahead.js.html">components/typeahead.js</a></li>
+            <li><a href="../helpers/animation/cancel.js.html">helpers/animation/cancel.js</a></li>
+            <li><a href="../helpers/animation/height.js.html">helpers/animation/height.js</a></li>
+            <li><a href="../helpers/animation/request.js.html">helpers/animation/request.js</a></li>
+            <li><a href="../helpers/animation/scroll-to.js.html">helpers/animation/scroll-to.js</a></li>
+            <li><a href="../helpers/animation/tween.js.html">helpers/animation/tween.js</a></li>
+            <li><a href="../helpers/css/transform.js.html">helpers/css/transform.js</a></li>
+            <li><a href="../helpers/date/date.js.html">helpers/date/date.js</a></li>
+            <li><a href="../helpers/date/parse-format.js.html">helpers/date/parse-format.js</a></li>
+            <li><a href="../helpers/dom/add-class.js.html">helpers/dom/add-class.js</a></li>
+            <li><a href="../helpers/dom/breakpoint.js.html">helpers/dom/breakpoint.js</a></li>
+            <li><a href="../helpers/dom/has-class.js.html">helpers/dom/has-class.js</a></li>
+            <li><a href="../helpers/dom/make-element.js.html">helpers/dom/make-element.js</a></li>
+            <li><a href="../helpers/dom/offset.js.html">helpers/dom/offset.js</a></li>
+            <li><a href="../helpers/dom/outer-height.js.html">helpers/dom/outer-height.js</a></li>
+            <li><a href="../helpers/dom/outer-width.js.html">helpers/dom/outer-width.js</a></li>
+            <li><a href="../helpers/dom/parse-attribute.js.html">helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../helpers/dom/remove-class.js.html">helpers/dom/remove-class.js</a></li>
+            <li><a href="../helpers/dom/toggle-class.js.html">helpers/dom/toggle-class.js</a></li>
+            <li><a href="../helpers/dom/trigger-event.js.html">helpers/dom/trigger-event.js</a></li>
+            <li><a href="../helpers/form/build-select.js.html">helpers/form/build-select.js</a></li>
+            <li><a href="../helpers/form/form-data.js.html">helpers/form/form-data.js</a></li>
+            <li><a href="../helpers/form/set-caret.js.html">helpers/form/set-caret.js</a></li>
+            <li><a href="../helpers/manipulation/append-children.js.html">helpers/manipulation/append-children.js</a></li>
+            <li><a href="../helpers/manipulation/copy-attributes.js.html">helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../helpers/manipulation/insert-before.js.html">helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../helpers/manipulation/wrap-element.js.html">helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../helpers/position/affix.js.html">helpers/position/affix.js</a></li>
+            <li><a href="../helpers/position/box-position.js.html">helpers/position/box-position.js</a></li>
+            <li><a href="../helpers/traversal/get-child.js.html">helpers/traversal/get-child.js</a></li>
+            <li><a href="../helpers/traversal/get-children.js.html">helpers/traversal/get-children.js</a></li>
+            <li><a href="../helpers/traversal/get-index.js.html">helpers/traversal/get-index.js</a></li>
+            <li><a href="../helpers/traversal/get-parent.js.html">helpers/traversal/get-parent.js</a></li>
+            <li><a href="../helpers/traversal/get-parents.js.html">helpers/traversal/get-parents.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-after.js.html">helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-before.js.html">helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../helpers/traversal/has-parent.js.html">helpers/traversal/has-parent.js</a></li>
+            <li><a href="../helpers/traversal/matches.js.html">helpers/traversal/matches.js</a></li>
+            <li><a href="../helpers/util/debounce.js.html">helpers/util/debounce.js</a></li>
+            <li><a href="../helpers/util/each.js.html">helpers/util/each.js</a></li>
+            <li><a href="../helpers/util/mixin.js.html">helpers/util/mixin.js</a></li>
+            <li><a href="../helpers/util/pad.js.html">helpers/util/pad.js</a></li>
+            <li><a href="../helpers/util/range.js.html">helpers/util/range.js</a></li>
+            <li><a href="../helpers/util/round.js.html">helpers/util/round.js</a></li>
+            <li><a href="../helpers/util/trim.js.html">helpers/util/trim.js</a></li>
+            <li><a href="../mixins/messaging.js.html">mixins/messaging.js</a></li>
+            <li><a href="../mixins/validation.js.html">mixins/validation.js</a></li>
+            <li><a href="../spark.jquery.js.html">spark.jquery.js</a></li>
+            <li><a href="../spark.js.html">spark.js</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>ProgressIndicator</h1>
+</div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>module</td>
+                <td></td>
+                <td>components/progress-indicator.js</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">import BaseComponent from './base';
+import toggleClass from '../helpers/dom/toggle-class';
+import round from '../helpers/util/round';
+
+const sizes = {
+  large: {
+    diameter: 264,
+    stroke: 12,
+    track: 'M132 6c69.588 0 126 56.412 126 126s-56.412 126-126 126S6 201.588 6 132 62.412 6 132 6z',
+    fill: '',
+    border: 'M132 252c-66.274 0-120-53.726-120-120S65.726 12 132 12s120 53.726 120 120-53.726 120-120 120z'
+  },
+  small: {
+    diameter: 60,
+    stroke: 6,
+    track: 'M30 3c14.912 0 27 12.088 27 27S44.912 57 30 57 3 44.912 3 30 15.088 3 30 3z',
+    fill: '',
+    border: 'M30 54C16.745 54 6 43.255 6 30S16.745 6 30 6s24 10.745 24 24-10.745 24-24 24z'
+  },
+  extraSmall: {
+    diameter: 24,
+    stroke: 3,
+    track: 'M22.5 12c0 5.8-4.7 10.5-10.5 10.5S1.5 17.8 1.5 12 6.2 1.5 12 1.5 22.5 6.2 22.5 12z',
+    fill: '',
+    border: ''
+  }
+};
+
+class ProgressIndicator extends BaseComponent {</code></pre>
+          <h5>Example</h5>
+          <pre><code class="language-javascript">new ProgressIndicator(el, {
+  // Optional. The precision of the progress percentage.
+  precision: 10 // 10 decimal places
+});</code></pre>
+          <section id="constructor">
+            <h1>constructor</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">constructor</div><span>&nbsp;</span><span>constructor()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>ProgressIndicator constructor.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">constructor(el, params = {}) {
+
+  params.elRequired = true;
+
+  if (!super(el, params)) {
+    return;
+  }
+
+  this._bindEventListenerCallbacks();
+  this._addEventListeners();
+}</code></pre>
+          <section id="set">
+            <h1>set</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>set()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set the value of the indicator.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>Number</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">set(val) {
+
+  if (val === this.value) {
+    return this;
+  }
+
+  if (val &gt; 1) {
+    val = 1;
+  }
+
+  this.value = val;
+
+  if (this.isDeterminate &amp;&amp; this.progressEl) {
+    this.progressEl.setAttribute('value', Math.round(val * 100) / 100);
+  }
+
+  this._updateDOM();
+
+  return this;
+}</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Store a reference to all the needed elements.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_cacheElements(el) {
+
+  this.el = el;
+  this.progressEl = this.el.querySelector('progress');
+  this.statusEl = this.el.querySelector('.spark-progress__value-status, [role=&quot;status&quot;]');
+  this.noteEl = this.el.querySelector('.spark-progress__states');
+  this.meterEl = this.el.querySelector('.spark-progress__meter');
+
+  this.isDeterminate = this.progressEl.getAttribute('value') !== null;
+  this.size = this._determineSize();
+
+  // If this is a determinate value, replace the meter with the SVG.
+  if (this.isDeterminate) {
+
+    var svg = this._buildSVG();
+    svg.setAttribute('class', this.meterEl.className);
+
+    this.meterEl.parentNode.replaceChild(svg, this.meterEl);
+    this.meterEl = svg;
+    this.fillEl = this.meterEl.querySelector('.spark-progress__fill');
+  }
+
+  if (this.noteEl) {
+    this._parseNotes(this.noteEl);
+  }
+
+  if (this.progressEl) {
+    this.value = this.progressEl.value;
+  }
+
+  this._cacheSize();
+
+  this._updateDOM();
+}</code></pre>
+          <section id="_cacheSize">
+            <h1>_cacheSize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheSize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Cache the size of the meter.</p></div>
+          <pre><code class="language-javascript">_cacheSize() {
+  this.meterHeight = this.meterEl.clientHeight;
+  this.meterWidth = this.meterEl.clientWidth;
+}</code></pre>
+          <section id="_determineSize">
+            <h1>_determineSize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_determineSize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Determine the size of the indicator.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>return</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_determineSize() {
+
+  if (this.el.className.indexOf('progress--sm') !== -1) {
+    return 'small';
+  } else if (this.el.className.indexOf('progress--xs') !== -1) {
+    return 'extraSmall';
+  }
+
+  return 'large';
+}</code></pre>
+          <section id="_buildSVG">
+            <h1>_buildSVG</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_buildSVG()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Build the proper SVG element for this size indicator.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>return</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_buildSVG() {
+  var size = sizes[this.size];
+  var template = '&lt;svg viewBox=&quot;0 0 ' + size.diameter + ' ' + size.diameter + '&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;path d=&quot;' + size.track + '&quot; stroke-width=&quot;' + size.stroke + '&quot; class=&quot;spark-progress__track&quot;/&gt;&lt;path d=&quot;' + (size.fill || size.track) + '&quot; stroke-width=&quot;' + size.stroke + '&quot; class=&quot;spark-progress__fill&quot;/&gt;&lt;path d=&quot;' + size.border + '&quot; class=&quot;spark-progress__border&quot;/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;';
+  var div = document.createElement('div');
+  div.innerHTML = template;
+  return div.children[0];
+}</code></pre>
+          <section id="_parseNotes">
+            <h1>_parseNotes</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_parseNotes()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Take an unordered list of notes and determine the ranges for<br />when to show a given note.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Array</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_parseNotes(el) {
+
+  this.notes = this.notes || [];
+
+  var len = el.children.length;
+  var i = len - 1;
+
+  for (; i &gt;= 0; i--) {
+    this.notes.push({
+      min: parseInt(el.children[i].getAttribute('data-value'), 10),
+      max: el.children[i + 1] ? parseInt(el.children[i + 1].getAttribute('data-value'), 10) - 1 : 100,
+      el: el.children[i]
+    });
+  }
+}</code></pre>
+          <section id="_updateDOM">
+            <h1>_updateDOM</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_updateDOM()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update the text visible based on the value. Also adjust the SVG.</p></div>
+          <pre><code class="language-javascript">_updateDOM() {
+
+  if (!this.isDeterminate) {
+    return;
+  }
+
+  var updateTime = Date.now();
+  var val = round(this.value * 100, this.precision);
+
+  // Don't animate if we're animating back to 0 or it's been less than 150ms since our last update.
+  var noAnimation = val === 0 || this.lastDOMUpdateTime + 150 &gt; updateTime;
+  toggleClass(this.fillEl, 'no-animation', noAnimation);
+
+  this.statusEl.innerHTML = val + '%';
+
+  var dashArray = (sizes[this.size].diameter - sizes[this.size].stroke) * Math.PI;
+  var dashOffset = dashArray - (dashArray * (val / 100));
+
+  this.fillEl.setAttribute('style', 'stroke-dasharray: ' + dashArray + '; stroke-dashoffset: ' + dashOffset);
+
+  this.lastDOMUpdateTime = updateTime;
+
+  if (!this.notes) {
+    return;
+  }
+
+  var i = 0;
+  var len = this.notes.length;
+
+  for (; i &lt; len; i++) {
+    toggleClass(this.notes[i].el, 'active', (this.notes[i].min &lt;= val &amp;&amp; this.notes[i].max &gt;= val));
+  }
+}</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because the<br />function signatures won&#39;t match.</p></div>
+          <pre><code class="language-javascript">_bindEventListenerCallbacks() {
+  this._onResizeBound = this._onResize.bind(this);
+}</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners for DOM events.</p></div>
+          <pre><code class="language-javascript">_addEventListeners() {
+  window.addEventListener('resize', this._onResizeBound);
+}</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners for DOM events..</p></div>
+          <pre><code class="language-javascript">_removeEventListeners() {
+  window.removeEventListener('resize', this._onResizeBound);
+}</code></pre>
+          <section id="_onResize">
+            <h1>_onResize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onResize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the window resizes, cache the dimensions.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onResize() {
+  this._cacheSize();
+}
+}</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>ProgressIndicator.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">ProgressIndicator.prototype._whitelistedParams = ['precision'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>ProgressIndicator.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">ProgressIndicator.prototype.defaults = {
+  el: null,
+  progressEl: null,
+  statusEl: null,
+  noteEls: null,
+  meterEl: null,
+  fillEl: null,
+  meterHeight: 0,
+  meterWidth: 0,
+  notes: null,
+  isDeterminate: false,
+  value: null,
+  precision: 0,
+  lastDOMUpdateTime: 0,
+  _onResizeBound: null
+};
+
+export default ProgressIndicator;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with<a href="https://github.com/mr-doc/mr-doc">Mr. Doc</a> created by<a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau</a></p>
+        <p>Mr. Doc is sponsored by<a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr</a> and<a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../js/twitter-widget.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap-transition.min.js"></script>
+    <script src="../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../js/bootstrap-dropdown.min.js"></script>
+    <script src="../js/bootstrap-collapse.min.js"></script>
+    <script src="../js/bootstrap-affix.min.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script src="../js/index.min.js"></script>
+  </body>
+</html>

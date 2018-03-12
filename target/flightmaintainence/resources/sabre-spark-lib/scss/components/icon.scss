@@ -1,0 +1,64 @@
+////
+/// ## Icons
+/// @group components/icon
+////
+
+
+/// Icons
+.spark-icon,
+[class^='spark-icon-'],
+[class*=' spark-icon-'] {
+  display: inline-block;
+  font-size: 1.333333333rem;
+  line-height: 1.333333333rem;
+  vertical-align: middle;
+}
+
+// Set the icon fonts on the pseudo elements as well. Otherwise they
+// end up being overridden in some instances.
+.spark-icon,
+[class^='spark-icon-'],
+[class*=' spark-icon-'],
+.spark-icon::before,
+[class^='spark-icon-']::before,
+[class*=' spark-icon-']::before {
+  @extend %icon;
+}
+
+// Make the content fit with its containing element.
+.spark-icon::before,
+[class^='spark-icon-']::before,
+[class*=' spark-icon-']::before {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Fill-style icons.
+.spark-icon--fill,
+.spark-icon--fill::before {
+  @extend %icon-fill;
+}
+
+// Small icons
+.spark-icon--sm,
+.spark-icon--sm::before {
+  font-size: .75rem;
+  line-height: .75rem;
+}
+
+// Medium icons
+.spark-icon--md,
+.spark-icon--md::before {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+// Large icons
+.spark-icon--lg,
+.spark-icon--lg::before {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+// Import icon definitions from Sabre Spark Extras
+@import '../../icons/build/scss/icon-definitions';

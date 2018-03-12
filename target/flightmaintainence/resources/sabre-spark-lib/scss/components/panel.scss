@@ -1,0 +1,207 @@
+////
+/// ## Panel
+/// @group components/panel
+////
+
+
+/// Panel content container
+.spark-panel {
+  @extend %panel;
+}
+
+/// Panel header
+.spark-panel__header {
+  @extend %panel-header;
+}
+
+/// Panel masthead image
+.spark-panel__masthead {
+
+  // Image fills the whole width
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  // Position numerals in the top corner
+  .spark-numerals {
+    left: 2rem;
+    position: absolute;
+    top: 2rem;
+    width: calc(100% - 3rem);
+    z-index: 10;
+  }
+
+  // Add some black on top of the masthead image to allow the copy to pop
+  &::after {
+    box-shadow: $panel__masthead__box-shadow;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+}
+
+/// Panel body content
+.spark-panel__content {
+  color: $color-body;
+  @include clearfix();
+  padding: 2rem;
+  width: 100%;
+
+  // No padding if we're also table content
+  &.spark-table__scroll,
+  &table {
+    padding: 0;
+  }
+
+  // No bottom margin on the last element
+  >:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/// An expandable panel
+.spark-panel--expand {
+  border: none;
+  overflow: hidden;
+
+  // Heading has a bottom border to separate from content as well as a down arrow.
+  .spark-panel__header {
+    background: $panel__background-color;
+    border: $panel__border;
+    border-bottom: $panel__border;
+    border-radius: $panel__border-radius;
+    box-shadow: $panel--expand__content__shadow;
+    color: $panel--expand__header__color;
+    cursor: pointer;
+    padding-right: 4.25rem;
+    position: relative;
+    transition-duration: 250ms;
+    transition-property: color, border, border-radius;
+    transition-timing-function: $ease-in-out-quint;
+    user-select: none;
+    width: 100%;
+    z-index: 10;
+
+    // Headings inherit color instead of being slate blue.
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
+
+    // Focus state
+    &:focus {
+      outline: none;
+
+      &::after {
+        border: $btn--icon--focus__border;
+      }
+    }
+
+    // Toggle arrow
+    &::after {
+      @extend %icon;
+      border: $btn--icon__border;
+      border-radius: $btn--icon__border-radius;
+      content: '\f10f';
+      font-size: 2.25rem;
+      margin-right: -.25rem;
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transform-origin: center center;
+      transition: transform 250ms $ease-in-out-quint;
+    }
+
+    // Darken on hover
+    &:hover {
+      border: $panel--expand__header--hover__border;
+      color: $panel--expand__header--hover__color;
+      z-index: 100;
+    }
+  }
+
+  // A flexible version of the header
+  .spark-panel__header--flex {
+    display: flex;
+    padding-left: 1rem;
+  }
+
+  // Body has a drop shadow and is hidden by default
+  .spark-panel__content {
+    border: $panel__border;
+    border-top: none;
+    display: none;
+    position: relative;
+    z-index: 0;
+  }
+
+  // Show the expanded state
+  &.expanded {
+
+    // No rounded borders on the bottom
+    .spark-panel__header {
+      border-radius: $panel__border-radius $panel__border-radius 0 0;
+    }
+
+    // Heading arrow rotates
+    .spark-panel__header::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    // Body becomes visible
+    .spark-panel__content {
+      display: block;
+    }
+  }
+}
+
+/// Card panel
+.spark-panel--card {
+  h6 {
+    margin-bottom: .75rem;
+  }
+
+  h4 + h6 {
+    margin-top: -.25rem;
+  }
+}
+
+/// Large panel content
+.spark-panel__content--lg {
+  padding: 4rem;
+}
+
+/// A group of panels that should be stacked
+.spark-panel-group {
+
+  // No borders
+  .spark-panel--expand,
+  .spark-panel--expand:hover,
+  .spark-panel--expand.expanded {
+    .spark-panel__header {
+      border-radius: 0;
+      border-left: 0;
+      border-right: 0;
+    }
+  }
+
+  // Don't double up on borders
+  .spark-panel--expand + .spark-panel--expand {
+    margin-top: -1px;
+  }
+}
+
+/// Large panel padding on xs
+@include media-breakpoint-down(xs) {
+  .spark-panel--lg {
+    .spark-panel__content {
+      padding: 2rem;
+    }
+  }
+}
