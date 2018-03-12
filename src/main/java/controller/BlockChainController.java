@@ -1,10 +1,13 @@
 package controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.sabre.biznet.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -57,7 +60,38 @@ public class BlockChainController {
 
     @RequestMapping(path={"/airline"},method=RequestMethod.GET)
     public String getAirline(Model model) {
+        /*RestTemplate restTemplate = new RestTemplate();
+        Airline[] airlines = restTemplate.getForObject(AIRLINE_URL, Airline[].class);
+
+        if(airlines == null || airlines.length == 0 )
+        {
+            return "";
+        }
+
+        JSONArray array = new JSONArray();
+        JSONObject json;
+        for (int i = 0; i < airlines.length; i++) {
+            json = new JSONObject();
+            json.put("carrierCode", airlines[i].getCarrierCode());
+            json.put("address", airlines[i].getAddress());
+            json.put("fullName", airlines[i].getFullName());
+            json.put("state", airlines[i].getState());
+            json.put("zipcode", airlines[i].getZipcode());
+            json.put("city", airlines[i].getCity());
+            json.put("country", airlines[i].getCountry());
+            json.put("addressType", airlines[i].getAddressType());
+            json.put("phonenumber", airlines[i].getPhonenumber());
+            json.put("phoneType", airlines[i].getPhoneType());
+            array.add(json);
+        }
+
+        return array.toJSONString();*/
         return "airline";
+    }
+
+    @RequestMapping(path={"/transactionHistory"},method=RequestMethod.GET)
+    public String getTransactionHistory(Model model) {
+        return "transactionHistory";
     }
 
     @RequestMapping(path={"/airlineSave"},method=RequestMethod.POST)

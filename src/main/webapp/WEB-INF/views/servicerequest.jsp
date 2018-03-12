@@ -25,6 +25,10 @@
                     <span class="spark-label">Service Request Id</span>
                 </label>
 
+<label class="spark-input">
+                                                     <input class="spark-input__field" name="flightNo" id="flightNo" role="textbox" value="">
+                                                     <span class="spark-label">Flight No</span>
+                                                 </label>
                   <label class="spark-input">
                                                      <input class="spark-input__field" name="serialNo" id="serialNo" role="textbox" value="">
                                                      <span class="spark-label">Serial No</span>
