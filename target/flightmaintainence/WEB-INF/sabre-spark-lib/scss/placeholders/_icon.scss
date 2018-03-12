@@ -1,0 +1,24 @@
+////
+/// ## Icon
+/// Iconography
+/// @group placeholders/input-addoncon
+
+@import '../mixins/add-placeholder';
+
+/// Line Icon
+@include addPlaceholder(icon) {
+  display: inline-block;
+  @include useFont($icon__font-family--line, normal, normal);
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: normal !important;
+  speak: none;
+  text-transform: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/// Fill Icon
+@include addPlaceholder(icon-fill) {
+  @include useFont($icon__font-family--fill, normal, normal);
+}

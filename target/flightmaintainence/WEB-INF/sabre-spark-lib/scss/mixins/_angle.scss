@@ -1,0 +1,23 @@
+////
+/// Create an angle SVG for using with buttons.
+/// As seen in the header.
+/// @group mixins/angle
+////
+
+
+/// Generate an "angle" SVG for use in the header.
+/// @param {Color} $color
+/// @param {Number} $width [43]
+/// @param {Number} $height [96]
+/// @output An inline SVG image
+/// @todo figure out a good way to replace this with a pseudo element shape or something similar.
+@mixin angle($color, $width: 43, $height: 98) {
+  $svg: base64_encode('<svg width="' + $width + '" height="' + $height + '" viewBox="0 0 ' + $width + ' ' + $height + '" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h' + $width + 'L0 ' + $height + 'V0z" fill="' + $color + '" fill-rule="evenodd"/></svg>');
+  background-image: url('data:image/svg+xml;base64,' + $svg);
+  background-position: center center;
+  background-size: cover;
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: #{$width}px;
+}

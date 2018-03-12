@@ -1,5 +1,7 @@
 package controller;
 
+import org.sabre.biznet.Airline;
+import org.sabre.biznet.Vendor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -54,6 +56,12 @@ public class BlockChainController {
         return "airline";
     }
 
+    @RequestMapping(path={"/airlineMain"},method=RequestMethod.GET)
+    public String getAirlineMain(Model model) {
+        //return "aircraft";
+        return "airlineMain";
+    }
+
     @RequestMapping(path={"/airlineSave"},method=RequestMethod.POST)
     public String saveAirline(@ModelAttribute("airline") Airline airline) {
 
@@ -69,10 +77,8 @@ public class BlockChainController {
     }
 
     @RequestMapping(path={"/vendorSave"},method=RequestMethod.POST)
-    public String saveVendor(Model model) {
+    public String saveVendor(@ModelAttribute("vendor") Vendor vendor) {
 
-        model.addAttribute("message","Hello Spring MVC!");
-        model.addAttribute("date", "today");
         return "vendorSave";
     }
 

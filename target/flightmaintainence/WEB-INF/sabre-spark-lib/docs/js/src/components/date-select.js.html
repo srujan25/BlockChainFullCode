@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../css/prism.min.css">
+    <link rel="stylesheet" href="../../css/index.min.css">
+    <link rel="stylesheet" href="../../css/docs.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../index.html">Main</a></li>
+            <li><a href="../../dist/components/base.js.html">dist/components/base.js</a></li>
+            <li><a href="../../dist/components/calendar-popover.js.html">dist/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/components/carousel.js.html">dist/components/carousel.js</a></li>
+            <li><a href="../../dist/components/date-input.js.html">dist/components/date-input.js</a></li>
+            <li><a href="../../dist/components/date-select.js.html">dist/components/date-select.js</a></li>
+            <li><a href="../../dist/components/date-typeahead.js.html">dist/components/date-typeahead.js</a></li>
+            <li><a href="../../dist/components/expand.js.html">dist/components/expand.js</a></li>
+            <li><a href="../../dist/components/filter-module.js.html">dist/components/filter-module.js</a></li>
+            <li><a href="../../dist/components/filter.js.html">dist/components/filter.js</a></li>
+            <li><a href="../../dist/components/header.js.html">dist/components/header.js</a></li>
+            <li><a href="../../dist/components/menu.js.html">dist/components/menu.js</a></li>
+            <li><a href="../../dist/components/modal.js.html">dist/components/modal.js</a></li>
+            <li><a href="../../dist/components/multi-select-input.js.html">dist/components/multi-select-input.js</a></li>
+            <li><a href="../../dist/components/number-selector.js.html">dist/components/number-selector.js</a></li>
+            <li><a href="../../dist/components/popover.js.html">dist/components/popover.js</a></li>
+            <li><a href="../../dist/components/progress-indicator.js.html">dist/components/progress-indicator.js</a></li>
+            <li><a href="../../dist/components/range-slider.js.html">dist/components/range-slider.js</a></li>
+            <li><a href="../../dist/components/scroll-to-top.js.html">dist/components/scroll-to-top.js</a></li>
+            <li><a href="../../dist/components/select-input.js.html">dist/components/select-input.js</a></li>
+            <li><a href="../../dist/components/slider.js.html">dist/components/slider.js</a></li>
+            <li><a href="../../dist/components/step-indicator.js.html">dist/components/step-indicator.js</a></li>
+            <li><a href="../../dist/components/table.js.html">dist/components/table.js</a></li>
+            <li><a href="../../dist/components/tabs.js.html">dist/components/tabs.js</a></li>
+            <li><a href="../../dist/components/text-input.js.html">dist/components/text-input.js</a></li>
+            <li><a href="../../dist/components/toggle-switch.js.html">dist/components/toggle-switch.js</a></li>
+            <li><a href="../../dist/components/toolbar.js.html">dist/components/toolbar.js</a></li>
+            <li><a href="../../dist/components/tooltip.js.html">dist/components/tooltip.js</a></li>
+            <li><a href="../../dist/components/typeahead.js.html">dist/components/typeahead.js</a></li>
+            <li><a href="../../dist/helpers/animation/cancel.js.html">dist/helpers/animation/cancel.js</a></li>
+            <li><a href="../../dist/helpers/animation/height.js.html">dist/helpers/animation/height.js</a></li>
+            <li><a href="../../dist/helpers/animation/request.js.html">dist/helpers/animation/request.js</a></li>
+            <li><a href="../../dist/helpers/animation/scroll-to.js.html">dist/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../dist/helpers/animation/tween.js.html">dist/helpers/animation/tween.js</a></li>
+            <li><a href="../../dist/helpers/css/transform.js.html">dist/helpers/css/transform.js</a></li>
+            <li><a href="../../dist/helpers/date/date.js.html">dist/helpers/date/date.js</a></li>
+            <li><a href="../../dist/helpers/date/parse-format.js.html">dist/helpers/date/parse-format.js</a></li>
+            <li><a href="../../dist/helpers/dom/add-class.js.html">dist/helpers/dom/add-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/breakpoint.js.html">dist/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../dist/helpers/dom/has-class.js.html">dist/helpers/dom/has-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/make-element.js.html">dist/helpers/dom/make-element.js</a></li>
+            <li><a href="../../dist/helpers/dom/offset.js.html">dist/helpers/dom/offset.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-height.js.html">dist/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-width.js.html">dist/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../dist/helpers/dom/parse-attribute.js.html">dist/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../dist/helpers/dom/remove-class.js.html">dist/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/toggle-class.js.html">dist/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/trigger-event.js.html">dist/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../dist/helpers/form/build-select.js.html">dist/helpers/form/build-select.js</a></li>
+            <li><a href="../../dist/helpers/form/form-data.js.html">dist/helpers/form/form-data.js</a></li>
+            <li><a href="../../dist/helpers/form/set-caret.js.html">dist/helpers/form/set-caret.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/append-children.js.html">dist/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/copy-attributes.js.html">dist/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/insert-before.js.html">dist/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/wrap-element.js.html">dist/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../dist/helpers/position/affix.js.html">dist/helpers/position/affix.js</a></li>
+            <li><a href="../../dist/helpers/position/box-position.js.html">dist/helpers/position/box-position.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-child.js.html">dist/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-children.js.html">dist/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-index.js.html">dist/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parent.js.html">dist/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parents.js.html">dist/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-after.js.html">dist/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-before.js.html">dist/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../dist/helpers/traversal/has-parent.js.html">dist/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/matches.js.html">dist/helpers/traversal/matches.js</a></li>
+            <li><a href="../../dist/helpers/util/debounce.js.html">dist/helpers/util/debounce.js</a></li>
+            <li><a href="../../dist/helpers/util/each.js.html">dist/helpers/util/each.js</a></li>
+            <li><a href="../../dist/helpers/util/mixin.js.html">dist/helpers/util/mixin.js</a></li>
+            <li><a href="../../dist/helpers/util/pad.js.html">dist/helpers/util/pad.js</a></li>
+            <li><a href="../../dist/helpers/util/range.js.html">dist/helpers/util/range.js</a></li>
+            <li><a href="../../dist/helpers/util/round.js.html">dist/helpers/util/round.js</a></li>
+            <li><a href="../../dist/helpers/util/trim.js.html">dist/helpers/util/trim.js</a></li>
+            <li><a href="../../dist/js/src/components/calendar-popover.js.html">dist/js/src/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/js/src/components/filter-module.js.html">dist/js/src/components/filter-module.js</a></li>
+            <li><a href="../../dist/js/src/components/filter.js.html">dist/js/src/components/filter.js</a></li>
+            <li><a href="../../dist/js/src/components/modal.js.html">dist/js/src/components/modal.js</a></li>
+            <li><a href="../../dist/js/src/components/typeahead.js.html">dist/js/src/components/typeahead.js</a></li>
+            <li><a href="../../dist/js/src/spark.js.html">dist/js/src/spark.js</a></li>
+            <li><a href="../../dist/mixins/messaging.js.html">dist/mixins/messaging.js</a></li>
+            <li><a href="../../dist/mixins/validation.js.html">dist/mixins/validation.js</a></li>
+            <li><a href="../../dist/spark.jquery.js.html">dist/spark.jquery.js</a></li>
+            <li><a href="../../dist/spark.js.html">dist/spark.js</a></li>
+            <li><a href="../../src/components/base.js.html">src/components/base.js</a></li>
+            <li><a href="../../src/components/calendar-popover.js.html">src/components/calendar-popover.js</a></li>
+            <li><a href="../../src/components/carousel.js.html">src/components/carousel.js</a></li>
+            <li><a href="../../src/components/date-input.js.html">src/components/date-input.js</a></li>
+            <li class="active"><a href="../../src/components/date-select.js.html">src/components/date-select.js</a></li>
+            <li><a href="../../src/components/date-typeahead.js.html">src/components/date-typeahead.js</a></li>
+            <li><a href="../../src/components/expand.js.html">src/components/expand.js</a></li>
+            <li><a href="../../src/components/header.js.html">src/components/header.js</a></li>
+            <li><a href="../../src/components/menu.js.html">src/components/menu.js</a></li>
+            <li><a href="../../src/components/modal.js.html">src/components/modal.js</a></li>
+            <li><a href="../../src/components/multi-select-input.js.html">src/components/multi-select-input.js</a></li>
+            <li><a href="../../src/components/number-selector.js.html">src/components/number-selector.js</a></li>
+            <li><a href="../../src/components/popover.js.html">src/components/popover.js</a></li>
+            <li><a href="../../src/components/progress-indicator.js.html">src/components/progress-indicator.js</a></li>
+            <li><a href="../../src/components/range-slider.js.html">src/components/range-slider.js</a></li>
+            <li><a href="../../src/components/scroll-to-top.js.html">src/components/scroll-to-top.js</a></li>
+            <li><a href="../../src/components/select-input.js.html">src/components/select-input.js</a></li>
+            <li><a href="../../src/components/slider.js.html">src/components/slider.js</a></li>
+            <li><a href="../../src/components/step-indicator.js.html">src/components/step-indicator.js</a></li>
+            <li><a href="../../src/components/table.js.html">src/components/table.js</a></li>
+            <li><a href="../../src/components/tabs.js.html">src/components/tabs.js</a></li>
+            <li><a href="../../src/components/text-input.js.html">src/components/text-input.js</a></li>
+            <li><a href="../../src/components/toggle-switch.js.html">src/components/toggle-switch.js</a></li>
+            <li><a href="../../src/components/toolbar.js.html">src/components/toolbar.js</a></li>
+            <li><a href="../../src/components/tooltip.js.html">src/components/tooltip.js</a></li>
+            <li><a href="../../src/components/typeahead.js.html">src/components/typeahead.js</a></li>
+            <li><a href="../../src/helpers/animation/cancel.js.html">src/helpers/animation/cancel.js</a></li>
+            <li><a href="../../src/helpers/animation/height.js.html">src/helpers/animation/height.js</a></li>
+            <li><a href="../../src/helpers/animation/request.js.html">src/helpers/animation/request.js</a></li>
+            <li><a href="../../src/helpers/animation/scroll-to.js.html">src/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../src/helpers/animation/tween.js.html">src/helpers/animation/tween.js</a></li>
+            <li><a href="../../src/helpers/css/transform.js.html">src/helpers/css/transform.js</a></li>
+            <li><a href="../../src/helpers/date/date.js.html">src/helpers/date/date.js</a></li>
+            <li><a href="../../src/helpers/date/parse-format.js.html">src/helpers/date/parse-format.js</a></li>
+            <li><a href="../../src/helpers/dom/add-class.js.html">src/helpers/dom/add-class.js</a></li>
+            <li><a href="../../src/helpers/dom/breakpoint.js.html">src/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../src/helpers/dom/has-class.js.html">src/helpers/dom/has-class.js</a></li>
+            <li><a href="../../src/helpers/dom/make-element.js.html">src/helpers/dom/make-element.js</a></li>
+            <li><a href="../../src/helpers/dom/offset.js.html">src/helpers/dom/offset.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-height.js.html">src/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-width.js.html">src/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../src/helpers/dom/parse-attribute.js.html">src/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../src/helpers/dom/remove-class.js.html">src/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../src/helpers/dom/toggle-class.js.html">src/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../src/helpers/dom/trigger-event.js.html">src/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../src/helpers/form/build-select.js.html">src/helpers/form/build-select.js</a></li>
+            <li><a href="../../src/helpers/form/form-data.js.html">src/helpers/form/form-data.js</a></li>
+            <li><a href="../../src/helpers/form/set-caret.js.html">src/helpers/form/set-caret.js</a></li>
+            <li><a href="../../src/helpers/manipulation/append-children.js.html">src/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../src/helpers/manipulation/copy-attributes.js.html">src/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../src/helpers/manipulation/insert-before.js.html">src/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../src/helpers/manipulation/wrap-element.js.html">src/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../src/helpers/position/affix.js.html">src/helpers/position/affix.js</a></li>
+            <li><a href="../../src/helpers/position/box-position.js.html">src/helpers/position/box-position.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-child.js.html">src/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-children.js.html">src/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-index.js.html">src/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parent.js.html">src/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parents.js.html">src/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-after.js.html">src/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-before.js.html">src/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../src/helpers/traversal/has-parent.js.html">src/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/matches.js.html">src/helpers/traversal/matches.js</a></li>
+            <li><a href="../../src/helpers/util/debounce.js.html">src/helpers/util/debounce.js</a></li>
+            <li><a href="../../src/helpers/util/each.js.html">src/helpers/util/each.js</a></li>
+            <li><a href="../../src/helpers/util/mixin.js.html">src/helpers/util/mixin.js</a></li>
+            <li><a href="../../src/helpers/util/pad.js.html">src/helpers/util/pad.js</a></li>
+            <li><a href="../../src/helpers/util/range.js.html">src/helpers/util/range.js</a></li>
+            <li><a href="../../src/helpers/util/round.js.html">src/helpers/util/round.js</a></li>
+            <li><a href="../../src/helpers/util/trim.js.html">src/helpers/util/trim.js</a></li>
+            <li><a href="../../src/mixins/messaging.js.html">src/mixins/messaging.js</a></li>
+            <li><a href="../../src/mixins/validation.js.html">src/mixins/validation.js</a></li>
+            <li><a href="../../src/spark.jquery.js.html">src/spark.jquery.js</a></li>
+            <li><a href="../../src/spark.js.html">src/spark.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#constructor"><i class="alert alert-success"></i><span>constructor</span></a>
+              </li>
+              <li><a href="#getValue"><i class="alert alert-info"></i><span>getValue</span></a>
+              </li>
+              <li><a href="#setValue"><i class="alert alert-info"></i><span>setValue</span></a>
+              </li>
+              <li><a href="#clearValue"><i class="alert alert-info"></i><span>clearValue</span></a>
+              </li>
+              <li><a href="#enable"><i class="alert alert-info"></i><span>enable</span></a>
+              </li>
+              <li><a href="#disable"><i class="alert alert-info"></i><span>disable</span></a>
+              </li>
+              <li><a href="#setOptions"><i class="alert alert-info"></i><span>setOptions</span></a>
+              </li>
+              <li><a href="#setLabel"><i class="alert alert-info"></i><span>setLabel</span></a>
+              </li>
+              <li><a href="#_createSelect"><i class="alert alert-info"></i><span>_createSelect</span></a>
+              </li>
+              <li><a href="#_cacheElements"><i class="alert alert-info"></i><span>_cacheElements</span></a>
+              </li>
+              <li><a href="#_parseParams"><i class="alert alert-info"></i><span>_parseParams</span></a>
+              </li>
+              <li><a href="#_getDefaultMonthNames"><i class="alert alert-info"></i><span>_getDefaultMonthNames</span></a>
+              </li>
+              <li><a href="#_getTypeText"><i class="alert alert-info"></i><span>_getTypeText</span></a>
+              </li>
+              <li><a href="#_bindEventListenerCallbacks"><i class="alert alert-info"></i><span>_bindEventListenerCallbacks</span></a>
+              </li>
+              <li><a href="#_onSelectChange"><i class="alert alert-info"></i><span>_onSelectChange</span></a>
+              </li>
+              <li><a href="#_onSelectFocus"><i class="alert alert-info"></i><span>_onSelectFocus</span></a>
+              </li>
+              <li><a href="#_onSelectBlur"><i class="alert alert-info"></i><span>_onSelectBlur</span></a>
+              </li>
+              <li><a href="#_whitelistedParams"><i class="alert alert-success"></i><span>_whitelistedParams</span></a>
+              </li>
+              <li><a href="#defaults"><i class="alert alert-success"></i><span>defaults</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>DateSelect</h1>
+<p>Create a select list of days, months or years.</p></div>
+          <pre><code class="language-javascript">import BaseComponent from './base';
+import SelectInput from './select-input';
+import dateHelper from '../helpers/date/date';
+import {number as parseNumberAttribute, boolean as parseBooleanAttribute, string as parseStringAttribute} from '../helpers/dom/parse-attribute';
+
+const noop = function() {};
+
+function createDefaultElement() {
+  var el = document.createElement('span');
+  el.className = 'spark-select';
+  el.innerHTML = '&lt;select class=&quot;spark-select__input&quot;&gt;&lt;/select&gt;&lt;span class=&quot;spark-label&quot;&gt;&lt;/span&gt;';
+  return el;
+}
+
+class DateSelect extends BaseComponent {</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">new DateSelect(el);</code></pre>
+          <section id="constructor">
+            <h1>constructor</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">constructor</div><span>&nbsp;</span><span>constructor()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Optional</p></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>DateSelect constructor</p></div>
+          <pre><code class="language-javascript">constructor (el, params = {}) {
+
+  // If the first argument is a plain object, create a default element
+  // since the user MUST provide additional params but the element
+  // is optional. Doing it this way to keep the arity the same
+  // as other components.
+  if (!(el instanceof HTMLElement)) {
+    params = el || {};
+    el = createDefaultElement();
+  }
+
+  super(el, params);
+
+  this._bindEventListenerCallbacks();
+  this._createSelect(el);
+}</code></pre>
+          <section id="getValue">
+            <h1>getValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>getValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>asInt</td>
+                <td>Boolean</td>
+                <td><p>Get the value as a parsed integer.</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Mixed</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Get the value.</p></div>
+          <pre><code class="language-javascript">getValue(asInt) {
+  return asInt ? parseInt(this.select.getValue(), 10) : this.select.getValue();
+}</code></pre>
+          <section id="setValue">
+            <h1>setValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>setValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>Mixed</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Set the value.</p></div>
+          <pre><code class="language-javascript">setValue(val) {
+  return this.select.setValue(val);
+}</code></pre>
+          <section id="clearValue">
+            <h1>clearValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>clearValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Clear the value.</p></div>
+          <pre><code class="language-javascript">clearValue() {
+  return this.select.clearValue();
+}</code></pre>
+          <section id="enable">
+            <h1>enable</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>enable()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Enable the input.</p></div>
+          <pre><code class="language-javascript">enable() {
+  return this.select.enable();
+}</code></pre>
+          <section id="disable">
+            <h1>disable</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>disable()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Disable the input.</p></div>
+          <pre><code class="language-javascript">disable() {
+  return this.select.disable();
+}</code></pre>
+          <section id="setOptions">
+            <h1>setOptions</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>setOptions()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object, Array</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Update the date select&#39;s options.</p></div>
+          <pre><code class="language-javascript">setOptions(params) {
+
+  params = params || {};
+
+  this.min = params.min || this.min;
+  this.max = params.max || this.max;
+  this.monthNames = params.monthNames || this.monthNames;
+  this.numericMonth = params.numericMonth || this.numericMonth;
+
+  if (this.type === 'year') {
+    if (params.min &amp;&amp; !params.max) {
+      this.max = this.min + 100;
+    }
+    else if (params.max &amp;&amp; !params.min) {
+      this.min = this.max - 100;
+    }
+  }
+
+  var i = this.min ? this.min - 1 : 0;
+  var len = this.max || this.monthNames.length;
+  var opts = [{}];
+
+  for (; i &lt; len; i++) {
+    opts.push({
+      value: i + 1,
+      text: this.monthNames ? this.monthNames[i] : i + 1
+    });
+  }
+
+  this.select.setOptions(opts);
+
+  return this;
+}</code></pre>
+          <section id="setLabel">
+            <h1>setLabel</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>setLabel()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>text</td>
+                <td>String</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Set the label text for the select input.</p></div>
+          <pre><code class="language-javascript">setLabel(text) {
+  this.select.setLabel(text !== undefined ? text : this._getTypeText());
+  return this;
+}</code></pre>
+          <section id="_createSelect">
+            <h1>_createSelect</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_createSelect()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Create a select input helper.</p></div>
+          <pre><code class="language-javascript">_createSelect(el) {
+
+  this.select = new SelectInput(el, {
+    onChange: this._onSelectChangeBound,
+    onFocus: this._onSelectFocusBound,
+    onBlur: this._onSelectBlurBound
+  });
+
+  this.setOptions();
+  this.setLabel();
+}</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Cache elements.</p></div>
+          <pre><code class="language-javascript">_cacheElements(el) {
+  this.el = el;
+  this.selectEl = this.el.querySelector('select');
+}</code></pre>
+          <section id="_parseParams">
+            <h1>_parseParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_parseParams()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Parse parameters from the elements.</p></div>
+          <pre><code class="language-javascript">_parseParams() {
+
+  this.type = this.type !== null ? this.type : parseStringAttribute(this.selectEl, 'data-type', 'day');
+
+  if (this.type === 'year') {
+    var date = new Date();
+    this.min = this.min !== null ? this.min : parseNumberAttribute(this.selectEl, 'min', date.getFullYear() - 100);
+    this.max = this.max !== null ? this.max : parseNumberAttribute(this.selectEl, 'max', (this.min || date.getFullYear()) + 100);
+  }
+  else if (this.type === 'month') {
+
+    this.monthNames = this.monthNames !== null ? this.monthNames : parseStringAttribute(this.selectEl, 'data-month-names', null);
+    this.numericMonth = this.numericMonth !== null ? this.numericMonth : parseBooleanAttribute(this.selectEl, 'data-numeric-month', false);
+    this.min = this.min !== null ? this.min : parseNumberAttribute(this.selectEl, 'min', null);
+    this.max = this.max !== null ? this.max : parseNumberAttribute(this.selectEl, 'max', null);
+
+    // No monthNames yet and no min or max
+    if (!this.monthNames &amp;&amp; !this.numericMonth &amp;&amp; !this.min &amp;&amp; !this.max) {
+      this.monthNames = this._getDefaultMonthNames();
+    }
+    else if (!this.min &amp;&amp; !this.max) {
+      this.min = 1;
+      this.max = 12;
+    }
+
+    if (typeof this.monthNames === 'string') {
+      this.monthNames = this.monthNames.split(',');
+    }
+  }
+  else {
+    this.min = this.min !== null ? this.min : parseNumberAttribute(this.selectEl, 'min', 1);
+    this.max = this.max !== null ? this.max : parseNumberAttribute(this.selectEl, 'max', 31);
+  }
+}</code></pre>
+          <section id="_getDefaultMonthNames">
+            <h1>_getDefaultMonthNames</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_getDefaultMonthNames()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Make a list of month options.</p></div>
+          <pre><code class="language-javascript">_getDefaultMonthNames() {
+  return dateHelper.getMonthNamesShort();
+}</code></pre>
+          <section id="_getTypeText">
+            <h1>_getTypeText</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_getTypeText()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the text for this type of date select.</p></div>
+          <pre><code class="language-javascript">_getTypeText() {
+  return this.type.charAt(0).toUpperCase() + this.type.slice(1);
+}</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because the<br />function signatures won&#39;t match.</p></div>
+          <pre><code class="language-javascript">_bindEventListenerCallbacks() {
+  this._onSelectChangeBound = this._onSelectChange.bind(this);
+  this._onSelectFocusBound = this._onSelectFocus.bind(this);
+  this._onSelectBlurBound = this._onSelectBlur.bind(this);
+}</code></pre>
+          <section id="_onSelectChange">
+            <h1>_onSelectChange</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onSelectChange()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>String</td>
+                <td><p>The value of the input</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the select changes, run the callback.</p></div>
+          <pre><code class="language-javascript">_onSelectChange(val) {
+  (this.onChange || noop)(val, this);
+}</code></pre>
+          <section id="_onSelectFocus">
+            <h1>_onSelectFocus</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onSelectFocus()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>String</td>
+                <td><p>The value of the input</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the select changes, run the callback.</p></div>
+          <pre><code class="language-javascript">_onSelectFocus(val) {
+  (this.onFocus || noop)(val, this);
+}</code></pre>
+          <section id="_onSelectBlur">
+            <h1>_onSelectBlur</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onSelectBlur()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>String</td>
+                <td><p>The value of the input</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the select changes, run the callback.</p></div>
+          <pre><code class="language-javascript">_onSelectBlur(val) {
+  (this.onBlur || noop)(val, this);
+}
+}</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>DateSelect.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <pre><code class="language-javascript">DateSelect.prototype._whitelistedParams = ['type', 'monthNames', 'numericMonth', 'min', 'max', 'onChange', 'onFocus', 'onBlur'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>DateSelect.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <pre><code class="language-javascript">DateSelect.prototype.defaults = {
+  el: null,
+  selectEl: null,
+  type: null,
+  monthNames: null,
+  min: null,
+  max: null,
+  select: null,
+  numericMonth: null,
+  onChange: null,
+  onFocus: null,
+  onBlur: null,
+  _onChangeBound: null,
+  _onFocusBound: null,
+  _onBlurBound: null
+};
+
+export default DateSelect;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/mr-doc/mr-doc">Mr. Doc </a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau </a></p>
+        <p>Mr. Doc is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr </a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../js/twitter-widget.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap-transition.min.js"></script>
+    <script src="../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../js/bootstrap-affix.min.js"></script>
+    <script src="../../js/prism.min.js"></script>
+    <script src="../../js/index.min.js"></script>
+  </body>
+</html>

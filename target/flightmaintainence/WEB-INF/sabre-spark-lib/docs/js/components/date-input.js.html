@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cayman.min.css">
+    <link rel="stylesheet" href="../css/prism.min.css">
+    <link rel="stylesheet" href="../css/index.min.css">
+    <link rel="stylesheet" href="../css/docs.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../index.html">Main</a></li>
+            <li><a href="../components/base.js.html">components/base.js</a></li>
+            <li><a href="../components/calendar-popover.js.html">components/calendar-popover.js</a></li>
+            <li><a href="../components/carousel.js.html">components/carousel.js</a></li>
+            <li class="active"><a href="../components/date-input.js.html">components/date-input.js</a></li>
+            <li><a href="../components/date-select.js.html">components/date-select.js</a></li>
+            <li><a href="../components/date-typeahead.js.html">components/date-typeahead.js</a></li>
+            <li><a href="../components/expand.js.html">components/expand.js</a></li>
+            <li><a href="../components/filter-module.js.html">components/filter-module.js</a></li>
+            <li><a href="../components/filter.js.html">components/filter.js</a></li>
+            <li><a href="../components/header.js.html">components/header.js</a></li>
+            <li><a href="../components/menu.js.html">components/menu.js</a></li>
+            <li><a href="../components/modal.js.html">components/modal.js</a></li>
+            <li><a href="../components/multi-select-input.js.html">components/multi-select-input.js</a></li>
+            <li><a href="../components/number-selector.js.html">components/number-selector.js</a></li>
+            <li><a href="../components/popover.js.html">components/popover.js</a></li>
+            <li><a href="../components/progress-indicator.js.html">components/progress-indicator.js</a></li>
+            <li><a href="../components/range-slider.js.html">components/range-slider.js</a></li>
+            <li><a href="../components/scroll-to-top.js.html">components/scroll-to-top.js</a></li>
+            <li><a href="../components/select-input.js.html">components/select-input.js</a></li>
+            <li><a href="../components/slider.js.html">components/slider.js</a></li>
+            <li><a href="../components/step-indicator.js.html">components/step-indicator.js</a></li>
+            <li><a href="../components/table.js.html">components/table.js</a></li>
+            <li><a href="../components/tabs.js.html">components/tabs.js</a></li>
+            <li><a href="../components/text-input.js.html">components/text-input.js</a></li>
+            <li><a href="../components/toggle-switch.js.html">components/toggle-switch.js</a></li>
+            <li><a href="../components/toolbar.js.html">components/toolbar.js</a></li>
+            <li><a href="../components/tooltip.js.html">components/tooltip.js</a></li>
+            <li><a href="../components/typeahead.js.html">components/typeahead.js</a></li>
+            <li><a href="../helpers/animation/cancel.js.html">helpers/animation/cancel.js</a></li>
+            <li><a href="../helpers/animation/height.js.html">helpers/animation/height.js</a></li>
+            <li><a href="../helpers/animation/request.js.html">helpers/animation/request.js</a></li>
+            <li><a href="../helpers/animation/scroll-to.js.html">helpers/animation/scroll-to.js</a></li>
+            <li><a href="../helpers/animation/tween.js.html">helpers/animation/tween.js</a></li>
+            <li><a href="../helpers/css/transform.js.html">helpers/css/transform.js</a></li>
+            <li><a href="../helpers/date/date.js.html">helpers/date/date.js</a></li>
+            <li><a href="../helpers/date/parse-format.js.html">helpers/date/parse-format.js</a></li>
+            <li><a href="../helpers/dom/add-class.js.html">helpers/dom/add-class.js</a></li>
+            <li><a href="../helpers/dom/breakpoint.js.html">helpers/dom/breakpoint.js</a></li>
+            <li><a href="../helpers/dom/has-class.js.html">helpers/dom/has-class.js</a></li>
+            <li><a href="../helpers/dom/make-element.js.html">helpers/dom/make-element.js</a></li>
+            <li><a href="../helpers/dom/offset.js.html">helpers/dom/offset.js</a></li>
+            <li><a href="../helpers/dom/outer-height.js.html">helpers/dom/outer-height.js</a></li>
+            <li><a href="../helpers/dom/outer-width.js.html">helpers/dom/outer-width.js</a></li>
+            <li><a href="../helpers/dom/parse-attribute.js.html">helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../helpers/dom/remove-class.js.html">helpers/dom/remove-class.js</a></li>
+            <li><a href="../helpers/dom/toggle-class.js.html">helpers/dom/toggle-class.js</a></li>
+            <li><a href="../helpers/dom/trigger-event.js.html">helpers/dom/trigger-event.js</a></li>
+            <li><a href="../helpers/form/build-select.js.html">helpers/form/build-select.js</a></li>
+            <li><a href="../helpers/form/form-data.js.html">helpers/form/form-data.js</a></li>
+            <li><a href="../helpers/form/set-caret.js.html">helpers/form/set-caret.js</a></li>
+            <li><a href="../helpers/manipulation/append-children.js.html">helpers/manipulation/append-children.js</a></li>
+            <li><a href="../helpers/manipulation/copy-attributes.js.html">helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../helpers/manipulation/insert-before.js.html">helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../helpers/manipulation/wrap-element.js.html">helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../helpers/position/affix.js.html">helpers/position/affix.js</a></li>
+            <li><a href="../helpers/position/box-position.js.html">helpers/position/box-position.js</a></li>
+            <li><a href="../helpers/traversal/get-child.js.html">helpers/traversal/get-child.js</a></li>
+            <li><a href="../helpers/traversal/get-children.js.html">helpers/traversal/get-children.js</a></li>
+            <li><a href="../helpers/traversal/get-index.js.html">helpers/traversal/get-index.js</a></li>
+            <li><a href="../helpers/traversal/get-parent.js.html">helpers/traversal/get-parent.js</a></li>
+            <li><a href="../helpers/traversal/get-parents.js.html">helpers/traversal/get-parents.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-after.js.html">helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-before.js.html">helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../helpers/traversal/has-parent.js.html">helpers/traversal/has-parent.js</a></li>
+            <li><a href="../helpers/traversal/matches.js.html">helpers/traversal/matches.js</a></li>
+            <li><a href="../helpers/util/debounce.js.html">helpers/util/debounce.js</a></li>
+            <li><a href="../helpers/util/each.js.html">helpers/util/each.js</a></li>
+            <li><a href="../helpers/util/mixin.js.html">helpers/util/mixin.js</a></li>
+            <li><a href="../helpers/util/pad.js.html">helpers/util/pad.js</a></li>
+            <li><a href="../helpers/util/range.js.html">helpers/util/range.js</a></li>
+            <li><a href="../helpers/util/round.js.html">helpers/util/round.js</a></li>
+            <li><a href="../helpers/util/trim.js.html">helpers/util/trim.js</a></li>
+            <li><a href="../mixins/messaging.js.html">mixins/messaging.js</a></li>
+            <li><a href="../mixins/validation.js.html">mixins/validation.js</a></li>
+            <li><a href="../spark.jquery.js.html">spark.jquery.js</a></li>
+            <li><a href="../spark.js.html">spark.js</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>DateInput</h1>
+<p>A date input container.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>module</td>
+                <td></td>
+                <td>components/date-input.js</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">import Base from './base';
+import DateTypeahead from './date-typeahead';
+import DateSelect from './date-select';
+import parseDateFormat from '../helpers/date/parse-format';
+import padNumber from '../helpers/util/pad';
+import toggleClass from '../helpers/dom/toggle-class';
+import removeClass from '../helpers/dom/remove-class';
+import addClass from '../helpers/dom/add-class';
+import hasClass from '../helpers/dom/has-class';
+import appendChildren from '../helpers/manipulation/append-children';
+import triggerEvent from '../helpers/dom/trigger-event';
+import copyAttributes from '../helpers/manipulation/copy-attributes';
+import date from '../helpers/date/date';
+import each from '../helpers/util/each';
+import {string as parseStringAttribute, boolean as parseBooleanAttribute} from '../helpers/dom/parse-attribute';
+import mixin from '../helpers/util/mixin';
+import messaging from '../mixins/messaging';
+import makeElement from '../helpers/dom/make-element';
+import validation from '../mixins/validation';
+
+const domDateFormat = 'YYYY-MM-DD';
+const parsedDomFormat = parseDateFormat(domDateFormat);
+const noop = function() {};
+
+class DateInput extends Base {</code></pre>
+          <h5>Example</h5>
+          <pre><code class="language-javascript">new DateInput(el, {
+  // Optional. Callback for when the input value changes.
+  onChange(value, inputInstance) {}
+});</code></pre>
+          <section id="constructor">
+            <h1>constructor</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">constructor</div><span>&nbsp;</span><span>constructor()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>DateInput constructor.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">constructor(el, params = {}) {
+
+  params.elRequired = true;
+
+  if (!super(el, params)) {
+    return;
+  }
+
+  this._bindEventListenerCallbacks();
+  this._convertLabel();
+  this._initializeInputs();
+  this._updateClass();
+  this._addEventListeners();
+}</code></pre>
+          <section id="show">
+            <h1>show</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>show()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Show the input by adding the active state and setting character counts (if necessary).</p></div>
+          <pre><code class="language-javascript">show() {
+
+  if (!this.isActive) {
+    this._runTypeaheads();
+    this.isActive = true;
+    this._updateClass();
+  }
+
+  return this;
+}</code></pre>
+          <section id="hide">
+            <h1>hide</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>hide()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Hide the input by removing the active state.</p></div>
+          <pre><code class="language-javascript">hide() {
+  if (!this.isActive) return this;
+  this.isActive = false;
+  this._updateClass();
+  return this;
+}</code></pre>
+          <section id="remove">
+            <h1>remove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>remove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Augment default remove call w/ helper cleanup.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>leaveElement</td>
+                <td>Boolean</td>
+                <td><p>Leave the element intact.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">remove(leaveElement) {
+
+  this._removeTypeaheads(leaveElement);
+  this._removeSelects(leaveElement);
+  this._removeInputPieces();
+
+  super.remove(leaveElement);
+
+  return this;
+}</code></pre>
+          <section id="setValue">
+            <h1>setValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>setValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Given an object with day, month and year, set the value of the input.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>values</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">setValue(values) {
+
+  values = values || {
+    day: '',
+    month: '',
+    year: ''
+  };
+  let i;
+  let hadValue;
+
+  for (i in this.typeaheads) {
+    if (values[i] !== undefined) {
+      this.typeaheads[i].setValue(values[i]);
+      hadValue = hadValue || (values[i] ? true : false);
+    }
+  }
+
+  for (i in this.selects) {
+    if (values[i] !== undefined) {
+      this.selects[i].setValue(values[i]);
+      hadValue = hadValue || (values[i] ? true : false);
+    }
+  }
+
+  if (!this.isActive &amp;&amp; hadValue) {
+    this.isActive = true;
+  }
+
+  this._padTypeaheads();
+  this._updateClass();
+  this.updateInput();
+
+  return this;
+}</code></pre>
+          <section id="getValue">
+            <h1>getValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>getValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the value of the input.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>return</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">getValue() {
+  return this.inputEl.value;
+}</code></pre>
+          <section id="clearValue">
+            <h1>clearValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>clearValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Clear the values.</p></div>
+          <pre><code class="language-javascript">clearValue() {
+
+  each(this.isTypeahead ? this.typeaheads : this.selects, (k, v) =&gt; {
+    v.clearValue();
+  });
+
+  this.inputEl.value = '';
+
+  return this;
+}</code></pre>
+          <section id="setErrorState">
+            <h1>setErrorState</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>setErrorState()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set/reset error state</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>true:</td>
+                <td>Boolean</td>
+                <td><p>set error state, false: reset</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">setErrorState(opt) {
+  if(opt){
+    this.el.setAttribute('data-error', '');
+  }
+  else {
+    this.el.removeAttribute('data-error');
+  }
+}</code></pre>
+          <section id="enable">
+            <h1>enable</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>enable()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Enable the inputs</p></div>
+          <pre><code class="language-javascript">enable() {
+
+  each(this.isTypeahead ? this.typeaheads : this.selects, (k, v) =&gt; {
+    v.enable();
+  });
+
+  this.inputEl.removeAttribute('disabled');
+
+  toggleClass(this.el, 'disabled', false);
+
+  return this;
+}</code></pre>
+          <section id="disable">
+            <h1>disable</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>disable()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Clear the values.</p></div>
+          <pre><code class="language-javascript">disable() {
+
+  each(this.isTypeahead ? this.typeaheads : this.selects, (k, v) =&gt; {
+    v.disable();
+  });
+
+  this.inputEl.setAttribute('disabled', '');
+
+  toggleClass(this.el, 'disabled', true);
+
+  return this;
+}</code></pre>
+          <section id="updateInput">
+            <h1>updateInput</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>updateInput()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update the input values to match the typeaheads.</p></div>
+          <pre><code class="language-javascript">updateInput() {
+
+  let inputs;
+
+  if (this.isTypeahead &amp;&amp; this.typeaheads) {
+    inputs = this.typeaheads;
+  }
+  else if (this.isSelect) {
+    inputs = this.selects;
+  }
+
+  if (inputs) {
+
+    let day = (inputs.day &amp;&amp; inputs.day.getValue(true)) || 0;
+    let month = (inputs.month &amp;&amp; inputs.month.getValue(true)) || 0;
+    let year = (inputs.year &amp;&amp; inputs.year.getValue(true)) || 0;
+
+    let val = this.inputEl.value;
+
+    this.inputEl.value = [day, month, year].indexOf(0) === -1 ? padNumber(year, 4) + '-' + padNumber(month, 2) + '-' + padNumber(day, 2) : '';
+
+    if (val !== this.inputEl.value) {
+      this._pauseInputChange = true;
+      triggerEvent(this.inputEl, 'change');
+      (this.onChange || noop)(this.inputEl.value, this);
+      this._pauseInputChange = false;
+    }
+  }
+
+  this.currValue = this.inputEl.value;
+
+  return this;
+}</code></pre>
+          <section id="getTypingValue">
+            <h1>getTypingValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>getTypingValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get current typing value</p></div>
+          <pre><code class="language-javascript">getTypingValue() {
+
+  let inputs;
+  let result = '';
+
+  if (this.isTypeahead &amp;&amp; this.typeaheads) {
+    inputs = this.typeaheads;
+  }
+  else if (this.isSelect) {
+    inputs = this.selects;
+  }
+
+  if (inputs) {
+
+    let day = (inputs.day &amp;&amp; inputs.day.getValue(true));
+    let month = (inputs.month &amp;&amp; inputs.month.getValue(true));
+    let year = (inputs.year &amp;&amp; inputs.year.getValue(true));
+
+    result = month.toString() + day.toString() + year.toString();
+  }
+
+  return result;
+}</code></pre>
+          <section id="focus">
+            <h1>focus</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>focus()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Move the focus to a typeahead element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>i</td>
+                <td>Number</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>character</td>
+                <td>String</td>
+                <td><p>Optional A character to add</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">focus(i, character) {
+
+  if (!this.isActive || !this.inFocus) {
+    return this;
+  }
+
+  let index = this.typeaheadEls.indexOf(this.inFocus.typeahead.el);
+  let sib = this.typeaheadEls[index + i];
+  let typeahead;
+
+  // If we were passed a character to prepend, find the typeahead for this element
+  if (character) {
+    typeahead = this._getTypeaheadByElement(sib);
+    if (typeahead) {
+      typeahead.typeahead.addCharacterAtIndex(character, 0);
+    }
+  }
+
+  if (!sib) {
+    return false;
+  }
+
+  let sibInput = sib.querySelector('input');
+
+  if (sibInput) {
+    sibInput.focus();
+
+    // If we have a typeahead (because we needed to prepend a character), move the caret.
+    if (typeahead) {
+      typeahead.typeahead.moveCaret(1);
+    }
+  }
+
+  return this;
+}</code></pre>
+          <section id="focusNext">
+            <h1>focusNext</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>focusNext()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Move the focus to the next element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>character</td>
+                <td>String</td>
+                <td><p>Optional A character to add</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">focusNext(character) {
+
+  if (this.focus(1, character)) {
+    if (this.inFocus &amp;&amp; !character)
+      this.inFocus.typeahead.moveCaretToStart();
+  }
+
+  return this;
+}</code></pre>
+          <section id="focusPrevious">
+            <h1>focusPrevious</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>focusPrevious()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Move the focus to the next element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>character</td>
+                <td>String</td>
+                <td><p>Optional A character to add</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">focusPrevious(character) {
+
+  if (this.focus(-1, character)) {
+    if (this.inFocus)
+      this.inFocus.typeahead.moveCaretToEnd();
+  }
+
+  return this;
+}</code></pre>
+          <section id="hasPartialValue">
+            <h1>hasPartialValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>hasPartialValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Do we have any values?</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>return</td>
+                <td>Boolean</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">hasPartialValue() {
+
+  let i;
+
+  for (i in this.typeaheads) {
+    if (this.typeaheads[i].getValue()) {
+      return true;
+    }
+  }
+
+  for (i in this.selects) {
+    if (this.selects[i].getValue()) {
+      return true;
+    }
+  }
+
+  return false;
+}</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Resize the elements, to account for any changed display property.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">update(el) {
+
+  if (el) {
+
+    this._removeTypeaheads();
+    this._removeSelects();
+    this._removeInputPieces();
+
+    this._removeEventListeners();
+
+    this._cacheElements(el);
+    this._convertLabel();
+    this._initializeInputs();
+    this._updateClass();
+
+    this._addEventListeners();
+  }
+  else {
+    this._runTypeaheads();
+  }
+
+  return this;
+}</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Store a reference to the needed elements.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_cacheElements(el) {
+
+  this.el = el;
+  this.inputEl = this.el.querySelector('[type=&quot;date&quot;]');
+  this.inputLabel = this.el.querySelector('.spark-label').innerHTML;
+  this.selectLabelPrefix = this.el.querySelector('.spark-label').getAttribute('id');
+
+  if (!this.inputEl) {
+    throw new Error('No &lt;input type=&quot;date&quot;&gt; element present in date input container!', this.el);
+  }
+
+  this.toggleEl = this.el.querySelector('.spark-date__toggle');
+
+  this.messageEl = this.el.querySelector('.spark-input__message') || makeElement('&lt;span class=&quot;spark-input__message&quot;&gt;&lt;/span&gt;');
+}</code></pre>
+          <section id="_parseParams">
+            <h1>_parseParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_parseParams()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Parse parameters from the elements.</p></div>
+          <pre><code class="language-javascript">_parseParams() {
+
+  this.isActive = this.isActive !== null ? this.isActive : (this.inputEl.value ? true : false);
+  this.isSelect = this.isSelect !== null ? this.isSelect : (hasClass(this.el, 'spark-date--select') ? true : false);
+  this.isTypeahead = this.isTypeahead !== null ? this.isTypeahead : (!this.isSelect ? true : false);
+  this.format = this.format !== null ? this.format : parseStringAttribute(this.inputEl, 'data-format', 'MM-DD-YYYY');
+  this.textFormat = this.textFormat !== null ? this.textFormat : parseStringAttribute(this.inputEl, 'data-text-format', 'MM DD YYYY');
+  this.showDateAsText = this.showDateAsText !== null ? this.showDateAsText : parseBooleanAttribute(this.inputEl, 'data-show-date-as-text', false);
+
+  this.parsedFormat = parseDateFormat(this.format);
+  this.parsedTextFormat = parseDateFormat(this.textFormat);
+  this.min = this.min !== null ? this.min : this.inputEl.getAttribute('min');
+  this.max = this.max !== null ? this.max : this.inputEl.getAttribute('max');
+  this.min = this.min &amp;&amp; parsedDomFormat.getValues(this.min);
+  this.max = this.max &amp;&amp; parsedDomFormat.getValues(this.max);
+
+  this.currValue = this.inputEl.value !== null ? this.inputEl.value : null;
+}</code></pre>
+          <section id="_initializeInputs">
+            <h1>_initializeInputs</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initializeInputs()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Setup the proper inputs. This could mean creating a typeahead, or creating selects.</p></div>
+          <pre><code class="language-javascript">_initializeInputs() {
+
+  if (this.isTypeahead) {
+    this._initializeInputPieces();
+    this._runTypeaheads();
+  }
+  else if (this.isSelect) {
+    removeClass(this.el, 'spark-input');
+    this._initializeInputPieces();
+  }
+}</code></pre>
+          <section id="_initializeInputPieces">
+            <h1>_initializeInputPieces</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initializeInputPieces()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Replace the date input with a group of typeaheads or select inputs.<br />Keep the date input around and store the typeahead data in there in an ISO date format.</p></div>
+          <pre><code class="language-javascript">_initializeInputPieces() {
+
+  // Hide the original element. This will be updated as the typeahead values change
+  this.inputEl.style.display = 'none';
+
+  let els = [];
+  let label;
+
+  // Create a new typeahead for each part of the parsed format. Also add placeholder elements.
+  this.parsedFormat.parts.forEach(function(part) {
+    // Something weird with Node that makes us have to specify what `this` is here.
+    (this.isTypeahead ? this._initializeTypeaheadPiece : this._initializeSelectPiece).call(this, els, part);
+  }.bind(this));
+
+  // Create a holder for all the pieces
+  this.piecesEl = document.createElement('span');
+  this.piecesEl.className = this.isTypeahead ? 'spark-input__fields' : 'spark-select-group';
+
+  // Add all the necessary elements
+  appendChildren(this.piecesEl, els);
+
+  // If this is a select group, move the label element.
+  if (this.isSelect &amp;&amp; (label = this.el.querySelector('.spark-label'))) {
+    this.piecesEl.appendChild(label);
+  }
+
+  // Add the pieces holder
+  this.el.insertBefore(this.piecesEl, this.inputEl);
+
+  // Set the value
+  if (this.inputEl.value) {
+    this.setValue(parsedDomFormat.getValues(this.inputEl.value));
+    this.isActive = true;
+  }
+}</code></pre>
+          <section id="_removeInputPieces">
+            <h1>_removeInputPieces</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeInputPieces()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove the input pieces.</p></div>
+          <pre><code class="language-javascript">_removeInputPieces() {
+
+  this.inputEl.style.display = '';
+
+  // Remove elements we inserted into the DOM
+  if (this.piecesEl) {
+    this.piecesEl.parentNode.removeChild(this.piecesEl);
+  }
+}</code></pre>
+          <section id="_removeTypeaheads">
+            <h1>_removeTypeaheads</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeTypeaheads()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove typeaheads.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>leaveElement</td>
+                <td>Boolean</td>
+                <td><p>Leave the element intact.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_removeTypeaheads(leaveElement) {
+
+  // Remove typeaheads
+  if (this.typeaheads) {
+    for (let i in this.typeaheads) {
+      this.typeaheads[i].remove(leaveElement);
+    }
+  }
+}</code></pre>
+          <section id="_removeSelects">
+            <h1>_removeSelects</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeSelects()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove selects.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>leaveElement</td>
+                <td>Boolean</td>
+                <td><p>Leave the element intact.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_removeSelects(leaveElement) {
+
+  let label;
+
+  // Remove selects
+  if (this.selects) {
+
+    for (let i in this.selects) {
+      this.selects[i].remove(leaveElement);
+    }
+
+    // If this is a select group, move the label element.
+    if ((label = this.piecesEl.querySelector('.spark-label'))) {
+      this.el.appendChild(label);
+    }
+
+    addClass(this.el, 'spark-input');
+  }
+}</code></pre>
+          <section id="_initializeTypeaheadPiece">
+            <h1>_initializeTypeaheadPiece</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initializeTypeaheadPiece()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create a typeahead or placeholder piece.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>els</td>
+                <td>Array</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>part</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_initializeTypeaheadPiece(els, part) {
+
+  this.typeaheads = this.typeaheads || {};
+  this.typeaheadEls = this.typeaheadEls || [];
+
+  let el;
+
+  switch (part.name) {
+    case 'day':
+    case 'month':
+    case 'year':
+      this.typeaheads[part.name] = new DateTypeahead({
+        type: part.name,
+        ariaLabelPrefix: this.inputLabel,
+        len: part.length,
+        placeholder: part.value,
+        onFocus: this._onTypeaheadFocusBound,
+        onBlur: this._onTypeaheadBlurBound,
+        onChange: this._onPieceChangeBound,
+        onInput: this._onTypeaheadInputBound,
+        onBackspace: this._onTypeaheadBackspaceBound,
+        onEnd: this._onTypeaheadEndBound
+      });
+      el = this.typeaheads[part.name].typeahead.el;
+      this.typeaheadEls.push(el);
+      break;
+    default:
+      el = document.createElement('span');
+      el.innerHTML = part.value;
+      el.className = 'spark-input__divider';
+      break;
+  }
+
+  els.push(el);
+}</code></pre>
+          <section id="_initializeSelectPiece">
+            <h1>_initializeSelectPiece</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_initializeSelectPiece()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Replace the date input with three date dropdowns. Keep the date input around and store the<br />select data in there.</p></div>
+          <pre><code class="language-javascript">_initializeSelectPiece(els, part) {
+
+  this.selects = this.selects || {};
+  this.selectEls = this.selectEls || [];
+
+  if (['day', 'month', 'year'].indexOf(part.name) === -1) {
+    return;
+  }
+
+  let el;
+
+  switch (part.name) {
+    case 'day':
+    case 'month':
+      this.selects[part.name] = new DateSelect({
+        type: part.name,
+        ariaLabelPrefix: this.selectLabelPrefix,
+        onChange: this._onPieceChangeBound
+      });
+      el = this.selects[part.name].select.el;
+      break;
+    case 'year': {
+      let minYear = this.inputEl.min ? parsedDomFormat.getValues(this.inputEl.min).year : null;
+      let maxYear = this.inputEl.max ? parsedDomFormat.getValues(this.inputEl.max).year : null;
+
+      this.selects[part.name] = new DateSelect({
+        min: minYear,
+        max: maxYear,
+        type: part.name,
+        ariaLabelPrefix: this.selectLabelPrefix,
+        onChange: this._onPieceChangeBound
+      });
+      el = this.selects[part.name].select.el;
+      break;
+    }
+  }
+
+  els.push(el);
+  this.selectEls.push(el);
+}</code></pre>
+          <section id="_convertLabel">
+            <h1>_convertLabel</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_convertLabel()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>If our element is a label, convert it to a div so that<br />we are semantically correct. Can&#39;t have more than one<br />input inside of a label!</p></div>
+          <pre><code class="language-javascript">_convertLabel() {
+
+  if (this.isTypeahead || this.el.nodeName.toLowerCase() !== 'label') {
+    return;
+  }
+
+  let newEl = document.createElement('fieldset');
+
+  copyAttributes(this.el, newEl);
+  appendChildren(newEl, this.el.children);
+
+  if (this.el.parentNode) {
+    this.el.parentNode.replaceChild(newEl, this.el);
+  }
+
+  this.el = newEl;
+}</code></pre>
+          <section id="_validate">
+            <h1>_validate</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_validate()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Validate the date values.</p></div>
+          <pre><code class="language-javascript">_validate() {
+
+  if (this.isTypeahead) {
+    this._validateTypeaheads();
+  }
+  else if (this.isSelect) {
+    this._validateSelects();
+  }
+}</code></pre>
+          <section id="_validateTypeaheads">
+            <h1>_validateTypeaheads</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_validateTypeaheads()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Validate the typeahead values.</p></div>
+          <pre><code class="language-javascript">_validateTypeaheads() {
+
+  if (!this.typeaheads) {
+    return;
+  }
+
+  let month = this.typeaheads.month ? this.typeaheads.month.getValue(true) : null;
+  let year = this.typeaheads.year ? this.typeaheads.year.getValue(true) : null;
+  let day = this.typeaheads.day ? this.typeaheads.day.getValue(true) : null;
+  let maxDay;
+
+  if (this.format === 'DD-MM-YYYY') {
+    let selectedDate = new Date(this.inputEl.value); // this is in format YYYY-MM-DD
+    let selectedMonth = selectedDate.getMonth() + 1;
+
+    if (month === null || month === '') {
+      maxDay = this._getMaxDaysInMonth(selectedMonth);
+    }
+    else {
+      let oldVal = new Date(this.currValue);
+      let oldMonth = oldVal.getMonth() + 1;
+
+      if (selectedMonth !== oldMonth) {
+        maxDay = this._getMaxDaysInMonth(selectedMonth);
+      }
+      else {
+        maxDay = (month &amp;&amp; new Date(year !== null ? year : new Date().getFullYear(), month, 0).getDate()) || this._getMaxDaysInMonth(month);
+      }
+    }
+  }
+  else {
+    maxDay = (month &amp;&amp; new Date(year !== null ? year : new Date().getFullYear(), month, 0).getDate()) || this._getMaxDaysInMonth(month);
+  }
+
+  if (maxDay &lt; day) {
+    this.typeaheads.day.setValue(maxDay);
+    this.updateInput();
+  }
+}</code></pre>
+          <section id="_validateTypeaheadBounds">
+            <h1>_validateTypeaheadBounds</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_validateTypeaheadBounds()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Validate the boundaries of the typeahead values relative to the min and max values.</p></div>
+          <pre><code class="language-javascript">_validateTypeaheadBounds() {
+
+  let year = this.typeaheads.year ? this.typeaheads.year.getValue(true) : null;
+  let month = this.typeaheads.month ? this.typeaheads.month.getValue(true) : null;
+  let day = this.typeaheads.day ? this.typeaheads.day.getValue(true) : null;
+
+  if (!year || !month || !day) {
+    return;
+  }
+
+  let date = new Date(year, month - 1, day);
+  let set = '';
+
+  if (this.min &amp;&amp; date &lt; new Date(this.min.year, this.min.month - 1, this.min.day)) {
+    set = 'min';
+  }
+  else if (this.max &amp;&amp; date &gt; new Date(this.max.year, this.max.month - 1, this.max.day)) {
+    set = 'max';
+  }
+
+  if (set) {
+    this.typeaheads.year.setValue(padNumber(this[set].year, this.typeaheads.year.typeahead.format.length));
+    this.typeaheads.month.setValue(padNumber(this[set].month, this.typeaheads.month.typeahead.format.length));
+    this.typeaheads.day.setValue(padNumber(this[set].day, this.typeaheads.day.typeahead.format.length));
+    this.updateInput();
+  }
+}</code></pre>
+          <section id="_padTypeaheads">
+            <h1>_padTypeaheads</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_padTypeaheads()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Pad the typeahead input values.</p></div>
+          <pre><code class="language-javascript">_padTypeaheads() {
+
+  if (this._pauseInputChange) return;
+
+  this._pauseInputChange = true;
+
+  for (let i in this.typeaheads) {
+    this._padTypeahead(this.typeaheads[i]);
+  }
+
+  this._pauseInputChange = false;
+}</code></pre>
+          <section id="_padTypeahead">
+            <h1>_padTypeahead</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_padTypeahead()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Pad the typeahead input values.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>typeahead</td>
+                <td>Typeahead</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_padTypeahead(typeahead) {
+
+  let value = typeahead.getValue();
+
+  if (value) {
+    let padded = padNumber(value, typeahead.typeahead.format.length);
+    if (value !== padded) typeahead.setValue(padNumber(value, typeahead.typeahead.format.length));
+  }
+}</code></pre>
+          <section id="_hasTypeaheadValue">
+            <h1>_hasTypeaheadValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_hasTypeaheadValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Do any of the typeaheads have a value?</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>return</td>
+                <td>Boolean</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_hasTypeaheadValue() {
+
+  for (let i in this.typeaheads) {
+    if (this.typeaheads[i].getValue(true)) {
+      return true;
+    }
+  }
+
+  return false;
+}</code></pre>
+          <section id="_validateSelects">
+            <h1>_validateSelects</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_validateSelects()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Validate select input values.</p></div>
+          <pre><code class="language-javascript">_validateSelects() {
+
+  if (!this.selects) {
+    return;
+  }
+
+  let month = this.selects.month ? this.selects.month.getValue(true) : null;
+  let year = this.selects.year ? this.selects.year.getValue(true) : null;
+
+  let maxDay = (month &amp;&amp; new Date(year !== null ? year : new Date().getFullYear(), month, 0).getDate()) || this._getMaxDaysInMonth(month);
+  let day = this.selects.day ? this.selects.day.getValue(true) : null;
+
+  this.selects.day.setOptions({
+    max: maxDay
+  });
+  if (maxDay &lt; day) {
+    this.selects.day.setValue(maxDay);
+  }
+
+  this.updateInput();
+}</code></pre>
+          <section id="_getMaxDaysInMonth">
+            <h1>_getMaxDaysInMonth</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_getMaxDaysInMonth()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the maximum number of days for a given month.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>month</td>
+                <td>Number</td>
+                <td><p>The month&#39;s number. 1-12.</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Number</td>
+                <td><p>The maximum number of days. 28-31.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_getMaxDaysInMonth(month) {
+  if (month === 2) return 29;
+  else if ([4, 6, 9, 11].indexOf(month) !== -1) return 30;
+  return 31;
+}</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because them.</p></div>
+          <pre><code class="language-javascript">_bindEventListenerCallbacks() {
+  this._onTypeaheadBlurBound = this._onTypeaheadBlur.bind(this);
+  this._onTypeaheadInputBound = this._onTypeaheadInput.bind(this);
+  this._onTypeaheadFocusBound = this._onTypeaheadFocus.bind(this);
+  this._onPieceChangeBound = this._onPieceChange.bind(this);
+  this._onTypeaheadBackspaceBound = this._onTypeaheadBackspace.bind(this);
+  this._onTypeaheadEndBound = this._onTypeaheadEnd.bind(this);
+  this._onInputChangeBound = this._onInputChange.bind(this);
+  this._onVisibleChildrenBound = this._onVisibleChildren.bind(this);
+}</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners.</p></div>
+          <pre><code class="language-javascript">_addEventListeners() {
+  this.el.addEventListener('click', this._onClickBound);
+  this.inputEl.addEventListener('change', this._onInputChangeBound);
+  document.addEventListener('spark.visible-children', this._onVisibleChildrenBound, true);
+}</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners.</p></div>
+          <pre><code class="language-javascript">_removeEventListeners() {
+  this.el.removeEventListener('click', this._onClickBound);
+  this.inputEl.removeEventListener('change', this._onInputChangeBound);
+  document.removeEventListener('spark.visible-children', this._onVisibleChildrenBound, true);
+}</code></pre>
+          <section id="_onVisibleChildren">
+            <h1>_onVisibleChildren</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onVisibleChildren()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Handle the spark.visible-children event</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onVisibleChildren(e) {
+  if (e.target.contains(this.el)) {
+    window.setTimeout(function() {
+      this.update();
+    }.bind(this), 0);
+  }
+}</code></pre>
+          <section id="_runTypeaheads">
+            <h1>_runTypeaheads</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_runTypeaheads()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Run all typeaheads so they have placeholder values.</p></div>
+          <pre><code class="language-javascript">_runTypeaheads() {
+
+  // Make sure we don't get into an infinite loop. Even though the logic
+  // in the typeaheads should be stopping this from happening, there is
+  // something in Safari where the focus and blur events fire in different
+  // order than other browsers so those failsafes do not work.
+  if (this.runningTypeaheads) {
+    return;
+  }
+
+  this.runningTypeaheads = true;
+
+  if (this.inFocus) {
+    this.inFocus.pause();
+  }
+
+  for (let i in this.typeaheads) {
+    if (this.typeaheads[i] !== this.inFocus) {
+      this.typeaheads[i].run();
+    }
+  }
+
+  if (this.inFocus) {
+    this.inFocus.resume();
+    this.inFocus.run();
+  }
+
+  this.runningTypeaheads = false;
+}</code></pre>
+          <section id="_updateClass">
+            <h1>_updateClass</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_updateClass()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update the active and focus classes.</p></div>
+          <pre><code class="language-javascript">_updateClass() {
+  toggleClass(this.el, 'active', this.isActive);
+  toggleClass(this.el, 'has-partial-value', this.hasPartialValue());
+  toggleClass(this.el, 'focus', this.inFocus ? true : false);
+}</code></pre>
+          <section id="_getTypeaheadByElement">
+            <h1>_getTypeaheadByElement</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_getTypeaheadByElement()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the typeahead that corresponds to the given element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_getTypeaheadByElement(el) {
+  for (let i in this.typeaheads) {
+    if (this.typeaheads[i].typeahead.el === el) {
+      return this.typeaheads[i];
+    }
+  }
+}</code></pre>
+          <section id="_showDateText">
+            <h1>_showDateText</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_showDateText()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Show the date as text.</p></div>
+          <pre><code class="language-javascript">_showDateText() {
+
+  var text = this._getDateText();
+
+  if (!text || !this.showDateAsText) {
+    return;
+  }
+
+  if (!this.dateTextEl) {
+    this._createDateTextEl();
+  }
+
+  this.dateTextEl.innerHTML = text;
+  this.dateTextEl.style.display = '';
+}</code></pre>
+          <section id="_hideDateText">
+            <h1>_hideDateText</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_hideDateText()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Hide the date as text.</p></div>
+          <pre><code class="language-javascript">_hideDateText() {
+
+  if (!this.showDateAsText || !this.dateTextEl) {
+    return;
+  }
+
+  this.dateTextEl.style.display = 'none';
+}</code></pre>
+          <section id="_createDateTextEl">
+            <h1>_createDateTextEl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_createDateTextEl()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create the date text element.</p></div>
+          <pre><code class="language-javascript">_createDateTextEl() {
+
+  var el = document.createElement('div');
+  el.className = 'spark-input__overlay';
+  el.style.display = 'none';
+
+  this.el.appendChild(el);
+  this.dateTextEl = el;
+}</code></pre>
+          <section id="_getDateText">
+            <h1>_getDateText</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_getDateText()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the date as text.</p></div>
+          <pre><code class="language-javascript">_getDateText() {
+
+  var parts = this.parsedTextFormat.parts;
+  var i = 0;
+  var len = parts.length;
+  var str = '';
+  var isValid = true;
+  var val;
+
+  for(; i &lt; len; i++) {
+
+    val = this.typeaheads[parts[i].name] &amp;&amp; this.typeaheads[parts[i].name].getValue();
+
+    switch(parts[i].name) {
+      case 'month':
+        str += date.getMonthNameShort(val);
+        if (!val) {
+          isValid = false;
+          break;
+        }
+        break;
+      case 'day':
+      case 'year':
+        str += val;
+        if (!val) {
+          isValid = false;
+          break;
+        }
+        break;
+      default:
+        str += parts[i].value;
+        break;
+    }
+  }
+
+  return (isValid ? str : false);
+}</code></pre>
+          <section id="_onPieceChange">
+            <h1>_onPieceChange</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onPieceChange()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the value of a typeahead or select changes, validate.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>Number</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>typeahead</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onPieceChange() {
+
+  this._validate();
+
+  if (this.isTypeahead &amp;&amp; this.showDateAsText &amp;&amp; !this._hasFocus) {
+
+    if (this._showTextTimer) {
+      clearTimeout(this._showTextTimer);
+    }
+
+    this._showTextTimer = setTimeout(function() {
+      this._showDateText();
+    }.bind(this), 0);
+  }
+}</code></pre>
+          <section id="_onTypeaheadFocus">
+            <h1>_onTypeaheadFocus</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTypeaheadFocus()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the typeahead gains focus.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>Number</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>typeahead</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onTypeaheadFocus(val, typeahead) {
+
+  if (this.runningTypeaheads) return;
+
+  this._hideDateText();
+
+  if (!this._hasFocus) {
+    this._hasFocus = true;
+    (this.onFocus || noop)(this.inputEl.value, this);
+  }
+
+  triggerEvent(this.inputEl, 'focus');
+  this.inFocus = typeahead;
+  this.show();
+  this._updateClass();
+
+  if (this._blurTimer) {
+    clearTimeout(this._blurTimer);
+    this._blurTimer = null;
+  }
+}</code></pre>
+          <section id="_onTypeaheadBlur">
+            <h1>_onTypeaheadBlur</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTypeaheadBlur()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the typeahead loses focus, make sure numbers are padded properly.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>Number</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>typeahead</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onTypeaheadBlur(val, typeahead) {
+
+  if (this.runningTypeaheads) return;
+
+  this.inFocus = null;
+
+  this._padTypeahead(typeahead);
+  this.updateInput();
+  this._updateClass();
+
+  if (!this.inputEl.value &amp;&amp; !this._hasTypeaheadValue()) {
+    this.hide();
+  }
+  else {
+    this._validateTypeaheadBounds();
+  }
+
+  this._blurTimer = setTimeout(function() {
+    this._hasFocus = false;
+    (this.onBlur || noop)(this.inputEl.value, this);
+    this._showDateText();
+  }.bind(this), 1);
+}</code></pre>
+          <section id="_onTypeaheadInput">
+            <h1>_onTypeaheadInput</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTypeaheadInput()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p><code>input</code> event callback for typeahead</p></div>
+          <pre><code class="language-javascript">_onTypeaheadInput() {
+  (this.onInput || noop)(this.getTypingValue(), this);
+}</code></pre>
+          <section id="_onTypeaheadBackspace">
+            <h1>_onTypeaheadBackspace</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTypeaheadBackspace()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the typeahead fires a backspace event, move back to the previous input.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>val</td>
+                <td>Number</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>typeahead</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onTypeaheadBackspace() {
+  this.focusPrevious();
+}</code></pre>
+          <section id="_onTypeaheadEnd">
+            <h1>_onTypeaheadEnd</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onTypeaheadEnd()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the typeahead is at its maximum length and the caret is at the end,<br />focus on the next input field.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>typeahead</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>character</td>
+                <td>String</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onTypeaheadEnd(typeahead, character) {
+  this.focusNext(character);
+}</code></pre>
+          <section id="_onInputChange">
+            <h1>_onInputChange</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onInputChange()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the input that corresponds to this instance changes. Allows us to listen<br />and respond to changes made by other components (Calendar Popover, for example).</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onInputChange(e) {
+
+  if (this.isTypeahead) {
+    this.isActive = e.target.value ? true : false;
+    this._updateClass();
+  }
+
+  if (this._pauseInputChange) return;
+  this.setValue(parsedDomFormat.getValues(e.target.value));
+  (this.onChange || noop)(this.inputEl.value, this);
+}</code></pre>
+          <section id="_onClick">
+            <h1>_onClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the input group is clicked, focus on the first typeahead<br />if we don&#39;t already have focus.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onClick(</code></pre>
+          <div class="description"><p>e</p></div>
+          <pre><code class="language-javascript">{</code></pre>
+          <div class="description"><p>if (this.isTypeahead || this.inFocus || this.isActive || getParent(e.target, &#39;.spark-input__addon&#39;)) {<br />      return;<br />    }</p><pre><code>let input = this.typeaheadEls[0].querySelector(&#39;input&#39;);
+
+if (input) {
+  input.focus();
+}
+</code></pre></div>
+          <pre><code class="language-javascript">}
+}</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>DateInput.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">DateInput.prototype._whitelistedParams = ['validate', 'onValidate', 'onChange', 'onInput', 'onFocus', 'onBlur', 'isTypeahead', 'isSelect', 'format', 'textFormat', 'showDateAsText', 'min', 'max'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>DateInput.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">DateInput.prototype.defaults = {
+  el: null,
+  inputEl: null,
+  messageEl: null,
+  piecesEl: null,
+  toggleEl: null,
+  inFocus: null,
+  isActive: null,
+  isSelect: null,
+  isTypeahead: null,
+  typeaheads: null,
+  typeaheadEls: null,
+  selects: null,
+  selectEls: null,
+  format: null,
+  parsedFormat: null,
+  showDateAsText: null,
+  textFormat: null,
+  runningTypeaheads: false,
+  onValidate: null,
+  onChange: null,
+  onInput: null,
+  onFocus: null,
+  onBlur: null,
+  _hasFocus: false,
+  _pauseInputChange: false,
+  _onClickBound: null,
+  _onPieceChangeBound: null,
+  _onTypeaheadFocusBound: null,
+  _onTypeaheadBlurBound: null,
+  _onTypeaheadInputBound: null,
+  _onTypeaheadBackspaceBound: null,
+  _onTypeaheadEndBound: null,
+  _onInputChangeBound: null
+};
+
+mixin(DateInput.prototype, messaging, validation);
+
+export default DateInput;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with<a href="https://github.com/mr-doc/mr-doc">Mr. Doc</a> created by<a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau</a></p>
+        <p>Mr. Doc is sponsored by<a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr</a> and<a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../js/twitter-widget.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap-transition.min.js"></script>
+    <script src="../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../js/bootstrap-dropdown.min.js"></script>
+    <script src="../js/bootstrap-collapse.min.js"></script>
+    <script src="../js/bootstrap-affix.min.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script src="../js/index.min.js"></script>
+  </body>
+</html>

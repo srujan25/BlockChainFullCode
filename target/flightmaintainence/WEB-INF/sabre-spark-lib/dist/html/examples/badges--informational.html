@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Badges - Informational</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<div class="row spark-mar-b-2">
+  <div class="col-xs-12">
+    <span class="spark-badge spark-badge--neutral spark-mar-r-2">6</span>
+
+    <span class="spark-badge spark-badge--critical spark-mar-r-2">8</span>
+  </div>
+</div>
+
+<div class="row spark-mar-b-2">
+  <div class="col-xs-12">
+    <span tabindex="0" class="spark-badge spark-badge--neutral spark-tooltip" aria-expanded="false" aria-describedby="tooltip1">
+      $23,000
+      <span id="tooltip1" class="spark-tooltip__content--right" role="tooltip">
+        Itinerary cost
+        <span class="spark-tooltip__caret"></span>
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="row spark-mar-b-2">
+  <div class="col-xs-12">
+    <span tabindex="0" class="spark-badge spark-badge--sm spark-badge--warning spark-tooltip" aria-expanded="false" aria-describedby="tooltip2">
+      $23,000
+      <span id="tooltip2" class="spark-tooltip__content--right" role="tooltip">
+        Itinerary cost
+        <span class="spark-tooltip__caret"></span>
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="row spark-mar-b-2">
+  <div class="col-xs-12">
+    <span class="spark-popover spark-inline-block">
+      <span tabindex="0" class="spark-badge spark-badge--success spark-popover__toggle">$23,000</span>
+      <div class="spark-popover__content" role="tooltip" data-anchor-x="center" data-anchor-y="bottom">
+        <p class="spark-mar-b-0">This particular item is<br /> extremely overpriced.</p>
+        <span class="spark-popover__caret"></span>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <span class="spark-popover spark-inline-block">
+      <span tabindex="0" class="spark-badge spark-badge--sm spark-badge--critical spark-popover__toggle">$23,000</span>
+      <div class="spark-popover__content" role="tooltip" data-anchor-x="center" data-anchor-y="bottom">
+        <p class="spark-mar-b-0">This particular item is<br /> extremely overpriced.</p>
+        <span class="spark-popover__caret"></span>
+      </div>
+    </span>
+  </div>
+</div>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+var popovers = document.querySelectorAll('.spark-popover');
+for(var i = 0, len = popovers.length; i < len; i++) {
+  new Spark.Popover(popovers[i]);
+}
+
+
+var tooltips = document.querySelectorAll('.spark-tooltip');
+for(var i = 0, len = tooltips.length; i < len; i++) {
+  new Spark.Tooltip(tooltips[i]);
+}
+
+      });
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,33 @@
+////
+/// ## Clear
+/// Clears based on screen size
+/// @group helpers/clear
+////
+
+
+/// Clear an element on both sides
+.spark-clear {
+  clear: both;
+}
+
+@include make-media-queries('.spark-clear', 'Clear an element on both sides') {
+  clear: both;
+};
+
+/// Clear an element on the left side
+.spark-clear-left {
+  clear: left;
+}
+
+@include make-media-queries('.spark-clear-left', 'Clear an element on the left side') {
+  clear: left;
+};
+
+/// Clear an element on the right side
+.spark-clear-right {
+  clear: right;
+}
+
+@include make-media-queries('.spark-clear-right', 'Clear an element on the right side') {
+  clear: right;
+};

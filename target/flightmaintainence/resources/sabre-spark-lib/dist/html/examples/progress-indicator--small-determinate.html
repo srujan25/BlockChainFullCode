@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Progress Indicator - Small Determinate</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<div class="spark-progress spark-progress--horizontal spark-progress--sm" role="progressbar">
+  <progress value="0"></progress>
+  <span class="spark-progress__text">
+    <span class="spark-progress__value"><span role="status">0%</span> complete</span>
+    <ul class="spark-progress__states" role="note">
+      <li data-value="0" class="active">Applying Policy Rules</li>
+      <li data-value="20">Sorting Options</li>
+      <li data-value="40">Generating Jobs</li>
+      <li data-value="60">Perturbing Matrices</li>
+      <li data-value="80">Reticulating Splines</li>
+      <li data-value="100">All done!</li>
+    </ul>
+  </span>
+  <span class="spark-progress__meter"></span>
+</div>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+function incrementProgress(obj, val, stop) {
+  val = val || 0.01;
+  stop = stop || 1;
+  obj.set(Math.min(val, 1));
+  if (val < 1 && val < stop) {
+    window.setTimeout(function() {
+      incrementProgress(obj, val + 0.01, stop);
+    }, 50);
+  }
+  else if (val >= stop) {
+    // STOP THE MADNESS
+    return;
+  }
+  else {
+    window.setTimeout(function() {
+      obj.set(0);
+      window.setTimeout(function() {
+        incrementProgress(obj, 0);
+      }, 500);
+    }, 2000);
+  }
+}
+
+var progress = document.querySelectorAll('.spark-progress--horizontal');
+for(var i = 0, len = progress.length; i < len; i++) {
+  incrementProgress(new Spark.ProgressIndicator(progress[i]));
+}
+
+      });
+    </script>
+
+  </body>
+
+</html>

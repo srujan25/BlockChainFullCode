@@ -1,0 +1,41 @@
+////
+/// ## Panel Configuration
+/// @group config/components
+////
+
+
+/// Panel `border-radius`
+/// @type {Number}
+$panel__border-radius: .25rem !default;
+
+/// Panel `background-color`
+/// @type {Color}
+$panel__background-color: $white !default;
+
+/// Panel `border`
+/// @type {String}
+$panel__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Panel masthead `box-shadow`
+/// @type {String}
+$panel__masthead__box-shadow: inset 0 84px 84px -84px $gray !default;
+
+/// Panel expanded content `box-shadow`
+/// @type {String}
+$panel--expand__content__shadow: 0 3px 16px 0 map-get($gray-color-steps, 300) !default;
+
+/// Panel expanded header `border`
+/// @type {String}
+$panel--expand__header__border: 1px solid transparent !default;
+
+/// Panel expanded header `color`
+/// @type {Color}
+$panel--expand__header__color: map-get($gray-color-steps, 800) !default;
+
+/// Panel expanded header `border` on hover
+/// @type {String}
+$panel--expand__header--hover__border: 1px solid map-get($gray-color-steps, 500) !default;
+
+/// Panel expanded header `color` on hover
+/// @type {Color}
+$panel--expand__header--hover__color: map-get($gray-color-steps, 800) !default;

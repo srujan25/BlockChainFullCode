@@ -1,0 +1,24 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Panel" %}
+
+{% block example %}
+<div class="spark-panel spark-panel--card col-xs-12 col-sm-6">
+  <div class="spark-panel__content spark-expand">
+    <h3>
+      Panel heading
+    </h3>
+    <p>
+      Donec tincidunt vitae magna non ultricies. Maecenas sed mauris imperdiet, rhoncus mauris eget, eleifend ex. Donec turpis enim, interdum et ullamcorper nec, hendrerit eget libero. Maecenas dictum laoreet venenatis. Nulla nulla velit, semper et hendrerit vitae, gravida a tortor. In sed iaculis velit. Mauris dignissim maximus neque non luctus.
+    </p>
+    <p id="panel__content" class="spark-expand__content" aria-hidden="true">
+      Duis elit laborum cupidatat do cillum nulla est culpa elit cillum culpa in culpa velit nisi commodo commodo sit Duis magna irure anim enim nisi mollit sit et enim adipisicing aute sed proident consequat proident ullamco consectetur fugiat dolore culpa deserunt veniam eu magna dolor proident tempor aliqua dolor officia enim.
+    </p>
+    <button class="spark-btn spark-btn--text spark-expand__toggle spark-expand__hide--expanded" aria-expanded="false" aria-hidden="false" aria-controls="panel__content">View More<span class="spark-expand__toggle-caret"></span></button>
+    <button class="spark-btn spark-btn--text spark-expand__toggle spark-expand__show--expanded" aria-expanded="true" aria-hidden="true" aria-controls="panel__content">View Less<span class="spark-expand__toggle-caret"></span></button>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/expand.js" %}
+{% endblock %}

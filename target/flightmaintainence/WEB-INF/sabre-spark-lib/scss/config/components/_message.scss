@@ -1,0 +1,147 @@
+////
+/// ## Message Configuration
+/// @group config/components
+////
+
+
+// Info
+
+/// Message info `background-color`
+/// @type {Color}
+$message--info__background-color: transparent !default;
+
+/// Message info `color`
+/// @type {Color}
+$message--info__color: map-get($gray-color-steps, 900) !default;
+
+/// Message info icon `background-color`
+/// @type {Color}
+$message--info__icon__background-color: $color-state-info !default;
+
+/// Message info icon `border`
+/// @type {String}
+$message--info__icon__border: 2px solid map-get($blue-color-steps, 400) !default;
+
+/// Message info icon `color`
+/// @type {Color}
+$message--info__icon__color: $white !default;
+
+/// Message info heading `color`
+/// @type {Color}
+$message--info__heading__color: $color-state-info !default;
+
+/// Message info message content `background-color`
+/// @type {Color}
+$message--info__message__background-color: $color-state-info !default;
+
+/// Message info message content `color`
+/// @type {Color}
+$message--info__message__color: $white !default;
+
+
+
+// Warning
+
+/// Message warning `background-color`
+/// @type {Color}
+$message--warning__background-color: transparent !default;
+
+/// Message warning `color`
+/// @type {Color}
+$message--warning__color: map-get($gray-color-steps, 900) !default;
+
+/// Message warning icon `background-color`
+/// @type {Color}
+$message--warning__icon__background-color: $color-state-warning !default;
+
+/// Message warning icon `border`
+/// @type {String}
+$message--warning__icon__border: 2px solid $color-state-warning--dark !default;
+
+/// Message warning icon `color`
+/// @type {Color}
+$message--warning__icon__color: $white !default;
+
+/// Message warning heading `color`
+/// @type {Color}
+$message--warning__heading__color: $color-state-warning--text !default;
+
+/// Message warning message content `background-color`
+/// @type {Color}
+$message--warning__message__background-color: $color-state-warning !default;
+
+/// Message warning message content `color`
+/// @type {Color}
+$message--warning__message__color: $white !default;
+
+
+
+// Error
+
+/// Message error `background-color`
+/// @type {Color}
+$message--error__background-color: transparent !default;
+
+/// Message error `color`
+/// @type {Color}
+$message--error__color: map-get($gray-color-steps, 900) !default;
+
+/// Message error icon `background-color`
+/// @type {Color}
+$message--error__icon__background-color: $color-state-danger !default;
+
+/// Message error icon `border`
+/// @type {String}
+$message--error__icon__border: 2px solid $color-state-danger--dark !default;
+
+/// Message error icon `color`
+/// @type {Color}
+$message--error__icon__color: $white !default;
+
+/// Message error heading `color`
+/// @type {Color}
+$message--error__heading__color: $color-state-danger !default;
+
+/// Message error message content `background-color`
+/// @type {Color}
+$message--error__message__background-color: $color-state-danger !default;
+
+/// Message error message content `color`
+/// @type {Color}
+$message--error__message__color: $white !default;
+
+
+
+// Success
+
+/// Message success `background-color`
+/// @type {Color}
+$message--success__background-color: transparent !default;
+
+/// Message success `color`
+/// @type {Color}
+$message--success__color: map-get($gray-color-steps, 900) !default;
+
+/// Message success icon `background-color`
+/// @type {Color}
+$message--success__icon__background-color: $color-state-success !default;
+
+/// Message success icon `border`
+/// @type {String}
+$message--success__icon__border: 2px solid $color-state-success--dark !default;
+
+/// Message success icon `color`
+/// @type {Color}
+$message--success__icon__color: $white !default;
+
+/// Message success heading `color`
+/// @type {Color}
+$message--success__heading__color: $color-state-success--text !default;
+
+/// Message success message content `background-color`
+/// @type {Color}
+$message--success__message__background-color: $color-state-success !default;
+
+/// Message success message content `color`
+/// @type {Color}
+$message--success__message__color: $white !default;

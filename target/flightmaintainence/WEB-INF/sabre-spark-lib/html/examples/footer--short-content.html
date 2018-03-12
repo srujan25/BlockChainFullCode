@@ -1,0 +1,82 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Footer - Short Content" %}
+{% set bodyClass = "spark-content--sticky-footer" %}
+
+{% block example %}
+<div class="spark-content__wrapper--sticky-footer">
+
+  <!-- SECTION ONLY FOR DEMO -->
+  <main id="demo-scroll-background" class="spark-main--sticky-footer shortbody">
+    <div class="spark-splash-screen__center">
+      <h1 class="spark-mega spark-splash-screen__heading" style="margin-top:7rem; color: white;">Scroll Down</h1>
+      <h2 class="spark-splash-screen__heading" style="color: white;">(Content Resizes)</h2>
+      <h1 class="spark-mega spark-splash-screen__heading" style="color: white;"><i class="spark-icon--lg spark-icon-arrow-basic-down"></i></h1>
+    </div>
+  </main>
+  <!-- END SECTION ONLY FOR DEMO -->
+
+  <footer class="spark-footer">
+    <div class="container">
+      <a class="spark-footer__logo spark-hidden--lte-sm" title="Sabre"><i class="spark-logo spark-logo--sabre spark-logo--xs"></i></a>
+      <div class="spark-footer__content">
+        <div class="spark-footer__copyright">
+          © 2015-16 Sabre <span class="spark-hidden--lte-md">Curabitur blandit tempus porttitor.</span>
+        </div>
+        <ul class="spark-footer__list">
+          <li class="spark-footer__list-item">
+            <a class="spark-footer__list-link" href="javascript: void(0);">
+              Legal Policy
+            </a>
+          </li>
+          <li class="spark-footer__list-item">
+            <a class="spark-footer__list-link" href="javascript: void(0);">
+              Contact Us
+            </a>
+          </li>
+          <li class="spark-footer__list-item">
+            <a class="spark-footer__list-link" href="javascript: void(0);">
+              Support
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="spark-footer__list spark-footer__list--right spark-footer__list--icons">
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="Twitter">
+            <i class="spark-icon-social-twitter spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="Facebook">
+            <i class="spark-icon-social-facebook spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="LinkedIn">
+            <i class="spark-icon-social-linkedin spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="Instagram">
+            <i class="spark-icon-social-instagram spark-icon--fill"></i>
+          </a>
+        </li>
+        <li class="spark-footer__list-item">
+          <a class="spark-footer__list-link" title="YouTube">
+            <i class="spark-icon-social-youtube spark-icon--fill"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+{% endblock %}
+
+{% block styles %}
+{% include "examples/partials/styles/scroll.css" %}
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

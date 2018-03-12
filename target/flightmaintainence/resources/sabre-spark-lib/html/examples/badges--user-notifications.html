@@ -1,0 +1,27 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Badges - User Notifications" %}
+
+{% block example %}
+<div class="row">
+  <div class="col-xs-12 col-md-3 col-lg-2 spark-mar-b-2--lte-sm">
+    <a href="" class="spark-avatar spark-avatar--text" aria-label="Laurence Traveler" aria-describedby="message1">
+      LT
+      <span id="message1" class="spark-badge--notification spark-badge--notification__light" aria-label="23 messages">23</span>
+    </a>
+  </div>
+
+  <div class="col-xs-12 col-md-3 col-lg-2 spark-mar-b-2--lte-sm">
+    <a href="" class="spark-avatar spark-avatar--image">
+      <img src="../../images/profile-pic.jpg" alt="Guy Wolfe" aria-describedby="message2"/>
+      <span id="message2" class="spark-badge--notification spark-badge--notification__critical" aria-label="23 unread messages">23</span>
+    </a>
+  </div>
+
+  <div class="col-xs-12 col-md-3 col-lg-2 spark-mar-b-2--lte-sm">
+    <a href="" class="spark-avatar spark-avatar--image">
+      <img src="../../images/profile-pic.jpg" alt="Guy Wolfe" aria-describedby="message3"/>
+      <span id="message3" class="spark-badge--notification spark-badge--notification__critical" aria-label="120 unread messages">99+</span>
+    </a>
+  </div>
+</div>
+{% endblock %}
