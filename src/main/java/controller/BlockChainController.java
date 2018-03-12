@@ -177,7 +177,6 @@ public class BlockChainController {
         componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponent#"+serviceTransaction.getAircraftComponent());
         componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
         componentMap.put("transactionId", "");
-        componentMap.put("timestamp", new Date().toString());
 
         ObjectMapper mapper = new ObjectMapper();
         String jsonResult = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(componentMap);
