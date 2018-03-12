@@ -54,7 +54,8 @@
                                     <option value="L">Landline</option>
                                 </select><span class="spark-label"></span></label></div>
 
-                                <div class="col-xs-6 rsv-guest-details-info__phone-input"><label class="spark-input"><input
+                                <div class="col-xs-6 rsv-guest-details-info__phone-input"><label class="spark-input">
+                                <input
                                         class="spark-input__field" name="phonenumber" role="textbox" value="" maxlength="25"><span
                                         class="spark-label">Phone</span></label></div>
                                 <div class="col-xs-4"></div>
@@ -69,7 +70,8 @@
                         <div class="container rsv-guest-details-info__address">
                             <div class="row">
                                 <div class="col-xs-3"><label
-                                        class="spark-select spark-select--no-label rsv-guest-details-info-address__label"><select
+                                        class="spark-select spark-select--no-label rsv-guest-details-info-address__label">
+                                        <select name="addressType"
                                         class="spark-select__input rsv-guest-details-info-address__select">
                                     <option value="P">PERSONAL</option>
                                     <option value="B">BUSINESS</option>
@@ -99,8 +101,10 @@
                                 <input name=""
                                         class="spark-input__field" name="state" role="textbox" maxlength="2" value=""><span
                                         class="spark-label">State</span></label></div>
-                                <div class="col-xs-4 rsv-guest-details-info-address-zipcode"><label class="spark-input"><input
-                                        class="spark-input__field" name="zipcode" role="textbox" maxlength="10" value=""><span
+                                <div class="col-xs-4 rsv-guest-details-info-address-zipcode"><label class="spark-input">
+                                <input
+                                        class="spark-input__field" name="zipcode" role="textbox" maxlength="10" value="">
+                                        <span
                                         class="spark-label">Postal Code</span></label></div>
                             </div>
                         </div>
