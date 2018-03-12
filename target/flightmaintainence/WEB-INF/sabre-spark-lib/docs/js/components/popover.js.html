@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cayman.min.css">
+    <link rel="stylesheet" href="../css/prism.min.css">
+    <link rel="stylesheet" href="../css/index.min.css">
+    <link rel="stylesheet" href="../css/docs.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../index.html">Main</a></li>
+            <li><a href="../components/base.js.html">components/base.js</a></li>
+            <li><a href="../components/calendar-popover.js.html">components/calendar-popover.js</a></li>
+            <li><a href="../components/carousel.js.html">components/carousel.js</a></li>
+            <li><a href="../components/date-input.js.html">components/date-input.js</a></li>
+            <li><a href="../components/date-select.js.html">components/date-select.js</a></li>
+            <li><a href="../components/date-typeahead.js.html">components/date-typeahead.js</a></li>
+            <li><a href="../components/expand.js.html">components/expand.js</a></li>
+            <li><a href="../components/filter-module.js.html">components/filter-module.js</a></li>
+            <li><a href="../components/filter.js.html">components/filter.js</a></li>
+            <li><a href="../components/header.js.html">components/header.js</a></li>
+            <li><a href="../components/menu.js.html">components/menu.js</a></li>
+            <li><a href="../components/modal.js.html">components/modal.js</a></li>
+            <li><a href="../components/multi-select-input.js.html">components/multi-select-input.js</a></li>
+            <li><a href="../components/number-selector.js.html">components/number-selector.js</a></li>
+            <li class="active"><a href="../components/popover.js.html">components/popover.js</a></li>
+            <li><a href="../components/progress-indicator.js.html">components/progress-indicator.js</a></li>
+            <li><a href="../components/range-slider.js.html">components/range-slider.js</a></li>
+            <li><a href="../components/scroll-to-top.js.html">components/scroll-to-top.js</a></li>
+            <li><a href="../components/select-input.js.html">components/select-input.js</a></li>
+            <li><a href="../components/slider.js.html">components/slider.js</a></li>
+            <li><a href="../components/step-indicator.js.html">components/step-indicator.js</a></li>
+            <li><a href="../components/table.js.html">components/table.js</a></li>
+            <li><a href="../components/tabs.js.html">components/tabs.js</a></li>
+            <li><a href="../components/text-input.js.html">components/text-input.js</a></li>
+            <li><a href="../components/toggle-switch.js.html">components/toggle-switch.js</a></li>
+            <li><a href="../components/toolbar.js.html">components/toolbar.js</a></li>
+            <li><a href="../components/tooltip.js.html">components/tooltip.js</a></li>
+            <li><a href="../components/typeahead.js.html">components/typeahead.js</a></li>
+            <li><a href="../helpers/animation/cancel.js.html">helpers/animation/cancel.js</a></li>
+            <li><a href="../helpers/animation/height.js.html">helpers/animation/height.js</a></li>
+            <li><a href="../helpers/animation/request.js.html">helpers/animation/request.js</a></li>
+            <li><a href="../helpers/animation/scroll-to.js.html">helpers/animation/scroll-to.js</a></li>
+            <li><a href="../helpers/animation/tween.js.html">helpers/animation/tween.js</a></li>
+            <li><a href="../helpers/css/transform.js.html">helpers/css/transform.js</a></li>
+            <li><a href="../helpers/date/date.js.html">helpers/date/date.js</a></li>
+            <li><a href="../helpers/date/parse-format.js.html">helpers/date/parse-format.js</a></li>
+            <li><a href="../helpers/dom/add-class.js.html">helpers/dom/add-class.js</a></li>
+            <li><a href="../helpers/dom/breakpoint.js.html">helpers/dom/breakpoint.js</a></li>
+            <li><a href="../helpers/dom/has-class.js.html">helpers/dom/has-class.js</a></li>
+            <li><a href="../helpers/dom/make-element.js.html">helpers/dom/make-element.js</a></li>
+            <li><a href="../helpers/dom/offset.js.html">helpers/dom/offset.js</a></li>
+            <li><a href="../helpers/dom/outer-height.js.html">helpers/dom/outer-height.js</a></li>
+            <li><a href="../helpers/dom/outer-width.js.html">helpers/dom/outer-width.js</a></li>
+            <li><a href="../helpers/dom/parse-attribute.js.html">helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../helpers/dom/remove-class.js.html">helpers/dom/remove-class.js</a></li>
+            <li><a href="../helpers/dom/toggle-class.js.html">helpers/dom/toggle-class.js</a></li>
+            <li><a href="../helpers/dom/trigger-event.js.html">helpers/dom/trigger-event.js</a></li>
+            <li><a href="../helpers/form/build-select.js.html">helpers/form/build-select.js</a></li>
+            <li><a href="../helpers/form/form-data.js.html">helpers/form/form-data.js</a></li>
+            <li><a href="../helpers/form/set-caret.js.html">helpers/form/set-caret.js</a></li>
+            <li><a href="../helpers/manipulation/append-children.js.html">helpers/manipulation/append-children.js</a></li>
+            <li><a href="../helpers/manipulation/copy-attributes.js.html">helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../helpers/manipulation/insert-before.js.html">helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../helpers/manipulation/wrap-element.js.html">helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../helpers/position/affix.js.html">helpers/position/affix.js</a></li>
+            <li><a href="../helpers/position/box-position.js.html">helpers/position/box-position.js</a></li>
+            <li><a href="../helpers/traversal/get-child.js.html">helpers/traversal/get-child.js</a></li>
+            <li><a href="../helpers/traversal/get-children.js.html">helpers/traversal/get-children.js</a></li>
+            <li><a href="../helpers/traversal/get-index.js.html">helpers/traversal/get-index.js</a></li>
+            <li><a href="../helpers/traversal/get-parent.js.html">helpers/traversal/get-parent.js</a></li>
+            <li><a href="../helpers/traversal/get-parents.js.html">helpers/traversal/get-parents.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-after.js.html">helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../helpers/traversal/get-sibling-before.js.html">helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../helpers/traversal/has-parent.js.html">helpers/traversal/has-parent.js</a></li>
+            <li><a href="../helpers/traversal/matches.js.html">helpers/traversal/matches.js</a></li>
+            <li><a href="../helpers/util/debounce.js.html">helpers/util/debounce.js</a></li>
+            <li><a href="../helpers/util/each.js.html">helpers/util/each.js</a></li>
+            <li><a href="../helpers/util/mixin.js.html">helpers/util/mixin.js</a></li>
+            <li><a href="../helpers/util/pad.js.html">helpers/util/pad.js</a></li>
+            <li><a href="../helpers/util/range.js.html">helpers/util/range.js</a></li>
+            <li><a href="../helpers/util/round.js.html">helpers/util/round.js</a></li>
+            <li><a href="../helpers/util/trim.js.html">helpers/util/trim.js</a></li>
+            <li><a href="../mixins/messaging.js.html">mixins/messaging.js</a></li>
+            <li><a href="../mixins/validation.js.html">mixins/validation.js</a></li>
+            <li><a href="../spark.jquery.js.html">spark.jquery.js</a></li>
+            <li><a href="../spark.js.html">spark.js</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <div class="description"><h1>Popover</h1>
+<p>Show and hide a popover. Should do some sanity checks on positioning as well.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>module</td>
+                <td></td>
+                <td>components/popover.js</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">import BaseComponent from './base';
+import addClass from '../helpers/dom/add-class';
+import hasClass from '../helpers/dom/has-class';
+import toggleClass from '../helpers/dom/toggle-class';
+import appendChildren from '../helpers/manipulation/append-children';
+import hasParent from '../helpers/traversal/has-parent';
+import getParent from '../helpers/traversal/get-parent';
+import {string as parseStringAttribute} from '../helpers/dom/parse-attribute';
+import Affix from '../helpers/position/affix';
+
+const noop = function() {};
+
+class Popover extends BaseComponent {
+
+  constructor(el, params = {}) {
+    super(el, params);
+    if (!el) return this;
+    this._bindEventListenerCallbacks();
+    this._addEventListeners();
+  }</code></pre>
+          <h5>Example</h5>
+          <pre><code class="language-javascript">new Popover(el, {
+  // Optional. Default anchoring of the content's x and y-axis relative to the button.
+  defaultAnchorX: 'center', // 'left', 'center', 'right'
+  defaultAnchorY: 'center' // 'left', 'center', 'right'
+});</code></pre>
+          <section id="open">
+            <h1>open</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>open()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Open.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">open(params = {}) {
+
+  // If there is a timer running for the close event, clear it so it
+  // doesn't close stuff during open.
+  if (this.closeTimer) {
+    clearTimeout(this.closeTimer);
+    this.closeTimer = null;
+  }
+
+  // If the element we anchor the popover to is fixed, we need to know
+  // so that the affixed content can also be fixed.
+  this._checkFixedPosition();
+
+  // Update an existing affixed instance.
+  if (this.affix) {
+    this.affix.targetEl = params.affixTo || this.affix.targetEl;
+    this.affix.update();
+  }
+  // Affix the content to the toggle
+  else {
+    this.affix = new Affix({
+      el: this.contentEl,
+      targetEl: params.affixTo || this.el,
+      caretEl: this.caretEl,
+      anchorX: this.anchorX,
+      anchorY: this.anchorY,
+      isFixed: this.isFixed
+    });
+  }
+
+  // Find all focusable elements in the Popover for navigation
+  let popoverFocusableEls = this.contentEl.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex=&quot;0&quot;]');
+
+  if ( popoverFocusableEls.length &gt; 0 ) {
+    this.popoverFocusableEls = Array.prototype.slice.call(popoverFocusableEls);
+    this.firstPopoverFocusableEl = this.popoverFocusableEls[0];
+    this.lastPopoverFocusableEl = this.popoverFocusableEls[ this.popoverFocusableEls.length - 1 ];
+  }
+
+  // Listen for clicks on the window
+  this._addWindowEventListeners();
+
+  this.isActive = true;
+
+  // Dispatch a custom event so content inside the popover can respond
+  var e = document.createEvent('Event');
+  e.initEvent('spark.visible-children', true, true);
+  this.contentEl.dispatchEvent(e);
+
+  // Update bindings
+  this._updateAttributes();
+
+  // Set focus to first focusable element once Popover has been opened
+  if ( popoverFocusableEls.length &gt; 0 ) {
+    this.firstPopoverFocusableEl.focus();
+  }
+
+  // Callbacks
+  (params.complete || noop)();
+  (this.onOpen || noop)();
+
+  return this;
+}</code></pre>
+          <section id="close">
+            <h1>close</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>close()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Close.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">close(params = {}) {
+
+  // Not open, so don't close.
+  if (!this.affix) return this;
+
+  // If there is a timer running for the close event, clear it so we don't run close stuff twice.
+  if (this.closeTimer) {
+    clearTimeout(this.closeTimer);
+    this.closeTimer = null;
+  }
+
+  // Stop listening to window clicks.
+  this._removeWindowEventListeners();
+
+  this.isActive = false;
+
+  // Update bindings
+  this._updateAttributes();
+
+  // Close after the animation has completed
+  this.closeTimer = setTimeout(() =&gt; {
+    this._finishClose(params);
+  }, 250);
+
+  return this;
+}</code></pre>
+          <section id="toggle">
+            <h1>toggle</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>toggle()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Toggle the open state.</p></div>
+          <pre><code class="language-javascript">toggle() {
+  return this[this.isActive ? 'close' : 'open']();
+}</code></pre>
+          <section id="setContent">
+            <h1>setContent</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>setContent()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set the content. Optionally append instead of replacing.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>content</td>
+                <td>Element, Array, NodeList</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">setContent(content, params) {
+  params = params || {};
+  appendChildren(this.contentEl, content.length ? content : [content], !(params.append || false));
+  return this;
+}</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update the component to use a new element or reparse from<br />the existing element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">update(el) {
+
+  this._removeEventListeners();
+  this._cacheElements(el || this.el);
+  this._addEventListeners();
+
+  if (this.affix) this.affix.update();
+
+  return this;
+}</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Store a reference to the tabs list, each tab and each panel.<br />Set which tab is active, or use the first.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_cacheElements(el) {
+
+  // If a content element was already passed, make sure it has a popover content class
+  if (this.contentEl) {
+    addClass(this.contentEl, 'spark-popover__content');
+  }
+
+  this.el = el;
+  this.toggleEl = this.el.querySelector('.spark-popover__toggle, [data-role=&quot;toggle&quot;]') || this.el;
+  this.contentEl = this.contentEl || this.el.querySelector('.spark-popover__content, [class*=&quot;spark-popover__content--&quot;]') || this._createContentEl();
+  this.caretEl = this.contentEl.querySelector('.spark-popover__caret') || this._createCaretEl();
+  this.isActive = hasClass(this.toggleEl, 'popover-active');
+}</code></pre>
+          <section id="_parseParams">
+            <h1>_parseParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_parseParams()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Parse config values from the element.</p></div>
+          <pre><code class="language-javascript">_parseParams() {
+
+  this.anchorY = this.anchorY !== null ? this.anchorY : parseStringAttribute(this.contentEl, 'data-anchor-y', null);
+  this.anchorX = this.anchorX !== null ? this.anchorX : parseStringAttribute(this.contentEl, 'data-anchor-x', null);
+
+  // No anchors defined
+  if (!this.anchorY &amp;&amp; !this.anchorX) {
+
+    // Left
+    if (hasClass(this.contentEl, 'spark-popover__content--left')) {
+      this.anchorY = 'middle';
+      this.anchorX = 'left';
+    }
+    // Right
+    else if (hasClass(this.contentEl, 'spark-popover__content--right')) {
+      this.anchorY = 'middle';
+      this.anchorX = 'right';
+    }
+    // Top
+    else if (hasClass(this.contentEl, 'spark-popover__content--top')) {
+      this.anchorY = 'top';
+      this.anchorX = 'center';
+    }
+    // Bottom
+    else {
+      this.anchorY = 'bottom';
+      this.anchorX = 'center';
+    }
+  }
+}</code></pre>
+          <section id="_checkFixedPosition">
+            <h1>_checkFixedPosition</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_checkFixedPosition()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Check to see if the button triggering the popover is fixed.<br />If so, then popover needs to be fixed as well.</p></div>
+          <pre><code class="language-javascript">_checkFixedPosition() {
+
+  let parent = this.el;
+
+  while (parent &amp;&amp; parent !== document) {
+    let style = getComputedStyle(parent);
+    if (style.position === 'fixed') {
+      return this.isFixed = true;
+    }
+    parent = parent.parentNode;
+  }
+
+  return this.isFixed = false;
+}</code></pre>
+          <section id="_updateAttributes">
+            <h1>_updateAttributes</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_updateAttributes()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update classes for the open or close state.</p></div>
+          <pre><code class="language-javascript">_updateAttributes() {
+  toggleClass(this.el, 'popover-active', this.isActive);
+  toggleClass(this.contentEl, 'active', this.isActive);
+  toggleClass(this.toggleEl, 'active', this.isActive);
+}</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because the<br />function signatures won&#39;t match.</p></div>
+          <pre><code class="language-javascript">_bindEventListenerCallbacks() {
+  this._onClickBound = this._onClick.bind(this);
+  this._onContentClickBound = this._onContentClick.bind(this);
+  this._onWindowClickBound = this._onWindowClick.bind(this);
+  this._onKeyupBound = this._onKeyup.bind(this);
+  this._onKeydownBound = this._onKeydown.bind(this);
+}</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners for DOM events.</p></div>
+          <pre><code class="language-javascript">_addEventListeners() {
+  this.el.addEventListener('click', this._onClickBound);
+  this.contentEl.addEventListener('click', this._onContentClickBound);
+}</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners for DOM events..</p></div>
+          <pre><code class="language-javascript">_removeEventListeners() {
+  this.el.removeEventListener('click', this._onClickBound);
+  this.contentEl.removeEventListener('click', this._onContentClickBound);
+}</code></pre>
+          <section id="_addWindowEventListeners">
+            <h1>_addWindowEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_addWindowEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners to the window.</p></div>
+          <pre><code class="language-javascript">_addWindowEventListeners() {
+  this._removeWindowEventListeners();
+  window.addEventListener('click', this._onWindowClickBound);
+  window.addEventListener('keyup', this._onKeyupBound);
+  window.addEventListener('keydown', this._onKeydownBound);
+}</code></pre>
+          <section id="_removeWindowEventListeners">
+            <h1>_removeWindowEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_removeWindowEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove window event listeners.</p></div>
+          <pre><code class="language-javascript">_removeWindowEventListeners() {
+  window.removeEventListener('click', this._onWindowClickBound);
+  window.removeEventListener('keyup', this._onKeyupBound);
+  window.removeEventListener('keydown', this._onKeydownBound);
+}</code></pre>
+          <section id="_createContentEl">
+            <h1>_createContentEl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_createContentEl()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create a content element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>return</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_createContentEl() {
+  var el = document.createElement('div');
+  addClass(el, 'spark-popover__content');
+  el.setAttribute('role', 'tooltip');
+  return el;
+}</code></pre>
+          <section id="_createCaretEl">
+            <h1>_createCaretEl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_createCaretEl()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create the caret element.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>return</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_createCaretEl() {
+  var el = document.createElement('div');
+  el.className = 'spark-popover__caret';
+  this.contentEl.appendChild(el);
+  return el;
+}</code></pre>
+          <section id="_finishClose">
+            <h1>_finishClose</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_finishClose()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Complete the close event by moving the element back and destroying the affix.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_finishClose(params = {}) {
+
+  this.closeTimer = null;
+
+  // Move the content back to the parent
+  this.el.appendChild(this.contentEl);
+
+  this.affix.remove({keepEl: true});
+  this.affix = null;
+
+  (params.complete || noop)();
+  (this.onClose || noop)();
+}</code></pre>
+          <section id="_onClick">
+            <h1>_onClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When we are clicked, toggle the popover-active state.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onClick(e) {
+
+  // If this is the toggle element, toggle.
+  if (e.target === this.toggleEl || hasParent(e.target, this.toggleEl)) {
+    e.preventDefault();
+    this.toggle();
+    return;
+  }
+}</code></pre>
+          <section id="_onKeyup">
+            <h1>_onKeyup</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onKeyup()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When a key is pressed on the window and it&#39;s an ESC, close the popover.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onKeyup(e) {
+  if (e.keyCode === 27) {
+    this.close();
+
+    // Set focus back to toggle
+    this.toggleEl.focus();
+  }
+}</code></pre>
+          <section id="_onKeydown">
+            <h1>_onKeydown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onKeydown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When a key is pressed in an active Popover and it is a Tab key, or Shift+Tab, navigate the popover<br />If it the Enter key, and focus is on the close button, close the Popover</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onKeydown(e) {
+  if (e.keyCode === 9) {
+    if ( this.popoverFocusableEls.length === 1 ) {
+      e.preventDefault();
+    }
+
+    if (e.shiftKey) {
+      this._onBackwardTab(e);
+    }
+    else {
+      this._onForwardTab(e);
+    }
+  }
+
+  // Enter Key
+  if (e.keyCode === 13) {
+    if (e.target === document.querySelector('.spark-popover__close') || getParent(e.target, '.spark-popover__close', this.contentEl)) {
+      e.preventDefault();
+      this.close();
+
+      // Set focus back to toggle
+      this.toggleEl.focus();
+    }
+  }
+}</code></pre>
+          <section id="_onBackwardTab">
+            <h1>_onBackwardTab</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onBackwardTab()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When tabbing backwards, localize traversal to Popover elements only</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onBackwardTab(e) {
+  if ( document.activeElement === this.firstPopoverFocusableEl ) {
+    e.preventDefault();
+    this.lastPopoverFocusableEl.focus();
+  }
+}</code></pre>
+          <section id="_onForwardTab">
+            <h1>_onForwardTab</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onForwardTab()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When tabbing forwards, localize traversal to Popover elements only</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onForwardTab(e) {
+  if ( document.activeElement === this.lastPopoverFocusableEl ) {
+    e.preventDefault();
+    this.firstPopoverFocusableEl.focus();
+  }
+}</code></pre>
+          <section id="_onContentClick">
+            <h1>_onContentClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onContentClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the toggle is clicked, close if it&#39;s a link. If it&#39;s content, don&#39;t do anything but stop<br />the event from bubbling.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onContentClick(e) {
+
+  // If this is a link, close.
+  if (getParent(e.target, '.spark-popover__list-link', this.contentEl) || getParent(e.target, '.spark-popover__close', this.contentEl)) {
+    this.close();
+    return;
+  }
+}</code></pre>
+          <section id="_onWindowClick">
+            <h1>_onWindowClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>_onWindowClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the window is clicked and it&#39;s not part of the popover, close the popover.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Objec</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">_onWindowClick(e) {
+  if (e.target !== this.el &amp;&amp; e.target !== this.contentEl &amp;&amp; !hasParent(e.target, this.el) &amp;&amp; !hasParent(e.target, this.contentEl)) {
+    this.close();
+  }
+}
+}</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Popover.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">Popover.prototype._whitelistedParams = ['anchorX', 'anchorY', 'toggleEl', 'contentEl', 'onOpen', 'onClose'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Popover.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <pre><code class="language-javascript">Popover.prototype.defaults = {
+  el: null,
+  toggleEl: null,
+  contentEl: null,
+  caretEl: null,
+  affix: null,
+  isActive: false,
+  isPaused: false,
+  isFixed: false,
+  anchorX: null,
+  anchorY: null,
+  closeTimer: null,
+  onOpen: null,
+  onClose: null,
+  _onClickBound: null,
+  _onKeyupBound: null,
+  _onKeydownBound: null,
+  _onContentClickBound: null,
+  _onWindowClickBound: null,
+  _onWindowResizeBound: null,
+  _onWindowScrollBound: null
+};
+
+export default Popover;</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with<a href="https://github.com/mr-doc/mr-doc">Mr. Doc</a> created by<a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau</a></p>
+        <p>Mr. Doc is sponsored by<a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr</a> and<a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../js/twitter-widget.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap-transition.min.js"></script>
+    <script src="../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../js/bootstrap-dropdown.min.js"></script>
+    <script src="../js/bootstrap-collapse.min.js"></script>
+    <script src="../js/bootstrap-affix.min.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script src="../js/index.min.js"></script>
+  </body>
+</html>

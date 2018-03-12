@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../css/prism.min.css">
+    <link rel="stylesheet" href="../../css/index.min.css">
+    <link rel="stylesheet" href="../../css/docs.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../index.html">Main</a></li>
+            <li><a href="../../dist/components/base.js.html">dist/components/base.js</a></li>
+            <li><a href="../../dist/components/calendar-popover.js.html">dist/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/components/carousel.js.html">dist/components/carousel.js</a></li>
+            <li><a href="../../dist/components/date-input.js.html">dist/components/date-input.js</a></li>
+            <li><a href="../../dist/components/date-select.js.html">dist/components/date-select.js</a></li>
+            <li><a href="../../dist/components/date-typeahead.js.html">dist/components/date-typeahead.js</a></li>
+            <li><a href="../../dist/components/expand.js.html">dist/components/expand.js</a></li>
+            <li><a href="../../dist/components/filter-module.js.html">dist/components/filter-module.js</a></li>
+            <li><a href="../../dist/components/filter.js.html">dist/components/filter.js</a></li>
+            <li><a href="../../dist/components/header.js.html">dist/components/header.js</a></li>
+            <li><a href="../../dist/components/menu.js.html">dist/components/menu.js</a></li>
+            <li><a href="../../dist/components/modal.js.html">dist/components/modal.js</a></li>
+            <li><a href="../../dist/components/multi-select-input.js.html">dist/components/multi-select-input.js</a></li>
+            <li><a href="../../dist/components/number-selector.js.html">dist/components/number-selector.js</a></li>
+            <li><a href="../../dist/components/popover.js.html">dist/components/popover.js</a></li>
+            <li><a href="../../dist/components/progress-indicator.js.html">dist/components/progress-indicator.js</a></li>
+            <li><a href="../../dist/components/range-slider.js.html">dist/components/range-slider.js</a></li>
+            <li><a href="../../dist/components/scroll-to-top.js.html">dist/components/scroll-to-top.js</a></li>
+            <li><a href="../../dist/components/select-input.js.html">dist/components/select-input.js</a></li>
+            <li><a href="../../dist/components/slider.js.html">dist/components/slider.js</a></li>
+            <li><a href="../../dist/components/step-indicator.js.html">dist/components/step-indicator.js</a></li>
+            <li><a href="../../dist/components/table.js.html">dist/components/table.js</a></li>
+            <li><a href="../../dist/components/tabs.js.html">dist/components/tabs.js</a></li>
+            <li class="active"><a href="../../dist/components/text-input.js.html">dist/components/text-input.js</a></li>
+            <li><a href="../../dist/components/toggle-switch.js.html">dist/components/toggle-switch.js</a></li>
+            <li><a href="../../dist/components/toolbar.js.html">dist/components/toolbar.js</a></li>
+            <li><a href="../../dist/components/tooltip.js.html">dist/components/tooltip.js</a></li>
+            <li><a href="../../dist/components/typeahead.js.html">dist/components/typeahead.js</a></li>
+            <li><a href="../../dist/helpers/animation/cancel.js.html">dist/helpers/animation/cancel.js</a></li>
+            <li><a href="../../dist/helpers/animation/height.js.html">dist/helpers/animation/height.js</a></li>
+            <li><a href="../../dist/helpers/animation/request.js.html">dist/helpers/animation/request.js</a></li>
+            <li><a href="../../dist/helpers/animation/scroll-to.js.html">dist/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../dist/helpers/animation/tween.js.html">dist/helpers/animation/tween.js</a></li>
+            <li><a href="../../dist/helpers/css/transform.js.html">dist/helpers/css/transform.js</a></li>
+            <li><a href="../../dist/helpers/date/date.js.html">dist/helpers/date/date.js</a></li>
+            <li><a href="../../dist/helpers/date/parse-format.js.html">dist/helpers/date/parse-format.js</a></li>
+            <li><a href="../../dist/helpers/dom/add-class.js.html">dist/helpers/dom/add-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/breakpoint.js.html">dist/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../dist/helpers/dom/has-class.js.html">dist/helpers/dom/has-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/make-element.js.html">dist/helpers/dom/make-element.js</a></li>
+            <li><a href="../../dist/helpers/dom/offset.js.html">dist/helpers/dom/offset.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-height.js.html">dist/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-width.js.html">dist/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../dist/helpers/dom/parse-attribute.js.html">dist/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../dist/helpers/dom/remove-class.js.html">dist/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/toggle-class.js.html">dist/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/trigger-event.js.html">dist/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../dist/helpers/form/build-select.js.html">dist/helpers/form/build-select.js</a></li>
+            <li><a href="../../dist/helpers/form/form-data.js.html">dist/helpers/form/form-data.js</a></li>
+            <li><a href="../../dist/helpers/form/set-caret.js.html">dist/helpers/form/set-caret.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/append-children.js.html">dist/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/copy-attributes.js.html">dist/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/insert-before.js.html">dist/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/wrap-element.js.html">dist/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../dist/helpers/position/affix.js.html">dist/helpers/position/affix.js</a></li>
+            <li><a href="../../dist/helpers/position/box-position.js.html">dist/helpers/position/box-position.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-child.js.html">dist/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-children.js.html">dist/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-index.js.html">dist/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parent.js.html">dist/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parents.js.html">dist/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-after.js.html">dist/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-before.js.html">dist/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../dist/helpers/traversal/has-parent.js.html">dist/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/matches.js.html">dist/helpers/traversal/matches.js</a></li>
+            <li><a href="../../dist/helpers/util/debounce.js.html">dist/helpers/util/debounce.js</a></li>
+            <li><a href="../../dist/helpers/util/each.js.html">dist/helpers/util/each.js</a></li>
+            <li><a href="../../dist/helpers/util/mixin.js.html">dist/helpers/util/mixin.js</a></li>
+            <li><a href="../../dist/helpers/util/pad.js.html">dist/helpers/util/pad.js</a></li>
+            <li><a href="../../dist/helpers/util/range.js.html">dist/helpers/util/range.js</a></li>
+            <li><a href="../../dist/helpers/util/round.js.html">dist/helpers/util/round.js</a></li>
+            <li><a href="../../dist/helpers/util/trim.js.html">dist/helpers/util/trim.js</a></li>
+            <li><a href="../../dist/js/src/components/calendar-popover.js.html">dist/js/src/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/js/src/components/filter-module.js.html">dist/js/src/components/filter-module.js</a></li>
+            <li><a href="../../dist/js/src/components/filter.js.html">dist/js/src/components/filter.js</a></li>
+            <li><a href="../../dist/js/src/components/modal.js.html">dist/js/src/components/modal.js</a></li>
+            <li><a href="../../dist/js/src/components/typeahead.js.html">dist/js/src/components/typeahead.js</a></li>
+            <li><a href="../../dist/js/src/spark.js.html">dist/js/src/spark.js</a></li>
+            <li><a href="../../dist/mixins/messaging.js.html">dist/mixins/messaging.js</a></li>
+            <li><a href="../../dist/mixins/validation.js.html">dist/mixins/validation.js</a></li>
+            <li><a href="../../dist/spark.jquery.js.html">dist/spark.jquery.js</a></li>
+            <li><a href="../../dist/spark.js.html">dist/spark.js</a></li>
+            <li><a href="../../src/components/base.js.html">src/components/base.js</a></li>
+            <li><a href="../../src/components/calendar-popover.js.html">src/components/calendar-popover.js</a></li>
+            <li><a href="../../src/components/carousel.js.html">src/components/carousel.js</a></li>
+            <li><a href="../../src/components/date-input.js.html">src/components/date-input.js</a></li>
+            <li><a href="../../src/components/date-select.js.html">src/components/date-select.js</a></li>
+            <li><a href="../../src/components/date-typeahead.js.html">src/components/date-typeahead.js</a></li>
+            <li><a href="../../src/components/expand.js.html">src/components/expand.js</a></li>
+            <li><a href="../../src/components/header.js.html">src/components/header.js</a></li>
+            <li><a href="../../src/components/menu.js.html">src/components/menu.js</a></li>
+            <li><a href="../../src/components/modal.js.html">src/components/modal.js</a></li>
+            <li><a href="../../src/components/multi-select-input.js.html">src/components/multi-select-input.js</a></li>
+            <li><a href="../../src/components/number-selector.js.html">src/components/number-selector.js</a></li>
+            <li><a href="../../src/components/popover.js.html">src/components/popover.js</a></li>
+            <li><a href="../../src/components/progress-indicator.js.html">src/components/progress-indicator.js</a></li>
+            <li><a href="../../src/components/range-slider.js.html">src/components/range-slider.js</a></li>
+            <li><a href="../../src/components/scroll-to-top.js.html">src/components/scroll-to-top.js</a></li>
+            <li><a href="../../src/components/select-input.js.html">src/components/select-input.js</a></li>
+            <li><a href="../../src/components/slider.js.html">src/components/slider.js</a></li>
+            <li><a href="../../src/components/step-indicator.js.html">src/components/step-indicator.js</a></li>
+            <li><a href="../../src/components/table.js.html">src/components/table.js</a></li>
+            <li><a href="../../src/components/tabs.js.html">src/components/tabs.js</a></li>
+            <li><a href="../../src/components/text-input.js.html">src/components/text-input.js</a></li>
+            <li><a href="../../src/components/toggle-switch.js.html">src/components/toggle-switch.js</a></li>
+            <li><a href="../../src/components/toolbar.js.html">src/components/toolbar.js</a></li>
+            <li><a href="../../src/components/tooltip.js.html">src/components/tooltip.js</a></li>
+            <li><a href="../../src/components/typeahead.js.html">src/components/typeahead.js</a></li>
+            <li><a href="../../src/helpers/animation/cancel.js.html">src/helpers/animation/cancel.js</a></li>
+            <li><a href="../../src/helpers/animation/height.js.html">src/helpers/animation/height.js</a></li>
+            <li><a href="../../src/helpers/animation/request.js.html">src/helpers/animation/request.js</a></li>
+            <li><a href="../../src/helpers/animation/scroll-to.js.html">src/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../src/helpers/animation/tween.js.html">src/helpers/animation/tween.js</a></li>
+            <li><a href="../../src/helpers/css/transform.js.html">src/helpers/css/transform.js</a></li>
+            <li><a href="../../src/helpers/date/date.js.html">src/helpers/date/date.js</a></li>
+            <li><a href="../../src/helpers/date/parse-format.js.html">src/helpers/date/parse-format.js</a></li>
+            <li><a href="../../src/helpers/dom/add-class.js.html">src/helpers/dom/add-class.js</a></li>
+            <li><a href="../../src/helpers/dom/breakpoint.js.html">src/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../src/helpers/dom/has-class.js.html">src/helpers/dom/has-class.js</a></li>
+            <li><a href="../../src/helpers/dom/make-element.js.html">src/helpers/dom/make-element.js</a></li>
+            <li><a href="../../src/helpers/dom/offset.js.html">src/helpers/dom/offset.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-height.js.html">src/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-width.js.html">src/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../src/helpers/dom/parse-attribute.js.html">src/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../src/helpers/dom/remove-class.js.html">src/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../src/helpers/dom/toggle-class.js.html">src/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../src/helpers/dom/trigger-event.js.html">src/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../src/helpers/form/build-select.js.html">src/helpers/form/build-select.js</a></li>
+            <li><a href="../../src/helpers/form/form-data.js.html">src/helpers/form/form-data.js</a></li>
+            <li><a href="../../src/helpers/form/set-caret.js.html">src/helpers/form/set-caret.js</a></li>
+            <li><a href="../../src/helpers/manipulation/append-children.js.html">src/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../src/helpers/manipulation/copy-attributes.js.html">src/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../src/helpers/manipulation/insert-before.js.html">src/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../src/helpers/manipulation/wrap-element.js.html">src/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../src/helpers/position/affix.js.html">src/helpers/position/affix.js</a></li>
+            <li><a href="../../src/helpers/position/box-position.js.html">src/helpers/position/box-position.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-child.js.html">src/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-children.js.html">src/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-index.js.html">src/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parent.js.html">src/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parents.js.html">src/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-after.js.html">src/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-before.js.html">src/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../src/helpers/traversal/has-parent.js.html">src/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/matches.js.html">src/helpers/traversal/matches.js</a></li>
+            <li><a href="../../src/helpers/util/debounce.js.html">src/helpers/util/debounce.js</a></li>
+            <li><a href="../../src/helpers/util/each.js.html">src/helpers/util/each.js</a></li>
+            <li><a href="../../src/helpers/util/mixin.js.html">src/helpers/util/mixin.js</a></li>
+            <li><a href="../../src/helpers/util/pad.js.html">src/helpers/util/pad.js</a></li>
+            <li><a href="../../src/helpers/util/range.js.html">src/helpers/util/range.js</a></li>
+            <li><a href="../../src/helpers/util/round.js.html">src/helpers/util/round.js</a></li>
+            <li><a href="../../src/helpers/util/trim.js.html">src/helpers/util/trim.js</a></li>
+            <li><a href="../../src/mixins/messaging.js.html">src/mixins/messaging.js</a></li>
+            <li><a href="../../src/mixins/validation.js.html">src/mixins/validation.js</a></li>
+            <li><a href="../../src/spark.jquery.js.html">src/spark.jquery.js</a></li>
+            <li><a href="../../src/spark.js.html">src/spark.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#noop"><i class="alert alert-info"></i><span>noop</span></a>
+              </li>
+              <li><a href="#TextInput"><i class="alert alert-info"></i><span>TextInput</span></a>
+              </li>
+              <li><a href="#show"><i class="alert alert-info"></i><span>show</span></a>
+              </li>
+              <li><a href="#hide"><i class="alert alert-info"></i><span>hide</span></a>
+              </li>
+              <li><a href="#setValue"><i class="alert alert-info"></i><span>setValue</span></a>
+              </li>
+              <li><a href="#getValue"><i class="alert alert-info"></i><span>getValue</span></a>
+              </li>
+              <li><a href="#clearValue"><i class="alert alert-info"></i><span>clearValue</span></a>
+              </li>
+              <li><a href="#disable"><i class="alert alert-info"></i><span>disable</span></a>
+              </li>
+              <li><a href="#enable"><i class="alert alert-info"></i><span>enable</span></a>
+              </li>
+              <li><a href="#remove"><i class="alert alert-info"></i><span>remove</span></a>
+              </li>
+              <li><a href="#update"><i class="alert alert-info"></i><span>update</span></a>
+              </li>
+              <li><a href="#_createTypeahead"><i class="alert alert-info"></i><span>_createTypeahead</span></a>
+              </li>
+              <li><a href="#_cacheElements"><i class="alert alert-info"></i><span>_cacheElements</span></a>
+              </li>
+              <li><a href="#_parseParams"><i class="alert alert-info"></i><span>_parseParams</span></a>
+              </li>
+              <li><a href="#_setCharactersCount"><i class="alert alert-info"></i><span>_setCharactersCount</span></a>
+              </li>
+              <li><a href="#_setTextareaHeight"><i class="alert alert-info"></i><span>_setTextareaHeight</span></a>
+              </li>
+              <li><a href="#_bindEventListenerCallbacks"><i class="alert alert-info"></i><span>_bindEventListenerCallbacks</span></a>
+              </li>
+              <li><a href="#_addEventListeners"><i class="alert alert-info"></i><span>_addEventListeners</span></a>
+              </li>
+              <li><a href="#_removeEventListeners"><i class="alert alert-info"></i><span>_removeEventListeners</span></a>
+              </li>
+              <li><a href="#_updateClass"><i class="alert alert-info"></i><span>_updateClass</span></a>
+              </li>
+              <li><a href="#_onFocus"><i class="alert alert-info"></i><span>_onFocus</span></a>
+              </li>
+              <li><a href="#_onBlur"><i class="alert alert-info"></i><span>_onBlur</span></a>
+              </li>
+              <li><a href="#_onInput"><i class="alert alert-info"></i><span>_onInput</span></a>
+              </li>
+              <li><a href="#_onClearClick"><i class="alert alert-info"></i><span>_onClearClick</span></a>
+              </li>
+              <li><a href="#_onTogglePasswordViewHide"><i class="alert alert-info"></i><span>_onTogglePasswordViewHide</span></a>
+              </li>
+              <li><a href="#_whitelistedParams"><i class="alert alert-success"></i><span>_whitelistedParams</span></a>
+              </li>
+              <li><a href="#defaults"><i class="alert alert-success"></i><span>defaults</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <section id="noop">
+            <h1>noop</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>noop()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h1>TextInput</h1>
+<p>A text input container.</p></div>
+          <pre><code class="language-javascript">var noop = function noop() {};
+
+var TextInput = function (_BaseComponent) {
+  _inherits(TextInput, _BaseComponent);</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">new TextInput(el, {
+  // Optional. Callback for when the input value changes.
+  onChange(inputInstance, value) {}
+});</code></pre>
+          <section id="TextInput">
+            <h1>TextInput</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>TextInput()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>TextInput constructor.</p></div>
+          <pre><code class="language-javascript">function TextInput(el) {
+  var _this;
+
+  var params = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+
+  _classCallCheck(this, TextInput);
+
+  params.elRequired = true;
+
+  if (!(_this = _possibleConstructorReturn(this, _BaseComponent.call(this, el, params)), _this)) {
+    return _possibleConstructorReturn(_this);
+  }
+
+  _this._bindEventListenerCallbacks();
+  _this._addEventListeners();
+  _this._createTypeahead();
+  return _possibleConstructorReturn(_this);
+}</code></pre>
+          <section id="show">
+            <h1>show</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.show()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Show the input by adding the active state and setting character counts (if necessary).</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.show = function show() {
+  this.isActive = true;
+  this._updateClass();
+  this._setCharactersCount();
+  return this;
+};</code></pre>
+          <section id="hide">
+            <h1>hide</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.hide()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Hide the input by removing the active state.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.hide = function hide() {
+  this.isActive = false;
+  this._updateClass();
+  return this;
+};</code></pre>
+          <section id="setValue">
+            <h1>setValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.setValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>value</td>
+                <td>Mixed</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Set the value of the input.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.setValue = function setValue(value) {
+
+  if (this.typeahead) {
+    this.typeahead.setValue(value);
+  } else {
+    this.inputEl.value = value;
+    if (value) {
+      this.show();
+    } else {
+      this.hide();
+    }
+  }
+
+  return this;
+};</code></pre>
+          <section id="getValue">
+            <h1>getValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.getValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the value of the input.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.getValue = function getValue() {
+  return this.inputEl.value;
+};</code></pre>
+          <section id="clearValue">
+            <h1>clearValue</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.clearValue()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Clear the value of the input.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.clearValue = function clearValue() {
+  if (this.typeahead) this.typeahead.clear();else this.inputEl.value = '';
+  return this;
+};</code></pre>
+          <section id="disable">
+            <h1>disable</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.disable()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Disable the input.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.disable = function disable() {
+  if (this.typeahead) this.typeahead.disable();else this.inputEl.setAttribute('disabled', '');
+  return this;
+};</code></pre>
+          <section id="enable">
+            <h1>enable</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.enable()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Enable the input.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.enable = function enable() {
+  if (this.typeahead) this.typeahead.enable();else this.inputEl.removeAttribute('disabled');
+  return this;
+};</code></pre>
+          <section id="remove">
+            <h1>remove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.remove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>leaveElement</td>
+                <td>Boolean</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Remove.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.remove = function remove(leaveElement) {
+  if (this.typeahead) this.typeahead.remove(leaveElement);
+  return _BaseComponent.prototype.remove.call(this, leaveElement);
+};</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype.update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Update the element in use and the position.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.update = function update(el) {
+  if (this.typeahead) this.typeahead.remove();
+  return _BaseComponent.prototype.update.call(this, el);
+};</code></pre>
+          <section id="_createTypeahead">
+            <h1>_createTypeahead</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._createTypeahead()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create the typeahead instance.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._createTypeahead = function _createTypeahead() {
+
+  if (this.typeahead === true || this.inputEl.getAttribute('data-typeahead') !== null) {
+    this.typeahead = new _typeahead2.default(this.el, {
+      onBlur: this._onBlurBound
+    });
+  }
+};</code></pre>
+          <section id="_cacheElements">
+            <h1>_cacheElements</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._cacheElements()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Store a reference to the needed elements.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._cacheElements = function _cacheElements(el) {
+
+  this.el = el;
+  this.inputEl = this.el.querySelector('input, textarea');
+  this.passwordToggleEl = this.el.querySelector('.spark-input__password-toggle');
+
+  if (!this.inputEl) {
+    throw new Error('No &lt;input&gt; or &lt;textarea&gt; element present in input container!', this.el);
+  }
+
+  this.messageEl = this.el.querySelector('.spark-input__message') || (0, _makeElement2.default)('&lt;span class=&quot;spark-input__message&quot;&gt;&lt;/span&gt;');
+
+  this.clearEl = this.el.querySelector('.spark-input__clear');
+
+  if (this.inputEl.value) {
+    this.show();
+    this._onInput();
+  }
+};</code></pre>
+          <section id="_parseParams">
+            <h1>_parseParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._parseParams()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Parse parameters from the elements.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._parseParams = function _parseParams() {
+
+  this.validatePattern = this.validatePattern || this.inputEl.getAttribute('data-validate');
+  this.type = this.inputEl.getAttribute('type') || 'text';
+  this.showCharacters = this.el.getAttribute('data-characters') !== null ? true : false;
+  this.showCharactersRemaining = this.el.getAttribute('data-characters-remaining') !== null ? true : false;
+  this.maxlength = this.inputEl.getAttribute('maxlength') || this.inputEl.getAttribute('data-maxlength-soft') || null;
+  this.isTextarea = this.inputEl.nodeName.toLowerCase() === 'textarea' ? true : false;
+  this.isActive = this.inputEl.value ? true : false;
+};</code></pre>
+          <section id="_setCharactersCount">
+            <h1>_setCharactersCount</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._setCharactersCount()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set the characters count attribute.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._setCharactersCount = function _setCharactersCount() {
+
+  if (this.showCharacters) {
+    this.el.setAttribute('data-characters', this.inputEl.value.length);
+  } else if (this.showCharactersRemaining) {
+
+    var remaining = this.maxlength - this.inputEl.value.length;
+
+    this.el.setAttribute('data-characters-remaining', remaining);
+
+    if (remaining &lt; 1) {
+      this.el.setAttribute('data-characters-remaining-danger', true);
+    } else {
+      this.el.removeAttribute('data-characters-remaining-danger');
+    }
+  }
+};</code></pre>
+          <section id="_setTextareaHeight">
+            <h1>_setTextareaHeight</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._setTextareaHeight()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set the height of the textarea so that it doesn&#39;t scroll.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._setTextareaHeight = function _setTextareaHeight() {
+
+  var style = window.getComputedStyle(this.inputEl);
+  var borders = parseInt(style.borderTopWidth, 10) + parseInt(style.borderBottomWidth, 10);
+
+  this.inputEl.style.height = null;
+
+  var height = this.inputEl.scrollHeight;
+  var lines;
+
+  // No height, most likely the element is invisible. Get a rough
+  // approximation of height so we have something.
+  if (!height) {
+    lines = this.inputEl.innerHTML.split('\n');
+    height = Math.max(parseFloat(style.lineHeight)) * lines.length + parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
+  }
+
+  this.inputEl.style.height = height + borders + 'px';
+};</code></pre>
+          <section id="_bindEventListenerCallbacks">
+            <h1>_bindEventListenerCallbacks</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._bindEventListenerCallbacks()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Create bound versions of event listener callbacks and store them.<br />Otherwise we can&#39;t unbind from these events later because the<br />function signatures won&#39;t match.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._bindEventListenerCallbacks = function _bindEventListenerCallbacks() {
+  this._onFocusBound = this._onFocus.bind(this);
+  this._onBlurBound = this._onBlur.bind(this);
+  this._onInputBound = this._onInput.bind(this);
+  this._onTogglePasswordViewHideBound = this._onTogglePasswordViewHide.bind(this);
+  this._onClearClickBound = this._onClearClick.bind(this);
+};</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Add event listeners for focus, blur, input, and click.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._addEventListeners = function _addEventListeners() {
+
+  this.inputEl.addEventListener('focus', this._onFocusBound);
+  this.inputEl.addEventListener('blur', this._onBlurBound);
+  this.inputEl.addEventListener('input', this._onInputBound);
+
+  if (this.passwordToggleEl) {
+    this.passwordToggleEl.addEventListener('click', this._onTogglePasswordViewHideBound);
+  }
+
+  if (this.clearEl) {
+    this.clearEl.addEventListener('click', this._onClearClickBound);
+  }
+};</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners for focus, blur and input.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._removeEventListeners = function _removeEventListeners() {
+
+  this.inputEl.removeEventListener('focus', this._onFocusBound);
+  this.inputEl.removeEventListener('blur', this._onBlurBound);
+  this.inputEl.removeEventListener('input', this._onInputBound);
+
+  if (this.passwordToggleEl) {
+    this.passwordToggleEl.removeEventListener('click', this._onTogglePasswordViewHideBound);
+  }
+
+  if (this.clearEl) {
+    this.clearEl.removeEventListener('click', this._onClearClickBound);
+  }
+};</code></pre>
+          <section id="_updateClass">
+            <h1>_updateClass</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._updateClass()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update the active class.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._updateClass = function _updateClass() {
+  (0, _toggleClass2.default)(this.el, 'active', this.isActive);
+};</code></pre>
+          <section id="_onFocus">
+            <h1>_onFocus</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._onFocus()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the input element gains focus.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._onFocus = function _onFocus() {
+  this.show();
+  (this.onFocus || noop)(this.inputEl.value, this);
+};</code></pre>
+          <section id="_onBlur">
+            <h1>_onBlur</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._onBlur()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the input element loses focus.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._onBlur = function _onBlur() {
+  if (!this.inputEl.value) {
+    this.hide();
+  }
+  (this.onBlur || noop)(this.inputEl.value, this);
+};</code></pre>
+          <section id="_onInput">
+            <h1>_onInput</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._onInput()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When the value is about to change, run the validation, set the characters count<br />and resize if we&#39;re a textarea.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._onInput = function _onInput() {
+
+  this.validate();
+  this._setCharactersCount();
+
+  if (this.isTextarea) {
+    this._setTextareaHeight();
+  }
+
+  (this.onChange || noop)(this.inputEl.value, this);
+};</code></pre>
+          <section id="_onClearClick">
+            <h1>_onClearClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._onClearClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>When a clear button is clicked, empty the field.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._onClearClick = function _onClearClick() {
+  this.inputEl.value = '';
+  this.hide();
+  (this.onChange || noop)(this.inputEl.value, this);
+};</code></pre>
+          <section id="_onTogglePasswordViewHide">
+            <h1>_onTogglePasswordViewHide</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>TextInput.prototype._onTogglePasswordViewHide()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Toggle the current type value (text/password) of password input.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._onTogglePasswordViewHide = function _onTogglePasswordViewHide(e) {
+  e.preventDefault();
+  this.inputEl.setAttribute('type', this.inputEl.getAttribute('type') === 'password' ? 'text' : 'password');
+};
+
+return TextInput;
+}(_base2.default);</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>TextInput.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype._whitelistedParams = ['validate', 'validatePattern', 'onValidate', 'onChange', 'onFocus', 'onBlur'];</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>TextInput.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <pre><code class="language-javascript">TextInput.prototype.defaults = {
+  el: null,
+  messageEl: null,
+  inputEl: null,
+  passwordToggleEl: null,
+  clearEl: null,
+  isActive: false,
+  isTextarea: false,
+  validatePattern: false,
+  type: null,
+  showCharacters: false,
+  showCharactersRemaining: false,
+  maxlength: null,
+  typeahead: null,
+  onValidate: noop,
+  onChange: noop,
+  onFocus: noop,
+  onBlur: noop,
+  _onFocusBound: null,
+  _onBlurBound: null,
+  _onInputBound: null,
+  _onTogglePasswordViewHideBound: null,
+  _onClearClickBound: null
+};
+
+(0, _mixin2.default)(TextInput.prototype, _messaging2.default, _validation2.default);
+
+exports.default = TextInput;
+module.exports = exports['default'];
+//# sourceMappingURL=text-input.js.map</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/mr-doc/mr-doc">Mr. Doc </a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau </a></p>
+        <p>Mr. Doc is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr </a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../js/twitter-widget.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap-transition.min.js"></script>
+    <script src="../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../js/bootstrap-affix.min.js"></script>
+    <script src="../../js/prism.min.js"></script>
+    <script src="../../js/index.min.js"></script>
+  </body>
+</html>

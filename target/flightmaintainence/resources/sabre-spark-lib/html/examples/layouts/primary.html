@@ -1,0 +1,50 @@
+{% set themes = ['light', 'whitelabel'] %}
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="../../css/spark.{{ defaultTheme if defaultTheme else 'light' }}.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      {% block styles %}{% endblock %}
+    </style>
+
+  </head>
+
+  <body class="{{ bodyClass }}">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        {% for theme in themes %}
+          <option {{ (selected if theme == defaultTheme) }} value="../../css/spark.{{ theme }}.css">{{ theme }} theme</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      {% block example %}{% endblock %}
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        {% block scripts %}{% endblock %}
+      });
+    </script>
+
+  </body>
+
+</html>

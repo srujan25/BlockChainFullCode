@@ -1,0 +1,290 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Header - In Page</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<header class="spark-header spark-header--condensed">
+  <nav class="spark-header__nav" role="navigation">
+    <button class="spark-menu__toggle spark-header__toggle" title="View Navigation">
+      <i class="spark-icon--fill spark-icon-menu-hamburger spark-icon--md"></i>
+    </button>
+    <span class="spark-header__logo"><i class="spark-logo spark-logo--sabre spark-logo--sm">Sabre</i></span>
+    <a href="#" class="spark-header__title">Product™</a>
+    <div class="spark-menu spark-header__menu">
+      <div class="spark-menu__header">
+        <button class="spark-menu__toggle" title="Hide Navigation">
+          <i class="spark-icon--fill spark-icon-close"></i>
+        </button>
+        <span class="spark-menu__title"></span>
+      </div>
+      <ul class="spark-menu__list spark-menu__list--main spark-header__list spark-header__list--overflow">
+        <li class="spark-menu__list-item">
+          <a href="#" class="spark-menu__list-link">Dashboard</a>
+        </li>
+        <li class="spark-menu__list-item child-active">
+          <span class="spark-menu__list-links">
+            <a href="#" class="spark-menu__list-link">Market Analysis</a>
+            <button class="spark-menu__list-expand" role="menuitemcheckbox"></button>
+          </span>
+          <ul class="spark-menu__list">
+            <li class="spark-menu__list-item">
+              <a href="#" class="spark-menu__list-link"><i class="spark-icon--fill spark-icon-world"></i> Global</a>
+            </li>
+            <li class="spark-menu__list-item child-active">
+              <span class="spark-menu__list-links">
+                <a href="#" class="spark-menu__list-link">Regional</a>
+                <button class="spark-menu__list-expand" role="menuitemcheckbox"></button>
+              </span>
+              <ul class="spark-menu__list">
+                <li class="spark-menu__list-item">
+                  <a href="#" class="spark-menu__list-link"><i class="spark-icon--fill spark-icon-world"></i> Global 2</a>
+                </li>
+                <li class="spark-menu__list-item">
+                  <a href="#" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Regional 2</a>
+                </li>
+                <li class="spark-menu__list-item child-active">
+                  <span class="spark-menu__list-links">
+                    <a tabindex="0" class="spark-menu__list-link spark-menu__list-next" data-menu="#fourth">Third-level Item IV Alpha</a>
+                  </span>
+                  <ul id="fourth" class="spark-menu__list spark-menu__list-next--target">
+                    <li class="spark-menu__list-item spark-menu__list-item--cta">
+                      <a tabindex="0" class="spark-header__list-cta-link spark-menu__list-back">Back to Main Menu</a>
+                    </li>
+                    <li class="spark-menu__list-title">Third-level Item IV Alpha</li>
+                    <li class="spark-menu__list-item">
+                      <a tabindex="0" class="spark-menu__list-link">Fourth-level Item A</a>
+                    </li>
+                    <li class="spark-menu__list-item">
+                      <span class="spark-menu__list-links">
+                        <a tabindex="0" class="spark-menu__list-link spark-menu__list-expand">Fourth-level Item B</a>
+                      </span>
+                      <ul class="spark-menu__list">
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link">Fifth-level Item i</a>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link">Fifth-level Item ii</a>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link">Fifth-level Item iii</a>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Fifth-level Item iv</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="spark-menu__list-item child-active">
+                      <span class="spark-menu__list-links">
+                        <a tabindex="0" class="spark-menu__list-link spark-menu__list-next" data-menu="#fourth-beta">Third-level Item V Beta</a>
+                      </span>
+                      <ul id="fourth-beta" class="spark-menu__list spark-menu__list-next--target">
+                        <li class="spark-menu__list-item spark-menu__list-item--cta">
+                          <a tabindex="0" class="spark-header__list-cta-link spark-menu__list-back">Back to Third-level Item IV Alpha</a>
+                        </li>
+                        <li class="spark-menu__list-title">Third-level Item IV Beta</li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link">Fourth-level Item A Beta</a>
+                        </li>
+                        <li class="spark-menu__list-item open child-active">
+                          <span class="spark-menu__list-links">
+                            <a tabindex="0" class="spark-menu__list-link spark-menu__list-expand">Fourth-level Item B Beta</a>
+                          </span>
+                          <ul class="spark-menu__list">
+                            <li class="spark-menu__list-item">
+                              <a tabindex="0" class="spark-menu__list-link">Fifth-level Item i Beta</a>
+                            </li>
+                            <li class="spark-menu__list-item">
+                              <a tabindex="0" class="spark-menu__list-link">Fifth-level Item ii Beta</a>
+                            </li>
+                            <li class="spark-menu__list-item active">
+                              <a tabindex="0" class="spark-menu__list-link">Fifth-level Item iii Beta</a>
+                            </li>
+                            <li class="spark-menu__list-item">
+                              <a tabindex="0" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Fifth-level Item iv Beta</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link">Fourth-level Item C Beta</a>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Fourth-level Item D Beta</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="spark-menu__list-item">
+                      <span class="spark-menu__list-links">
+                        <a tabindex="0" class="spark-menu__list-link spark-menu__list-next" data-menu="#fourth-Charlie">Third-level Item V Charlie</a>
+                      </span>
+                      <ul id="fourth-Charlie" class="spark-menu__list spark-menu__list-next--target">
+                        <li class="spark-menu__list-item spark-menu__list-item--cta">
+                          <a tabindex="0" class="spark-header__list-cta-link spark-menu__list-back">Back to Third-level Item IV Alpha</a>
+                        </li>
+                        <li class="spark-menu__list-title">Third-level Item IV Charlie</li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link">Fourth-level Item A Charlie</a>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <span class="spark-menu__list-links">
+                            <a tabindex="0" class="spark-menu__list-link spark-menu__list-expand">Fourth-level Item B Charlie</a>
+                          </span>
+                          <ul class="spark-menu__list">
+                            <li class="spark-menu__list-item">
+                              <a tabindex="0" class="spark-menu__list-link">Fifth-level Item i Charlie</a>
+                            </li>
+                            <li class="spark-menu__list-item">
+                              <a tabindex="0" class="spark-menu__list-link">Fifth-level Item ii Charlie</a>
+                            </li>
+                            <li class="spark-menu__list-item">
+                              <a tabindex="0" class="spark-menu__list-link">Fifth-level Item iii Charlie</a>
+                            </li>
+                            <li class="spark-menu__list-item">
+                              <a tabindex="0" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Fifth-level Item iv Charlie</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link">Fourth-level Item C Charlie</a>
+                        </li>
+                        <li class="spark-menu__list-item">
+                          <a tabindex="0" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Fourth-level Item D Charlie</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="spark-menu__list-item">
+                      <a tabindex="0" class="spark-menu__list-link">Fourth-level Item C</a>
+                    </li>
+                    <li class="spark-menu__list-item">
+                      <a tabindex="0" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Fourth-level Item D</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="spark-menu__list-item">
+                  <a href="#" class="spark-menu__list-link">Historic 2</a>
+                </li>
+                <li class="spark-menu__list-item">
+                  <a href="#" class="spark-menu__list-link">All 2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="spark-menu__list-item">
+              <a href="#" class="spark-menu__list-link spark-menu__list-link--in-page">(in-page) Historic</a>
+            </li>
+            <li class="spark-menu__list-item">
+              <a href="#" class="spark-menu__list-link">All</a>
+            </li>
+          </ul>
+        </li>
+        <li class="spark-menu__list-item">
+          <a href="#" class="spark-menu__list-link">Flight Analysis</a>
+        </li>
+        <li class="spark-menu__list-item">
+          <a href="#" class="spark-menu__list-link">Wait Times</a>
+        </li>
+        <li class="spark-menu__list-item">
+          <a href="#" class="spark-menu__list-link">Reports</a>
+        </li>
+      </ul>
+      <ul class="spark-menu__list">
+        <li class="spark-menu__list-item spark-menu__list-item--secondary" role="menuitem">
+          <a href="#" class="spark-menu__list-link spark-menu__ignore">
+            <i class="spark-icon--fill spark-icon-search spark-icon--md"></i>
+            <span class="spark-header__collapsed-show">Search</span>
+          </a>
+        </li>
+        <li class="spark-menu__list-item spark-menu__list-item--secondary">
+          <a href="#" class="spark-menu__list-link spark-menu__ignore">
+            <i class="spark-icon--fill spark-icon-cog spark-icon--md"></i>
+            <span class="spark-header__collapsed-show">Account Settings</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="spark-header__sign-in spark-popover">
+      <a href="#" class="spark-menu__list-link spark-popover__toggle">Sign In</a>
+      <form class="spark-popover__content--bottom col-xs-8 col-md-4" role="tooltip" onsubmit="return false;" data-anchor-x="right">
+        <a href="#" class="spark-popover__close" title="Close"></a>
+        <h4>Account Sign In</h4>
+        <label class="spark-input spark-margin-top">
+          <input class="spark-input__field" name="username" role="textbox">
+          <span class="spark-label">Username</span>
+        </label>
+        <label class="spark-input">
+          <input class="spark-input__field" name="password" type="password" role="textbox">
+          <span class="spark-label">Password</span>
+        </label>
+        <button class="spark-btn spark-btn--md spark-btn--block">Sign In</button>
+        <div class="spark-text-center spark-margin-top">
+          <button class="spark-btn--link spark-eta">Forgot username or password?</button>
+        </div>
+        <span class="spark-popover__caret"></span>
+      </form>
+    </div>
+  </nav>
+</header>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+// $('.spark-header').sparkHeader();
+var header = document.querySelectorAll('.spark-header');
+for(var i = 0, len = header.length; i < len; i++) {
+  new Spark.Header(header[i]);
+}
+
+// $('[data-role="expand"]').sparkExpand();
+var expands = document.querySelectorAll('.spark-expand, .spark-panel--expand');
+for(var i = 0, len = expands.length; i < len; i++) {
+  new Spark.Expand(expands[i]);
+}
+
+var popovers = document.querySelectorAll('.spark-popover');
+for(var i = 0, len = popovers.length; i < len; i++) {
+  new Spark.Popover(popovers[i]);
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

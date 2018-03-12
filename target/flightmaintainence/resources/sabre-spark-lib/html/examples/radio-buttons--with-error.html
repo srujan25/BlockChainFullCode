@@ -1,0 +1,29 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Radio Buttons - Error" %}
+
+{% block example %}
+<fieldset class="row spark-radio-group" data-error>
+  <div class="col-xs-12">
+    <span class="spark-radio-group__message"><b>UH OH!</b> You must choose one.</span>
+  </div>
+  <label class="col-xs-12 spark-radio">
+    <input class="spark-radio__input" type="radio" name="test-radio-2"> <!-- This has to be before .spark-radio__box! -->
+    <span class="spark-radio__box"></span>
+    <span class="spark-label">Radio one...</span>
+  </label>
+  <label class="col-xs-12 spark-radio">
+    <input class="spark-radio__input" type="radio" name="test-radio-2"> <!-- This has to be before .spark-radio__box! -->
+    <span class="spark-radio__box"></span>
+    <span class="spark-label">Radio two...</span>
+  </label>
+  <label class="col-xs-12 spark-radio">
+    <input class="spark-radio__input" type="radio" name="test-radio-2"> <!-- This has to be before .spark-radio__box! -->
+    <span class="spark-radio__box"></span>
+    <span class="spark-label">Radio three...</span>
+  </label>
+</fieldset>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

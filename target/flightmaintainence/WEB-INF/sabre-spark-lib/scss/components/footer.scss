@@ -1,0 +1,178 @@
+////
+/// ## Footer
+/// @group components/footer
+////
+
+
+/// Footer container
+.spark-footer {
+  background-color: $footer__background-color;
+  color: $footer__color;
+  @include fontsize(eta, all);
+  line-height: 5rem;
+  overflow-y: hidden;
+  width: 100%;
+
+  // A grid container should flex to align the content but allow use of the grid.
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/// Sticky Footer
+/// Class to be added to the <body> tag
+.spark-content--sticky-footer {
+  display: flex;
+
+  // We have to have this wrapper because IE11 doesn't like `min-height` and `flex-direction: column`
+  // to be used together.
+  // @link https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
+  .spark-content__wrapper--sticky-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .spark-main--sticky-footer {
+    flex: 1 1 auto;
+  }
+
+  .spark-header,
+  .spark-footer {
+    flex: none;
+  }
+}
+
+/// Footer Logo
+.spark-footer__logo {
+  border-bottom: 0;
+  display: inline-block;
+  flex: 0 1 auto;
+  line-height: 1rem;
+  margin-bottom: 0;
+  padding: 1.5rem 1rem 1.5rem 0;
+}
+
+/// Footer Copyright
+.spark-footer__copyright {
+  display: inline-block;
+  flex: 0 1 auto;
+  line-height: 3rem;
+  padding: 1rem;
+}
+
+/// Details which come after copyright should be snug on the left.
+.spark-footer__copyright + .spark-footer__details {
+  margin-left: -1rem;
+}
+
+/// Wrapper for footer content
+.spark-footer__content {
+  display: block;
+  flex: 10 10 auto;
+}
+
+/// Footer link list
+.spark-footer__list {
+  display: inline-block;
+  flex: 10 10 auto;
+  line-height: 5rem;
+  margin: 0 .5rem;
+  padding: 0;
+}
+
+/// A list pulled to the right
+.spark-footer__list--right {
+  flex: 1 1 auto;
+  margin-right: -.5rem;
+  text-align: center;
+}
+
+/// A list of icons should not have underlined links
+.spark-footer__list--icons {
+  .spark-footer__list-link {
+    text-decoration: none;
+  }
+}
+
+/// Footer list item
+.spark-footer__list-item {
+  @extend %list-item-no-bullet;
+  margin: 0;
+  line-height: initial;
+  display: inline-block;
+}
+
+/// Footer list item link
+.spark-footer__list-link {
+  @include fontsize(eta, all);
+  border-bottom: none;
+  color: $footer__link--color;
+  display: inline-block;
+  line-height: 3rem;
+  margin-bottom: 0;
+  padding: 1rem .5rem;
+
+  // Icon inside footer should sit in a circle
+  [data-icon],
+  .spark-icon,
+  [class^='spark-icon-'],
+  [class*=' spark-icon-'] {
+    @include fontsize(epsilon);
+    color: $footer__icon--color;
+
+    &:hover {
+      color: $footer__icon--hover__color;
+    }
+  }
+
+  // Underline links and lighten them on hover and focus
+  &:hover,
+  &:focus {
+    color: $footer__link--hover__color;
+    text-decoration: underline;
+  }
+
+  // Active links
+  &:active {
+    color: $footer__link--active__color;
+  }
+
+  // Lose the border on focus
+  &:focus {
+    border-bottom: none;
+  }
+}
+
+/// Footer Social Icons
+.spark-footer__social{
+  flex: 0 1 auto;
+  text-align: right;
+
+  // Social links have a fixed size because they are circles
+  li {
+    height: 2.5rem;
+    overflow: hidden;
+    padding-left: 1rem;
+    width: 2.5rem;
+  }
+}
+
+/// Footer at the `xs` breakpoint
+@include media-breakpoint-down(xs) {
+
+  // Text align center content when it's small.
+  .spark-footer__content {
+    text-align: center;
+  }
+
+  // Elements to the right should break to a new line.
+  .spark-footer__list--right {
+    display: block;
+    flex: none;
+    margin-top: -2rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Select - Multi w/ Warning</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<fieldset class="spark-multi-select" aria-label="Choose 5 Options" data-warning size="4">
+  <span class="spark-multi-select__label">Select Options <span class="spark-multi-select__label--small">(Choose 5 Options)</span></span>
+  <fieldset class="spark-multi-select__container">
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check one...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check one...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check one...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check one...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check one...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check one...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check two...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check three...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox">
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check four...</span>
+    </label>
+    <label class="spark-checkbox">
+      <input class="spark-checkbox__input" type="checkbox" disabled>
+      <!-- This has to be before .spark-checkbox__box! -->
+      <span class="spark-checkbox__box"></span>
+      <span class="spark-label">Check five...</span>
+    </label>
+  </fieldset>
+  <span class="spark-select__message"><b>Almost there</b> You need to select 2 more options</span>
+</fieldset>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+var selects = document.querySelectorAll('.spark-multi-select');
+for(var i = 0, len = selects.length; i < len; i++) {
+  new Spark.MultiSelectInput(selects[i]);
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

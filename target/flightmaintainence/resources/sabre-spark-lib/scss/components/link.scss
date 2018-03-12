@@ -1,0 +1,36 @@
+////
+/// ## Link
+/// @group components/link
+////
+
+
+/// Any anchor tag treated as a link
+/// If no class is added to an anchor element,
+/// will default to the same styling as a primary link
+a,
+.spark-link {
+  @extend %link;
+
+  &:hover,
+  &.hover{
+    @extend %link-hover;
+  }
+
+  &:active,
+  &.active {
+    @extend %link-active;
+  }
+
+  // Hide the default focus outline. This takes the form of an underline.
+  &:focus,
+  &.focus {
+    @extend %link-focus;
+  }
+
+  // Disabled link.
+  // This will overwrite any other color and styling
+  &[disabled],
+  &.disabled {
+    @extend %link-disabled;
+  }
+}

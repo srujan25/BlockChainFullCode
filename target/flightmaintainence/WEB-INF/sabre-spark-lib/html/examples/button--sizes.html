@@ -1,0 +1,27 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Button Sizes" %}
+
+{% block example %}
+<div class="row">
+  <div class="col-xs-12 spark-margin-bottom--lg">
+    <button class="spark-btn spark-btn--lg">Large</button>
+    <button class="spark-btn spark-btn--lg spark-btn--secondary">Large</button>
+  </div>
+  <div class="col-xs-12 spark-margin-bottom--lg">
+    <button class="spark-btn spark-btn--md">Medium</button>
+    <button class="spark-btn spark-btn--md spark-btn--secondary">Medium</button>
+  </div>
+  <div class="col-xs-12 spark-margin-bottom--lg">
+    <button class="spark-btn spark-btn--sm">Small</button>
+    <button class="spark-btn spark-btn--sm spark-btn--secondary">Small</button>
+  </div>
+  <div class="col-xs-12">
+    <button class="spark-btn spark-btn--xs">Extra Small</button>
+    <button class="spark-btn spark-btn--xs spark-btn--secondary">Extra Small</button>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

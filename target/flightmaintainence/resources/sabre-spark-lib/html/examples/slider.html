@@ -1,0 +1,47 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Slider" %}
+
+{% block example %}
+<div class="col-xs-12 col-lg-4 spark-margin-bottom--lg">
+  <div class="spark-slider">
+    <label id="slider-label-1" class="spark-label">Slider Label</label>
+    <input type="number" min="-20" max="30" value="4">
+    <div class="spark-slider__controls">
+      <button class="spark-slider__handle" role="slider" aria-orientation="horizontal" aria-valuemin="-20" aria-valuemax="30" aria-valuenow="4" aria-valuetext="4" aria-labelledby="slider-label-1"></button>
+      <span class="spark-slider__track">
+        <span class="spark-slider__track-fill"></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-lg-4 spark-margin-bottom--lg">
+  <div class="spark-slider">
+    <label id="slider-label-2" class="spark-label">Slider Label</label>
+    <input type="number" min="-20" max="30" value="30" step="5">
+    <div class="spark-slider__controls">
+      <button class="spark-slider__handle" role="slider" aria-orientation="horizontal" aria-valuemin="-20" aria-valuemax="30" aria-valuenow="30" aria-valuetext="30" aria-labelledby="slider-label-2"></button>
+      <span class="spark-slider__track">
+        <span class="spark-slider__track-fill"></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-lg-4 spark-margin-bottom--lg">
+  <div class="spark-slider">
+    <label id="slider-label-3" class="spark-label">Slider Label</label>
+    <input type="number" min="-20" max="30" value="23" disabled>
+    <div class="spark-slider__controls">
+      <button class="spark-slider__handle" tabindex="-1" role="slider" aria-orientation="horizontal" aria-valuemin="-20" aria-valuemax="30" aria-valuenow="23" aria-valuetext="23" aria-labelledby="slider-label-3"></button>
+      <span class="spark-slider__track">
+        <span class="spark-slider__track-fill"></span>
+      </span>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/slider.js" %}
+{% endblock %}

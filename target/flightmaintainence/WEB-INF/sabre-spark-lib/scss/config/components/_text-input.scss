@@ -1,0 +1,129 @@
+////
+/// ## Text Input Configuration
+///	@group config/components
+////
+
+
+/// Text input `border-radius`
+/// @type	{Number}
+$input__border-radius: .25rem !default;
+
+
+
+// Default
+
+/// Text input `background-color`
+/// @type {Color}
+$input__background-color: $white !default;
+
+/// Text input `border`
+/// @type {String}
+$input__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Text input `color`
+/// @type {Color}
+$input__color: map-get($gray-color-steps, 1000) !default;
+
+/// Text input label `color`
+/// @type {Color}
+$input__label__color: map-get($gray-color-steps, 800) !default;
+
+/// Text input placeholder `color`
+/// @type {Color}
+$input__placeholder__color: map-get($gray-color-steps, 600) !default;
+
+/// Text input `font-weight`
+/// @type {Number}
+$input__font-weight: 400 !default;
+
+/// Thin text input `font-weight`
+/// @type {Number}
+$input__font-weight--thin: 300 !default;
+
+/// Text input placeholder `font-weight`
+/// @type {Number}
+$input__placeholder__font-weight: 300 !default;
+
+/// Text input message `fontsize` variable
+/// @type {String}
+$input__message__font-size: zeta !default;
+
+/// Text input message `fontsize` variable
+/// @type {String}
+$input__message__font-weight: 700 !default;
+
+/// Text input message reversed state `fontsize` variable
+/// @type {String}
+$input__message--reversed__font-size: eta !default;
+
+/// Text input message reversed state `fontsize` variable
+/// @type {String}
+$input__message--reversed__font-weight: 400 !default;
+
+
+
+// Hover
+
+/// Text input `background-color` on hover
+/// @type {Color}
+$input--hover__background-color: $white !default;
+
+/// Text input `border` on hover
+/// @type {String}
+$input--hover__border: 1px solid map-get($gray-color-steps, 500) !default;
+
+/// Text input `color` on hover
+/// @type {Color}
+$input--hover__color: map-get($gray-color-steps, 800) !default;
+
+
+
+// Active
+
+/// Text input `background-color` when active
+/// @type {Color}
+$input--active__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Text input `border` when active
+/// @type {String}
+$input--active__border: 1px solid map-get($gray-color-steps, 700) !default;
+
+/// Text input `color` when active
+/// @type {Color}
+$input--active__color: map-get($gray-color-steps, 1000) !default;
+
+/// Text input label `color` when active
+/// @type {Color}
+$input--active__label__color: map-get($green-color-steps, 400) !default;
+
+
+
+// Disabled
+
+/// Text input `background-color` when disabled
+/// @type {Color}
+$input--disabled__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Text input `border` when disabled
+/// @type {String}
+$input--disabled__border: 1px solid map-get($gray-color-steps, 100) !default;
+
+/// Text input `color` when disabled
+/// @type {Color}
+$input--disabled__color: map-get($gray-color-steps, 500) !default;
+
+
+
+// States
+
+/// Text input with an error `color`
+/// @type {Color}
+$input--error__color: $white !default;
+
+
+
+// Typeahead
+
+/// Text input with a typeahead `color`
+/// @type {Color}
+$input--typeahead__placeholder__color: map-get($gray-color-steps, 500) !default;
