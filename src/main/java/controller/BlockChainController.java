@@ -3,17 +3,18 @@ package controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.sabre.biznet.*;
-import org.springframework.http.ResponseEntity;
+import org.sabre.biznet.AircraftComponents;
+import org.sabre.biznet.Airline;
+import org.sabre.biznet.ServiceTransaction;
+import org.sabre.biznet.Vendor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,6 +58,26 @@ public class BlockChainController {
         restTemplate.postForEntity(COMPONENT_URL,componentMap,String.class );
         return "aircraft";
     }
+
+    @RequestMapping(path={"/vendors"},method=RequestMethod.POST)
+    @ResponseBody
+    public String getVendors(Model model) {
+        RestTemplate restTemplate = new RestTemplate();
+        Vendor[] vendors = restTemplate.getForObject(VENDOR_URL, Vendor[].class);
+        if(vendors == null || vendors.length == 0 ) {
+            return "";
+        }
+        JSONArray array = new JSONArray();
+        JSONObject json;
+        for (int i = 0; i < vendors.length; i++) {
+            json = new JSONObject();
+            json.put("vendorName", vendors[i].getVendorName());
+            json.put("regnNo", vendors[i].getRegnNo());
+            array.add(json);
+        }
+        return array.toJSONString();
+    }
+
 
     @RequestMapping(path={"/airline"},method=RequestMethod.GET)
     public String getAirline(Model model) {
