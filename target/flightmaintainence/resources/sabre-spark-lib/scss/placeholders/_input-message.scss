@@ -1,0 +1,56 @@
+////
+/// ## Input Message
+/// A container for state messaging related to inputs.
+/// @group placeholders/input-message
+////
+
+@import '../mixins/add-placeholder';
+
+/// Holds any state messaging
+@include addPlaceholder(input-message) {
+  border-radius: 0 0 $input__border-radius $input__border-radius;
+  box-sizing: border-box;
+  color: $input--error__color;
+  display: none;
+  @include fontsize($input__message__font-size);
+  @include useFont($weight: $input__message__font-weight);
+  padding: .75rem 1rem;
+  transform-origin: top center;
+  transition-delay: 0ms, 0ms, 0ms;
+  transition-duration: 200ms;
+  transition-property: background-color, color;
+  transition-timing-function: linear, $ease-in-out-quint, $ease-in-out-quint;
+  z-index: 0;
+  width: 100%;
+
+  // Style top-level links
+  a {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  .spark-animate-height {
+    transition-property: height, margin, background-color, color;
+  }
+}
+
+/// Holds any state messaging
+@include addPlaceholder(input-message-reversed) {
+  display: none;
+  @include fontsize($input__message--reversed__font-size);
+  @include useFont($weight: $input__message--reversed__font-weight);
+  line-height: 1rem;
+  padding: 1rem 0;
+  transform-origin: top center;
+  transition-delay: 0ms;
+  transition-duration: 200ms;
+  transition-property: color;
+  transition-timing-function: linear;
+  width: 100%;
+  z-index: 0;
+
+  .spark-animate-height {
+    transition-property: height, margin, background-color, color;
+  }
+}
+

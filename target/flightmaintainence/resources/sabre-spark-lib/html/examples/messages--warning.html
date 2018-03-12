@@ -1,0 +1,22 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Messages - Warning" %}
+
+{% block example %}
+<div class="spark-message spark-message--lg spark-message--warning spark-panel">
+  <div class="spark-panel__content">
+    <i class="spark-message__icon spark-icon-alert-triangle spark-icon--fill"></i>
+    <div class="spark-message__content">
+      <h4 class="spark-message__heading">
+        Warning-style message title
+      </h4>
+      <p>
+        Some message to explain in further detail.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

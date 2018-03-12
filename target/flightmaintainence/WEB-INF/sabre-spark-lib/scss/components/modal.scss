@@ -1,0 +1,275 @@
+////
+/// ## Modal
+/// @group components/modal
+////
+
+
+/// Window class to disable scrolling when the modal is open.
+.spark-modal-open {
+  overflow: hidden;
+}
+
+/// Default modal
+.spark-modal {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  left: 0;
+  min-width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition-delay: 0ms, 250ms;
+  transition-duration: 250ms, 0ms;
+  transition-property: opacity, visibility;
+  transition-timing-function: $ease-out-quint;
+  visibility: hidden;
+  z-index: 1000;
+
+  // Gray background (not visible by default)
+  &::before {
+    @extend %gray-out;
+  }
+
+  // Modal is open
+  &.active {
+    opacity: 1;
+    transition-delay: 0ms;
+    visibility: visible;
+
+    // Show the gray background
+    &::before {
+      @extend %gray-out--active;
+    }
+
+    // Slide up the content
+    .spark-modal__scroll {
+      transform: translateY(0);
+    }
+  }
+}
+
+/// A modal that is fullscreen on mobile should have no padding for the bottom of the heading on desktop.
+/// This is weird but necessary to properly space the header and the content.
+.spark-modal--fullscreen-xs .spark-modal__header {
+  padding-bottom: 0;
+}
+
+/// Scroll wrapper. This allows us to center the modal but stop it from being cropped when the window is too short to fit it all.
+.spark-modal__scroll {
+  max-height: 100%;
+  overflow: auto;
+  position: relative;
+  transform: translateY(50%);
+  transition: transform 250ms $ease-out-quint;
+  width: 100%;
+  z-index: 100;
+}
+
+/// Content container
+.spark-modal__content {
+  background-color: $modal__background-color;
+  border-radius: $modal__border-radius;
+  margin: 4rem auto;
+  padding: 0;
+  position: relative;
+  z-index: 100;
+}
+
+.spark-modal__content[class*='col-'],
+.spark-modal__content {
+  padding: 0;
+}
+
+/// Full width content
+.spark-modal__full-width-content {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+/// Padding for the content areas
+.spark-modal__header,
+.spark-modal__body,
+.spark-modal__footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/// Header should have less bottom padding
+.spark-modal__header {
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+  }
+}
+
+/// Body content
+.spark-modal__body {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+  // If the body is the first child, give it extra padding
+  &:first-child {
+    padding-top: 2rem;
+  }
+
+  // If the body is the last child, give it extra padding
+  &:last-child {
+    padding-bottom: 2rem;
+  }
+}
+
+
+/// Snug content
+.spark-modal__body--snug {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.spark-modal__body--snug-bottom {
+  padding-bottom: 0;
+}
+.spark-modal__body--snug-top {
+  padding-top: 0;
+}
+
+/// Footer has small top padding
+.spark-modal__footer {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+/// When the body is snug on the bottom, add additional padding to the top of the footer if the nav is the first element
+.spark-modal__body--snug ~ .spark-modal__footer .spark-btn-group,
+.spark-modal__body--snug-bottom ~ .spark-modal__footer .spark-btn-group {
+  margin-top: 1rem;
+}
+
+/// Close button
+.spark-modal__close {
+  bottom: 100%;
+  color: $modal__close__color;
+  padding: 1rem 0 1rem 2rem;
+  position: absolute;
+  right: 0;
+  transition: transform 100ms $ease-out-quint;
+
+  &:hover,
+  &:focus {
+    border-bottom: none;
+    color: $modal__close__color;
+    transform: scale(1.1);
+  }
+}
+
+/// Applied to the body when the modal is open to kill scrollbars on the body
+.spark--modal-open {
+  overflow: hidden;
+}
+
+
+@include media-breakpoint-down(xs) {
+
+  /// Adjust the spacing for the modal on xs
+  .spark-modal {
+    padding: 2rem;
+
+    // Stack message
+    .spark-message {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    // Space out heading and content
+    .spark-message__heading {
+      margin-bottom: .5rem;
+    }
+  }
+
+  /// Full width content modal content should be snug
+  .spark-modal__full-width-content {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  /// A modal which takes up the full screen on xs breakpoint
+  .spark-modal--fullscreen-xs {
+    padding: 0;
+
+    // Make the scroll take up all the vertical space it can
+    .spark-modal__scroll {
+      height: 100%;
+    }
+
+    // Flex the content so we have a fixed header and footer
+    .spark-modal__content {
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin: 0;
+      width: 100%;
+    }
+
+    // Reposition the close button
+    .spark-modal__close {
+      bottom: auto;
+      color: $modal--fullscreen-xs__close__color;
+      padding: 1rem;
+      top: .75rem;
+      right: 0;
+      z-index: 100;
+
+      &:hover {
+        transform: none;
+      }
+    }
+
+    // Add padding to the bottom of the header since we removed it for desktop
+    .spark-modal__header {
+      padding-bottom: 1rem;
+    }
+
+    // Make the body scroll and flex
+    .spark-modal__body {
+      flex: 1;
+      overflow: auto;
+      position: relative;
+      z-index: 0;
+    }
+
+    // Padding for the content areas
+    .spark-modal__header,
+    .spark-modal__body,
+    .spark-modal__footer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    // When the body is snug on the bottom, remove additional padding to the top of the footer if the nav is the first element
+    .spark-modal__body--snug ~ .spark-modal__footer .spark-btn-group,
+    .spark-modal__body--snug-bottom ~ .spark-modal__footer .spark-btn-group {
+      margin-top: 0;
+    }
+
+    // Border for the header
+    .spark-modal__header {
+      border-bottom: $modal--fullscreen-xs__border;
+      padding-top: 1rem;
+    }
+
+    // Fixed footer w/ border
+    .spark-modal__footer {
+      background-color: $modal__background-color;
+      border-top: $modal--fullscreen-xs__border;
+      flex: 0 0 auto;
+      padding-bottom: 1rem;
+      width: 100%;
+      z-index: 5;
+    }
+  }
+}

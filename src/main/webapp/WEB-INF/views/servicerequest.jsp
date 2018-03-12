@@ -20,11 +20,15 @@
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <section>
 
-
                 <label class="spark-input">
                     <input class="spark-input__field" name="serviceRequestId" id="serviceRequestId" role="textbox" value="">
                     <span class="spark-label">Service Request Id</span>
                 </label>
+
+                  <label class="spark-input">
+                                                     <input class="spark-input__field" name="serialNo" id="serialNo" role="textbox" value="">
+                                                     <span class="spark-label">Serial No</span>
+                                                 </label>
 
                 <label class="spark-input">
                     <input class="spark-input__field" name="serviceRequestFor" id="serviceRequestFor" role="textbox" value="">

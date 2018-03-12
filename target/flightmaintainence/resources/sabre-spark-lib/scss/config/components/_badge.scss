@@ -1,0 +1,152 @@
+////
+/// ## Badge Configuration
+/// @group config/components
+////
+
+
+
+// Neutral
+
+/// Badge `background-color`
+/// @type {Color}
+$badge--neutral__background-color: map-get($blue-color-steps, 250) !default;
+
+/// Badge `border`
+/// @type {String}
+$badge--neutral__border: 1px solid map-get($blue-color-steps, 400) !default;
+
+/// Badge `box-shadow`
+/// @type {String}
+$badge--neutral__box-shadow: 0 0 0 4px map-get($blue-color-steps, 100) !default;
+
+/// Badge `color`
+/// @type {Color}
+$badge--neutral__color: $blue !default;
+
+/// Badge button `background-color` on hover
+/// @type {Color}
+$badge--neutral--hover__background-color: map-get($blue-color-steps, 400) !default;
+
+/// Badge button `background-color` when active
+/// @type {Color}
+$badge--neutral--active__background-color: map-get($blue-color-steps, 500) !default;
+
+
+
+// Warning
+
+/// Badge `background-color`
+/// @type {Color}
+$badge--warning__background-color: $color-state-warning !default;
+
+/// Badge `border`
+/// @type {String}
+$badge--warning__border: 1px solid $color-state-warning--dark !default;
+
+/// Badge `box-shadow`
+/// @type {String}
+$badge--warning__box-shadow: 0 0 0 4px map-get($orange-color-steps, 100) !default;
+
+/// Badge button `background-color` on hover
+/// @type {Color}
+$badge--warning--hover__background-color: map-get($orange-color-steps, 400) !default;
+
+/// Badge button `background-color` when active
+/// @type {Color}
+$badge--warning--active__background-color: map-get($orange-color-steps, 500) !default;
+
+
+
+// Critical
+
+/// Badge `background-color`
+/// @type {Color}
+$badge--critical__background-color: map-get($red-color-steps, 400) !default;
+
+/// Badge `border`
+/// @type {String}
+$badge--critical__border: 1px solid map-get($red-color-steps, 700) !default;
+
+/// Badge `box-shadow`
+/// @type {String}
+$badge--critical__box-shadow: 0 0 0 4px map-get($red-color-steps, 100) !default;
+
+/// Badge button `background-color` on hover
+/// @type {Color}
+$badge--critical--hover__background-color: map-get($red-color-steps, 500) !default;
+
+/// Badge button `background-color` when active
+/// @type {Color}
+$badge--critical--active__background-color: map-get($red-color-steps, 600) !default;
+
+
+
+// Success
+
+/// Badge `background-color`
+/// @type {Color}
+$badge--success__background-color: $color-state-success !default;
+
+/// Badge `border`
+/// @type {String}
+$badge--success__border: 1px solid $color-state-success--dark !default;
+
+/// Badge `box-shadow`
+/// @type {String}
+$badge--success__box-shadow: 0 0 0 4px map-get($lime-green-color-steps, 100) !default;
+
+/// Badge button `background-color` on hover
+/// @type {Color}
+$badge--success--hover__background-color: map-get($lime-green-color-steps, 700) !default;
+
+/// Badge button `background-color` when active
+/// @type {Color}
+$badge--success--active__background-color: map-get($lime-green-color-steps, 800) !default;
+
+
+
+// Badge counters
+
+/// Neutral badge counter `background-color`
+/// @type {Color}
+$badge-counter--neutral__background-color: map-get($blue-color-steps, 250) !default;
+
+/// Neutral badge counter `border`
+/// @type {String}
+$badge-counter--neutral__border: 1px solid map-get($blue-color-steps, 400) !default;
+
+
+/// Light badge counter `border`
+/// @type {String}
+$badge-counter--light__border: 1px solid map-get($blue-color-steps, 250) !default;
+
+/// Light badge counter `color`
+/// @type {Color}
+$badge-counter--light__color: $blue !default;
+
+
+/// Critical badge counter `background-color`
+/// @type {Color}
+$badge-counter--critical__background-color: map-get($red-color-steps, 400) !default;
+
+/// Critical badge counter `border`
+/// @type {String}
+$badge-counter--critical__border: 1px solid map-get($red-color-steps, 600) !default;
+
+
+/// Warning badge counter `background-color`
+/// @type {Color}
+$badge-counter--warning__background-color: $color-state-warning !default;
+
+/// Warning badge counter `border-color`
+/// @type {String}
+$badge-counter--warning__border: 1px solid $color-state-warning--dark !default;
+
+
+/// Success badge counter `background-color`
+/// @type {Color}
+$badge-counter--success__background-color: $color-state-success !default;
+
+/// Success badge counter `border-color`
+/// @type {String}
+$badge-counter--success__border: 1px solid $color-state-success--dark !default;

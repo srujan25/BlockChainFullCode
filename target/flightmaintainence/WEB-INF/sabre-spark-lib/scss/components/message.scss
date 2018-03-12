@@ -1,0 +1,152 @@
+////
+/// ## Message
+/// @group components/message
+////
+
+
+/// Default message
+.spark-message {
+  align-items: top;
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  // When this is a panel-level message
+  &.spark-panel {
+
+    // Content needs to flex
+    .spark-panel__content {
+      display: flex;
+
+      // Need the first child to sit snuggly next to the heading
+      p:first-of-type {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+/// Flex content for horizontal alignment.
+.spark-message__icon,
+.spark-message__content {
+  flex: 0 1 auto;
+}
+
+/// Icon shouldn't grow too large and should have spacing around it
+.spark-message__icon {
+  border-radius: 50%;
+  display: inline-block;
+  height: 3rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  padding: 0 .5rem;
+  position: relative;
+  text-align: center;
+  width: 3rem;
+
+  // Center the icon content
+  &::before {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/// Message content
+.spark-message__content {
+  line-height: 2rem;
+  padding: .5rem;
+}
+
+/// Content which follows an icon should have an additional left margin
+.spark-message__icon + .spark-message__content {
+  margin-left: .5rem;
+}
+
+/// A heading
+.spark-message__heading {
+  @include fontsize(delta);
+  @include useFont($heading__font-family, 400);
+  line-height: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/// A large message
+.spark-message--lg {
+
+  // Icon should be much bigger
+  .spark-message__icon {
+    @include fontsize(delta);
+    height: 5rem;
+    min-height: 5rem;
+    min-width: 5rem;
+    padding: 0 1rem;
+    width: 5rem;
+  }
+}
+
+/// Info message
+.spark-message--info {
+  background-color: $message--info__background-color;
+  color: $message--info__color;
+
+  .spark-message__icon {
+    background-color: $message--info__icon__background-color;
+    border: $message--info__icon__border;
+    color: $message--info__icon__color;
+  }
+
+  h1, h2, h3, h4, h5, h6, b, strong {
+    color: $message--info__heading__color;
+  }
+}
+
+/// Warning message
+.spark-message--warning {
+  background-color: $message--warning__background-color;
+  color: $message--warning__color;
+
+  .spark-message__icon {
+    background-color: $message--warning__icon__background-color;
+    border: $message--warning__icon__border;
+    color: $message--warning__icon__color;
+  }
+
+  h1, h2, h3, h4, h5, h6, b, strong {
+    color: $message--warning__heading__color;
+  }
+}
+
+/// Error message
+.spark-message--error {
+  background-color: $message--error__background-color;
+  color: $message--error__color;
+
+  .spark-message__icon {
+    background-color: $message--error__icon__background-color;
+    border: $message--error__icon__border;
+    color: $message--error__icon__color;
+  }
+
+  h1, h2, h3, h4, h5, h6, b, strong {
+    color: $message--error__heading__color;
+  }
+}
+
+/// Success message
+.spark-message--success {
+  background-color: $message--success__background-color;
+  color: $message--success__color;
+
+  .spark-message__icon {
+    background-color: $message--success__icon__background-color;
+    border: $message--success__icon__border;
+    color: $message--success__icon__color;
+  }
+
+  h1, h2, h3, h4, h5, h6, b, strong {
+    color: $message--success__heading__color;
+  }
+}

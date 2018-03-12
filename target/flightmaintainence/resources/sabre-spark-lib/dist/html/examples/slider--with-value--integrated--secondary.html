@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Slider - Integrated Value Secondary</title>
+
+    <link rel="stylesheet" href="../../css/spark.light.css" data-hook="stylesheet-toggle">
+    <link rel="stylesheet" href="./assets/css/examples.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="HandheldFriendly" content="true" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style type="text/css">
+      
+    </style>
+
+  </head>
+
+  <body class="">
+
+    <div class="stylesheet-picker">
+      <select class="stylesheet-picker__select" data-hook="stylesheet-picker">
+        
+          <option  value="../../css/spark.light.css">light theme</option>
+        
+          <option  value="../../css/spark.whitelabel.css">whitelabel theme</option>
+        
+      </select>
+    </div>
+
+    <div class="spark-padding--sm" style="width: 100%;">
+      
+<div class="col-xs-12 col-lg-4 spark-margin-bottom--lg">
+  <div class="spark-slider--integrated spark-slider--secondary">
+    <label id="slider-label-15" class="spark-label">Slider Label</label>
+    <input type="number" min="-20" max="30" value="4">
+    <div class="spark-slider__controls">
+      <button class="spark-slider__handle" role="slider" aria-orientation="horizontal" aria-valuemin="-20" aria-valuemax="30" aria-valuenow="4" aria-valuetext="4" aria-labelledby="slider-label-15"></button>
+      <span class="spark-slider__track">
+        <span class="spark-slider__track-fill"></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-lg-4 spark-margin-bottom--lg">
+  <div class="spark-slider--integrated spark-slider--secondary">
+    <label id="slider-label-16" class="spark-label">Slider Label</label>
+    <input type="number" min="-10" max="30" value="20" step="5">
+    <div class="spark-slider__controls">
+      <button class="spark-slider__handle" role="slider" aria-orientation="horizontal" aria-valuemin="-10" aria-valuemax="30" aria-valuenow="20" aria-valuetext="20" aria-labelledby="slider-label-16"></button>
+      <span class="spark-slider__track">
+        <span class="spark-slider__track-fill"></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-lg-4 spark-margin-bottom--lg">
+  <div class="spark-slider--integrated spark-slider--secondary">
+    <label id="slider-label-17" class="spark-label">Slider Label</label>
+    <input type="number" min="-20" max="30" value="23" disabled>
+    <div class="spark-slider__controls">
+      <button class="spark-slider__handle" tabindex="-1" role="slider" aria-orientation="horizontal" aria-valuemin="-20" aria-valuemax="30" aria-valuenow="23" aria-valuetext="23" aria-labelledby="slider-label-17"></button>
+      <span class="spark-slider__track">
+        <span class="spark-slider__track-fill"></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <script src="../../js/spark.js"></script>
+    <script src="./assets/js/examples.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+// $('.spark-slider').sparkSlider();
+var sliders = document.querySelectorAll('.spark-slider, .spark-slider--input, .spark-slider--integrated');
+for(var i = 0, len = sliders.length; i < len; i++) {
+  if(sliders[i].hasAttribute('data-error')) {
+    new Spark.Slider(sliders[i], {
+      onWillChange: function(value, inst) {
+        if(value > 0) {
+          inst.setErrorState(false);
+        }
+        else {
+          inst.setErrorState(true);
+        }
+      }
+    });
+  }
+  else {
+    new Spark.Slider(sliders[i]);
+  }
+}
+
+
+      });
+    </script>
+
+  </body>
+
+</html>

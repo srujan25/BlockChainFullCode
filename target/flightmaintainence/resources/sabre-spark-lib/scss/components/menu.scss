@@ -1,0 +1,572 @@
+////
+/// ## Menu
+/// @group components/menu
+////
+
+
+/// The basic navigation menu
+.spark-menu {
+  background-color: $menu__background-color;
+  color: $menu__color;
+  @include fontsize($menu__font-size);
+  overflow-x: hidden;
+
+  // A panel header has a bottom border
+  .spark-panel__header {
+    border-bottom: $menu__panel-header__border-bottom;
+  }
+
+  // A panel header followed by a menu list should be snug on the bottom
+  .spark-panel__header + .spark-menu__list {
+    margin-top: 0rem;
+  }
+}
+
+/// Panel menus should adopt panel styling.
+.spark-menu--panel {
+  @extend %panel;
+}
+
+/// Panel-style menu header.
+.spark-menu--panel__header {
+  @extend %panel-header;
+}
+
+/// Group of elements at the top of the header
+.spark-menu__header {
+  background-color: $menu__header__background-color;
+  color: $menu__header__color;
+  display: flex;
+  line-height: 1rem;
+  width: 100%;
+
+  // All direct children should flex
+  > * {
+    flex: 0 1 auto;
+  }
+
+  // Title should fill the space
+  .spark-menu__title {
+    width: 100%;
+  }
+}
+
+/// Title for a menu
+.spark-menu__title {
+  align-items: center;
+  border: none;
+  color: inherit;
+  display: flex;
+  @include useFont($heading__font-family);
+  @include fontsize($menu__title__font-size, all);
+  line-height: 1rem;
+  margin: 0;
+  padding: 1.5rem 2rem 1.5rem 0;
+}
+
+/// Menu toggle
+.spark-menu__toggle {
+  background-color: $menu__header__toggle__background-color;
+  border: none;
+  color: $menu__header__toggle__color;
+  cursor: pointer;
+  flex: none;
+  font-size: 1.375rem;
+  line-height: 1rem;
+  margin: 0;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  width: 6rem;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+/// List of nav items
+.spark-menu__list {
+  background-color: $menu__list__background-color;
+  color: $menu__list__color;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+
+  // Sub list
+  .spark-menu__list {
+    background-color: $menu__list--second__background;
+    display: none;
+    min-width: 100%;
+    position: relative;
+    text-transform: none;
+    z-index: 0;
+
+    // List titles below the first level should have a top margin.
+    .spark-menu__list-title {
+      &:first-child {
+        border-top: $menu__list--second__border-top;
+        margin-top: 1rem;
+      }
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
+
+    // Gradient to make a faux drop shadow at the top and bottom
+    &::after,
+    &::before {
+      background: $menu__list--second__shadow;
+      content: '';
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -5;
+    }
+
+    // Position second shadow at the bottom
+    &::after {
+      bottom: 0;
+      top: auto;
+      transform: rotate(180deg);
+    }
+
+    // Shorter menu items
+    .spark-menu__list-link,
+    .spark-menu__list-expand,
+    .spark-menu__list-next {
+      padding-bottom: .5rem;
+      padding-top: .5rem;
+    }
+
+    // Adjust the focus color of the expand button
+    .spark-menu__list-expand {
+      &:focus::before {
+        border: $btn--icon--focus__border--darker;
+      }
+    }
+
+    // Shorter faux border on in-page links
+    .spark-menu__list-item.active {
+      > .spark-menu__list-link--in-page::before {
+        margin-top: -.5rem;
+      }
+    }
+
+    // Since the background is now colored, don't show a background color on hover
+    .spark-menu__list-item:not(.active) {
+      > .spark-menu__list-link:hover,
+      > .spark-menu__list-links .spark-menu__list-link:hover,
+      > .spark-menu__list-links .spark-menu__list-expand:hover,
+      > .spark-menu__list-links .spark-menu__list-next:hover {
+        background-color: transparent;
+      }
+    }
+
+    // Third level list
+    .spark-menu__list {
+      padding-bottom: 0;
+      padding-top: 0;
+
+      // Indent type
+      .spark-menu__list-link,
+      .spark-menu__list-title {
+        padding-left: 3rem;
+      }
+
+      // Hide shadows
+      &::after,
+      &::before {
+        content: none;
+      }
+
+      // All subsquent lists should indent, and be on a white background
+      .spark-menu__list {
+        border-top: $menu__list--second__border-top;
+
+        // Hide shadows
+        &::after,
+        &::before {
+          display: none;
+        }
+
+        // 4th level
+        .spark-menu__list-link,
+        .spark-menu__list-title {
+          padding-left: 4rem;
+        }
+
+        // 5th level
+        .spark-menu__list {
+          .spark-menu__list-link,
+          .spark-menu__list-title {
+            padding-left: 5rem;
+          }
+        }
+
+        // Not supporting nesting beyond 5 levels because that's just nuts.
+      }
+    }
+  }
+}
+
+/// Animation wrapper for sliding lists
+.spark-menu__animation-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  transition-duration: 250ms;
+  transition-property: transform, height;
+  transition-timing-function: $ease-in-out-quint;
+
+  // Don't grow the lists
+  .spark-menu__list {
+    flex: 0 0 auto;
+  }
+
+  &.no-animate {
+    transition-duration: 0ms !important;
+  }
+}
+
+
+/// A second list should have a top border
+.spark-menu__list ~ .spark-menu__list {
+  border-top: $menu__list--second__border-top;
+}
+
+/// A single list item
+.spark-menu__list-item {
+  background-color: $menu__list-item__background-color;
+  color: $menu__list-item__color;
+  display: block;
+  margin: 0;
+  line-height: initial;
+  position: relative;
+  @extend %list-item-no-bullet;
+
+  // Anchor should inherit these styles
+  .spark-menu__list-link {
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    width: 100%;
+  }
+
+  // Show the list items of a nested list when an item is open
+  &.open {
+
+    // Show second-level items
+    > .spark-menu__list {
+      display: block;
+      padding: 0;
+    }
+
+    .spark-menu__list-next--target {
+      display: none;
+    }
+
+    // When a list is open
+    > .spark-menu__list-links .spark-menu__list-expand,
+    > .spark-menu__list-expand,
+    > .spark-menu__list-next {
+
+      // Spin its expand button around
+      &::before {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      &.spark-menu__list-link::before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  // Bold text for menus which are open or have active children
+  &.open,
+  &.has-active-child,
+  &.child-active {
+
+    // Bold text
+    > .spark-menu__list-link,
+    > .spark-menu__list-links {
+      color: $menu__list-item--open__color;
+      @include useFont($weight: $menu__list-item--open__font-weight);
+    }
+
+    // Bold expand caret
+    > .spark-menu__list-links .spark-menu__list-expand,
+    > .spark-menu__list-expand,
+    > .spark-menu__list-next {
+      &::before {
+        @extend %icon-fill;
+      }
+    }
+  }
+
+  // Active list item
+  &.active {
+
+    > .spark-menu__list-links .spark-menu__list-link,
+    > .spark-menu__list-link:not(.spark-menu__list-link--in-page),
+    > .spark-menu__list-expand,
+    > .spark-menu__list-next {
+      background-color: $menu__list-item--active__background-color;
+      color: $menu__list-item--active__color;
+      @include useFont($weight: $menu__list-item--open__font-weight);
+    }
+
+    // In-page link style
+    > .spark-menu__list-link.spark-menu__list-link--in-page {
+      color: $menu__list-link--in-page__color;
+      @include useFont($weight: $menu__list-item--open__font-weight);
+
+      // Faux Border
+      &::before {
+        border-left: $menu__list-link--in-page__border-left;
+        content: '';
+        height: 100%;
+        left: 0px;
+        margin-top: -1rem;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/// List anchor tags
+.spark-menu__list-link {
+  border-bottom: 0;
+  display: block;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 2rem;
+  margin-bottom: 0;
+  padding: 1rem 2rem;
+  width: 100%;
+
+  // Override default anchor styles
+  &:focus {
+    border-bottom: none;
+    padding-bottom: 1rem;
+    text-decoration: underline;
+  }
+
+  // Hovering over a list link
+  &:hover {
+    background-color: $menu__list-link--hover__background-color;
+    color: $menu__list-link--hover__color;
+  }
+
+  // Offset the icons up 1px to account for font descenders
+  [class^='spark-icon-'] {
+    margin-right: .5rem;
+    position: relative;
+    top: -.1rem;
+
+    // Need to add some fake content or else the line-height collapses in IE. This is an &nbsp.
+    &::after {
+      content: '\0000a0';
+      display: inline-block;
+      text-indent: -9999px;
+    }
+  }
+}
+
+/// Caret to allow expanding list items to show sub lists
+.spark-menu__list-expand,
+.spark-menu__list-next,
+.spark-menu__list-back {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 1rem;
+  margin-bottom: 0;
+  min-width: 4rem;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+
+  // Icon
+  &::before {
+    @extend %icon;
+    font-size: 2rem !important;
+    left: 50%;
+    line-height: 2rem !important;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition-duration: 100ms;
+    transition-property: transform, border-color;
+    transition-timing-function: $ease-in-out-quint;
+  }
+
+  // Darken like a link on hover
+  &:hover {
+    background-color: $menu__list-link--hover__background-color;
+    color: $menu__list-link--hover__color;
+  }
+
+  &:focus {
+    border-bottom: none;
+    padding-bottom: 1rem;
+    outline: none;
+
+    &::before {
+      // text-decoration: underline;
+    }
+  }
+}
+
+// Caret icon
+.spark-menu__list-expand {
+  &::before {
+    border: $btn--icon--focus__border;
+    border-color: transparent;
+    margin: 0 -4px;
+    content: '\f10f';
+  }
+
+  &:focus::before,
+  &.focus::before {
+    border: $btn--icon--focus__border;
+    border-radius: .25rem;
+    outline: none;
+  }
+
+  &:not(.spark-menu__list-link) {
+    &::before {
+      margin: 0;
+    }
+  }
+}
+
+.spark-header__list-cta-link.spark-menu__list-back {
+  color: $menu__list-cta-link--back__color;
+  padding-left: 5rem;
+  text-align: left;
+
+  &::before {
+    @extend %icon-fill;
+    content: '\f10c';;
+    font-size: 1.5rem !important;
+    left: 0;
+    margin-left: 3rem;
+  }
+}
+
+.spark-menu__list-next {
+  &::before {
+    @extend %icon-fill;
+    content: '\f10d';
+    font-size: 1.5rem !important;
+  }
+}
+
+/// Transitions for links and expand buttons
+.spark-menu__list-link,
+.spark-menu__list-expand,
+.spark-menu__list-next {
+  transition-duration: 250ms;
+  transition-property: background-color, color, font-weight;
+  transition-timing-function: $ease-in-out-quint;
+}
+
+/// An expand button after a link should have a left border to seprate it
+.spark-menu__list-link + .spark-menu__list-expand,
+.spark-menu__list-link + .spark-menu__list-next {
+  &::after {
+    border-left: $menu__list--second__border-top;
+    content: '';
+    height: 45%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 27.5%;
+    transition: opacity 250ms $ease-in-out-quint;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+/// Hide the expand border when the link is hovered
+.spark-menu__list-link:hover + .spark-menu__list-expand::after,
+.spark-menu__list-link:hover + .spark-menu__list-next::after {
+  opacity: 0;
+}
+
+/// A link which is also an expand should have the caret on the right and appropriate padding
+.spark-menu__list-link.spark-menu__list-expand,
+.spark-menu__list-link.spark-menu__list-next {
+  line-height: 2rem;
+  padding: 1rem 4rem 1rem 2rem;
+  text-align: left;
+
+  &::before {
+    left: auto;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/// A group of links
+.spark-menu__list-links {
+  align-items: stretch;
+  display: flex;
+
+  .spark-menu__list-link {
+    flex: 0 1 auto;
+  }
+
+  .spark-menu__list-expand,
+  .spark-menu__list-next {
+    flex: 1;
+  }
+}
+
+/// A title for a list. This should be used for non-actionable list items
+/// in place of a list-link.
+.spark-menu__list-title {
+  background-color: $menu__list-title__background-color;
+  border-bottom: $menu__list--second__border-top;
+  border-top: $menu__list--second__border-top;
+  color: $menu__list-title__color;
+  display: inline-block;
+  @include fontsize($menu__list-title__font-size);
+  @include useFont($weight: 400);
+  margin: 0;
+  line-height: 1rem;
+  list-style-type: none;
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+  text-indent: 0;
+  width: 100%;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+/// A placeholder version of the menu. This is used by the JS to compute
+/// the size of list items. It should be absolutely positioned to remove it from
+/// the flow and hidden.
+.spark-menu__placeholder {
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  z-index: -10;
+}

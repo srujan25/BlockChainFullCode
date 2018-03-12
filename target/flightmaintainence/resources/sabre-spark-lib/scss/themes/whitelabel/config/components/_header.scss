@@ -1,0 +1,73 @@
+////
+/// ## Header Configuration
+/// @group themes/whitelabel/config/components/header
+////
+
+
+/// White header background
+/// @type {Color}
+$header__background-color: $white;
+
+/// Monochromatic header border
+/// @type {Color}
+$header__border-top-color: map-get($gray-color-steps, 100);
+
+/// Reverse header type color from default
+/// @type {Color}
+$header__color: map-get($gray-color-steps, 800);
+
+/// Darker header color than copy
+/// @type {Color}
+$header__title__color: map-get($gray-color-steps, 900);
+
+/// Light logo background color for the logo since it is now dark
+/// @type {Color}
+$header__logo--sabre__background-color: map-get($gray-color-steps, 100);
+
+/// Sign in button matches logo
+/// @type {Color}
+$header__sign-in__background-color: map-get($gray-color-steps, 100);
+
+/// Header sign in `color` on hover
+/// @type {Color}
+$header__sign-in--hover__color: map-get($lightblue-color-steps, 500);
+
+
+
+// Desktop
+
+/// Darker text to lay on top of the white background
+/// @type {Color}
+$header--visible__color: map-get($gray-color-steps, 800);
+
+/// Lighten text on hover
+/// @type {Color}
+$header--visible--hover__color: map-get($gray-color-steps, 500);
+
+/// Darken links when they themselves are hovered
+/// @type {Color}
+$header--visible__link--hover__color: map-get($gray-color-steps, 1000);
+
+/// Active show/hide toggle `background-color`
+/// @type {Color}
+$header--visible__link--active__toggle__background-color: $blue;
+
+/// Active link `background-color`
+/// @type {Color}
+$header--visible__link--active__background-color: map-get($gray-color-steps, 100);
+
+/// Active link's top border
+/// @type {Color}
+$header--visible__link--active__border-top-color: $blue;
+
+/// Darken link when active
+/// @type {Color}
+$header--visible__link--active__color: map-get($gray-color-steps, 900);
+
+/// Active links are bold
+/// @type {Number}
+$header--visible__link--active__font-weight: 700;
+
+/// Light gray shadow for active links
+/// @type {Color}
+$header--visible__link--active__shadow-color: map-get($gray-color-steps, 300);

@@ -1,0 +1,29 @@
+////
+/// ## Pagination Configuration
+/// @group config/components
+////
+
+
+/// Pagination item background-color
+/// @type {Color}
+$pagination__item__background-color: transparent !default;
+
+/// Pagination item text color
+/// @type {Color}
+$pagination__item__color: $link--default__color !default;
+
+/// Pagination item text color on hover
+/// @type {Color}
+$pagination__item--hover__color: $blue !default;
+
+/// Pagination item background-color when active
+/// @type {Color}
+$pagination__item--active__background-color: $blue !default;
+
+/// Pagination item text color when active
+/// @type {Color}
+$pagination__item--active__color: $white !default;
+
+/// Pagination item border color on focus
+/// @type {Color}
+$pagination__item--focus__border-color: map-get($blue-color-steps, 100) !default;

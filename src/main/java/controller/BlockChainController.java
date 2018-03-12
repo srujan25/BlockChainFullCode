@@ -1,5 +1,6 @@
 package controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.sabre.biznet.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -112,7 +113,7 @@ public class BlockChainController {
     }
 
     @RequestMapping(path={"/servicerequestSave"},method=RequestMethod.POST)
-    public String saveServiceRequest(@ModelAttribute("serviceTransaction") ServiceTransaction serviceTransaction) {
+    public String saveServiceRequest(@ModelAttribute("serviceTransaction") ServiceTransaction serviceTransaction) throws Exception{
 
         RestTemplate restTemplate = new RestTemplate();
         Map<String, String> componentMap = new HashMap<String, String>();
@@ -143,6 +144,9 @@ public class BlockChainController {
         componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
         componentMap.put("transactionId", "");
         componentMap.put("timestamp", new Date().toString());
+
+        ObjectMapper mapper = new ObjectMapper();
+        String jsonResult = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(componentMap);
 
         restTemplate.postForEntity( SERVICE_URL,componentMap,String.class );
         return "servicerequest";
