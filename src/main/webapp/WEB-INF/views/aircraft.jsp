@@ -6,7 +6,23 @@
     <link rel="stylesheet" type="text/css" href="resources/ui/common-spark.css"/>
     <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>AirCraft page</title>
+    <title>Aircraft Component</title>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+    $(document).ready(function(){
+       $.post("airlines", function( data ) {
+          var temp = JSON.parse(data);
+          var airlineCombo = document.getElementById("airline");
+          for (var i in temp) {
+             var option = document.createElement("option");
+             option.text = temp[i].fullName;
+             option.value = temp[i].carrierCode;
+             airlineCombo.add(option,i);
+          }
+       });
+       });
+       </script>
 
 </head>
 <body>
@@ -24,17 +40,12 @@
 
             <label class="spark-input">
                 <input class="spark-input__field" name="serialNo" id="serialNo" role="textbox" value="">
-                <span class="spark-label">Serial No</span>
+                <span class="spark-label">Component Serial No</span>
             </label>
 
             <label class="spark-input">
                 <input class="spark-input__field" name="flightNo" id="flightNo" role="textbox" value="">
-                <span class="spark-label">Flight No</span>
-            </label>
-
-            <label class="spark-input">
-                <input class="spark-input__field" name="flightMode" id="flightMode" role="textbox" value="">
-                <span class="spark-label">Flight Mode</span>
+                <span class="spark-label">Aircraft ID</span>
             </label>
 
             <label class="spark-input">
@@ -65,9 +76,7 @@
 
             <div class="spark-margin-top">
                 <label class="spark-select">
-                    <select name="airline" class="spark-select__input"> <!-- This has to be before .spark-label! -->
-                        <option></option>
-                        <option>LH</option>
+                    <select name="airline" id="airline" class="spark-select__input"> <!-- This has to be before .spark-label! -->
                     </select>
                     <span class="spark-label">Select Airline</span>
                 </label>

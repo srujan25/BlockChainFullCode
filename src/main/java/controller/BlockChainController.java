@@ -177,9 +177,10 @@ public class BlockChainController {
         return array.toJSONString();
     }
 
-    @RequestMapping(path={"/airline"},method=RequestMethod.GET)
-    public String getAirline(Model model) {
-        /*RestTemplate restTemplate = new RestTemplate();
+    @RequestMapping(path={"/airlines"},method=RequestMethod.POST)
+    @ResponseBody
+    public String getAirlines(Model model) {
+        RestTemplate restTemplate = new RestTemplate();
         Airline[] airlines = restTemplate.getForObject(AIRLINE_URL, Airline[].class);
 
         if(airlines == null || airlines.length == 0 )
@@ -192,19 +193,16 @@ public class BlockChainController {
         for (int i = 0; i < airlines.length; i++) {
             json = new JSONObject();
             json.put("carrierCode", airlines[i].getCarrierCode());
-            json.put("address", airlines[i].getAddress());
             json.put("fullName", airlines[i].getFullName());
-            json.put("state", airlines[i].getState());
-            json.put("zipcode", airlines[i].getZipcode());
-            json.put("city", airlines[i].getCity());
-            json.put("country", airlines[i].getCountry());
-            json.put("addressType", airlines[i].getAddressType());
-            json.put("phonenumber", airlines[i].getPhonenumber());
-            json.put("phoneType", airlines[i].getPhoneType());
             array.add(json);
         }
+        return array.toJSONString();
+    }
 
-        return array.toJSONString();*/
+
+
+    @RequestMapping(path={"/airline"},method=RequestMethod.GET)
+    public String getAirline(Model model) {
         return "airline";
     }
 

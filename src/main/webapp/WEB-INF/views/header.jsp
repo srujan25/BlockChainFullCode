@@ -4,7 +4,7 @@
                <i class="spark-icon--fill spark-icon-menu-hamburger spark-icon--md"></i>
             </button>
             <span class="spark-header__logo"><i class="spark-logo spark-logo--sabre spark-logo--sm">Sabre</i></span>
-            <a href="#" class="spark-header__title">Flight Maintaince</a>
+            <a href="#" class="spark-header__title">Flight Maintenance</a>
             <div class="spark-menu spark-header__menu" role="menu">
                <div class="spark-menu__header">
                   <button class="spark-menu__toggle" title="Hide Navigation">
@@ -24,9 +24,6 @@
                         </li>
                         <li class="spark-menu__list-item" role="menuitem">
                            <a href="vendor" class="spark-menu__list-link">Vendor</a>
-                        </li>
-                        <li class="spark-menu__list-item" role="menuitem">
-                             <a href="#" class="spark-menu__list-link">Groundsman</a>
                         </li>
                      </ul>
                   </li>
@@ -51,7 +48,7 @@
                            <a href="servicerequest" class="spark-menu__list-link">Service Request</a>
                         </li>
                         <li class="spark-menu__list-item" role="menuitem">
-                           <a href="serviceover" class="spark-menu__list-link">Service Over</a>
+                           <a href="serviceover" class="spark-menu__list-link">Service Done</a>
                         </li>
                      </ul>
                   </li>
