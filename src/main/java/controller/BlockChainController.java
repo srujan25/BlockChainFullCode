@@ -172,9 +172,11 @@ public class BlockChainController {
             json.put("serviceRequestId", serviceRequests[i].getServiceRequestId());
             json.put("serviceRequestDate", serviceRequests[i].getServiceRequestDate());
             json.put("transactionType", "ServiceOver");
-            json.put("airline", serviceRequests[i].getAirline());
+            json.put("airline", serviceRequests[i].getAirline().substring(serviceRequests[i].getAirline().lastIndexOf("#")+1,
+                    serviceRequests[i].getAirline().length()));
             json.put("aircraftComponent", serviceRequests[i].getAircraftComponent());
-            json.put("vendor", serviceRequests[i].getVendor());
+            json.put("vendor", serviceRequests[i].getVendor()
+                    .substring(serviceRequests[i].getVendor().lastIndexOf("#") +1,serviceRequests[i].getVendor().length()));
             json.put("transactionId", serviceRequests[i].getTransactionId());
 
             array.add(json);

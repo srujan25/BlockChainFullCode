@@ -10,15 +10,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
 $(document).ready(function(){
+   var temp;
    $.post("serviceRequests", function( data ) {
-     var temp = JSON.parse(data);
+      temp = JSON.parse(data);
       var serviceRequestCombo = document.getElementById("serviceRequestId");
+      var option = document.createElement("option");
+      option.text = "";
+      option.value = "";
+      serviceRequestCombo.add(option,0)
       for (var i in temp) {
-         var option = document.createElement("option");
+         option = document.createElement("option");
          option.text = temp[i].serviceRequestId;
          option.value = temp[i].serviceRequestId;
-         serviceRequestCombo.add(option,i);
+         serviceRequestCombo.add(option,i+1);
       }
+   });
+
+   $( "#serviceRequestId").change(function(event) {
+     var serviceRequestVal =  $( "#serviceRequestId option:selected" ).val()
+     for (var i in temp) {
+         if(serviceRequestVal == temp[i].serviceRequestId){
+             document.getElementById("serviceRequestDate").value=temp[i].serviceRequestDate;
+             document.getElementById("flightNo").value=temp[i].flightNo;
+             document.getElementById("airline").value=temp[i].airline;
+             document.getElementById("vendor").value=temp[i].vendor;
+             document.getElementById("serialNo").value=temp[i].serialNo;
+             document.getElementById("componentName").value=temp[i].componentName;
+             document.getElementById("componentModel").value=temp[i].componentModel;
+             document.getElementById("componentManufacturer").value=temp[i].componentManufacturer;
+             document.getElementById("componentManufacturingDate").value=temp[i].componentManufacturingDate;
+             document.getElementById("componentExpiryDate").value=temp[i].componentExpiryDate;
+          }
+       }
+
    });
   });
   </script>
@@ -41,10 +65,6 @@ $(document).ready(function(){
                         <span class="spark-label">Service Request Id</span>
                      </label>
                </div>
-                <label class="spark-input">
-                    <input class="spark-input__field" name="serviceRequestFor" id="serviceRequestFor" role="textbox" value="">
-                    <span class="spark-label">Service Request For</span>
-                </label>
 
                 <label class="spark-input">
                     <input class="spark-input__field" name="serviceRequestDate" id="serviceRequestDate" role="textbox" value="">
@@ -84,7 +104,10 @@ $(document).ready(function(){
                     <input class="spark-input__field" name="componentManufacturer" id="componentManufacturer" role="textbox" value="">
                     <span class="spark-label">Component Manufacturer</span>
                 </label>
-
+                <label class="spark-input">
+                    <input class="spark-input__field" name="componentManufacturingDate" id="componentManufacturingDate" role="textbox" value="">
+                    <span class="spark-label">Component Manufacturing Date</span>
+                </label>
                 <label class="spark-input">
                     <input class="spark-input__field" name="componentExpiryDate" id="componentExpiryDate" role="textbox" value="">
                     <span class="spark-label">Component Expiry Date</span>
