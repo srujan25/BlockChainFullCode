@@ -49,7 +49,7 @@ public class BlockChainController {
         componentMap.put("$class","org.sabre.biznet.AircraftComponents");
         componentMap.put("serialNo", aircraft.getSerialNo());
         componentMap.put("flightNo", aircraft.getFlightNo());
-        componentMap.put("flightMode", aircraft.getFlightMode());
+        componentMap.put("flightMode", "In Ready");
         componentMap.put("componentName", aircraft.getComponentName());
         componentMap.put("componentModel", aircraft.getComponentModel());
         componentMap.put("componentManufacturer", aircraft.getComponentManufacturer());
@@ -331,6 +331,7 @@ public class BlockChainController {
         componentMap.put("serviceEngineer", serviceTransaction.getServiceEngineer());
         componentMap.put("comments", serviceTransaction.getComments());
         componentMap.put("flightMode", "In Ready");
+        componentMap.put("transactionType", "ServiceOver");
         componentMap.put("airline",  "org.sabre.biznet.Airline#"+serviceTransaction.getAirline());
         componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#"+serviceTransaction.getSerialNo());
         componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
