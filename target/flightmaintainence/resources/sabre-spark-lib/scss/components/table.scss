@@ -1,0 +1,880 @@
+////
+/// ## Table
+/// @group components/table
+////
+
+
+/// Table container
+.spark-table {
+
+  // Tables should fill the whole width
+  table {
+    background-color: $table__background-color;
+    border-collapse: collapse;
+    border: 1px solid $table__border-color;
+    border-radius: $panel__border-radius;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    width: 100%;
+  }
+
+  // Pad out each cell
+  .spark-table-heading__piece,
+  th,
+  td {
+    box-sizing: border-box;
+    height: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    vertical-align: middle;
+
+    // Allow wrapping of cell content
+    &.wrap {
+      white-space: normal;
+    }
+
+    // Pad out the right of the last child
+    &:last-child {
+      padding-right: 1.5rem;
+    }
+
+    // Negative margin on large icons so the cells have the right height
+    .spark-icon--lg {
+      margin: -1rem 0;
+    }
+
+    // Remove default input styling
+    input:not([type="checkbox"]):not(.spark-input__field),
+    select {
+      background-color: transparent;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    // Messaging
+    &[data-error],
+    &[data-info],
+    &[data-warning],
+    &[data-success] {
+      padding-left: 5rem;
+      position: relative;
+
+      .spark-table__status-icon {
+        font-family: $icon__font-family--fill;
+        font-size: 2rem;
+        left: 2rem;
+        line-height: 5rem;
+        position: absolute;
+        top: 0;
+      }
+
+      .spark-table__status-wrapper {
+        input:not([type="checkbox"]):not(.spark-input__field),
+        select {
+          margin-left: .75rem;
+          margin-top: calc(1px + .25rem);
+          width: calc(100% - 1.5rem);
+        }
+      }
+
+      input:not([type="checkbox"]):not(.spark-input__field),
+      select {
+        &:focus {
+          ~ .spark-table__status-message {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &[data-info] {
+
+      // Icon
+      .spark-table__status-icon {
+        color: $message--info__icon__background-color;
+
+        &::before {
+          content: '\f188';
+        }
+      }
+
+      // Text
+      .spark-table__status-message {
+        background-color: $message--info__message__background-color;
+        color: $message--info__message__color;
+      }
+    }
+
+    /// Warning message
+    &[data-warning] {
+
+      // Icon
+      .spark-table__status-icon {
+        color: $message--warning__icon__background-color;
+
+        &::before {
+          content: '\f104';
+        }
+      }
+
+      // Text
+      .spark-table__status-message {
+        background-color: $message--warning__message__background-color;
+        color: $message--warning__message__color;
+      }
+    }
+
+    /// Error message
+    &[data-error] {
+
+      // Icon
+      .spark-table__status-icon {
+        color: $message--error__icon__background-color;
+
+        &::before {
+          content: '\f11a';
+        }
+      }
+
+      // Text
+      .spark-table__status-message {
+        background-color: $message--error__message__background-color;
+        color: $message--error__message__color;
+      }
+    }
+
+    /// Success message
+    &[data-success] {
+
+      // Icon
+      .spark-table__status-icon {
+        color: $message--success__icon__background-color;
+
+        &::before {
+          content: '\f178';
+        }
+      }
+
+      // Text
+      .spark-table__status-message {
+        background-color: $message--success__message__background-color;
+        color: $message--success__message__color;
+      }
+    }
+  }
+
+  // Reset input styles for non-spreadsheet tables
+  &:not(.spark-table--spreadsheet) {
+
+    th, td {
+
+      // Text inputs get a border
+      input:not([type="checkbox"]):not(.spark-input__field) {
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        margin: -1rem -1.25rem;
+        padding: 1.25rem 1rem;
+        width: calc(100% + 2.5rem);
+      }
+    }
+  }
+
+  // Messaging for full-sized tables
+  &:not(.spark-table--spreadsheet):not(.spark-table--condensed) {
+
+    th, td {
+      &[data-error],
+      &[data-info],
+      &[data-warning],
+      &[data-success] {
+        > input:not([type="checkbox"]):not(.spark-input__field),
+        > select {
+          margin-left: -4.25rem;
+          width: calc(100% + 5.5rem);
+        }
+
+        input:not([type="checkbox"]):not(.spark-input__field),
+        select {
+          padding-left: 4rem;
+        }
+
+        .spark-table__status-message {
+          border-radius: 0 0 .25rem .25rem;
+          margin-left: .75rem;
+          margin-top: -.5rem;
+          padding: .75rem;
+          width: calc(100% - 1.5rem);
+        }
+      }
+    }
+  }
+
+  // Add input borders for non-spreadsheet and editable row tables
+  &:not(.spark-table--spreadsheet):not(.spark-table--edit-rows),
+  &.spark-table--edit-rows .editing {
+
+    th, td {
+
+      // Text inputs get a border
+      input:not([type="checkbox"]):not(.spark-input__field) {
+        border: 1px solid $table__input__border-color;
+
+        &:hover {
+          background-color: $table__input--hover__background-color;
+          border: 1px solid $table__input--hover__border-color;
+          color: $table__input--hover__color;
+        }
+
+        &:focus:not([readonly]) {
+          background-color: $table__input--editing__background-color;
+          border: 1px solid $table__input--editing__border-color;
+          color: $table__input--focus__color;
+        }
+      }
+
+      &[data-error] {
+        input:not([type="checkbox"]):not(.spark-input__field) {
+          &,
+          &:hover,
+          &:focus {
+            border-color: $message--error__icon__background-color;
+          }
+        }
+      }
+
+      &[data-warning] {
+        input:not([type="checkbox"]):not(.spark-input__field) {
+          &,
+          &:hover,
+          &:focus {
+            border-color: $message--warning__icon__background-color;
+          }
+        }
+      }
+
+      &[data-success] {
+        input:not([type="checkbox"]):not(.spark-input__field) {
+          &,
+          &:hover,
+          &:focus {
+            border-color: $message--success__icon__background-color;
+          }
+        }
+      }
+
+      &[data-info] {
+        input:not([type="checkbox"]):not(.spark-input__field) {
+          &,
+          &:hover,
+          &:focus {
+            border-color: $message--info__icon__background-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Fill the background color of the whole heading
+  thead {
+    background-color: $table__head__background-color;
+
+    tr {
+      border-bottom: 1px solid $table__head__border-color;
+    }
+  }
+
+  // Active and hover states for rows in the body
+  tbody {
+    position: relative;
+
+    tr {
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(to bottom, $table--hover__background-color 0,$table--hover__background-color 100%);
+        color: $table--hover__color;
+      }
+
+      &.active {
+        background: linear-gradient(to bottom, $table--active__background-color 0,$table--active__background-color 100%);
+        border-bottom: 1px double $table--active__border-color;
+        border-top: 1px double $table--active__border-color;
+        color: $table--active__color;
+
+        td {
+          border-right-color: $table--active__border-color;
+        }
+      }
+
+      &:first-child:not(:hover):not(.active) {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0,rgba(0,0,0,0) 1rem);
+        border-bottom: transparent;
+      }
+    }
+  }
+
+  // Table headings
+  .spark-table-heading__piece,
+  th {
+    border-right: 1px solid $table__head__border-color;
+    color: $table__head__color;
+    cursor: default;
+    @include fontsize($table__head__font-size);
+    @include useFont($weight: $table__head__font-weight);
+    text-transform: $table__head__text-transform;
+    white-space: nowrap;
+  }
+
+  // Sortable items should have a pointer cursor
+  .spark-table-heading__piece,
+  th[data-sort] {
+    cursor: pointer;
+  }
+
+  // Actionable column headers hover (includes Sortable rows and Sortable column)
+  th[data-sort],
+  .spark-table-heading__piece[data-sort],
+  .spark-table__select-all {
+    &:hover {
+      background-color: $table__head--hover__background-color;
+    }
+  }
+
+  // Sortable rows
+  .spark-table-heading__piece[data-sort='desc'],
+  .spark-table-heading__piece[data-sort='asc'],
+  th[data-sort='desc'],
+  th[data-sort='asc'] {
+    @include useFont($weight: $table__head--sorted__font-weight);
+
+    // Arrow icon
+    &::after {
+      @extend %icon;
+      @extend %icon-fill;
+      content: '\f10b';
+    }
+  }
+
+  // Descending arrow
+  .spark-table-heading__piece[data-sort='desc'],
+  th[data-sort='desc'] {
+    // Arrow icon
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  // Ascending arrow
+  .spark-table-heading__piece[data-sort="asc"],
+  th[data-sort="asc"] {
+    // Arrow icon
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+
+  // Add a bottom border to each cell in each row.
+  tr {
+    border-top: 1px solid $table__border-color;
+    border-bottom: 1px solid $table__border-color;
+
+    td, th, .spark-table-heading__piece {
+
+      // First item in a row should have a left border
+      &:first-child {
+        border-left: 1px solid transparent;
+      }
+
+      // Last item in a row should have a left border
+      &:last-child {
+        border-right: 1px solid transparent;
+      }
+    }
+  }
+
+  // Grouped headings
+  th.spark-table-heading {
+    padding: 0;
+
+    &[colspan="2"] {
+      .spark-table-heading__piece {
+        width: 50%;
+      }
+    }
+  }
+
+  .spark-table-heading__group {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  // Full width piece of the heading group
+  .spark-table-heading__full {
+    background-color: $table__head__border-color;
+    border-right: none;
+    flex-shrink: 0;
+    @include useFont($weight: 400);
+    height: 50%;
+    text-transform: none;
+    width: 100%;
+  }
+
+  // Piece of the heading group
+  .spark-table-heading__piece {
+    flex: 1 1 auto;
+    height: 50%;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+/// No border on a cell
+.spark-table__no-border {
+  border: none !important;
+}
+
+/// Table heading. Distribute the items and align the nav to the right.
+.spark-table__header {
+  align-items: center;
+  display: flex;
+  width: 100%;
+
+  .spark-table__title {
+    flex: 1;
+  }
+
+  .spark-table__nav {
+    flex: 1;
+  }
+}
+
+/// Wrap a `<table>` el in a scroll container so that it overflows gracefully.
+.spark-table__scroll {
+  overflow-x: auto;
+  transform: translate3d(0,0,0);
+
+  // When it's also panel content, no padding.
+  &.spark-panel__content {
+    padding: 0;
+  }
+}
+
+/// The checkbox in a row
+.spark-table__checkbox {
+  line-height: 1;
+  width: 1rem;
+}
+
+/// Table rows with specific styles
+.spark-table__row {
+  &--align-top {
+    td {
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      vertical-align: top;
+    }
+  }
+}
+
+/// Adjust margins on buttons inside of the actions group.
+.spark-table__actions,
+.spark-table__actions--icons {
+  white-space: nowrap;
+  width: 2rem;
+
+  // Actionable looking buttons
+  [class*='spark-btn'] {
+    cursor: pointer;
+  }
+}
+
+/// A group of icons
+.spark-table__actions--icons {
+  .spark-btn--icon {
+    margin: -1rem 0;
+    line-height: 3rem;
+  }
+}
+
+/// Actions to display when editing a row
+.spark-table__edit-actions {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  min-height: calc(5rem - 1px);
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition-duration: 100ms;
+  transition-property: opacity, transform;
+  width: auto;
+
+  // Drop shadow
+  &::before {
+    background: $table__edit-actions__background;
+    content: '';
+    display: block;
+    height: 100%;
+    left: -.5rem;
+    position: absolute;
+    width: 1rem;
+    z-index: 0;
+  }
+
+  // Make buttons full height
+  .spark-btn {
+    border: none;
+    border-radius: 0;
+    flex: 0 1 auto;
+    height: 100%;
+    margin: 0;
+    min-width: 6rem;
+
+    &::before {
+      box-shadow: none;
+    }
+  }
+}
+
+/// A grouped heading
+.spark-table-heading {
+  padding: 0;
+
+  @for $i from 2 to 10 {
+    &[colspan="#{$i}"] {
+      .spark-table-heading__piece {
+        width: 100% / $i;
+      }
+    }
+  }
+}
+
+/// Wrap the table cell contents in a div so positioning works properly in IE
+.spark-table__status-wrapper {
+  display: block;
+  height: 100%;
+  left: -5rem;
+  position: relative;
+  width: calc(100% + 7rem);
+}
+
+/// Messaging for a table cell
+.spark-table__status-message {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 15;
+}
+
+/// Resize handles for the table
+.spark-table__resize {
+  cursor: ew-resize;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 1rem;
+  z-index: 5;
+
+  &--left {
+    left: -1px;
+  }
+
+  &--right {
+    right: -1px;
+  }
+}
+
+/// Hide the first resize handle after a checkbox, and the last one
+.spark-table__checkbox .spark-table__resize,
+.spark-table__checkbox + th .spark-table__resize--left {
+  display: none;
+}
+
+/// Expand/collapse table element extends the normal expand
+.spark-table-expand {
+  @extend %expand;
+}
+
+/// Hide resize handles when we're small
+@include media-breakpoint-down(sm) {
+  .spark-table__resize {
+    display: none;
+  }
+}
+
+/// Condensed tables
+.spark-table--condensed,
+.spark-table--spreadsheet {
+  table {
+    margin-bottom: 4rem;
+  }
+
+  th {
+    height: 4rem;
+    padding: 1rem;
+  }
+
+  td {
+    border-right: 1px solid $table__border-color;
+    @include fontsize($table--condensed__body__font-size);
+    height: 3rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+
+    // Messaging
+    &[data-error],
+    &[data-info],
+    &[data-warning],
+    &[data-success] {
+      padding-left: 3rem;
+
+      .spark-table__status-icon {
+        font-size: 1.5rem;
+        font-family: $icon__font-family--line;
+        left: 1rem;
+        line-height: 3rem;
+        position: absolute;
+      }
+    }
+  }
+
+  &.spark-table--condensed--large-font td {
+    @include fontsize($table--condensed--large__body__font-size);
+  }
+
+  tr {
+    th, td {
+      &:last-child {
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .spark-table__edit-actions {
+    min-height: calc(3rem - 1px);
+  }
+}
+
+/// A condensed table's inputs are smaller than a full-size table
+.spark-table--condensed {
+  &:not(.spark-table--spreadsheet) {
+    th, td {
+      > input:not([type="checkbox"]):not(.spark-input__field) {
+        margin: -.5rem -.75rem;
+        width: calc(100% + 1.5rem);
+      }
+
+      input:not([type="checkbox"]):not(.spark-input__field) {
+        padding: .5rem .75rem;
+      }
+
+      &[data-error],
+      &[data-info],
+      &[data-warning],
+      &[data-success] {
+        > input:not([type="checkbox"]):not(.spark-input__field),
+        > select {
+          margin-left: -2.75rem;
+          width: calc(100% + 3.5rem);
+        }
+
+        input:not([type="checkbox"]):not(.spark-input__field),
+        select {
+          padding-left: 2.5rem;
+        }
+
+        .spark-table__status-wrapper {
+          left: -3rem;
+          width: calc(100% + 4rem);
+
+          input:not([type="checkbox"]):not(.spark-input__field),
+          select {
+            margin-left: .25rem;
+            margin-top: .25rem;
+            width: calc(100% - .5rem);
+          }
+        }
+
+        .spark-table__status-message {
+          border-radius: 0 0 .25rem .25rem;
+          margin-left: .25rem;
+          margin-top: -.5rem;
+          padding: .5rem .75rem;
+          width: calc(100% - .5rem);
+        }
+      }
+    }
+  }
+}
+
+/// A table that works like a spreadsheet
+.spark-table--spreadsheet {
+  td {
+    input:not([type="checkbox"]):not(.spark-input__field),
+    select {
+      border: none;
+      margin: -1.25rem -1rem;
+      padding: 1.25rem 1rem;
+      width: calc(100% + 2rem);
+
+      &[readonly] {
+        &::selection {
+          background: transparent;
+        }
+      }
+    }
+
+    select {
+      left: .5rem;
+      position: relative;
+      width: calc(100% + 1rem);
+    }
+
+    &.focus:not(.editing) {
+      color: $table__input--focus__color;
+      position: relative;
+
+      &::before {
+        background-color: $table__input--focus__background-color;
+        box-shadow: $table__input--focus__box-shadow;
+        border: 1px solid $table__input--focus__border-color;
+      }
+    }
+
+    &.editing,
+    &.focus {
+      color: $table__input--focus__color;
+      position: relative;
+
+      &::before {
+        background-color: $table__input--editing__background-color;
+        border: 1px solid $table__input--editing__border-color;
+        content: '';
+        display: block;
+        height: 100%;
+        left: -1px;
+        min-height: calc(3rem - 1px);
+        position: absolute;
+        top: -1px;
+        width: 100%;
+        z-index: 0;
+      }
+
+      > *:not(.spark-table__status-icon):not(.spark-table__status-message) {
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+    &.hover {
+      color: $table__input--hover__color;
+
+      &::before {
+        background-color: $table__input--hover__background-color;
+        border: 1px solid $table__input--hover__border-color;
+      }
+    }
+
+    &[data-error],
+    &[data-info],
+    &[data-warning],
+    &[data-success] {
+      height: auto;
+
+      .spark-table__status-wrapper {
+        height: calc(3rem - 1px);
+        left: -3rem;
+        margin: 0;
+        width: calc(100% + 4rem);
+
+        input:not([type="checkbox"]):not(.spark-input__field),
+        select {
+          margin: calc(-.35rem - 1px) 0;
+          padding: 1.25rem 1rem 1.25rem 3.25rem;
+          width: 100%;
+        }
+      }
+
+      .spark-table__status-message {
+        box-shadow: $table__input--focus__box-shadow;
+        padding: .5rem;
+      }
+    }
+  }
+}
+
+/// A table with editable rows
+.spark-table--edit-rows {
+
+  // The whole table is in edit mode, gray out rows except for the one being edited
+  &.editing {
+    tbody tr:not(.editing) {
+      opacity: .5;
+    }
+  }
+
+  // A row in edit mode
+  tr.editing {
+
+    // Hide everything that isn't the edit actions
+    .spark-table__actions,
+    .spark-table__actions--icons {
+      > *:not(.spark-table__edit-actions) {
+        display: none;
+      }
+    }
+
+    // Show the edit actions
+    .spark-table__edit-actions {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/// A disabled table row
+.spark-table tr.spark-table__disabled-row {
+  &,
+  &:hover,
+  &.active {
+    background-color: $table__background-color;
+    color: $table--disabled__color;
+  }
+
+  button {
+    &,
+    &:hover,
+    &:focus {
+      color: $table--disabled__color;
+    }
+  }
+}
+
+/// A disabled table cell
+.spark-table td.spark-table__disabled-cell input,
+.spark-table td input[disabled] {
+  color: $table--disabled__color;
+}
+
+/// A disabled column heading
+.spark-table th.spark-table__disabled-column {
+  &,
+  &:hover {
+    color: $table__head--disabled__color;
+  }
+}

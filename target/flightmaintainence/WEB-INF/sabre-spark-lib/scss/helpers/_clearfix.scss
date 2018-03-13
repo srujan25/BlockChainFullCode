@@ -1,0 +1,11 @@
+////
+/// ## Clearfix
+/// For elements with floated children
+/// @group helpers/clearfix
+////
+
+
+/// Clearfix for elements with floating children
+.spark-clearfix {
+  @include clearfix();
+}

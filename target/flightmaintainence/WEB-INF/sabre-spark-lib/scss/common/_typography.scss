@@ -1,0 +1,287 @@
+////
+/// ## Typography
+/// Styles which apply to the fonts, line heights, etc. used across the EDL.
+/// @group common/typography
+////
+
+
+/// Setting root sizes and base styles.
+html {
+  text-size-adjust: 100%;
+  @include rootsize();
+}
+
+/// Site-wide font family, size and line-height.
+body {
+  color: $color-body;
+  @include fontsize(zeta, all);
+  @include useFont($body__font-family, $body__font-weight--normal, normal);
+  line-height: 2rem;
+}
+
+/// Alternate body color
+.spark-alt {
+  color: $color-body--alt;
+}
+
+/// Info text
+.spark-info {
+  color: $color-state-info;
+}
+
+/// Success text
+.spark-success {
+  color: $color-state-success;
+}
+
+/// Warning text
+.spark-warning {
+  color: $color-state-warning;
+}
+
+/// Danger text
+.spark-danger {
+  color: $color-state-danger;
+}
+
+/// Set the default font on things which don't like to use the body style.
+button,
+input {
+  @include useFont($body__font-family);
+}
+
+/// Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+p {
+  font-feature-settings: 'kern' 1, 'liga' 0;
+  @include fontsize(zeta, all);
+  line-height: 2rem;
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+/// Large headings should be slate, bold and use a serif font.
+/// OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+h1 {
+  color: $color-heading;
+  font-feature-settings: 'dlig' 0, 'liga' 0, 'lnum' 1, 'kern' 1;
+  @include useFont($heading__font-family, $heading__font-weight--light);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: $color-heading;
+  font-feature-settings: 'dlig' 0, 'liga' 0, 'lnum' 1, 'kern' 1;
+  @include useFont($heading__font-family, $heading__font-weight--light);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: $color-heading;
+  font-feature-settings: 'dlig' 0, 'liga' 0, 'lnum' 1, 'kern' 1;
+  @include useFont($heading__font-family, $heading__font-weight--light);
+  margin-bottom: 1rem;
+
+  @include media-breakpoint-only(xs) {
+    @include useFont($weight: $heading__font-weight--normal);
+  }
+}
+
+h4 {
+  color: $color-heading;
+  font-feature-settings: 'dlig' 0, 'liga' 0, 'lnum' 1, 'kern' 1;
+  @include useFont($heading__font-family, $heading__font-weight--light);
+  margin-bottom: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    @include useFont($weight: $heading__font-weight--normal);
+  }
+}
+
+h5 {
+  color: $color-heading;
+  @include useFont($body__font-family, $heading__font-weight--light);
+  margin-bottom: 1rem;
+}
+
+h6 {
+  color: $color-heading;
+  @include useFont($body__font-family, $heading__font-weight--normal);
+  margin-bottom: 1rem;
+}
+
+/// A display title. Bigger than the default h1.
+.spark-display-title {
+  @include fontsize(mega, all, false, true);
+}
+
+h1 {
+  @include fontsize(alpha, all, false, true);
+}
+
+h2 {
+  @include fontsize(beta, all, false, true);
+}
+
+h3 {
+  @include fontsize(gamma, all, false, true);
+}
+
+h4 {
+  @include fontsize(delta, all, false, true);
+}
+
+h5 {
+  @include fontsize(epsilon, all, false, true);
+  text-transform: uppercase;
+}
+
+h6 {
+  @include fontsize(epsilon, all, false, true);
+}
+
+/// Create declarations for each of the greek classes
+@each $key, $val in map-get($font-scales, xs) {
+  .spark-#{$key} {
+    @include fontsize($key, all, true, true);
+  }
+}
+
+/// Bold type
+b,
+strong,
+.spark-bold {
+  @include useFont($body__font-family, $body__font-weight--bold);
+}
+
+/// Italic type
+em,
+i,
+.spark-italic {
+  font-style: italic;
+}
+
+/// Small body copy
+small,
+.spark-small {
+  @include fontsize(eta, all, true);
+}
+
+/// Large body copy
+.spark-large {
+  @include fontsize(delta, all, true);
+}
+
+/// Text with a light weight.
+.spark-thin {
+  @include useFont($body__font-family, $body__font-weight--thin);
+}
+
+/// Nest captions a bit closer to the three primary headings.
+h1 + .spark-caption,
+.spark-alpha + .spark-caption,
+h2 + .spark-caption,
+.spark-beta + .spark-caption,
+h3 + .spark-caption,
+.spark-gamma + .spark-caption {
+  margin-top: -1rem;
+}
+
+/// Captions that follow a smaller heading shouldn't have a top margin.
+.spark-delta + .spark-caption,
+.spark-epsilon + .spark-caption,
+.spark-zeta + .spark-caption {
+  margin-top: 0rem;
+}
+
+/// Unordered and ordered lists
+ul,
+ol {
+  @include fontsize(zeta, all);
+  line-height: 2rem;
+  list-style-type: none;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem; /// Best cross-browser setting to align bullets with left-edge of text
+
+  li {
+    font-feature-settings: 'kern' 1, 'lnum' 1, 'liga' 1;
+    list-style-type: none;
+    margin-left: 0;
+
+    @include media-breakpoint-only(sm) {
+      margin-left: 0;
+    }
+  }
+}
+
+/// Blockquote
+blockquote {
+  p {
+    @include useFont($body__font-family, $body__font-weight--normal, italic);
+    padding-left: 1rem;
+  }
+
+  @include media-breakpoint-only(sm) {
+    margin-left: -1rem;
+  }
+}
+
+/// Horizontal rule
+hr {
+  background-color: $color-caption;
+  border: 0;
+  height: 1px;
+  margin: 3rem 0;
+  padding: 0;
+}
+
+/// Underline text
+.spark-underline {
+  text-decoration: underline;
+}
+
+/// Capital letters
+.spark-caps {
+  text-transform: uppercase;
+}
+
+/// Small capital letters
+.spark-small-caps {
+  font-feature-settings: 'smcp' 1, 'kern' 1;
+  letter-spacing: 0.1rem;
+}
+
+/// Display numerals
+.spark-numerals {
+  @include fontsize(gamma, all);
+  @include useFont($weight: $heading__font-weight--normal);
+  line-height: 2.5rem;
+}
+
+/// Consistent height numbers with OpenType.
+.spark-lining-numerals {
+  font-feature-settings: 'lnum' 1, 'kern' 1;
+}
+
+/// Ascending and descending numbers with OpenType.
+.spark-oldstyle-numerals {
+  font-feature-settings: 'onum' 1, 'kern' 1;
+}
+
+/// Align the text to the center
+.spark-text-center {
+  text-align: center;
+}
+
+/// Align the text to the left
+.spark-text-left {
+  text-align: left;
+}
+
+/// Align the text to the right
+.spark-text-right {
+  text-align: right;
+}

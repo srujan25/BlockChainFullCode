@@ -1,0 +1,21 @@
+////
+/// ## Tooltip Configuration
+/// @group config/components
+////
+
+
+/// Tooltip `background-color`
+/// @type {Color}
+$tooltip__background-color: map-get($gray-color-steps, 1000) !default;
+
+/// Tooltip `border-radius`
+/// @type {Number}
+$tooltip__border-radius: .25rem !default;
+
+/// Tooltip `color`
+/// @type {Color}
+$tooltip__color: $white !default;
+
+/// Tooltip `font-size`
+/// @type {Color}
+$tooltip__font-size: eta !default;

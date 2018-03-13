@@ -1,0 +1,135 @@
+////
+/// ## Menu Configuration
+/// @group config/components
+////
+
+
+/// Menu `background-color`
+/// @type {Color}
+$menu__background-color: $white !default;
+
+/// Menu `color`
+/// @type {Color}
+$menu__color: map-get($gray-color-steps, 800) !default;
+
+/// Menu `fontsize` variable
+/// @type {String}
+$menu__font-size: eta !default;
+
+/// Menu title `fontsize`
+/// @type {String}
+$menu__title__font-size: delta !default;
+
+
+// Menu Header
+
+/// Menu header `background-color`
+/// @type {Color}
+$menu__header__background-color: map-get($red-color-steps, 400) !default;
+
+/// Menu header `color`
+/// @type {Color}
+$menu__header__color: $white !default;
+
+/// Menu header toggle button `background-color`
+/// @type {Color}
+$menu__header__toggle__background-color: map-get($red-color-steps, 400) !default;
+
+/// Menu header toggle button `color`
+/// @type {Color}
+$menu__header__toggle__color: $white !default;
+
+
+
+// Menu List
+
+/// Menu list `background-color`
+/// @type {Color}
+$menu__list--background-color: transparent !default;
+
+/// Menu list `color`
+/// @type {Color}
+$menu__list__color: map-get($gray-color-steps, 800) !default;
+
+/// Menu list item `color` on hover
+/// @type {Color}
+$menu__list--hover__item__color: map-get($gray-color-steps, 900) !default;
+
+/// Menu list title `backgorund-color` variable
+/// @type {Color}
+$menu__list-title__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Menu list title `color` variable
+/// @type {Color}
+$menu__list-title__color: map-get($gray-color-steps, 700) !default;
+
+/// Menu list title `fontsize` variable
+/// @type {String}
+$menu__list-title__font-size: theta !default;
+
+/// Menu secondary list `border-top`
+/// @type {String}
+$menu__list--second__border-top: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Menu secondary list `background-color`
+/// @type {Color}
+$menu__list--second__background: map-get($gray-color-steps, 100) !default;
+
+/// Menu secondary list `background` gradiant
+/// @type {String}
+$menu__list--second__shadow: linear-gradient(to bottom, rgba(100, 100, 100, 0.125), transparent) !default;
+
+/// Menu secondary list item `background-color`
+/// @type {Color}
+$menu__list-item__background-color: transparent !default;
+
+/// Menu secondary list item `border-top`
+/// @type {String}
+$menu__list-item__border-top: 1px solid transparent !default;
+
+/// Menu secondary list item `color`
+/// @type {Color}
+$menu__list-item__color: map-get($gray-color-steps, 700) !default;
+
+/// Menu secondary list item `background-color` when active
+/// @type {Color}
+$menu__list-item--active__background-color: $blue !default;
+
+/// Menu secondary list item `color` when active
+/// @type {Color}
+$menu__list-item--active__color: $white !default;
+
+/// Menu secondary list item `color` when open
+/// @type {Color}
+$menu__list-item--open__color: $blue !default;
+
+/// Menu secondary list item `font-weight` when open
+/// @type {Number}
+$menu__list-item--open__font-weight: 700 !default;
+
+/// Menu list link `background-color` on hover
+/// @type {Color}
+$menu__list-link--hover__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Menu list link `color` on hover
+/// @type {Color}
+$menu__list-link--hover__color: map-get($gray-color-steps, 900) !default;
+
+/// Menu list link in-page `border-left`
+/// @type {String}
+$menu__list-link--in-page__border-left: 4px solid $blue !default;
+
+/// Menu list link in-page `color`
+/// @type {Color}
+$menu__list-link--in-page__color: $blue !default;
+
+/// Menu list call-to-action link back `color`
+/// @type {Color}
+$menu__list-cta-link--back__color: map-get($lightblue-color-steps, 300) !default;
+
+
+// Panel menu
+
+/// Panel menu header `border-bottom`
+/// @type {String}
+$menu__panel-header__border-bottom: 1px solid map-get($gray-color-steps, 400) !default;

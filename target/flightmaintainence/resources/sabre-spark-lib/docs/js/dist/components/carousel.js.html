@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../css/prism.min.css">
+    <link rel="stylesheet" href="../../css/index.min.css">
+    <link rel="stylesheet" href="../../css/docs.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../index.html">Main</a></li>
+            <li><a href="../../dist/components/base.js.html">dist/components/base.js</a></li>
+            <li><a href="../../dist/components/calendar-popover.js.html">dist/components/calendar-popover.js</a></li>
+            <li class="active"><a href="../../dist/components/carousel.js.html">dist/components/carousel.js</a></li>
+            <li><a href="../../dist/components/date-input.js.html">dist/components/date-input.js</a></li>
+            <li><a href="../../dist/components/date-select.js.html">dist/components/date-select.js</a></li>
+            <li><a href="../../dist/components/date-typeahead.js.html">dist/components/date-typeahead.js</a></li>
+            <li><a href="../../dist/components/expand.js.html">dist/components/expand.js</a></li>
+            <li><a href="../../dist/components/filter-module.js.html">dist/components/filter-module.js</a></li>
+            <li><a href="../../dist/components/filter.js.html">dist/components/filter.js</a></li>
+            <li><a href="../../dist/components/header.js.html">dist/components/header.js</a></li>
+            <li><a href="../../dist/components/menu.js.html">dist/components/menu.js</a></li>
+            <li><a href="../../dist/components/modal.js.html">dist/components/modal.js</a></li>
+            <li><a href="../../dist/components/multi-select-input.js.html">dist/components/multi-select-input.js</a></li>
+            <li><a href="../../dist/components/number-selector.js.html">dist/components/number-selector.js</a></li>
+            <li><a href="../../dist/components/popover.js.html">dist/components/popover.js</a></li>
+            <li><a href="../../dist/components/progress-indicator.js.html">dist/components/progress-indicator.js</a></li>
+            <li><a href="../../dist/components/range-slider.js.html">dist/components/range-slider.js</a></li>
+            <li><a href="../../dist/components/scroll-to-top.js.html">dist/components/scroll-to-top.js</a></li>
+            <li><a href="../../dist/components/select-input.js.html">dist/components/select-input.js</a></li>
+            <li><a href="../../dist/components/slider.js.html">dist/components/slider.js</a></li>
+            <li><a href="../../dist/components/step-indicator.js.html">dist/components/step-indicator.js</a></li>
+            <li><a href="../../dist/components/table.js.html">dist/components/table.js</a></li>
+            <li><a href="../../dist/components/tabs.js.html">dist/components/tabs.js</a></li>
+            <li><a href="../../dist/components/text-input.js.html">dist/components/text-input.js</a></li>
+            <li><a href="../../dist/components/toggle-switch.js.html">dist/components/toggle-switch.js</a></li>
+            <li><a href="../../dist/components/toolbar.js.html">dist/components/toolbar.js</a></li>
+            <li><a href="../../dist/components/tooltip.js.html">dist/components/tooltip.js</a></li>
+            <li><a href="../../dist/components/typeahead.js.html">dist/components/typeahead.js</a></li>
+            <li><a href="../../dist/helpers/animation/cancel.js.html">dist/helpers/animation/cancel.js</a></li>
+            <li><a href="../../dist/helpers/animation/height.js.html">dist/helpers/animation/height.js</a></li>
+            <li><a href="../../dist/helpers/animation/request.js.html">dist/helpers/animation/request.js</a></li>
+            <li><a href="../../dist/helpers/animation/scroll-to.js.html">dist/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../dist/helpers/animation/tween.js.html">dist/helpers/animation/tween.js</a></li>
+            <li><a href="../../dist/helpers/css/transform.js.html">dist/helpers/css/transform.js</a></li>
+            <li><a href="../../dist/helpers/date/date.js.html">dist/helpers/date/date.js</a></li>
+            <li><a href="../../dist/helpers/date/parse-format.js.html">dist/helpers/date/parse-format.js</a></li>
+            <li><a href="../../dist/helpers/dom/add-class.js.html">dist/helpers/dom/add-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/breakpoint.js.html">dist/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../dist/helpers/dom/has-class.js.html">dist/helpers/dom/has-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/make-element.js.html">dist/helpers/dom/make-element.js</a></li>
+            <li><a href="../../dist/helpers/dom/offset.js.html">dist/helpers/dom/offset.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-height.js.html">dist/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-width.js.html">dist/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../dist/helpers/dom/parse-attribute.js.html">dist/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../dist/helpers/dom/remove-class.js.html">dist/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/toggle-class.js.html">dist/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/trigger-event.js.html">dist/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../dist/helpers/form/build-select.js.html">dist/helpers/form/build-select.js</a></li>
+            <li><a href="../../dist/helpers/form/form-data.js.html">dist/helpers/form/form-data.js</a></li>
+            <li><a href="../../dist/helpers/form/set-caret.js.html">dist/helpers/form/set-caret.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/append-children.js.html">dist/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/copy-attributes.js.html">dist/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/insert-before.js.html">dist/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/wrap-element.js.html">dist/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../dist/helpers/position/affix.js.html">dist/helpers/position/affix.js</a></li>
+            <li><a href="../../dist/helpers/position/box-position.js.html">dist/helpers/position/box-position.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-child.js.html">dist/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-children.js.html">dist/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-index.js.html">dist/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parent.js.html">dist/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parents.js.html">dist/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-after.js.html">dist/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-before.js.html">dist/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../dist/helpers/traversal/has-parent.js.html">dist/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/matches.js.html">dist/helpers/traversal/matches.js</a></li>
+            <li><a href="../../dist/helpers/util/debounce.js.html">dist/helpers/util/debounce.js</a></li>
+            <li><a href="../../dist/helpers/util/each.js.html">dist/helpers/util/each.js</a></li>
+            <li><a href="../../dist/helpers/util/mixin.js.html">dist/helpers/util/mixin.js</a></li>
+            <li><a href="../../dist/helpers/util/pad.js.html">dist/helpers/util/pad.js</a></li>
+            <li><a href="../../dist/helpers/util/range.js.html">dist/helpers/util/range.js</a></li>
+            <li><a href="../../dist/helpers/util/round.js.html">dist/helpers/util/round.js</a></li>
+            <li><a href="../../dist/helpers/util/trim.js.html">dist/helpers/util/trim.js</a></li>
+            <li><a href="../../dist/js/src/components/calendar-popover.js.html">dist/js/src/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/js/src/components/filter-module.js.html">dist/js/src/components/filter-module.js</a></li>
+            <li><a href="../../dist/js/src/components/filter.js.html">dist/js/src/components/filter.js</a></li>
+            <li><a href="../../dist/js/src/components/modal.js.html">dist/js/src/components/modal.js</a></li>
+            <li><a href="../../dist/js/src/components/typeahead.js.html">dist/js/src/components/typeahead.js</a></li>
+            <li><a href="../../dist/js/src/spark.js.html">dist/js/src/spark.js</a></li>
+            <li><a href="../../dist/mixins/messaging.js.html">dist/mixins/messaging.js</a></li>
+            <li><a href="../../dist/mixins/validation.js.html">dist/mixins/validation.js</a></li>
+            <li><a href="../../dist/spark.jquery.js.html">dist/spark.jquery.js</a></li>
+            <li><a href="../../dist/spark.js.html">dist/spark.js</a></li>
+            <li><a href="../../src/components/base.js.html">src/components/base.js</a></li>
+            <li><a href="../../src/components/calendar-popover.js.html">src/components/calendar-popover.js</a></li>
+            <li><a href="../../src/components/carousel.js.html">src/components/carousel.js</a></li>
+            <li><a href="../../src/components/date-input.js.html">src/components/date-input.js</a></li>
+            <li><a href="../../src/components/date-select.js.html">src/components/date-select.js</a></li>
+            <li><a href="../../src/components/date-typeahead.js.html">src/components/date-typeahead.js</a></li>
+            <li><a href="../../src/components/expand.js.html">src/components/expand.js</a></li>
+            <li><a href="../../src/components/header.js.html">src/components/header.js</a></li>
+            <li><a href="../../src/components/menu.js.html">src/components/menu.js</a></li>
+            <li><a href="../../src/components/modal.js.html">src/components/modal.js</a></li>
+            <li><a href="../../src/components/multi-select-input.js.html">src/components/multi-select-input.js</a></li>
+            <li><a href="../../src/components/number-selector.js.html">src/components/number-selector.js</a></li>
+            <li><a href="../../src/components/popover.js.html">src/components/popover.js</a></li>
+            <li><a href="../../src/components/progress-indicator.js.html">src/components/progress-indicator.js</a></li>
+            <li><a href="../../src/components/range-slider.js.html">src/components/range-slider.js</a></li>
+            <li><a href="../../src/components/scroll-to-top.js.html">src/components/scroll-to-top.js</a></li>
+            <li><a href="../../src/components/select-input.js.html">src/components/select-input.js</a></li>
+            <li><a href="../../src/components/slider.js.html">src/components/slider.js</a></li>
+            <li><a href="../../src/components/step-indicator.js.html">src/components/step-indicator.js</a></li>
+            <li><a href="../../src/components/table.js.html">src/components/table.js</a></li>
+            <li><a href="../../src/components/tabs.js.html">src/components/tabs.js</a></li>
+            <li><a href="../../src/components/text-input.js.html">src/components/text-input.js</a></li>
+            <li><a href="../../src/components/toggle-switch.js.html">src/components/toggle-switch.js</a></li>
+            <li><a href="../../src/components/toolbar.js.html">src/components/toolbar.js</a></li>
+            <li><a href="../../src/components/tooltip.js.html">src/components/tooltip.js</a></li>
+            <li><a href="../../src/components/typeahead.js.html">src/components/typeahead.js</a></li>
+            <li><a href="../../src/helpers/animation/cancel.js.html">src/helpers/animation/cancel.js</a></li>
+            <li><a href="../../src/helpers/animation/height.js.html">src/helpers/animation/height.js</a></li>
+            <li><a href="../../src/helpers/animation/request.js.html">src/helpers/animation/request.js</a></li>
+            <li><a href="../../src/helpers/animation/scroll-to.js.html">src/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../src/helpers/animation/tween.js.html">src/helpers/animation/tween.js</a></li>
+            <li><a href="../../src/helpers/css/transform.js.html">src/helpers/css/transform.js</a></li>
+            <li><a href="../../src/helpers/date/date.js.html">src/helpers/date/date.js</a></li>
+            <li><a href="../../src/helpers/date/parse-format.js.html">src/helpers/date/parse-format.js</a></li>
+            <li><a href="../../src/helpers/dom/add-class.js.html">src/helpers/dom/add-class.js</a></li>
+            <li><a href="../../src/helpers/dom/breakpoint.js.html">src/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../src/helpers/dom/has-class.js.html">src/helpers/dom/has-class.js</a></li>
+            <li><a href="../../src/helpers/dom/make-element.js.html">src/helpers/dom/make-element.js</a></li>
+            <li><a href="../../src/helpers/dom/offset.js.html">src/helpers/dom/offset.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-height.js.html">src/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-width.js.html">src/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../src/helpers/dom/parse-attribute.js.html">src/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../src/helpers/dom/remove-class.js.html">src/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../src/helpers/dom/toggle-class.js.html">src/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../src/helpers/dom/trigger-event.js.html">src/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../src/helpers/form/build-select.js.html">src/helpers/form/build-select.js</a></li>
+            <li><a href="../../src/helpers/form/form-data.js.html">src/helpers/form/form-data.js</a></li>
+            <li><a href="../../src/helpers/form/set-caret.js.html">src/helpers/form/set-caret.js</a></li>
+            <li><a href="../../src/helpers/manipulation/append-children.js.html">src/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../src/helpers/manipulation/copy-attributes.js.html">src/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../src/helpers/manipulation/insert-before.js.html">src/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../src/helpers/manipulation/wrap-element.js.html">src/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../src/helpers/position/affix.js.html">src/helpers/position/affix.js</a></li>
+            <li><a href="../../src/helpers/position/box-position.js.html">src/helpers/position/box-position.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-child.js.html">src/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-children.js.html">src/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-index.js.html">src/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parent.js.html">src/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parents.js.html">src/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-after.js.html">src/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-before.js.html">src/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../src/helpers/traversal/has-parent.js.html">src/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/matches.js.html">src/helpers/traversal/matches.js</a></li>
+            <li><a href="../../src/helpers/util/debounce.js.html">src/helpers/util/debounce.js</a></li>
+            <li><a href="../../src/helpers/util/each.js.html">src/helpers/util/each.js</a></li>
+            <li><a href="../../src/helpers/util/mixin.js.html">src/helpers/util/mixin.js</a></li>
+            <li><a href="../../src/helpers/util/pad.js.html">src/helpers/util/pad.js</a></li>
+            <li><a href="../../src/helpers/util/range.js.html">src/helpers/util/range.js</a></li>
+            <li><a href="../../src/helpers/util/round.js.html">src/helpers/util/round.js</a></li>
+            <li><a href="../../src/helpers/util/trim.js.html">src/helpers/util/trim.js</a></li>
+            <li><a href="../../src/mixins/messaging.js.html">src/mixins/messaging.js</a></li>
+            <li><a href="../../src/mixins/validation.js.html">src/mixins/validation.js</a></li>
+            <li><a href="../../src/spark.jquery.js.html">src/spark.jquery.js</a></li>
+            <li><a href="../../src/spark.js.html">src/spark.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#Carousel"><i class="alert alert-info"></i><span>Carousel</span></a>
+              </li>
+              <li><a href="#Carousel"><i class="alert alert-info"></i><span>Carousel</span></a>
+              </li>
+              <li><a href="#_carouselItem"><i class="alert alert-info"></i><span>_carouselItem</span></a>
+              </li>
+              <li><a href="#_init"><i class="alert alert-info"></i><span>_init</span></a>
+              </li>
+              <li><a href="#remove"><i class="alert alert-info"></i><span>remove</span></a>
+              </li>
+              <li><a href="#_pause"><i class="alert alert-info"></i><span>_pause</span></a>
+              </li>
+              <li><a href="#_setPause"><i class="alert alert-info"></i><span>_setPause</span></a>
+              </li>
+              <li><a href="#_autoAdvance"><i class="alert alert-info"></i><span>_autoAdvance</span></a>
+              </li>
+              <li><a href="#_setupListeners"><i class="alert alert-info"></i><span>_setupListeners</span></a>
+              </li>
+              <li><a href="#_removeListeners"><i class="alert alert-info"></i><span>_removeListeners</span></a>
+              </li>
+              <li><a href="#_handleVisibleChildrenH"><i class="alert alert-info"></i><span>_handleVisibleChildrenH</span></a>
+              </li>
+              <li><a href="#_forward"><i class="alert alert-info"></i><span>_forward</span></a>
+              </li>
+              <li><a href="#_back"><i class="alert alert-info"></i><span>_back</span></a>
+              </li>
+              <li><a href="#_movestart"><i class="alert alert-info"></i><span>_movestart</span></a>
+              </li>
+              <li><a href="#_move"><i class="alert alert-info"></i><span>_move</span></a>
+              </li>
+              <li><a href="#_moveend"><i class="alert alert-info"></i><span>_moveend</span></a>
+              </li>
+              <li><a href="#_resize"><i class="alert alert-info"></i><span>_resize</span></a>
+              </li>
+              <li><a href="#change"><i class="alert alert-info"></i><span>change</span></a>
+              </li>
+              <li><a href="#update"><i class="alert alert-info"></i><span>update</span></a>
+              </li>
+              <li><a href="#_touchstart"><i class="alert alert-info"></i><span>_touchstart</span></a>
+              </li>
+              <li><a href="#_touchmove"><i class="alert alert-info"></i><span>_touchmove</span></a>
+              </li>
+              <li><a href="#_touchend"><i class="alert alert-info"></i><span>_touchend</span></a>
+              </li>
+              <li><a href="#_mousedown"><i class="alert alert-info"></i><span>_mousedown</span></a>
+              </li>
+              <li><a href="#_mousemove"><i class="alert alert-info"></i><span>_mousemove</span></a>
+              </li>
+              <li><a href="#_mouseup"><i class="alert alert-info"></i><span>_mouseup</span></a>
+              </li>
+              <li><a href="#_click"><i class="alert alert-info"></i><span>_click</span></a>
+              </li>
+              <li><a href="#_velocity"><i class="alert alert-info"></i><span>_velocity</span></a>
+              </li>
+              <li><a href="#_scrollToClicked"><i class="alert alert-info"></i><span>_scrollToClicked</span></a>
+              </li>
+              <li><a href="#_scrollTo"><i class="alert alert-info"></i><span>_scrollTo</span></a>
+              </li>
+              <li><a href="#_rafHandlerH"><i class="alert alert-info"></i><span>_rafHandlerH</span></a>
+              </li>
+              <li><a href="#_rafCancel"><i class="alert alert-info"></i><span>_rafCancel</span></a>
+              </li>
+              <li><a href="#_interiaScroll"><i class="alert alert-info"></i><span>_interiaScroll</span></a>
+              </li>
+              <li><a href="#_settle"><i class="alert alert-info"></i><span>_settle</span></a>
+              </li>
+              <li><a href="#_transformItems"><i class="alert alert-info"></i><span>_transformItems</span></a>
+              </li>
+              <li><a href="#_setTransformItems"><i class="alert alert-info"></i><span>_setTransformItems</span></a>
+              </li>
+              <li><a href="#_addTransform"><i class="alert alert-info"></i><span>_addTransform</span></a>
+              </li>
+              <li><a href="#_leftbound"><i class="alert alert-info"></i><span>_leftbound</span></a>
+              </li>
+              <li><a href="#_rightbound"><i class="alert alert-info"></i><span>_rightbound</span></a>
+              </li>
+              <li><a href="#_updateSelected"><i class="alert alert-info"></i><span>_updateSelected</span></a>
+              </li>
+              <li><a href="#_selectedItem"><i class="alert alert-info"></i><span>_selectedItem</span></a>
+              </li>
+              <li><a href="#_setTransform"><i class="alert alert-info"></i><span>_setTransform</span></a>
+              </li>
+              <li><a href="#defaults"><i class="alert alert-success"></i><span>defaults</span></a>
+              </li>
+              <li><a href="#_whitelistedParams"><i class="alert alert-success"></i><span>_whitelistedParams</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <section id="Carousel">
+            <h1>Carousel</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>Carousel()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h1>Carousel</h1>
+<p>Create a Carousel</p></div>
+          <pre><code class="language-javascript">var Carousel = function (_BaseComponent) {
+  _inherits(Carousel, _BaseComponent);</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">new Carousel(el);</code></pre>
+          <section id="Carousel">
+            <h1>Carousel</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>Carousel()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Carousel constructor.</p></div>
+          <pre><code class="language-javascript">function Carousel(el, params) {
+  _classCallCheck(this, Carousel);
+
+  var _this = _possibleConstructorReturn(this, _BaseComponent.call(this, el, params));
+
+  params = params || {};
+
+  if (!el) {
+    return _possibleConstructorReturn(_this);
+  }
+
+  _this._init(el);
+  return _this;
+}</code></pre>
+          <section id="_carouselItem">
+            <h1>_carouselItem</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._carouselItem()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Node to initalize as carouselItem</p></td>
+              </tr>
+              <tr>
+                <td>parent</td>
+                <td>Object</td>
+                <td><p>reference to the parent carousel</p></td>
+              </tr>
+              <tr>
+                <td>dot</td>
+                <td>Element</td>
+                <td><p>Node to use as dot element</p></td>
+              </tr>
+              <tr>
+                <td>order</td>
+                <td>Number</td>
+                <td><p>original order in the markup</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Carousel Item Contructor, exposes access to functions setTransform, setSelected, and currentPosition</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._carouselItem = function _carouselItem(el, parent, dot, order) {
+  var a = {};
+  a.el = el;
+  a.parent = parent;
+  a.dot = dot;
+  a.order = order;
+  a.addTransform = function (x) {
+    a.setTransform(a.transform.x + x);
+  };
+  a.setTransform = function (x) {
+    x = x ? x : 0;
+    a.transform = {
+      'x': x
+    };
+    a.el.setAttribute('style', (0, _transform2.default)('translate3d', a.transform.x + 'px, 0px, 0px'));
+  };
+  a.setSelected = function (b) {
+    if (a.setSelected.selected === b &amp;&amp; typeof a.setSelected.selected !== 'undefined') {
+      return;
+    }
+    if (b) {
+      (0, _addClass2.default)(a.el, 'selected');
+      (0, _addClass2.default)(a.dot, 'selected');
+      a.setSelected.selected = true;
+    } else {
+      (0, _removeClass2.default)(a.el, 'selected');
+      (0, _removeClass2.default)(a.dot, 'selected');
+      a.setSelected.selected = false;
+    }
+  };
+  a.currentPosition = function () {
+    return parent.transform.x + a.transform.x + a.dims.left + a.width / 2 - parent.dims.left;
+  };
+  a.setTransform();
+  a.dims = el.getBoundingClientRect();
+  a.width = a.dims.width;
+  a.el.sparkcarouselitem = a;
+  a.dot.sparkcarouselitemdot = a;
+  return a;
+};</code></pre>
+          <section id="_init">
+            <h1>_init</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._init()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Node to initalize as the carousel</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Scans element and sets up or resets the carousel based on configuration</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._init = function _init(el) {
+  //cache elements and controls
+  this.el = el;
+  this.el.sparkcarousel = this;
+  this.backe = this.el.querySelector('.spark-carousel__back');
+  this.forwarde = this.el.querySelector('.spark-carousel__forward');
+  this.outerContainer = this.el.querySelector('.spark-carousel__outer-container');
+  this.containerMask = this.el.querySelector('.spark-carousel__container-mask');
+  this.container = this.el.querySelector('.spark-carousel__container');
+  this.dots = this.el.querySelector('.spark-carousel__dots');
+  this.pauseEl = this.el.querySelector('.spark-carousel__pause');
+  //get the options from the element
+  this.opts = {};
+  this.opts.wrapItems = this.el.attributes['data-spark-carousel-wrap-items'] ? true : false;
+  this.opts.startingVelocity = this.el.attributes['data-spark-carousel-scroll-velocity'] ? this.el.attributes['data-spark-carousel-scroll-velocity'].value : 10;
+  this.opts.smoothScroll = this.el.attributes['data-spark-carousel-smooth-scroll'] ? true : false;
+  this.opts.smoothScrollCenterItems = this.el.attributes['data-spark-carousel-smooth-scroll-center'] ? true : false;
+  this.opts.panelScroll = this.el.attributes['data-spark-carousel-panel'] ? true : false;
+  this.opts.edgeScroll = this.opts.panelScroll || this.el.attributes['data-spark-carousel-edge'] ? true : false;
+  this.opts.autoAdvance = this.el.attributes['data-spark-carousel-auto-advance'] ? this.el.attributes['data-spark-carousel-auto-advance'].value : false;
+  //setup autoAdvance
+  if (this.opts.autoAdvance &amp;&amp; !this.autoAdvance &amp;&amp; !this.pause) {
+    this.autoAdvance = window.setTimeout(function () {
+      this._autoAdvance();
+    }.bind(this), this.opts.autoAdvance * 1000);
+  }
+  //conditionally bind pause handlers.
+  //needs to be done here so that resetting the carousel will work correctly
+  if (this.opts.autoAdvance &amp;&amp; !this.pauseH) {
+    this.pauseH = this._pause.bind(this);
+    this.pauseEl.addEventListener('click', this.pauseH);
+  }
+  //collect items and cache sizing
+  var a = this.el.querySelectorAll('.spark-carousel__item');
+  this.items = [];
+  this.totalItemWidth = 0;
+  this.dims = this.containerMask.getBoundingClientRect();
+  this.width = this.dims.width;
+  this.height = this.dims.height;
+  var dots = document.createDocumentFragment();
+  var b;
+  //create our carouselItems
+  for (var i = 0; i &lt; a.length; i++) {
+    b = document.createElement('div');
+    dots.appendChild(b);
+    this.items.push(new this._carouselItem(a[i], this, b, i));
+    this.totalItemWidth += this.items[i].width;
+  }
+  //if we're resetting we need to empty out the exisiting elements first
+  while (this.dots.firstChild) {
+    this.dots.removeChild(this.dots.firstChild);
+  }
+  this.dots.appendChild(dots);
+  //this is to test if we're dealing with 2011 flexbox (IE10) and need to do an adjustment
+  //this is because ms-flex-pack: center doesn't work like 2012 flexbox center-pack
+  if (typeof this.container.style.msFlexAlign !== 'undefined') {
+    this._transformItems(-(this.totalItemWidth - this.width) / 2);
+  }
+  //setup inital transform
+  this._setTransform();
+  //need to bind this event handler here as we are always going to need to be listening
+  //for this event, in order to react to container visibility changing
+  this._handleVisibleChildren = this._handleVisibleChildrenH.bind(this);
+  document.addEventListener('spark.visible-children', this._handleVisibleChildren, true);
+  if (!this._rafHandler) {
+    this._rafHandler = this._rafHandlerH.bind(this);
+  }
+  //need to also listen to resize events, even if we don't have items overflowing
+  if (!this.resizeH) {
+    this.resizeH = (0, _debounce2.default)(this._resize.bind(this), 100);
+    window.addEventListener('resize', this.resizeH);
+  }
+  //if we haven't already init'd event listerers, and we have items overflowing
+  if (this.totalItemWidth &gt; this.width) {
+    if (!this.touchstartH) {
+      (0, _removeClass2.default)(this.el, 'noscroll');
+      this._setupListeners();
+      //center the first item
+      this._addTransform(-this.items[0].currentPosition() + this.width / 2);
+    }
+  }
+  //if we don't have overflowing items, then disable scrolling and remove listeners
+  else {
+      (0, _addClass2.default)(this.el, 'noscroll');
+      this._removeListeners();
+    }
+  //set the new selected item
+  this._updateSelected();
+  //finally, display the element
+  (0, _addClass2.default)(this.el, 'ready');
+};</code></pre>
+          <section id="remove">
+            <h1>remove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype.remove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>leaveElement</td>
+                <td>Boolean</td>
+                <td><p>Falsey value will remove the DOM element as well as the component instance</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Tears down the component, removes listeners, and conditionally delete the DOM element</p></div>
+          <pre><code class="language-javascript">Carousel.prototype.remove = function remove(leaveElement) {
+  window.removeEventListener('resize', this.resizeH);
+  delete this.resizeH;
+  document.removeEventListener('spark.visible-children', this._handleVisibleChildren, true);
+  delete this._handleVisibleChildren;
+  _BaseComponent.prototype.remove.call(this, leaveElement);
+};</code></pre>
+          <section id="_pause">
+            <h1>_pause</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._pause()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Pause/unpause the autoAdvance feature</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._pause = function _pause() {
+  if (this.pause) {
+    delete this.moves;
+    this.autoAdvance = window.setTimeout(function () {
+      this._autoAdvance();
+    }.bind(this), this.opts.autoAdvance * 1000);
+  } else {
+    this._rafCancel();
+    if (!this.opts.smoothScroll || this.opts.smoothScrollCenterItems) {
+      this._scrollTo(this._selectedItem());
+    }
+    window.clearTimeout(this.autoAdvance);
+    delete this.autoAdvance;
+  }
+  this._setPause(!this.pause);
+};</code></pre>
+          <section id="_setPause">
+            <h1>_setPause</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._setPause()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>b</td>
+                <td>Boolean</td>
+                <td><p>Truthy value will give the element the pause class</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>toggles the pause class on the element</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._setPause = function _setPause(b) {
+  if (typeof b === 'undefined') {
+    this.pause = typeof this.pause === 'undefined' ? false : this.pause;
+    return this.pause;
+  } else {
+    if (b) {
+      (0, _addClass2.default)(this.el, 'pause');
+    } else {
+      (0, _removeClass2.default)(this.el, 'pause');
+    }
+    this.pause = b;
+    return this.pause;
+  }
+};</code></pre>
+          <section id="_autoAdvance">
+            <h1>_autoAdvance</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._autoAdvance()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>function called by window.setTimeout, will check first to see if element is in use before triggering a slide advance</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._autoAdvance = function _autoAdvance() {
+  if (!this.moves &amp;&amp; !this._laststart &amp;&amp; !this.paused) {
+    this._rafCancel();
+    var a = this.items.indexOf(this._selectedItem());
+    this._scrollToItem = true;
+    this._scrollTo(this.items[a === this.items.length - 1 ? 0 : a + 1]);
+    this.autoAdvance = window.setTimeout(function () {
+      this._autoAdvance();
+    }.bind(this), this.opts.autoAdvance * 1000);
+  }
+};</code></pre>
+          <section id="_setupListeners">
+            <h1>_setupListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._setupListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>initalize and bind even listeners</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._setupListeners = function _setupListeners() {
+  this.touchstartH = this._touchstart.bind(this);
+  this.container.addEventListener('touchstart', this.touchstartH);
+  this.touchmoveH = this._touchmove.bind(this);
+  window.addEventListener('touchmove', this.touchmoveH);
+  this.touchendH = this._touchend.bind(this);
+  window.addEventListener('touchend', this.touchendH);
+  this.mousedownH = this._mousedown.bind(this);
+  this.container.addEventListener('mousedown', this.mousedownH);
+  this.mousemoveH = this._mousemove.bind(this);
+  window.addEventListener('mousemove', this.mousemoveH);
+  this.mouseupH = this._mouseup.bind(this);
+  window.addEventListener('mouseup', this.mouseupH);
+  this.forwardH = this._forward.bind(this);
+  this.forwarde.addEventListener('click', this.forwardH);
+  this.backH = this._back.bind(this);
+  this.backe.addEventListener('click', this.backH);
+  this.clickH = this._click.bind(this);
+  this.el.addEventListener('click', this.clickH);
+  this._focusHandler = this._scrollToClicked.bind(this);
+  this.container.addEventListener('focus', this._focusHandler, true);
+};</code></pre>
+          <section id="_removeListeners">
+            <h1>_removeListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._removeListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Removes non-essential event listeners, called when tearing down the component, or our content<br />does not exceed the width of our element</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._removeListeners = function _removeListeners() {
+  this.el.removeEventListener('touchstart', this.touchstartH);
+  delete this.touchstartH;
+  window.removeEventListener('touchmove', this.touchmoveH);
+  delete this.touchmoveH;
+  window.removeEventListener('touchend', this.touchendH);
+  delete this.touchendH;
+  this.el.removeEventListener('mousedown', this.mousedownH);
+  delete this.mousedownH;
+  window.removeEventListener('mousemove', this.mousemoveH);
+  delete this.mousemoveH;
+  window.removeEventListener('mouseup', this.mouseupH);
+  delete this.mouseupH;
+  this.forwarde.removeEventListener('click', this.forwardH);
+  delete this.forwardH;
+  this.backe.removeEventListener('click', this.backH);
+  delete this.backH;
+  this.el.removeEventListener('click', this.clickH);
+  delete this.clickH;
+  this.container.removeEventListener('focus', this._focusHandler, true);
+  delete this._focusHandler;
+  if (this.pauseEl) {
+    this.pauseEl.removeEventListener('click', this.pauseH);
+    delete this.pauseH;
+  }
+};</code></pre>
+          <section id="_handleVisibleChildrenH">
+            <h1>_handleVisibleChildrenH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._handleVisibleChildrenH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The spark.visible-children event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Event handler for the spark.visible-children event, just call the change function to handle any<br />visibility or sizing changes</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._handleVisibleChildrenH = function _handleVisibleChildrenH(e) {
+  if (e.target.contains(this.el)) {
+    window.setTimeout(function () {
+      this.change();
+    }.bind(this), 0);
+  }
+};</code></pre>
+          <section id="_forward">
+            <h1>_forward</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._forward()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The click event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Forward button click handler triggers a scrollTo to the &quot;next&quot; element</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._forward = function _forward(e) {
+  var s = this.items.indexOf(this._selectedItem());
+  s++;
+  if (s &gt; this.items.length - 1) {
+    if (this.opts.wrapItems) {
+      s = 0;
+    } else {
+      s--;
+    }
+  }
+  delete this.moves;
+  var a = this._startingVelocity;
+  a = a &lt; -this.opts.startingVelocity ? a : -this.opts.startingVelocity;
+  this._rafCancel();
+  this._scrollToItem = true;
+  this._scrollTo(this.items[s], a);
+  if (e) {
+    e.preventDefault();
+  }
+};</code></pre>
+          <section id="_back">
+            <h1>_back</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._back()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The click event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Back button click handler triggers a scrollTo to the &quot;previous&quot; element</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._back = function _back(e) {
+  var s = this.items.indexOf(this._selectedItem());
+  s--;
+  if (s &lt; 0) {
+    if (this.opts.wrapItems) {
+      s = this.items.length - 1;
+    } else {
+      s++;
+    }
+  }
+  delete this.moves;
+  var a = this._startingVelocity;
+  a = a &gt; this.opts.startingVelocity ? a : this.opts.startingVelocity;
+  this._rafCancel();
+  this._scrollToItem = true;
+  this._scrollTo(this.items[s], a);
+  if (e) {
+    e.preventDefault();
+  }
+};</code></pre>
+          <section id="_movestart">
+            <h1>_movestart</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._movestart()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The start event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Move start handler, handles both touchstart and mousedown events</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._movestart = function _movestart(e) {
+  this._rafCancel();
+  this.moves = [];
+  this.moves.push(e);
+};</code></pre>
+          <section id="_move">
+            <h1>_move</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._move()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The move event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Move handler, handles internal move event objects</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._move = function _move(e) {
+  if (this.moves &amp;&amp; this.moves.length &gt; 1) {
+    this._addTransform(e.pageX - this.moves[this.moves.length - 1].pageX);
+    this.moves.push(e);
+    e.preventDefault = true;
+  } else {
+    if (this.moves &amp;&amp; this.moves[0]) {
+      if (Math.abs(this.moves[0].pageX - e.pageX) &gt; Math.abs(this.moves[0].pageY - e.pageY) &amp;&amp; Math.abs(this.moves[0].pageX - e.pageX) &gt; 5 &amp;&amp; e.cancelable) {
+        this._addTransform(e.pageX - this.moves[0].pageX);
+        this.moves.push(e);
+        e.preventDefault = true;
+      } else {
+        if (Math.abs(this.moves[0].pageX - e.pageX) &gt; 5) {
+          this.moves[0] = e;
+        }
+      }
+    }
+    if (e.type === 'touchend' || e.type === 'mouseup') {
+      delete this.moves;
+    }
+  }
+};</code></pre>
+          <section id="_moveend">
+            <h1>_moveend</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._moveend()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The moveend event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Move end handler, handles both touchend and mouseup events</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._moveend = function _moveend(e) {
+  this._move(e);
+  if (!this.opts.smoothScroll) {
+    this._settle(this.moves);
+  } else {
+    this._interiaScroll(this.moves);
+  }
+  return e;
+};</code></pre>
+          <section id="_resize">
+            <h1>_resize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._resize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Resize event handler, calls change to handle any element dimension changes</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._resize = function _resize() {
+  this.change();
+};</code></pre>
+          <section id="change">
+            <h1>change</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype.change()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Calling the change function will handle updating the element to take into account<br />any styling, sizing, or visibility changes, and the addition or removal of any carouselItems</p></div>
+          <pre><code class="language-javascript">Carousel.prototype.change = function change() {
+  var dims = this.el.getBoundingClientRect();
+  if (dims.width !== this.width || dims.height !== this.height) {
+    if (this.autoAdvance) {
+      window.clearTimeout(this.autoAdvance);
+      delete this.autoAdvance;
+    }
+    this._rafCancel();
+    var c = this._selectedItem();
+    this._setTransform(0);
+    this._setTransformItems(0);
+    this._init(this.el);
+    if (this.items.indexOf(c.el.sparkcarouselitem) &gt; -1 &amp;&amp; this.totalItemWidth &gt; this.width) {
+      if (this.opts.wrapItems) {
+        this._addTransform(-this.totalItemWidth + (-c.el.sparkcarouselitem.currentPosition() + this.width / 2));
+      } else {
+        this._addTransform(-c.el.sparkcarouselitem.currentPosition() + this.width / 2);
+      }
+    }
+  }
+};</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype.update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Update the component to use a new element or reparse from<br />the existing element.</p></div>
+          <pre><code class="language-javascript">Carousel.prototype.update = function update(el) {
+
+  el = el || this.el;
+
+  this._removeListeners();
+  window.removeEventListener('resize', this.resizeH);
+  delete this.resizeH;
+  document.removeEventListener('spark.visible-children', this._handleVisibleChildren, true);
+  delete this._handleVisibleChildren;
+  this._init(el);
+
+  this.change();
+
+  return this;
+};</code></pre>
+          <section id="_touchstart">
+            <h1>_touchstart</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._touchstart()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The touchstart event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Touchstart event handler, passes necessary data points to the movestart function</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._touchstart = function _touchstart(e) {
+  var a = {
+    'type': e.type,
+    'pageX': e.touches[0].pageX,
+    'pageY': e.touches[0].pageY,
+    'timeStamp': e.timeStamp
+  };
+  this._movestart(a);
+};</code></pre>
+          <section id="_touchmove">
+            <h1>_touchmove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._touchmove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The touchmove event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Touchmove event handler, passes necessary data points to the move function</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._touchmove = function _touchmove(e) {
+  var a = {
+    'type': e.type,
+    'pageX': e.touches[0].pageX,
+    'pageY': e.touches[0].pageY,
+    'timeStamp': e.timeStamp,
+    'cancelable': e.cancelable
+  };
+  this._move(a);
+  if (a.preventDefault) {
+    e.preventDefault();
+  }
+};</code></pre>
+          <section id="_touchend">
+            <h1>_touchend</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._touchend()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The touchend event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Touchend event handler, passes necessary data points to the moveend function</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._touchend = function _touchend(e) {
+  if (this.moves &amp;&amp; this.moves.length &gt; 2 &amp;&amp; e.cancelable) {
+    var a = {
+      'type': e.type,
+      'pageX': this.moves[this.moves.length - 1].pageX,
+      'pageY': this.moves[this.moves.length - 1].pageY,
+      'timeStamp': e.timeStamp
+    };
+    this._moveend(a);
+  } else {
+    delete this.moves;
+  }
+};</code></pre>
+          <section id="_mousedown">
+            <h1>_mousedown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._mousedown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The mousedown event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Mousedown event handler, passes necessary data points to the movestart function</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._mousedown = function _mousedown(e) {
+  if (e.button !== 0) {
+    return e;
+  }
+  this.isMouseDown = true;
+  var a = {
+    'type': e.type,
+    'pageX': e.pageX,
+    'pageY': e.pageY,
+    'timeStamp': e.timeStamp
+  };
+  this._movestart(a);
+  e.preventDefault();
+};</code></pre>
+          <section id="_mousemove">
+            <h1>_mousemove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._mousemove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The mousemove event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Mousemove event handler, passes necessary data points to the move function</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._mousemove = function _mousemove(e) {
+  if (this.isMouseDown) {
+    var a = {
+      'type': e.type,
+      'pageX': e.clientX,
+      'pageY': e.clientY,
+      'timeStamp': e.timeStamp,
+      //this was changed to correct an issue in safari - it doesn't report cancelable correctly
+      'cancelable': true
+    };
+    this._move(a);
+    if (a.preventDefault) {
+      e.preventDefault();
+    }
+  }
+};</code></pre>
+          <section id="_mouseup">
+            <h1>_mouseup</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._mouseup()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The mouseup event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Mouseup event handler, passes necessary data points to the moveend function</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._mouseup = function _mouseup(e) {
+  if (this.moves &amp;&amp; this.moves.length &gt; 2) {
+    var a = {
+      'type': e.type,
+      'pageX': e.pageX,
+      'pageY': e.pageY,
+      'timeStamp': e.timeStamp
+    };
+    this._moveend(a);
+    this.mouseUpHandled = true;
+  } else {
+    delete this.moves;
+    this._scrollToClicked(e);
+  }
+  this.isMouseDown = false;
+};</code></pre>
+          <section id="_click">
+            <h1>_click</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._click()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Object</td>
+                <td><p>The click event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Click event handler</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._click = function _click(e) {
+  //if we are already tracking moves, then this will be handled by the mouseend event handler and we should prevent the default action
+  if (this.moves) {
+    e.preventDefault();
+  }
+  //if it has already been handled by mouseup handler, prevent the action
+  if (this.mouseUpHandled) {
+    e.preventDefault();
+  }
+  //reset our handled state
+  delete this.mouseUpHandled;
+  //checking both this.moves and this.mouseUpHandled ensures we capture events correctly in all browsers, where the order of the mouseup/click events can vary
+};</code></pre>
+          <section id="_velocity">
+            <h1>_velocity</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._velocity()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>moves</td>
+                <td>Array</td>
+                <td><p>The array of cursor positions</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Calculate the user&#39;s recent cursor/finger velocity</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._velocity = function _velocity(moves) {
+  var avg = 0;
+  var m = Math.min(6, moves.length - 1);
+  for (var i = 1; i &lt; m; i++) {
+    if (moves[moves.length - i].timeStamp === moves[moves.length - i - 1].timeStamp) {
+      avg += avg / i;
+    } else {
+      avg += 10 * (moves[moves.length - i].pageX - moves[moves.length - i - 1].pageX) / (moves[moves.length - i].timeStamp - moves[moves.length - i - 1].timeStamp) / m;
+    }
+  }
+  return avg;
+};</code></pre>
+          <section id="_scrollToClicked">
+            <h1>_scrollToClicked</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._scrollToClicked()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The click event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Handles click events on items and dots, scrolling to the clicked item</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._scrollToClicked = function _scrollToClicked(e) {
+  var tar = e.target;
+  if (this.el.contains(tar)) {
+    while (!tar.sparkcarousel) {
+      if (tar.sparkcarouselitem) {
+        this.containerMask.scrollLeft = 0;
+        delete this.moves;
+        this._rafCancel();
+        this._scrollTo(tar.sparkcarouselitem);
+        e.preventDefault();
+        break;
+      }
+      if (tar.sparkcarouselitemdot) {
+        this.containerMask.scrollLeft = 0;
+        delete this.moves;
+        this._rafCancel();
+        var v = tar.sparkcarouselitemdot.order &lt; this._selectedItem().order ? this.opts.startingVelocity : -this.opts.startingVelocity;
+        this._scrollTo(tar.sparkcarouselitemdot, v);
+        e.preventDefault();
+        break;
+      }
+      tar = tar.parentNode;
+    }
+  }
+};</code></pre>
+          <section id="_scrollTo">
+            <h1>_scrollTo</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._scrollTo()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>item</td>
+                <td>Object</td>
+                <td><p>The carouselItem to scroll to</p></td>
+              </tr>
+              <tr>
+                <td>startingVelocity</td>
+                <td>Number</td>
+                <td><p>The startingVelocity of the scroll animation</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Scroll to the carouselItem, with specified startingVelocity, auto determines default velocity if not specified</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._scrollTo = function _scrollTo(item, startingVelocity) {
+  var offset = this.width / 2;
+  var currentPosition = item.currentPosition();
+  if (!startingVelocity) {
+    startingVelocity = offset - item.currentPosition() &gt; 0 ? this.opts.startingVelocity : -this.opts.startingVelocity;
+  }
+  if (this.opts.wrapItems) {
+    if (startingVelocity &gt; 0) {
+      //left
+      if (currentPosition &gt; offset) {
+        this._totalDistance = offset + this.totalItemWidth - currentPosition;
+      } else {
+        this._totalDistance = offset - currentPosition;
+      }
+    } else {
+      //right
+      if (currentPosition &lt; offset) {
+        this._totalDistance = -(this.totalItemWidth + currentPosition - offset);
+      } else {
+        this._totalDistance = offset - currentPosition;
+      }
+    }
+  } else {
+    this._totalDistance = offset - currentPosition;
+  }
+  this._startingVelocity = startingVelocity;
+  delete this.moves;
+  this._scrollToItem = true;
+  this._raf = window.requestAnimationFrame(this._rafHandler);
+};</code></pre>
+          <section id="_rafHandlerH">
+            <h1>_rafHandlerH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._rafHandlerH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>t</td>
+                <td>Number</td>
+                <td><p>The timestamp for the current animation frame</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>This is the animator function, it examines the options set on the carousel object<br />and selectively adds transform and requests addtional animation frames if necesary</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._rafHandlerH = function _rafHandlerH(t) {
+  if (this.opts.autoAdvance &amp;&amp; this.autoAdvance) {
+    window.clearTimeout(this.autoAdvance);
+    delete this.autoAdvance;
+  }
+  var frames;
+  if (this.moves || !this._startingVelocity) {
+    this._rafCancel();
+    return;
+  }
+  if (!this._laststart) {
+    this._laststart = t;
+  }
+  if (!this._remainingDistance) {
+    this._remainingDistance = this._totalDistance;
+  }
+  if (!this._lastframe) {
+    this._lastframe = t;
+    frames = 1;
+  } else {
+    frames = (t - this._lastframe) / (1 / 60 * 1000);
+  }
+  var d = this._startingVelocity * frames;
+  if (this.opts.smoothScroll &amp;&amp; !this._scrollToItem) {
+    this._addTransform(d);
+    this._startingVelocity *= Math.pow(0.97, frames);
+    if (this.opts.smoothScrollCenterItems &amp;&amp; Math.abs(this._startingVelocity) &lt; 1) {
+      this._scrollTo(this._selectedItem());
+    }
+    if (Math.abs(this._startingVelocity) &lt; 0.5) {
+      if (this._startingVelocity &gt; 0 &amp;&amp; this.transform.x &gt; this.totalItemWidth / 2 - this.items[0].width / 2 || this._startingVelocity &lt; 0 &amp;&amp; this.transform.x &lt; -(this.totalItemWidth / 2 - this.items[this.items.length - 1].width / 2)) {
+        this._scrollToItem = true;
+        this._scrollTo(this._selectedItem());
+      } else {
+        this._rafCancel();
+      }
+    } else {
+      this._raf = window.requestAnimationFrame(this._rafHandler);
+    }
+  } else {
+    if (this._startingVelocity &gt; 0) {
+      if (d &lt; this._remainingDistance) {
+        this._addTransform(d);
+        this._remainingDistance -= d;
+        if (this._remainingDistance &gt; this._totalDistance / 2) {
+          this._startingVelocity *= Math.pow(1.15, frames);
+        } else {
+          this._startingVelocity *= Math.pow(0.9, frames);
+          this._startingVelocity = this._startingVelocity &gt; 2 ? this._startingVelocity : 2;
+        }
+        this._raf = window.requestAnimationFrame(this._rafHandler);
+      } else {
+        this._addTransform(this._remainingDistance);
+        this._rafCancel();
+      }
+    } else {
+      if (d &gt; this._remainingDistance) {
+        this._addTransform(d);
+        this._remainingDistance -= d;
+        if (this._remainingDistance &lt; this._totalDistance / 2) {
+          this._startingVelocity *= Math.pow(1.15, frames);
+        } else {
+          this._startingVelocity *= Math.pow(0.9, frames);
+          this._startingVelocity = this._startingVelocity &lt; -2 ? this._startingVelocity : -2;
+        }
+        this._raf = window.requestAnimationFrame(this._rafHandler);
+      } else {
+        this._addTransform(this._remainingDistance);
+        this._rafCancel();
+      }
+    }
+  }
+  this._lastframe = t;
+};</code></pre>
+          <section id="_rafCancel">
+            <h1>_rafCancel</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._rafCancel()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>This is the animator clearing function<br />it clears values used during animation, and selectively enables autoAdvance</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._rafCancel = function _rafCancel() {
+  if (this.opts.autoAdvance &amp;&amp; !this.autoAdvance &amp;&amp; !this.pause) {
+    this.autoAdvance = window.setTimeout(function () {
+      this._autoAdvance();
+    }.bind(this), this.opts.autoAdvance * 1000);
+  }
+  window.cancelAnimationFrame(this._raf);
+  delete this._scrollToItem;
+  delete this._laststart;
+  delete this._startingVelocity;
+  delete this._remainingDistance;
+  delete this._totalDistance;
+  delete this._lastframe;
+};</code></pre>
+          <section id="_interiaScroll">
+            <h1>_interiaScroll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._interiaScroll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>moves</td>
+                <td>Array</td>
+                <td><p>The captured move events</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>This computes values necessary to start an animation frame when the carousel is<br />configured to use smoothScroll</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._interiaScroll = function _interiaScroll(moves) {
+  if (moves[moves.length - 1].timeStamp - moves[moves.length - 2].timeStamp &gt; 100 || moves.length &lt; 3) {
+    if (this.opts.smoothScrollCenterItems) {
+      return this._scrollTo(this._selectedItem());
+    }
+    return;
+  }
+  this._startingVelocity = this._velocity(moves);
+  delete this.moves;
+  this._raf = window.requestAnimationFrame(this._rafHandler);
+};</code></pre>
+          <section id="_settle">
+            <h1>_settle</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._settle()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>moves</td>
+                <td>Array</td>
+                <td><p>The captured move events</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>This determines which carousel item should be focused based on the previous moves<br />made by the user</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._settle = function _settle(moves) {
+  if (moves &amp;&amp; moves.length &gt; 3) {
+    if (moves[moves.length - 1].timeStamp - moves[moves.length - 2].timeStamp &gt; 80) {
+      return this._scrollTo(this._selectedItem());
+    }
+    var v1 = 10 * (moves[moves.length - 3].pageX - moves[moves.length - 4].pageX) / (moves[moves.length - 3].timeStamp - moves[moves.length - 4].timeStamp);
+    var v2 = 10 * (moves[moves.length - 2].pageX - moves[moves.length - 3].pageX) / (moves[moves.length - 2].timeStamp - moves[moves.length - 3].timeStamp);
+    if (Math.abs(v1) &lt; Math.abs(v2) || Math.abs(v2) &gt; 0.5 &amp;&amp; Math.abs(v2) &gt; 0.5) {
+      //user is probably trying to go to next or prev item
+      var s = this.items.indexOf(this._selectedItem());
+      if (v2 &gt; 0) {
+        //prev
+        if (s &gt; 0) {
+          this._scrollTo(this.items[s - 1], v2);
+        } else {
+          if (this.opts.wrapItems) {
+            this._scrollTo(this.items[this.items.length - 1], v2);
+          } else {
+            this._scrollTo(this.items[0]);
+          }
+        }
+      } else {
+        //next
+        if (s &lt; this.items.length - 1) {
+          this._scrollTo(this.items[s + 1], v2);
+        } else {
+          if (this.opts.wrapItems) {
+            this._scrollTo(this.items[0], v2);
+          } else {
+            this._scrollTo(this.items[this.items.length - 1]);
+          }
+        }
+      }
+    } else {
+      if (this._selectedItem().currentPosition() &gt; this.width / 2) {
+        this._scrollTo(this._selectedItem(), -this.opts.startingVelocity);
+      } else {
+        this._scrollTo(this._selectedItem(), this.opts.startingVelocity);
+      }
+    }
+  }
+};</code></pre>
+          <section id="_transformItems">
+            <h1>_transformItems</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._transformItems()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>x</td>
+                <td>Number</td>
+                <td><p>The pixel value to transform</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Transforms the position of all carouselItems</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._transformItems = function _transformItems(x) {
+  for (var i = 0; i &lt; this.items.length; i++) {
+    this.items[i].addTransform(x);
+  }
+};</code></pre>
+          <section id="_setTransformItems">
+            <h1>_setTransformItems</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._setTransformItems()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>x</td>
+                <td>Number</td>
+                <td><p>The pixel value to transform</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Sets the transform position of all carouselItems</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._setTransformItems = function _setTransformItems(x) {
+  for (var i = 0; i &lt; this.items.length; i++) {
+    this.items[i].setTransform(x);
+  }
+};</code></pre>
+          <section id="_addTransform">
+            <h1>_addTransform</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._addTransform()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>x</td>
+                <td>Number</td>
+                <td><p>The pixel value to transform</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Adds transform to the container element, does checking for bounds conditions and<br />wraps items if necessary and configured</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._addTransform = function _addTransform(x) {
+  var a;
+  if ((this.opts.smoothScrollCenterItems || !this.opts.smoothScroll) &amp;&amp; !this.opts.wrapItems &amp;&amp; !this.opts.edgeScroll) {
+    var l = this.items.indexOf(this.selectedItem);
+    if (l === this.items.length - 1) {
+      this._leftbound(true);
+    } else {
+      this._leftbound(false);
+    }
+    if (l === 0) {
+      this._rightbound(true);
+    } else {
+      this._rightbound(false);
+    }
+  } else {
+    this._leftbound(false);
+    this._rightbound(false);
+  }
+  if (this.transform.x + x &lt; 0 &amp;&amp; x &lt; 0) {
+    if (this.opts.wrapItems) {
+      //wrap items until we have covered the visible area
+      while (this.transform.x + x &lt; -(this.totalItemWidth - this.width) / 2 &amp;&amp; (this.totalItemWidth &lt; this.width ? this.transform.x + x &lt; -this.totalItemWidth / 2 : true)) {
+        a = this.items.shift();
+        this.items.push(a);
+        a.addTransform(this.totalItemWidth);
+        this._transformItems(-a.width);
+        x += a.width;
+      }
+    } else {
+      //there is a 1 pixel adjustment to account for some math rounding
+      if (this.opts.edgeScroll &amp;&amp; x &lt; 0 &amp;&amp; this.transform.x + x - 1 &lt;= -(this.totalItemWidth - this.width) / 2) {
+        this._leftbound(true);
+        return this._setTransform(-(this.totalItemWidth - this.width) / 2);
+      }
+      //progressively reduce scrolling when no more items to the right
+      if (x &lt; 0 &amp;&amp; this.transform.x + x &lt; -(this.totalItemWidth / 2 - this.items[this.items.length - 1].width / 2)) {
+        x = x * ((this.totalItemWidth / 2 + this.items[this.items.length - 1].width / 2 + (this.transform.x + x)) / this.items[this.items.length - 1].width);
+        x = x &gt; 0 ? 0 : x;
+      }
+    }
+    return this._setTransform(this.transform.x + x);
+  } else {
+    if (this.transform.x + x &gt; 0 &amp;&amp; x &gt; 0) {
+      if (this.opts.wrapItems) {
+        //wrap items until we have covered the visible area
+        while (this.transform.x + x &gt; -(this.width - this.totalItemWidth) / 2 &amp;&amp; (this.totalItemWidth &lt; this.width ? this.transform.x + x &gt; this.totalItemWidth / 2 : true)) {
+          a = this.items.pop();
+          this.items.unshift(a);
+          a.addTransform(-this.totalItemWidth);
+          this._transformItems(a.width);
+          x -= a.width;
+        }
+      } else {
+        //there is a 1 pixel adjustment to account for some math rounding
+        if (this.opts.edgeScroll &amp;&amp; x &gt; 0 &amp;&amp; this.transform.x + x + 1 &gt;= (this.totalItemWidth - this.width) / 2) {
+          this._rightbound(true);
+          return this._setTransform((this.totalItemWidth - this.width) / 2);
+        }
+        //progressively reduce scrolling when no more items to the left
+        if (x &gt; 0 &amp;&amp; this.transform.x + x &gt; this.totalItemWidth / 2 - this.items[0].width / 2) {
+          x = x * ((this.totalItemWidth / 2 + this.items[0].width / 2 - (this.transform.x + x)) / this.items[0].width);
+          x = x &lt; 0 ? 0 : x;
+        }
+      }
+    }
+    return this._setTransform(this.transform.x + x);
+  }
+};</code></pre>
+          <section id="_leftbound">
+            <h1>_leftbound</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._leftbound()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>b</td>
+                <td>Boolean</td>
+                <td><p>Set or unset the leftbound class</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Sets the leftbound class</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._leftbound = function _leftbound(b) {
+  if (typeof b === 'undefined') {
+    this.leftbound = typeof this.leftbound === 'undefined' ? false : this.leftbound;
+    return this.leftbound;
+  } else {
+    if (b) {
+      (0, _addClass2.default)(this.el, 'leftbound');
+    } else {
+      (0, _removeClass2.default)(this.el, 'leftbound');
+    }
+    this.leftbound = b;
+    return this.leftbound;
+  }
+};</code></pre>
+          <section id="_rightbound">
+            <h1>_rightbound</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._rightbound()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>b</td>
+                <td>Boolean</td>
+                <td><p>Set or unset the rightbound class</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Sets the rightbound class</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._rightbound = function _rightbound(b) {
+  if (typeof b === 'undefined') {
+    this.rightbound = typeof this.rightbound === 'undefined' ? false : this.rightbound;
+    return this.rightbound;
+  } else {
+    if (b) {
+      (0, _addClass2.default)(this.el, 'rightbound');
+    } else {
+      (0, _removeClass2.default)(this.el, 'rightbound');
+    }
+    this.rightbound = b;
+    return this.rightbound;
+  }
+};</code></pre>
+          <section id="_updateSelected">
+            <h1>_updateSelected</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._updateSelected()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Updates the selected item, by seeing which item has its center closest<br />to the center of the carousel</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._updateSelected = function _updateSelected() {
+  var tar = this.width / 2;
+  var i = -1;
+  var a = 1;
+  var b = 0;
+  while (a &gt; b) {
+    i++;
+    if (i &gt; this.items.length - 2) {
+      break;
+    }
+    a = Math.abs(tar - this.items[i].currentPosition());
+    b = Math.abs(tar - this.items[i + 1].currentPosition());
+  }
+  return this._selectedItem(this.items[i]);
+};</code></pre>
+          <section id="_selectedItem">
+            <h1>_selectedItem</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._selectedItem()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>item</td>
+                <td>Object</td>
+                <td><p>Optional: the new item select, if omitted it will return the currently selected item.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Stores the selected item for the carousel, and updates the previously<br />selected item and newly selected item to have the correct states<br />Conditionally sets the leftbound/rightbound states depending on configuration</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._selectedItem = function _selectedItem(item) {
+  if ((typeof item === 'undefined' ? 'undefined' : _typeof(item)) !== 'object') {
+    if (this.selectedItem) {
+      return this.selectedItem;
+    } else {
+      return this._updateSelected();
+    }
+  } else {
+    if (this.selectedItem) {
+      this.selectedItem.setSelected(false);
+    }
+    this.selectedItem = item;
+    if ((this.opts.smoothScrollCenterItems || !this.opts.smoothScroll) &amp;&amp; !this.opts.wrapItems &amp;&amp; !this.opts.edgeScroll) {
+      var l = this.items.indexOf(this.selectedItem);
+      if (l === this.items.length - 1) {
+        this._leftbound(true);
+      } else {
+        this._leftbound(false);
+      }
+      if (l === 0) {
+        this._rightbound(true);
+      } else {
+        this._rightbound(false);
+      }
+    }
+    this.selectedItem.setSelected(true);
+  }
+};</code></pre>
+          <section id="_setTransform">
+            <h1>_setTransform</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Carousel.prototype._setTransform()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>x</td>
+                <td>Number</td>
+                <td><p>The pixel value to transform</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Sets the transform for the carousel container</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._setTransform = function _setTransform(x) {
+  x = x ? x : 0;
+  this.transform = {
+    'x': x
+  };
+  this.container.setAttribute('style', (0, _transform2.default)('translate3d', x + 'px, 0px, 0px'));
+  this._updateSelected();
+  return x;
+};
+
+return Carousel;
+}(_base2.default);</code></pre>
+          <section id="defaults">
+            <h1>defaults</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Carousel.prototype.defaults</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Default values for internal properties we will be setting.<br />These are set on each construction so we don&#39;t leak properties<br />into the prototype chain.</p></div>
+          <pre><code class="language-javascript">Carousel.prototype.defaults = {
+  el: null
+};</code></pre>
+          <section id="_whitelistedParams">
+            <h1>_whitelistedParams</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-success radius ctx-type">property</div><span>&nbsp;</span><span>Carousel.prototype._whitelistedParams</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Whitelisted parameters which can be set on construction.</p></div>
+          <pre><code class="language-javascript">Carousel.prototype._whitelistedParams = [];
+
+exports.default = Carousel;
+module.exports = exports['default'];
+//# sourceMappingURL=carousel.js.map</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/mr-doc/mr-doc">Mr. Doc </a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau </a></p>
+        <p>Mr. Doc is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr </a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../js/twitter-widget.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap-transition.min.js"></script>
+    <script src="../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../js/bootstrap-affix.min.js"></script>
+    <script src="../../js/prism.min.js"></script>
+    <script src="../../js/index.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+////
+/// ## Align
+/// Aligns items.
+/// @group helpers/align
+////
+
+
+/// Align top
+.spark-align-top {
+  vertical-align: top;
+}
+
+/// Align baseline
+.spark-align-baseline {
+  vertical-align: baseline;
+}
+
+/// Align middle
+.spark-align-middle {
+  vertical-align: middle;
+}
+
+/// Align items to the center
+.spark-align-items-center {
+  align-items: center;
+}
