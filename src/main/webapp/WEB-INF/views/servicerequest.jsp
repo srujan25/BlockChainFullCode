@@ -22,6 +22,17 @@ $(document).ready(function(){
          venderCombo.add(option,i);
       }
    });
+
+    $.post("aircraftComponents", function( data ) {
+        var temp = JSON.parse(data);
+         var aircraftCombo = document.getElementById("serialNo");
+         for (var i in temp) {
+            var option = document.createElement("option");
+            option.text = temp[i].componentName;
+            option.value = temp[i].serialNo;
+            aircraftCombo.add(option,i);
+         }
+      });
 });
 </script>
 
@@ -37,11 +48,17 @@ $(document).ready(function(){
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <section>
 
-                  <label class="spark-input">
-                        <input class="spark-input__field" name="serialNo" id="serialNo" role="textbox" value="">
-                       <span class="spark-label">Serial No</span>
+                 <label class="spark-input">
+                        <input class="spark-input__field" name="serviceRequestId" id="serviceRequestId" role="textbox" value="">
+                        <span class="spark-label">Service Request Id</span>
                   </label>
-
+                  <div class="spark-margin-top">
+                         <label class="spark-select">
+                             <select name="serialNo" id="serialNo" class="spark-select__input">
+                                             </select>
+                             <span class="spark-label">Select AirCraft Components</span>
+                         </label>
+                  </div>
 
                 <div class="spark-select-group spark-margin-top">
                     <label class="spark-select">

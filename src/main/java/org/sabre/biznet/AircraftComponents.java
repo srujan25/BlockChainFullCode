@@ -12,6 +12,16 @@ public class AircraftComponents {
     private String componentExpiryDate;
     private String airline;
 
+    public String getServiceRequestId() {
+        return serviceRequestId;
+    }
+
+    public void setServiceRequestId(String serviceRequestId) {
+        this.serviceRequestId = serviceRequestId;
+    }
+
+    private String serviceRequestId;
+
     public String getSerialNo() {
         return serialNo;
     }
