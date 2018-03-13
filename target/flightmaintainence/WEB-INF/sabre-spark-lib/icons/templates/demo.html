@@ -1,8 +1,0 @@
-<div class="icon-container"><% var hiddenGlyphs = {"log-in":1,"log-out":1} %>
-	<div class="row"><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx]; if (!hiddenGlyphs[glyph]){ %>
-		<div class="col-xs-6 col-md-4 col-lg-3" data-name="<%= glyph %>">
-			<% if (baseClass != 'spark-icon'){ %><i class="spark-icon <%= baseClass %> spark-icon--lg">&#x<%= codepoints[glyphIdx] %>;</i><% } else { %><i class="spark-icon spark-icon--lg">&#x<%= codepoints[glyphIdx] %>;</i><% } %>
-			<span class="spark-margin-left spark-eta"><%= glyph %></span>
-		</div><% } %><% } %>
-	</div>
-</div>
