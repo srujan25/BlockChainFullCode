@@ -101,10 +101,7 @@
     $(document).ready(function () {
         $.post("transactionHistoryObjects", function(data){
             var temp = JSON.parse(data);
-            alert("Data: " + temp );
-
             var count=Object.keys(temp).length;
-            alert("length: " + count );
 
             var content = "<table role='grid'><thead>";
             content += "<tr> <th data-sort>Serial No </th> <th data-sort='asc'>Flight No. </th> <th data-sort>Component Name </th><th data-sort>Model </th>";
