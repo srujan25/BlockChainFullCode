@@ -16,7 +16,6 @@
 </head>
 <body>
 <%@include file="menubar.jsp" %>
-<%@include file="menubar.jsp" %>
 <table align='center' width='100%'>
     <tr><td width='30%'></td><td align='center' >
 
