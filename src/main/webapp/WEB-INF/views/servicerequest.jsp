@@ -40,6 +40,9 @@ $(document).ready(function(){
 <body>
 <form action="servicerequestSave" method="post" commandName="somedata" style="form-spacing">
 
+    <%@include file="menubar.jsp" %>
+    <table align='center' width='100%'>
+        <tr><td width='30%'></td><td align='center' >
 
     <div class="container container-spacing">
         <div class="heading-content-container container sb-full-max-width spark-padding-top--sm spark-padding-bottom--sm"><div class="row"><div class="col-xs-12 property-id-container spark-text-right spark-bold"><div class="property-id-sub-container"><span class="property-id spark-padding-left title-spacing">Hi Srujan!!</span></div></div></div></div>
@@ -208,7 +211,7 @@ $(document).ready(function(){
 
 
 
-
+        </td></tr></table>
 
 </body>
 </html>

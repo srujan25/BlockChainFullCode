@@ -15,7 +15,10 @@
 <form action="airlineSave" method="post" commandName="somedata" style="form-spacing">
     <%@include file="menubar.jsp" %>
 
-    <div class="container container-spacing">
+        <table align='center' width='100%'>
+            <tr><td width='30%'></td><td align='center' >
+
+            <div class="container container-spacing">
 
         <div class="pms-page-title title-spacing"><h3>Airline</h3></div>
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -135,5 +138,7 @@
         <div><button class="spark-btn spark-btn--md spark-btn--secondary btn-left-airline-clear-spacing">Clear</button></div>
         <div><button class="sb-btn spark-btn btn-save-spacing" onclick="location.href='/vendorSave'">Save</button></div>
     </div>
+            </td></tr></table>
+
 </body>
 </html>

@@ -51,7 +51,10 @@ $(document).ready(function(){
 <form action="serviceOverSave" method="post" commandName="somedata" style="form-spacing">
 
     <%@include file="menubar.jsp" %>
-    <div class="container container-spacing">
+        <table align='center' width='100%'>
+            <tr><td width='30%'></td><td align='center' >
+
+            <div class="container container-spacing">
 
 
         <div class="pms-page-title title-spacing"><h3>Service Over</h3></div>
@@ -375,7 +378,7 @@ $(document).ready(function(){
     </div>
 
 
-
+        </td></tr></table>
 
 
 

@@ -12,6 +12,9 @@
 <body>
 <form action="aircraftsave" method="post" commandName="somedata" style="form-spacing">
 
+    <%@include file="menubar.jsp" %>
+    <table align='center' width='100%'>
+        <tr><td width='30%'></td><td align='center' >
 
     <div class="container container-spacing">
         <div class="heading-content-container container sb-full-max-width spark-padding-top--sm spark-padding-bottom--sm">
@@ -87,7 +90,7 @@
         var selectInstance = new Spark.SelectInput(el);
     </style>
 
-
+        </td></tr></table>
 
 
 </body>

@@ -11,6 +11,9 @@
 </head>
 <body>
 <form action="vendorSave" method="post" commandName="somedata" style="form-spacing">
+    <%@include file="menubar.jsp" %>
+    <table align='center' width='100%'>
+        <tr><td width='30%'></td><td align='center' >
 
 
     <div class="container container-spacing">
@@ -127,7 +130,7 @@
     </div>
 
 
-
+        </td></tr></table>
 
 
 

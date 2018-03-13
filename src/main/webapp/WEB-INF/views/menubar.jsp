@@ -22,5 +22,3 @@
 <script type="text/javascript" src="resources/sabre-spark-lib/js/jquery.js"></script>
 <script type="text/javascript" src="resources/sabre-spark-lib/js/spark.min.js"></script>
 <script type="text/javascript" src="resources/sabre-spark-lib/js/main.js"></script>
-</body>
-</html>
