@@ -6,8 +6,22 @@
     <link rel="stylesheet" type="text/css" href="resources/ui/common-spark.css"/>
     <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>AirCraft page</title>
-
+    <title>Service Over</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+   $.post("serviceRequests", function( data ) {
+     var temp = JSON.parse(data);
+      var serviceRequestCombo = document.getElementById("serviceRequestId");
+      for (var i in temp) {
+         var option = document.createElement("option");
+         option.text = temp[i].serviceRequestId;
+         option.value = temp[i].serviceRequestId;
+         serviceRequestCombo.add(option,i);
+      }
+   });
+  });
+  </script>
 </head>
 <body>
 <form action="serviceoversave" method="post" commandName="somedata" style="form-spacing">
