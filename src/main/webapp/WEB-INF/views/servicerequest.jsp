@@ -53,8 +53,14 @@ $(document).ready(function(){
 
                  <label class="spark-input">
                         <input class="spark-input__field" name="serviceRequestId" id="serviceRequestId" role="textbox" value="">
-                        <span class="spark-label">Service Request Id</span>
+                        <span class="spark-label">Service Request ID</span>
                   </label>
+
+                  <label class="spark-input">
+                      <input class="spark-input__field" name="flightNo" id="flightNo" role="textbox" value="">
+                      <span class="spark-label">Aircraft ID</span>
+                  </label>
+
                   <div class="spark-margin-top">
                          <label class="spark-select">
                              <select name="serialNo" id="serialNo" class="spark-select__input">

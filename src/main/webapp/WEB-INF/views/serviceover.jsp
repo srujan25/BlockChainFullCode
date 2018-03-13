@@ -65,7 +65,7 @@ $(document).ready(function(){
                     <label class="spark-select">
                         <select name="serviceRequestId" id="serviceRequestId" class="spark-select__input">
                         </select>
-                        <span class="spark-label">Service Request Id</span>
+                        <span class="spark-label">Service Request ID</span>
                      </label>
                </div>
 
