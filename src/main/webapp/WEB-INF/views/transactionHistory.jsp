@@ -110,7 +110,7 @@
             content += "<tr> <th data-sort>Serial No </th> <th data-sort='asc'>Flight No. </th> <th data-sort>Component Name </th><th data-sort>Model </th>";
             content += "<th data-sort>Manufacturer </th><th data-sort>Manufacturing Date</th><th data-sort>Expiry Date </th><th data-sort>Service Request ID </th>"
             content += "<th data-sort>Service request Date </th><th data-sort>Service over date</th><th data-sort>Next service Date </th><th data-sort>Service Engineer </th>"
-            content += "<th data-sort>Comments </th><th data-sort>transaction type</th><th data-sort>Service verified by </th><th data-sort>Designation </th>"
+            content += "<th data-sort>Comments </th><th data-sort>transaction type</th>"
             content += " </tr></thead>";
             for(i=0; i<count; i++){
                 content += '<tr><td>' + temp[i].serialNo + '</td>';
@@ -126,9 +126,7 @@
                 content += '<td>' + temp[i].nextServiceDate + '</td>';
                 content += '<td>' + temp[i].serviceEngineer + '</td>';
                 content += '<td>' + temp[i].comments + '</td>';
-                content += '<td>' + temp[i].transactionType + '</td>';
-                content += '<td>' + temp[i].serviceVerifiedBy + '</td>';
-                content += '<td>' + temp[i].designation + '</td></tr>';
+                content += '<td>' + temp[i].transactionType + '</td></tr>';
             }
             content += "</table>"
 
