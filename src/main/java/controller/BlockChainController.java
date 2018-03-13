@@ -28,6 +28,7 @@ public class BlockChainController {
     private static final String AIRLINE_URL = "http://localhost:3000/api/Airline";
     private static final String SERVICE_URL = "http://localhost:3000/api/ServiceTransaction";
     private static final String VENDOR_URL = "http://localhost:3000/api/Vendor";
+    private static final String SERVICE_REQUESTS_URL = "http://localhost:3000/api/queries/selectServiceRequest";
 
     @RequestMapping(path={"/"},method=RequestMethod.GET)
     public String getWelcome(Model model) {
@@ -149,6 +150,38 @@ public class BlockChainController {
     }
 
 
+    @RequestMapping(path={"/serviceRequests"},method=RequestMethod.POST)
+    @ResponseBody
+    public String getServiceRequests(Model model) {
+        RestTemplate restTemplate = new RestTemplate();
+        ServiceTransaction[] serviceRequests = restTemplate.getForObject(SERVICE_REQUESTS_URL, ServiceTransaction[].class);
+        if(serviceRequests == null || serviceRequests.length == 0 ) {
+            return "";
+        }
+        JSONArray array = new JSONArray();
+        JSONObject json;
+        for (int i = 0; i < serviceRequests.length; i++) {
+            json = new JSONObject();
+            json.put("serialNo", serviceRequests[i].getSerialNo());
+            json.put("flightNo", serviceRequests[i].getFlightNo());
+            json.put("componentName", serviceRequests[i].getComponentName());
+            json.put("componentModel", serviceRequests[i].getComponentModel());
+            json.put("componentManufacturer", serviceRequests[i].getComponentManufacturer());
+            json.put("componentManufacturingDate", serviceRequests[i].getComponentManufacturingDate());
+            json.put("componentExpiryDate", serviceRequests[i].getComponentExpiryDate());
+            json.put("serviceRequestId", serviceRequests[i].getServiceRequestId());
+            json.put("serviceRequestDate", serviceRequests[i].getServiceRequestDate());
+            json.put("transactionType", "ServiceOver");
+            json.put("airline", serviceRequests[i].getAirline());
+            json.put("aircraftComponent", serviceRequests[i].getAircraftComponent());
+            json.put("vendor", serviceRequests[i].getVendor());
+            json.put("transactionId", serviceRequests[i].getTransactionId());
+
+            array.add(json);
+        }
+        return array.toJSONString();
+    }
+
     @RequestMapping(path={"/airline"},method=RequestMethod.GET)
     public String getAirline(Model model) {
         /*RestTemplate restTemplate = new RestTemplate();
@@ -260,7 +293,7 @@ public class BlockChainController {
 
         componentMap.put("transactionType", "ServiceRequest");
         componentMap.put("flightMode", "In Service");
-        componentMap.put("airline", "org.sabre.biznet.Airline#"+aircraftComponent[0].getAirline());
+        componentMap.put("airline",  aircraftComponent[0].getAirline());
         componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#"+aircraftComponent[0].getSerialNo());
         componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getSerialNo());
         componentMap.put("transactionId", "");
