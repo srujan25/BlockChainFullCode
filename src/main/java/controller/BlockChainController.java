@@ -101,7 +101,7 @@ public class BlockChainController {
             json.put("serviceVerifiedBy", serviceTransactions[i].getServiceVerifiedBy());
             json.put("designation", serviceTransactions[i].getDesignation());
             json.put("airline", "org.sabre.biznet.Airline#"+serviceTransactions[i].getAirline());*/
-            json.put("aircraftComponent", "org.sabre.biznet.AircraftComponent#"+serviceTransactions[i].getAircraftComponent());
+            json.put("aircraftComponent", serviceTransactions[i].getAircraftComponent());
             /*json.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransactions[i].getVendor());
             json.put("transactionId", "");*/
             array.add(json);
