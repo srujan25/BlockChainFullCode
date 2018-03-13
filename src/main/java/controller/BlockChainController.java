@@ -243,6 +243,8 @@ public class BlockChainController {
         return "airline";
     }
 
+
+
     @RequestMapping(path={"/vendor"},method=RequestMethod.GET)
     public String getVendor(Model model) {
         return "vendor";
@@ -294,10 +296,10 @@ public class BlockChainController {
                 +serviceTransaction.getServiceRequestMonth() +"/"+serviceTransaction.getServiceRequestYear());
 
         componentMap.put("transactionType", "ServiceRequest");
-        componentMap.put("flightMode", "In Service");
+        componentMap.put("flightMode", "In Maintainence");
         componentMap.put("airline",  aircraftComponent[0].getAirline());
         componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#"+aircraftComponent[0].getSerialNo());
-        componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getSerialNo());
+        componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
         componentMap.put("transactionId", "");
 
         ObjectMapper mapper = new ObjectMapper();
@@ -305,6 +307,44 @@ public class BlockChainController {
 
         restTemplate.postForEntity( SERVICE_URL,componentMap,String.class );
         return "servicerequest";
+    }
+
+    @RequestMapping(path={"/serviceOverSave"},method=RequestMethod.POST)
+    public String saveServiceOver(@ModelAttribute("serviceTransaction") ServiceTransaction serviceTransaction) throws Exception{
+
+        RestTemplate restTemplate = new RestTemplate();
+       /* AircraftComponents[] aircraftComponent = restTemplate.getForObject(COMPONENT_URL
+                        +"?serialNo="+serviceTransaction.getSerialNo()
+                , AircraftComponents[].class);*/
+
+        Map<String, String> componentMap = new HashMap<String, String>();
+        componentMap.put("$class","org.sabre.biznet.ServiceTransaction");
+        componentMap.put("serialNo", serviceTransaction.getSerialNo());
+        componentMap.put("flightNo", serviceTransaction.getFlightNo());
+        componentMap.put("serviceRequestId", serviceTransaction.getServiceRequestId());
+        componentMap.put("componentName", serviceTransaction.getComponentName());
+        componentMap.put("componentModel", serviceTransaction.getComponentModel());
+        componentMap.put("componentManufacturer", serviceTransaction.getComponentModel());
+        componentMap.put("componentManufacturingDate", serviceTransaction.getComponentManufacturingDate());
+        componentMap.put("componentExpiryDate", serviceTransaction.getComponentExpiryDate());
+        componentMap.put("serviceRequestDate", serviceTransaction.getServiceRequestDate());
+        componentMap.put("serviceOverDate", serviceTransaction.getServiceOverDay()+
+                "/"+serviceTransaction.getServiceOverMonth()+"/"+serviceTransaction.getServiceOverYear());
+        componentMap.put("nextServiceDate", serviceTransaction.getNextServiceDay()+
+                "/"+serviceTransaction.getNextServiceMonth()+"/"+serviceTransaction.getNextServiceYear());
+        componentMap.put("serviceEngineer", serviceTransaction.getServiceEngineer());
+        componentMap.put("comments", serviceTransaction.getComments());
+        componentMap.put("flightMode", "In Ready");
+        componentMap.put("airline",  "org.sabre.biznet.Airline#"+serviceTransaction.getAirline());
+        componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#"+serviceTransaction.getSerialNo());
+        componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
+        componentMap.put("transactionId", "");
+
+        ObjectMapper mapper = new ObjectMapper();
+        String jsonResult = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(componentMap);
+
+        restTemplate.postForEntity( SERVICE_URL,componentMap,String.class );
+        return "serviceover";
     }
 
     @RequestMapping(path={"/servicerequest"},method=RequestMethod.GET)
