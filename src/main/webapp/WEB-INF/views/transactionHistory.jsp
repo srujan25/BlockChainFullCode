@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<%@ include file="header.jsp"%>
+<%@include file="menubar.jsp" %>
 
 
 <section class="spark-table col-xs-12">
@@ -104,12 +104,29 @@
             var count=Object.keys(temp).length;
             alert("length: " + count );
 
-            var content = "<table role='grid'>";
-            content += "<tr> <th data-sort='asc'>Flight No. </th> <th>Aircraft Component </th> </tr>";
-
+            var content = "<table role='grid'><thead>";
+            content += "<tr> <th data-sort>Serial No </th> <th data-sort='asc'>Flight No. </th> <th data-sort>Component Name </th><th data-sort>Model </th>";
+            content += "<th data-sort>Manufacturer </th><th data-sort>Manufacturing Date</th><th data-sort>Expiry Date </th><th data-sort>Service Request ID </th>"
+            content += "<th data-sort>Service request Date </th><th data-sort>Service over date</th><th data-sort>Next service Date </th><th data-sort>Service Engineer </th>"
+            content += "<th data-sort>Comments </th><th data-sort>transaction type</th><th data-sort>Service verified by </th><th data-sort>Designation </th>"
+            content += " </tr></thead>";
             for(i=0; i<count; i++){
-                content += '<tr><td>' + temp[i].flightNo + '</td>';
-                content += '<td>' + temp[i].aircraftComponent + '</td></tr>';
+                content += '<tr><td>' + temp[i].serialNo + '</td>';
+                content += '<td>' + temp[i].flightNo + '</td>';
+                content += '<td>' + temp[i].componentName + '</td>';
+                content += '<td>' + temp[i].componentModel + '</td>';
+                content += '<td>' + temp[i].componentManufacturer + '</td>';
+                content += '<td>' + temp[i].componentManufacturingDate + '</td>';
+                content += '<td>' + temp[i].componentExpiryDate + '</td>';
+                content += '<td>' + temp[i].serviceRequestId + '</td>';
+                content += '<td>' + temp[i].serviceRequestDate + '</td>';
+                content += '<td>' + temp[i].serviceOverDate + '</td>';
+                content += '<td>' + temp[i].nextServiceDate + '</td>';
+                content += '<td>' + temp[i].serviceEngineer + '</td>';
+                content += '<td>' + temp[i].comments + '</td>';
+                content += '<td>' + temp[i].transactionType + '</td>';
+                content += '<td>' + temp[i].serviceVerifiedBy + '</td>';
+                content += '<td>' + temp[i].designation + '</td></tr>';
             }
             content += "</table>"
 
@@ -122,8 +139,5 @@
     })
 
 </script>
-
-
-    <%@ include file="footer.jsp"%>
 </body>
 </html>

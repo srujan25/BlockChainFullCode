@@ -62,12 +62,8 @@ public class BlockChainController {
     @RequestMapping(path={"/transactionHistoryObjects"},method=RequestMethod.POST)
     @ResponseBody
     public String getTransactionHistoryObjects(Model model) {
-        ServiceTransaction[] serviceTransactions = new ServiceTransaction[1];
-        ServiceTransaction serviceTransaction= new ServiceTransaction();
-        serviceTransaction.setAircraftComponent("comp");
-        serviceTransaction.setFlightNo("12");
-
-        serviceTransactions[0] = serviceTransaction;
+        RestTemplate restTemplate = new RestTemplate();
+        ServiceTransaction[] serviceTransactions = restTemplate.getForObject(SERVICE_URL, ServiceTransaction[].class);
 
         if(serviceTransactions == null || serviceTransactions.length == 0 )
         {
@@ -78,10 +74,10 @@ public class BlockChainController {
         JSONObject json;
         for (int i = 0; i < serviceTransactions.length; i++) {
             json = new JSONObject();
-            /*json.put("$class","org.sabre.biznet.airlines[i]");
-            json.put("serialNo", serviceTransactions[i].getSerialNo());*/
+            json.put("$class","org.sabre.biznet.airlines[i]");
+            json.put("serialNo", serviceTransactions[i].getSerialNo());
             json.put("flightNo", serviceTransactions[i].getFlightNo());
-           /* json.put("componentName", serviceTransactions[i].getComponentName());
+            json.put("componentName", serviceTransactions[i].getComponentName());
             json.put("componentModel", serviceTransactions[i].getComponentModel());
             json.put("componentManufacturer", serviceTransactions[i].getComponentModel());
             json.put("componentManufacturingDate", serviceTransactions[i].getComponentManufacturingDate());
@@ -100,10 +96,10 @@ public class BlockChainController {
             json.put("transactionType", "ServiceRequest");
             json.put("serviceVerifiedBy", serviceTransactions[i].getServiceVerifiedBy());
             json.put("designation", serviceTransactions[i].getDesignation());
-            json.put("airline", "org.sabre.biznet.Airline#"+serviceTransactions[i].getAirline());*/
-            json.put("aircraftComponent", serviceTransactions[i].getAircraftComponent());
-            /*json.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransactions[i].getVendor());
-            json.put("transactionId", "");*/
+            json.put("airline", "org.sabre.biznet.Airline#"+serviceTransactions[i].getAirline());
+            json.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#" + serviceTransactions[i].getAircraftComponent());
+            json.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransactions[i].getVendor());
+            json.put("transactionId", "");
             array.add(json);
         }
 
