@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../css/prism.min.css">
+    <link rel="stylesheet" href="../../css/index.min.css">
+    <link rel="stylesheet" href="../../css/docs.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../index.html">Main</a></li>
+            <li><a href="../../dist/components/base.js.html">dist/components/base.js</a></li>
+            <li><a href="../../dist/components/calendar-popover.js.html">dist/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/components/carousel.js.html">dist/components/carousel.js</a></li>
+            <li><a href="../../dist/components/date-input.js.html">dist/components/date-input.js</a></li>
+            <li><a href="../../dist/components/date-select.js.html">dist/components/date-select.js</a></li>
+            <li><a href="../../dist/components/date-typeahead.js.html">dist/components/date-typeahead.js</a></li>
+            <li><a href="../../dist/components/expand.js.html">dist/components/expand.js</a></li>
+            <li><a href="../../dist/components/filter-module.js.html">dist/components/filter-module.js</a></li>
+            <li><a href="../../dist/components/filter.js.html">dist/components/filter.js</a></li>
+            <li><a href="../../dist/components/header.js.html">dist/components/header.js</a></li>
+            <li><a href="../../dist/components/menu.js.html">dist/components/menu.js</a></li>
+            <li><a href="../../dist/components/modal.js.html">dist/components/modal.js</a></li>
+            <li><a href="../../dist/components/multi-select-input.js.html">dist/components/multi-select-input.js</a></li>
+            <li><a href="../../dist/components/number-selector.js.html">dist/components/number-selector.js</a></li>
+            <li><a href="../../dist/components/popover.js.html">dist/components/popover.js</a></li>
+            <li><a href="../../dist/components/progress-indicator.js.html">dist/components/progress-indicator.js</a></li>
+            <li><a href="../../dist/components/range-slider.js.html">dist/components/range-slider.js</a></li>
+            <li><a href="../../dist/components/scroll-to-top.js.html">dist/components/scroll-to-top.js</a></li>
+            <li><a href="../../dist/components/select-input.js.html">dist/components/select-input.js</a></li>
+            <li><a href="../../dist/components/slider.js.html">dist/components/slider.js</a></li>
+            <li><a href="../../dist/components/step-indicator.js.html">dist/components/step-indicator.js</a></li>
+            <li><a href="../../dist/components/table.js.html">dist/components/table.js</a></li>
+            <li><a href="../../dist/components/tabs.js.html">dist/components/tabs.js</a></li>
+            <li><a href="../../dist/components/text-input.js.html">dist/components/text-input.js</a></li>
+            <li><a href="../../dist/components/toggle-switch.js.html">dist/components/toggle-switch.js</a></li>
+            <li class="active"><a href="../../dist/components/toolbar.js.html">dist/components/toolbar.js</a></li>
+            <li><a href="../../dist/components/tooltip.js.html">dist/components/tooltip.js</a></li>
+            <li><a href="../../dist/components/typeahead.js.html">dist/components/typeahead.js</a></li>
+            <li><a href="../../dist/helpers/animation/cancel.js.html">dist/helpers/animation/cancel.js</a></li>
+            <li><a href="../../dist/helpers/animation/height.js.html">dist/helpers/animation/height.js</a></li>
+            <li><a href="../../dist/helpers/animation/request.js.html">dist/helpers/animation/request.js</a></li>
+            <li><a href="../../dist/helpers/animation/scroll-to.js.html">dist/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../dist/helpers/animation/tween.js.html">dist/helpers/animation/tween.js</a></li>
+            <li><a href="../../dist/helpers/css/transform.js.html">dist/helpers/css/transform.js</a></li>
+            <li><a href="../../dist/helpers/date/date.js.html">dist/helpers/date/date.js</a></li>
+            <li><a href="../../dist/helpers/date/parse-format.js.html">dist/helpers/date/parse-format.js</a></li>
+            <li><a href="../../dist/helpers/dom/add-class.js.html">dist/helpers/dom/add-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/breakpoint.js.html">dist/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../dist/helpers/dom/has-class.js.html">dist/helpers/dom/has-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/make-element.js.html">dist/helpers/dom/make-element.js</a></li>
+            <li><a href="../../dist/helpers/dom/offset.js.html">dist/helpers/dom/offset.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-height.js.html">dist/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../dist/helpers/dom/outer-width.js.html">dist/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../dist/helpers/dom/parse-attribute.js.html">dist/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../dist/helpers/dom/remove-class.js.html">dist/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/toggle-class.js.html">dist/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../dist/helpers/dom/trigger-event.js.html">dist/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../dist/helpers/form/build-select.js.html">dist/helpers/form/build-select.js</a></li>
+            <li><a href="../../dist/helpers/form/form-data.js.html">dist/helpers/form/form-data.js</a></li>
+            <li><a href="../../dist/helpers/form/set-caret.js.html">dist/helpers/form/set-caret.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/append-children.js.html">dist/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/copy-attributes.js.html">dist/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/insert-before.js.html">dist/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../dist/helpers/manipulation/wrap-element.js.html">dist/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../dist/helpers/position/affix.js.html">dist/helpers/position/affix.js</a></li>
+            <li><a href="../../dist/helpers/position/box-position.js.html">dist/helpers/position/box-position.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-child.js.html">dist/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-children.js.html">dist/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-index.js.html">dist/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parent.js.html">dist/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-parents.js.html">dist/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-after.js.html">dist/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../dist/helpers/traversal/get-sibling-before.js.html">dist/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../dist/helpers/traversal/has-parent.js.html">dist/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../dist/helpers/traversal/matches.js.html">dist/helpers/traversal/matches.js</a></li>
+            <li><a href="../../dist/helpers/util/debounce.js.html">dist/helpers/util/debounce.js</a></li>
+            <li><a href="../../dist/helpers/util/each.js.html">dist/helpers/util/each.js</a></li>
+            <li><a href="../../dist/helpers/util/mixin.js.html">dist/helpers/util/mixin.js</a></li>
+            <li><a href="../../dist/helpers/util/pad.js.html">dist/helpers/util/pad.js</a></li>
+            <li><a href="../../dist/helpers/util/range.js.html">dist/helpers/util/range.js</a></li>
+            <li><a href="../../dist/helpers/util/round.js.html">dist/helpers/util/round.js</a></li>
+            <li><a href="../../dist/helpers/util/trim.js.html">dist/helpers/util/trim.js</a></li>
+            <li><a href="../../dist/js/src/components/calendar-popover.js.html">dist/js/src/components/calendar-popover.js</a></li>
+            <li><a href="../../dist/js/src/components/filter-module.js.html">dist/js/src/components/filter-module.js</a></li>
+            <li><a href="../../dist/js/src/components/filter.js.html">dist/js/src/components/filter.js</a></li>
+            <li><a href="../../dist/js/src/components/modal.js.html">dist/js/src/components/modal.js</a></li>
+            <li><a href="../../dist/js/src/components/typeahead.js.html">dist/js/src/components/typeahead.js</a></li>
+            <li><a href="../../dist/js/src/spark.js.html">dist/js/src/spark.js</a></li>
+            <li><a href="../../dist/mixins/messaging.js.html">dist/mixins/messaging.js</a></li>
+            <li><a href="../../dist/mixins/validation.js.html">dist/mixins/validation.js</a></li>
+            <li><a href="../../dist/spark.jquery.js.html">dist/spark.jquery.js</a></li>
+            <li><a href="../../dist/spark.js.html">dist/spark.js</a></li>
+            <li><a href="../../src/components/base.js.html">src/components/base.js</a></li>
+            <li><a href="../../src/components/calendar-popover.js.html">src/components/calendar-popover.js</a></li>
+            <li><a href="../../src/components/carousel.js.html">src/components/carousel.js</a></li>
+            <li><a href="../../src/components/date-input.js.html">src/components/date-input.js</a></li>
+            <li><a href="../../src/components/date-select.js.html">src/components/date-select.js</a></li>
+            <li><a href="../../src/components/date-typeahead.js.html">src/components/date-typeahead.js</a></li>
+            <li><a href="../../src/components/expand.js.html">src/components/expand.js</a></li>
+            <li><a href="../../src/components/header.js.html">src/components/header.js</a></li>
+            <li><a href="../../src/components/menu.js.html">src/components/menu.js</a></li>
+            <li><a href="../../src/components/modal.js.html">src/components/modal.js</a></li>
+            <li><a href="../../src/components/multi-select-input.js.html">src/components/multi-select-input.js</a></li>
+            <li><a href="../../src/components/number-selector.js.html">src/components/number-selector.js</a></li>
+            <li><a href="../../src/components/popover.js.html">src/components/popover.js</a></li>
+            <li><a href="../../src/components/progress-indicator.js.html">src/components/progress-indicator.js</a></li>
+            <li><a href="../../src/components/range-slider.js.html">src/components/range-slider.js</a></li>
+            <li><a href="../../src/components/scroll-to-top.js.html">src/components/scroll-to-top.js</a></li>
+            <li><a href="../../src/components/select-input.js.html">src/components/select-input.js</a></li>
+            <li><a href="../../src/components/slider.js.html">src/components/slider.js</a></li>
+            <li><a href="../../src/components/step-indicator.js.html">src/components/step-indicator.js</a></li>
+            <li><a href="../../src/components/table.js.html">src/components/table.js</a></li>
+            <li><a href="../../src/components/tabs.js.html">src/components/tabs.js</a></li>
+            <li><a href="../../src/components/text-input.js.html">src/components/text-input.js</a></li>
+            <li><a href="../../src/components/toggle-switch.js.html">src/components/toggle-switch.js</a></li>
+            <li><a href="../../src/components/toolbar.js.html">src/components/toolbar.js</a></li>
+            <li><a href="../../src/components/tooltip.js.html">src/components/tooltip.js</a></li>
+            <li><a href="../../src/components/typeahead.js.html">src/components/typeahead.js</a></li>
+            <li><a href="../../src/helpers/animation/cancel.js.html">src/helpers/animation/cancel.js</a></li>
+            <li><a href="../../src/helpers/animation/height.js.html">src/helpers/animation/height.js</a></li>
+            <li><a href="../../src/helpers/animation/request.js.html">src/helpers/animation/request.js</a></li>
+            <li><a href="../../src/helpers/animation/scroll-to.js.html">src/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../src/helpers/animation/tween.js.html">src/helpers/animation/tween.js</a></li>
+            <li><a href="../../src/helpers/css/transform.js.html">src/helpers/css/transform.js</a></li>
+            <li><a href="../../src/helpers/date/date.js.html">src/helpers/date/date.js</a></li>
+            <li><a href="../../src/helpers/date/parse-format.js.html">src/helpers/date/parse-format.js</a></li>
+            <li><a href="../../src/helpers/dom/add-class.js.html">src/helpers/dom/add-class.js</a></li>
+            <li><a href="../../src/helpers/dom/breakpoint.js.html">src/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../src/helpers/dom/has-class.js.html">src/helpers/dom/has-class.js</a></li>
+            <li><a href="../../src/helpers/dom/make-element.js.html">src/helpers/dom/make-element.js</a></li>
+            <li><a href="../../src/helpers/dom/offset.js.html">src/helpers/dom/offset.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-height.js.html">src/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../src/helpers/dom/outer-width.js.html">src/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../src/helpers/dom/parse-attribute.js.html">src/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../src/helpers/dom/remove-class.js.html">src/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../src/helpers/dom/toggle-class.js.html">src/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../src/helpers/dom/trigger-event.js.html">src/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../src/helpers/form/build-select.js.html">src/helpers/form/build-select.js</a></li>
+            <li><a href="../../src/helpers/form/form-data.js.html">src/helpers/form/form-data.js</a></li>
+            <li><a href="../../src/helpers/form/set-caret.js.html">src/helpers/form/set-caret.js</a></li>
+            <li><a href="../../src/helpers/manipulation/append-children.js.html">src/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../src/helpers/manipulation/copy-attributes.js.html">src/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../src/helpers/manipulation/insert-before.js.html">src/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../src/helpers/manipulation/wrap-element.js.html">src/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../src/helpers/position/affix.js.html">src/helpers/position/affix.js</a></li>
+            <li><a href="../../src/helpers/position/box-position.js.html">src/helpers/position/box-position.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-child.js.html">src/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-children.js.html">src/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-index.js.html">src/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parent.js.html">src/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-parents.js.html">src/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-after.js.html">src/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../src/helpers/traversal/get-sibling-before.js.html">src/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../src/helpers/traversal/has-parent.js.html">src/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../src/helpers/traversal/matches.js.html">src/helpers/traversal/matches.js</a></li>
+            <li><a href="../../src/helpers/util/debounce.js.html">src/helpers/util/debounce.js</a></li>
+            <li><a href="../../src/helpers/util/each.js.html">src/helpers/util/each.js</a></li>
+            <li><a href="../../src/helpers/util/mixin.js.html">src/helpers/util/mixin.js</a></li>
+            <li><a href="../../src/helpers/util/pad.js.html">src/helpers/util/pad.js</a></li>
+            <li><a href="../../src/helpers/util/range.js.html">src/helpers/util/range.js</a></li>
+            <li><a href="../../src/helpers/util/round.js.html">src/helpers/util/round.js</a></li>
+            <li><a href="../../src/helpers/util/trim.js.html">src/helpers/util/trim.js</a></li>
+            <li><a href="../../src/mixins/messaging.js.html">src/mixins/messaging.js</a></li>
+            <li><a href="../../src/mixins/validation.js.html">src/mixins/validation.js</a></li>
+            <li><a href="../../src/spark.jquery.js.html">src/spark.jquery.js</a></li>
+            <li><a href="../../src/spark.js.html">src/spark.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#Toolbar"><i class="alert alert-info"></i><span>Toolbar</span></a>
+              </li>
+              <li><a href="#Toolbar"><i class="alert alert-info"></i><span>Toolbar</span></a>
+              </li>
+              <li><a href="#change"><i class="alert alert-info"></i><span>change</span></a>
+              </li>
+              <li><a href="#update"><i class="alert alert-info"></i><span>update</span></a>
+              </li>
+              <li><a href="#remove"><i class="alert alert-info"></i><span>remove</span></a>
+              </li>
+              <li><a href="#toolbarItem"><i class="alert alert-info"></i><span>toolbarItem</span></a>
+              </li>
+              <li><a href="#toggleDropdown"><i class="alert alert-info"></i><span>toggleDropdown</span></a>
+              </li>
+              <li><a href="#handleClick"><i class="alert alert-info"></i><span>handleClick</span></a>
+              </li>
+              <li><a href="#_closeAll"><i class="alert alert-info"></i><span>_closeAll</span></a>
+              </li>
+              <li><a href="#_getOpenItems"><i class="alert alert-info"></i><span>_getOpenItems</span></a>
+              </li>
+              <li><a href="#_closeItems"><i class="alert alert-info"></i><span>_closeItems</span></a>
+              </li>
+              <li><a href="#_init"><i class="alert alert-info"></i><span>_init</span></a>
+              </li>
+              <li><a href="#_setupListeners"><i class="alert alert-info"></i><span>_setupListeners</span></a>
+              </li>
+              <li><a href="#_removeListeners"><i class="alert alert-info"></i><span>_removeListeners</span></a>
+              </li>
+              <li><a href="#_handleBlurH"><i class="alert alert-info"></i><span>_handleBlurH</span></a>
+              </li>
+              <li><a href="#_handleFocusH"><i class="alert alert-info"></i><span>_handleFocusH</span></a>
+              </li>
+              <li><a href="#_focusLast"><i class="alert alert-info"></i><span>_focusLast</span></a>
+              </li>
+              <li><a href="#_handleKeyDownH"><i class="alert alert-info"></i><span>_handleKeyDownH</span></a>
+              </li>
+              <li><a href="#_handleVisibleChildrenH"><i class="alert alert-info"></i><span>_handleVisibleChildrenH</span></a>
+              </li>
+              <li><a href="#_handleWindowClickH"><i class="alert alert-info"></i><span>_handleWindowClickH</span></a>
+              </li>
+              <li><a href="#_toggleShowMore"><i class="alert alert-info"></i><span>_toggleShowMore</span></a>
+              </li>
+              <li><a href="#_positionShowMore"><i class="alert alert-info"></i><span>_positionShowMore</span></a>
+              </li>
+              <li><a href="#_handleResizeH"><i class="alert alert-info"></i><span>_handleResizeH</span></a>
+              </li>
+              <li><a href="#_calculateStyles"><i class="alert alert-info"></i><span>_calculateStyles</span></a>
+              </li>
+              <li><a href="#_prioritySort"><i class="alert alert-info"></i><span>_prioritySort</span></a>
+              </li>
+              <li><a href="#_orderSort"><i class="alert alert-info"></i><span>_orderSort</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <section id="Toolbar">
+            <h1>Toolbar</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>Toolbar()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h1>Toolbar</h1>
+<p>Setup a responsive toolbar</p></div>
+          <pre><code class="language-javascript">var Toolbar = function () {</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">new Toolbar(el);</code></pre>
+          <section id="Toolbar">
+            <h1>Toolbar</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>Toolbar()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Toolbar constructor.</p></div>
+          <pre><code class="language-javascript">function Toolbar(el) {
+  _classCallCheck(this, Toolbar);
+
+  if (!el) return;
+  this._init(el);
+}</code></pre>
+          <section id="change">
+            <h1>change</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype.change()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>This function will update cached sizing when an element in the toolbar is changed<br />or, when toolbar items are added or removed</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype.change = function change() {
+  this._closeAll();
+  (0, _removeClass2.default)(this.el, ['ready', 'show-more', 'measured']);
+  var v = document.createDocumentFragment();
+  for (var i = 0; i &lt; this.items.length; i++) {
+    v.appendChild(this.items[i].el);
+  }
+  this.visibleContainer.appendChild(v);
+  this._initItems();
+  (0, _addClass2.default)(this.el, 'measured');
+  this._calculateStyles();
+  (0, _addClass2.default)(this.el, 'ready');
+  return this;
+};</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype.update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Optional</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Update the component to use a new element or reparse from<br />the existing element.</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype.update = function update(el) {
+
+  if (el) {
+    this.remove(true);
+    this._init(el);
+  } else {
+    this.change();
+  }
+
+  return this;
+};</code></pre>
+          <section id="remove">
+            <h1>remove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype.remove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>leaveElement</td>
+                <td>Boolean</td>
+                <td><p>Leave the element intact.</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Remove the element from the DOM and prepare for garbage collection by dereferencing values.</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype.remove = function remove(leaveElement) {
+  this._removeListeners();
+  delete this.el.sparktoolbarcon;
+  delete this.showMoreButton.sparktoolbarshowmore;
+  for (var i = 0; i &lt; this.items.length; i++) {
+    this.items[i].remove();
+  }
+  if (!leaveElement &amp;&amp; this.el.parentNode) {
+    this.el.parentNode.removeChild(this.el);
+    this.el = undefined;
+  }
+  return this;
+};</code></pre>
+          <section id="toolbarItem">
+            <h1>toolbarItem</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype.toolbarItem()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>parent</td>
+                <td>Element</td>
+                <td><p>Reference to parent toolbar</p></td>
+              </tr>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>Node to initalize as toolbarItem</p></td>
+              </tr>
+              <tr>
+                <td>order</td>
+                <td>Number</td>
+                <td><p>The original index of the item in list of toolbarItems (used for maintaining order when sorting)</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Setup a toolbarItem Instance to track the state of individual toolbar items</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype.toolbarItem = function toolbarItem(parent, el, order) {
+  //Setup and cache the values for this item
+  var a = {};
+  a.parent = parent;
+  a.el = el;
+  //cache the priority value present on the toolbar element if it is present, else default to 0
+  a.priority = a.el.attributes['data-priority'] ? a.el.attributes['data-priority'].value : 0;
+  a.order = a.el.attributes['data-order'] ? a.el.attributes['data-order'].value : order;
+  a.hasContent = a.el.querySelector('.spark-toolbar__item--content') ? true : false;
+  a.helper = a.el.querySelector('.spark-toolbar__item-helper');
+  a.label = a.el.attributes.label ? a.el.attributes.label.value : false;
+  a.closeOnClick = (0, _hasClass2.default)(a.el, 'spark-toolbar__item--close-more-on-click');
+  a.width = a.el.offsetWidth;
+  a.height = a.el.offsetHeight;
+  a.dropdown = el.querySelector('.spark-toolbar__item--content');
+  if (a.dropdown) {
+    a.dropdown.sparktoolbardropdown = true;
+  }</code></pre>
+          <section id="toggleDropdown">
+            <h1>toggleDropdown</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>a.toggleDropdown()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>open</td>
+                <td>Boolean</td>
+                <td><p>Set state to this regardless of current state</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Call method to toggle the open state, optional param sets open state to value<br />Can get current state by referencing a.toggleDropdown.open</p></div>
+          <pre><code class="language-javascript">a.toggleDropdown = function (open) {
+  var o = typeof open !== 'undefined' ? !open : a.toggleDropdown.open;
+  if (o) {
+    a.toggleDropdown.open = false;
+    (0, _removeClass2.default)(a.el, 'animate');
+    window.setTimeout(function () {
+      (0, _removeClass2.default)(a.el, 'open');
+    }, 100);
+  } else {
+    if (a.hasContent) {
+      a.toggleDropdown.open = true;
+      (0, _addClass2.default)(a.el, 'open');
+      a.positionDropdown();
+      var e = document.createEvent('Event');
+      e.initEvent('spark.visible-children', true, true);
+      a.dropdown.dispatchEvent(e);
+      window.setTimeout(function () {
+        (0, _addClass2.default)(a.el, 'animate');
+      }, 0);
+    } else {
+      a.parent._toggleShowMore(false);
+    }
+  }
+};</code></pre>
+          <section id="handleClick">
+            <h1>handleClick</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>a.handleClick()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>open</td>
+                <td>Boolean</td>
+                <td><p>Set state to this regardless of current state</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Click handler for local element - determines to close element<br />conditionally based on presence of spark-toolbar__item--close-on-click<br />closes parent&#39;s more dropdown conditionally as well</p></div>
+          <pre><code class="language-javascript">a.handleClick = function (e) {
+
+  if ((0, _parseAttribute.boolean)(a.el, 'disabled')) {
+    e.preventDefault();
+    return;
+  }
+
+  if (!a.toggleDropdown.open) {
+    a.toggleDropdown(true);
+  } else {
+    if (e.target === a.el || e.target === a.helper) {
+      a.toggleDropdown();
+    } else {
+      var b = e.target;
+      while (b !== a.el) {
+        if ((0, _hasClass2.default)(b, 'spark-toolbar__item--close-on-click')) {
+          a.toggleDropdown(false);
+          //close the mode section, as event originated inside a close-on-click area
+          a.parent._toggleShowMore(false);
+          break;
+        }
+        b = b.parentElement;
+      }
+    }
+  }
+  //e.preventDefault();
+};
+//perform bounds checking on dropdown open to position dropdown inside visual area
+//this is called each time a dropdown is opened, in case the state of the component has
+//changed since initialization
+a.positionDropdown = function () {
+  if (a.dropdown) {
+    a.dropdown.style.left = '';
+    a.dropdown.style.right = '';
+    var pos = a.dropdown.getBoundingClientRect();
+    var left = window.pageXOffset;
+    var right = window.pageXOffset + document.documentElement.clientWidth;
+    if (pos.right &gt; right) {
+      a.dropdown.style.left = 'inherit';
+      a.dropdown.style.right = 0;
+    }
+    if (pos.left &lt; left) {
+      a.dropdown.style.left = 0;
+      a.dropdown.style.right = 'inherit';
+    }
+  }
+};
+a.remove = function () {
+  if (a.el) {
+    delete a.el.sparktoolbar;
+  }
+  if (a.dropdown) {
+    delete a.dropdown.sparktoolbardropdown;
+  }
+};
+a.el.sparktoolbar = a;
+return a;
+  };</code></pre>
+          <section id="_closeAll">
+            <h1>_closeAll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._closeAll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Close any open items, and more dropdown</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._closeAll = function _closeAll() {
+  this._closeItems();
+  this._toggleShowMore(false);
+};</code></pre>
+          <section id="_getOpenItems">
+            <h1>_getOpenItems</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._getOpenItems()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Returns array of open toolbarItems</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._getOpenItems = function _getOpenItems() {
+  var a = [];
+  for (var i = 0; i &lt; this.items.length; i++) {
+    if (this.items[i].toggleDropdown.open) {
+      a.push(this.items[i]);
+    }
+  }
+  return a;
+};</code></pre>
+          <section id="_closeItems">
+            <h1>_closeItems</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._closeItems()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>a</td>
+                <td>Array</td>
+                <td><p>Optional array of toolbarItems to close, defaults to all open items</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Close any open items</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._closeItems = function _closeItems(a) {
+  a = typeof a === 'undefined' ? this._getOpenItems() : a;
+  for (var i = 0; i &lt; a.length; i++) {
+    a[i].toggleDropdown(false);
+  }
+};</code></pre>
+          <section id="_init">
+            <h1>_init</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._init()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>Element</td>
+                <td><p>The node to initalize on</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Setup the toolbar element, cache properties, and initalize styling<br />when complete, show toolbar</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._init = function _init(el) {
+  this.el = el;
+  //store a reference to this on the node to expedite event handling
+  this.el.sparktoolbarcon = this;
+  this.visibleContainer = this.el.querySelector('.spark-toolbar__container--visible');
+  this.hiddenContainer = this.el.querySelector('.spark-toolbar__container--hidden');
+  this.showMoreButton = this.el.querySelector('.spark-toolbar__show-more');
+  this.showMoreButton.sparktoolbarshowmore = true;
+  this.isOpen = false;
+  this.isFocus = false;
+  this._setupListeners();
+  this.el.style.width = '100%';
+  this._initItems();
+  (0, _addClass2.default)(this.el, 'measured');
+  this._calculateStyles();
+  this.tabindex = this.el.attributes.tabindex ? this.el.attributes.tabindex.value : 0;
+  (0, _addClass2.default)(this.el, 'ready');
+};
+
+Toolbar.prototype._initItems = function _initItems() {
+  var items = this.el.querySelectorAll('.spark-toolbar__item');
+  this.items = [];
+  for (var i = 0; i &lt; items.length; i++) {
+    this.items[i] = new this.toolbarItem(this, items[i], i);
+  }
+};</code></pre>
+          <section id="_setupListeners">
+            <h1>_setupListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._setupListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Setup event listeners for clicks and resize events</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._setupListeners = function _setupListeners() {
+  this._handleWindowClick = this._handleWindowClickH.bind(this);
+  document.addEventListener('click', this._handleWindowClick);
+  this._handleResize = (0, _debounce2.default)(this._handleResizeH.bind(this), 100);
+  window.addEventListener('resize', this._handleResize);
+  this._handleKeyDown = this._handleKeyDownH.bind(this);
+  this.el.addEventListener('keydown', this._handleKeyDown);
+  this._handleFocus = this._handleFocusH.bind(this);
+  document.addEventListener('focus', this._handleFocus, true);
+  this._handleBlur = this._handleBlurH.bind(this);
+  document.addEventListener('blur', this._handleBlur, true);
+  this._handleVisibleChildren = this._handleVisibleChildrenH.bind(this);
+  document.addEventListener('spark.visible-children', this._handleVisibleChildren, true);
+};</code></pre>
+          <section id="_removeListeners">
+            <h1>_removeListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._removeListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners for clicks and resize events</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._removeListeners = function _removeListeners() {
+  document.removeEventListener('click', this._handleWindowClick);
+  window.removeEventListener('resize', this._handleResize);
+  this.el.removeEventListener('keydown', this._handleKeyDown);
+  document.removeEventListener('blur', this._handleBlur, true);
+  document.removeEventListener('focus', this._handleFocus, true);
+  document.removeEventListener('spark.visible-children', this._handleVisibleChildren, true);
+};</code></pre>
+          <section id="_handleBlurH">
+            <h1>_handleBlurH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._handleBlurH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The FocusEvent</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>reset our tab index when user focuses outside of element (gets immediately reset to -1 if focus is placed back inside element)</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._handleBlurH = function _handleBlurH(e) {
+  if (this.el.contains(e.target)) {
+    this.el.attributes.tabindex.value = this.tabindex;
+  }
+};</code></pre>
+          <section id="_handleFocusH">
+            <h1>_handleFocusH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._handleFocusH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The FocusEvent</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>focus handler, works in conjunction with blur handler to set correct tabindex value</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._handleFocusH = function _handleFocusH(e) {
+  //if we're not being focused, reset our tabindex so we are accessible again, and close anything open
+  if (!this.el.contains(e.target)) {
+    this._closeAll();
+    this.el.attributes.tabindex.value = this.tabindex;
+  } else {
+    //set our tabindex to -1 so the user can shift-tab out of our element
+    this.el.attributes.tabindex.value = -1;
+    if (e.target.sparktoolbarcon) {
+      this._focusLast();
+      return;
+    }
+    //handle focusing an item
+    if (e.target.sparktoolbar) {
+      e.target.sparktoolbar.el.focus();
+      return;
+    }
+    var a = e.target;
+    //harder case - look up the tree to find if we're focusing inside content
+    while (!a.sparktoolbarcon) {
+      if (a.sparktoolbar) {
+        break;
+      }
+      //if we are - give our parent element a tabindex so the user can refocus the menu using shift-tab
+      if (a.sparktoolbardropdown) {
+        this.el.attributes.tabindex.value = this.tabindex;
+        return;
+      }
+      a = a.parentElement;
+    }
+  }
+};</code></pre>
+          <section id="_focusLast">
+            <h1>_focusLast</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._focusLast()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>reset our focus to the last menu item that was focused</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._focusLast = function _focusLast() {
+  if (!this._lastFocus) {
+    var a = this.visibleContainer.querySelector('.spark-toolbar__item') || this.hiddenContainer.querySelector('.spark-toolbar__item');
+    this._lastFocus = a.sparktoolbar;
+  }
+  if (this.hiddenContainer.contains(this._lastFocus.el)) {
+    this._toggleShowMore(true);
+  }
+  this._lastFocus.el.focus();
+};</code></pre>
+          <section id="_handleKeyDownH">
+            <h1>_handleKeyDownH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._handleKeyDownH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The KeyDown Event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>keydown handler, used for keyboard navigation</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._handleKeyDownH = function _handleKeyDownH(e) {
+  var a = e.target;
+  //find the nearest toolbaritem
+  while (!a.sparktoolbarcon) {
+    if (a.sparktoolbar) {
+      break;
+    }
+    if (a.sparktoolbardropdown) {
+      return;
+    }
+    a = a.parentElement;
+  }
+  if (a.sparktoolbar) {
+    //handle keys
+    switch (e.keyCode) {
+      //left arrow
+      //up arrow
+      case 37:
+      case 38:
+        if (a.previousSibling &amp;&amp; a.previousSibling.sparktoolbar) {
+          this._lastFocus = a.previousSibling.sparktoolbar;
+          a.previousSibling.focus();
+        } else {
+          if (this.visibleContainer.querySelector('.spark-toolbar__item') !== a.sparktoolbar.el) {
+            a = this.visibleContainer.querySelector('.spark-toolbar__item:last-of-type');
+            if (a) {
+              this._toggleShowMore(false);
+              this._lastFocus = a.sparktoolbar;
+              a.focus();
+            }
+          }
+        }
+        this._closeItems();
+        e.preventDefault();
+        break;
+      //right arrow
+      //down arrow
+      case 39:
+      case 40:
+        if (a.nextSibling &amp;&amp; a.nextSibling.sparktoolbar) {
+          this._lastFocus = a.nextSibling.sparktoolbar;
+          a.nextSibling.focus();
+        } else {
+          if (this.hiddenContainer.querySelector('.spark-toolbar__item:last-of-type') !== a.sparktoolbar.el) {
+            a = this.hiddenContainer.querySelector('.spark-toolbar__item');
+            if (a) {
+              this._toggleShowMore(true);
+              this._lastFocus = a.sparktoolbar;
+              a.focus();
+            }
+          }
+        }
+        this._closeItems();
+        e.preventDefault();
+        break;
+      //spacebar
+      case 32:
+        e.preventDefault();
+        //we only want to toggle the toolbar if we are actually focused directly on it;
+        if (e.target.sparktoolbar) {
+          e.target.sparktoolbar.el.click();
+        }
+        break;
+      //enter
+      case 13:
+        //we only want to toggle the toolbar if we are actually focused directly on it;
+        if (e.target.sparktoolbar) {
+          e.target.sparktoolbar.el.click();
+        }
+        break;
+    }
+  }
+};</code></pre>
+          <section id="_handleVisibleChildrenH">
+            <h1>_handleVisibleChildrenH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._handleVisibleChildrenH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The spark.visible-children event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Hanldes the spark.visible-children event to resize the component when it is made visible.</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._handleVisibleChildrenH = function _handleVisibleChildrenH(e) {
+  if (e.target.contains(this.el)) {
+    window.setTimeout(function () {
+      this.change();
+    }.bind(this), 0);
+  }
+};</code></pre>
+          <section id="_handleWindowClickH">
+            <h1>_handleWindowClickH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._handleWindowClickH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e</td>
+                <td>Event</td>
+                <td><p>The click event</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Event handler for click events, handles window clicks, control element clicks,<br />and forwards events to toolbarItem click handlers as needed</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._handleWindowClickH = function _handleWindowClickH(e) {
+
+  if ((0, _parseAttribute.boolean)(e.target, 'disabled')) {
+    e.preventDefault();
+    return;
+  }
+
+  //Check to see if the click was outside of the toolbar
+  if (!this.el.contains(e.target)) {
+    this._closeItems();
+    this._toggleShowMore(false);
+  } else {
+    var a = e.target;
+    //traverse the dom node tree until we find an element that handles the event,
+    //or we reach the toolbar root node
+    if (a === this.visibleContainer || a === this.el) {
+      e.stopPropagation();
+      e.preventDefault();
+      return;
+    }
+    while (a !== this.el) {
+      if (a.sparktoolbar) {
+        var c = this._getOpenItems();
+        if (c.indexOf(a.sparktoolbar) &gt;= 0) {
+          c.splice(c.indexOf(a.sparktoolbar), 1);
+        }
+        this._closeItems(c);
+        if (!this.hiddenContainer.contains(e.target)) {
+          this._toggleShowMore(false);
+        }
+        return a.sparktoolbar.handleClick(e);
+      }
+      if (a.sparktoolbarshowmore) {
+        this._closeItems();
+        this._toggleShowMore();
+        return;
+      }
+      a = a.parentElement;
+    }
+    this._closeAll();
+  }
+};</code></pre>
+          <section id="_toggleShowMore">
+            <h1>_toggleShowMore</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._toggleShowMore()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>open</td>
+                <td>Boolean</td>
+                <td><p>The new state of the show more dropdown</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Toggle the state of the show more dropdown, optional parameter overrides toggle and<br />sets state to passed value</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._toggleShowMore = function _toggleShowMore(open) {
+  var o = typeof open !== 'undefined' ? !open : this.isOpen;
+  if (o) {
+    (0, _removeClass2.default)(this.el, 'animate');
+    window.setTimeout(function () {
+      (0, _removeClass2.default)(this.el, 'open');
+      this.isOpen = false;
+    }.bind(this), 100);
+  } else {
+    this.isOpen = true;
+    (0, _addClass2.default)(this.el, 'open');
+    this._positionShowMore();
+    window.setTimeout(function () {
+      (0, _addClass2.default)(this.el, 'animate');
+    }.bind(this), 0);
+  }
+};</code></pre>
+          <section id="_positionShowMore">
+            <h1>_positionShowMore</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._positionShowMore()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Do bounds checking on show-more dropdown when it is opened, and position it accordingly</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._positionShowMore = function _positionShowMore() {
+  this.hiddenContainer.style.right = '0px';
+  var pos = this.hiddenContainer.getBoundingClientRect();
+  var left = window.pageXOffset;
+  var right = window.pageXOffset + document.documentElement.clientWidth;
+  if (pos.right &gt; right) {
+    this.hiddenContainer.style.right = 'calc(' + (pos.right - right) + 'px + 1rem)';
+  }
+  if (pos.left &lt; left) {
+    this.hiddenContainer.style.right = 'calc(' + (pos.left - left) + 'px - 1rem)';
+  }
+};</code></pre>
+          <section id="_handleResizeH">
+            <h1>_handleResizeH</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._handleResizeH()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Resize event helper, closes items then triggers recalculation of styles</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._handleResizeH = function _handleResizeH() {
+  this._closeAll();
+  this._calculateStyles();
+};</code></pre>
+          <section id="_calculateStyles">
+            <h1>_calculateStyles</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._calculateStyles()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>showMore</td>
+                <td>Boolean</td>
+                <td><p>Used to conditionally evaluate styling when showMore area is used</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Reevaluates the available area of the toolbar and places toolbarItems into<br />the hidden container, as necessary. Should not call with any specified value<br />for showMore (used internally)</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._calculateStyles = function _calculateStyles(showMore) {
+  this.el.style.width = '100%';
+  showMore = typeof showMore !== 'undefined' ? showMore : false;
+  if (!showMore) {
+    (0, _removeClass2.default)(this.el, 'show-more');
+  }
+  var visible = [];
+  var hidden = [];
+  var i;
+  //sort items by their priority to ensure higher-priority items are always placed
+  //into the visible area first
+  this.items.sort(this._prioritySort);
+  //get container width and start placing items into their containers
+  var visibleWidth = this.visibleContainer.clientWidth;
+  for (i = 0; i &lt; this.items.length; i++) {
+    if (visibleWidth - this.items[i].width &gt;= 0) {
+      visible.push(this.items[i]);
+      visibleWidth -= this.items[i].width;
+    } else {
+      if (!showMore) {
+        (0, _addClass2.default)(this.el, 'show-more');
+        return this._calculateStyles(true);
+      }
+      hidden.push(this.items[i]);
+    }
+  }
+  //sort items back into their original order before inserting them into the document
+  visible.sort(this._orderSort);
+  hidden.sort(this._orderSort);
+  var v = document.createDocumentFragment();
+  var h = document.createDocumentFragment();
+  for (i = 0; i &lt; visible.length; i++) {
+    v.appendChild(visible[i].el);
+  }
+  for (i = 0; i &lt; hidden.length; i++) {
+    h.appendChild(hidden[i].el);
+  }
+  this.visibleContainer.appendChild(v);
+  this.hiddenContainer.appendChild(h);
+  this.el.style.width = '';
+};</code></pre>
+          <section id="_prioritySort">
+            <h1>_prioritySort</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._prioritySort()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Sorts toolbar items in descending order based on their priority value</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._prioritySort = function _prioritySort(l, r) {
+  return r.priority - l.priority;
+};</code></pre>
+          <section id="_orderSort">
+            <h1>_orderSort</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Toolbar.prototype._orderSort()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Sorts toolbar items in ascending order based on their order value</p></div>
+          <pre><code class="language-javascript">Toolbar.prototype._orderSort = function _orderSort(l, r) {
+  return l.order - r.order;
+};
+
+return Toolbar;
+}();
+
+exports.default = Toolbar;
+module.exports = exports['default'];
+//# sourceMappingURL=toolbar.js.map</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/mr-doc/mr-doc">Mr. Doc </a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau </a></p>
+        <p>Mr. Doc is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr </a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../js/twitter-widget.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap-transition.min.js"></script>
+    <script src="../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../js/bootstrap-affix.min.js"></script>
+    <script src="../../js/prism.min.js"></script>
+    <script src="../../js/index.min.js"></script>
+  </body>
+</html>

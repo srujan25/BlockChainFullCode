@@ -1,0 +1,206 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Table - Heading/Messaging Spreadsheet" %}
+
+{% block example %}
+<section class="spark-table spark-table--spreadsheet col-xs-12">
+  <header class="spark-table__header">
+    <h4 class="spark-table__title">
+      Table Title
+    </h4>
+    <nav class="spark-table__nav">
+      <div class="spark-toolbar spark-toolbar--icon" tabindex="1">
+        <div class="spark-toolbar__container--visible">
+          <div class="spark-toolbar__item spark-tooltip" label="Print" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Print</span>
+            <div class="spark-icon-print spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Settings" tabindex="-1">
+            <div class="spark-toolbar__item--content">
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li>Save Results</li>
+                <li>Export to Excel</li>
+                <li>Create an Alert</li>
+              </ul>
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li>Modify Search</li>
+                <li>Advanced Search</li>
+              </ul>
+            </div>
+            <div class="spark-icon-cog spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item spark-tooltip" label="Filter" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Filter</span>
+            <div class="spark-icon-sliders spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item spark-tooltip" label="Delete" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Delete</span>
+            <div class="spark-icon-trash spark-toolbar__item-helper"></div>
+          </div>
+        </div>
+        <div class="spark-toolbar__show-more">
+          <i class="spark-icon-menu-ellipsis-vertical"></i>
+        </div>
+        <!-- All items should be placed in .spark-toolbar__container-shown -->
+        <div class="spark-toolbar__container--hidden">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="spark-table__scroll">
+    <table role="grid">
+      <thead>
+        <tr>
+          <th class="spark-table__select-all spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0 spark-checkbox--sm">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </th>
+          <th data-sort="asc">
+            Flight No.
+          </th>
+          <th colspan="2" class="spark-table-heading">
+            <div class="spark-table-heading__group">
+              <span class="spark-table-heading__full">Locations</span>
+              <span class="spark-table-heading__piece" data-sort>Departs</span>
+              <span class="spark-table-heading__piece" data-sort>Arrives</span>
+            </div>
+          </th>
+          <th data-sort>
+            Meal Served
+          </th>
+          <th class="spark-text-center">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0 spark-checkbox--sm">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </td>
+          <td>
+            <input type="text" value="DL0431" name="flight[]">
+          </td>
+          <td>
+            <input type="text" value="DFW" name="departs[]">
+          </td>
+          <td>
+            <input type="text" value="DTW" name="arrives[]">
+          </td>
+          <td>
+            <select name="meal[]">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </td>
+          <td class="spark-table__actions spark-text-center">
+            <button class="spark-btn spark-btn--xs">Edit Flight</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0 spark-checkbox--sm">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </td>
+          <td data-error>
+            <span class="spark-table__status-wrapper">
+              <span class="spark-table__status-icon"></span>
+              <input type="text" value="AA1321" name="flight[]">
+              <span class="spark-table__status-message">Flight is invalid.</span>
+            </span>
+          </td>
+          <td data-warning>
+            <span class="spark-table__status-wrapper">
+              <span class="spark-table__status-icon"></span>
+              <input type="text" value="ATL" name="departs[]">
+              <span class="spark-table__status-message">Flight is oversold.</span>
+            </span>
+          </td>
+          <td data-success>
+            <span class="spark-table__status-wrapper">
+              <span class="spark-table__status-icon"></span>
+              <input type="text" value="SFO" name="arrives[]">
+              <span class="spark-table__status-message">Flight is confirmed.</span>
+            </span>
+          </td>
+          <td>
+            <select name="meal[]">
+              <option value="yes">Yes</option>
+              <option value="no" selected>No</option>
+            </select>
+          </td>
+          <td class="spark-table__actions spark-text-center">
+            <button class="spark-btn spark-btn--xs">Edit Flight</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0 spark-checkbox--sm">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </td>
+          <td>
+            <input type="text" value="AA1321" name="flight[]">
+          </td>
+          <td data-info>
+            <span class="spark-table__status-wrapper">
+              <span class="spark-table__status-icon"></span>
+              <input type="text" value="CDG" name="departs[]">
+              <span class="spark-table__status-message">Flight is pending.</span>
+            </span>
+          </td>
+          <td>
+            <input type="text" value="BER" name="arrives[]">
+          </td>
+          <td>
+            <select name="meal[]">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </td>
+          <td class="spark-table__actions spark-text-center">
+            <button class="spark-btn spark-btn--xs">Edit Flight</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0 spark-checkbox--sm">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </td>
+          <td>
+            <input type="text" value="AA1321" name="flight[]">
+          </td>
+          <td>
+            <input type="text" value="DFW" name="departs[]">
+          </td>
+          <td>
+            <input type="text" value="DTW" name="arrives[]">
+          </td>
+          <td>
+            <select name="meal[]">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </td>
+          <td class="spark-table__actions spark-text-center">
+            <button class="spark-btn spark-btn--xs">Edit Flight</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/table.js" %}
+{% endblock %}

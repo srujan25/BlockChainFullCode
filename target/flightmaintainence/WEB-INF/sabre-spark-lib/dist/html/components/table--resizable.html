@@ -1,0 +1,127 @@
+
+<section class="spark-table spark-table--resizable col-xs-12">
+  <header class="spark-table__header">
+    <h4 class="spark-table__title">
+      Table Title
+    </h4>
+    <nav class="spark-table__nav">
+      <div class="spark-toolbar spark-toolbar--icon" tabindex="1">
+        <div class="spark-toolbar__container--visible">
+          <div class="spark-toolbar__item spark-tooltip" label="Print" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Print</span>
+            <div class="spark-icon-print spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Settings" tabindex="-1">
+            <div class="spark-toolbar__item--content">
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li>Save Results</li>
+                <li>Export to Excel</li>
+                <li>Create an Alert</li>
+              </ul>
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li>Modify Search</li>
+                <li>Advanced Search</li>
+              </ul>
+            </div>
+            <div class="spark-icon-cog spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item spark-tooltip" label="Filter" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Filter</span>
+            <div class="spark-icon-sliders spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item spark-tooltip" label="Delete" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Delete</span>
+            <div class="spark-icon-trash spark-toolbar__item-helper"></div>
+          </div>
+        </div>
+        <div class="spark-toolbar__show-more">
+          <i class="spark-icon-menu-ellipsis-vertical"></i>
+        </div>
+        <!-- All items should be placed in .spark-toolbar__container-shown -->
+        <div class="spark-toolbar__container--hidden">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="spark-table__scroll">
+    <table role="grid">
+      <thead>
+        <tr>
+          <th class="spark-table__select-all spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </th>
+          <th class="spark-text-center">
+            Icon
+          </th>
+          <th data-sort="asc">
+            Flight No.
+          </th>
+          <th data-sort>
+            Departure <span class="spark-hidden--lte-md">Time</span>
+          </th>
+          <th data-sort>
+            Arrival <span class="spark-hidden--lte-md">Time</span>
+          </th>
+          <th class="spark-text-center">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </td>
+          <td class="spark-text-center">
+            <i class="spark-icon-airplane spark-icon--lg"></i>
+          </td>
+          <td>
+            DL0431
+          </td>
+          <td>
+            <time datetime="2015-12-07T13:51:54.195Z">December 7, 2015 at 1:51 PM</time>
+          </td>
+          <td>
+            <time datetime="2015-12-08T02:10:51.195Z">December 8, 2015 at 2:10 AM</time>
+          </td>
+          <td class="spark-table__actions spark-text-center">
+            <button class="spark-btn spark-btn--sm">Book Flight</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </td>
+          <td class="spark-text-center">
+            <i class="spark-icon-airplane spark-icon--lg"></i>
+          </td>
+          <td>
+            AA1321
+          </td>
+          <td>
+            <time datetime="2015-12-06T09:23:54.195Z">December 6, 2015 at 9:23 AM</time>
+          </td>
+          <td>
+            <time datetime="2015-12-06T11:10:51.195Z">December 6, 2015 at 11:10 AM</time>
+          </td>
+          <td class="spark-table__actions spark-text-center">
+            <button class="spark-btn spark-btn--sm">Book Flight</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style type="text/css">
+  
+</style>

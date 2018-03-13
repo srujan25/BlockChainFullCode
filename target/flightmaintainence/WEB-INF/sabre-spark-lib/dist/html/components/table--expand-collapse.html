@@ -1,0 +1,114 @@
+
+<section class="spark-table col-xs-12">
+  <header class="spark-table__header">
+    <h4 class="spark-table__title">
+      Table Title
+    </h4>
+    <nav class="spark-table__nav">
+      <div class="spark-toolbar spark-toolbar--icon" tabindex="1">
+        <div class="spark-toolbar__container--visible">
+          <div class="spark-toolbar__item spark-tooltip" label="Print" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Print</span>
+            <div class="spark-icon-print spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item" label="Settings" tabindex="-1">
+            <div class="spark-toolbar__item--content">
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li>Save Results</li>
+                <li>Export to Excel</li>
+                <li>Create an Alert</li>
+              </ul>
+              <ul class="spark-toolbar__list spark-toolbar__item--close-on-click">
+                <li>Modify Search</li>
+                <li>Advanced Search</li>
+              </ul>
+            </div>
+            <div class="spark-icon-cog spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item spark-tooltip" label="Filter" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Filter</span>
+            <div class="spark-icon-sliders spark-toolbar__item-helper"></div>
+          </div>
+          <div class="spark-toolbar__item spark-tooltip" label="Delete" tabindex="-1">
+            <span class="spark-tooltip__content--bottom" role="tooltip">Delete</span>
+            <div class="spark-icon-trash spark-toolbar__item-helper"></div>
+          </div>
+        </div>
+        <div class="spark-toolbar__show-more">
+          <i class="spark-icon-menu-ellipsis-vertical"></i>
+        </div>
+        <!-- All items should be placed in .spark-toolbar__container-shown -->
+        <div class="spark-toolbar__container--hidden">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="spark-table__scroll">
+    <table role="grid">
+      <thead>
+        <tr>
+          <th class="spark-table__checkbox spark-table__select-all">
+            <label class="spark-checkbox spark-mar-b-0">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </th>
+          <th data-sort class="spark-text-center">
+            Price
+          </th>
+          <th data-sort="asc">
+            Description
+          </th>
+          <th data-sort>
+            Details
+          </th>
+          <th data-sort>
+            Other
+          </th>
+          <th class="spark-text-center">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="spark-table__row--align-top">
+          <td class="spark-table__checkbox">
+            <label class="spark-checkbox spark-mar-b-0">
+              <input type="checkbox" class="spark-checkbox__input">
+              <span class="spark-checkbox__box"></span>
+            </label>
+          </td>
+          <td class="spark-text-center">
+            <h2 class="spark-info">$289</h2>
+          </td>
+          <td class="spark-table-expand">
+            <span class="spark-epsilon">Row Title</span>
+            <p class="spark-margin-bottom--sm">
+              Lorem ipsum Aliqua cupidatat cillum eu eu tempor consequat voluptate Ut nostrud tempor ut dolore mollit dolor eiusmod dolore.
+            </p>
+            <div class="spark-expand__content spark-margin-top">
+              <p>
+                Est proident occaecat esse nostrud quis anim id laboris eiusmod laborum aute pariatur sit occaecat eiusmod proident amet elit nisi officia Ut sed adipisicing et.
+              </p>
+            </div>
+            <button class="spark-btn spark-btn--text spark-expand__toggle spark-expand__hide--expanded spark-margin-top">View Details<span class="spark-expand__toggle-caret"></span></button>
+            <button class="spark-btn spark-btn--text spark-expand__toggle spark-expand__show--expanded spark-margin-top">Hide Details<span class="spark-expand__toggle-caret"></span></button>
+          </td>
+          <td>
+            Lorem ipsum Occaecat est amet sit dolor quis consectetur veniam eu in.
+          </td>
+          <td>
+            Lorem ipsum Duis in ut consequat.
+          </td>
+          <td class="spark-table__actions spark-text-center">
+            <button class="spark-btn spark-btn--sm">Book Flight</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style type="text/css">
+  
+</style>

@@ -1,0 +1,133 @@
+/* sabre-spark - v2.4.4 - 2018-3-6 DO NOT MODIFY THIS FILE DIRECTLY OR YOU WILL NOT BE ABLE TO UPDATE YOUR VERSION OF SPARK. */
+.spark-message {
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%; }
+  .spark-message.spark-panel .spark-panel__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .spark-message.spark-panel .spark-panel__content p:first-of-type {
+      padding-top: 0; }
+
+.spark-message__icon,
+.spark-message__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
+
+.spark-message__icon {
+  border-radius: 50%;
+  display: inline-block;
+  height: 3rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  padding: 0 .5rem;
+  position: relative;
+  text-align: center;
+  width: 3rem; }
+  .spark-message__icon::before {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+.spark-message__content {
+  line-height: 2rem;
+  padding: .5rem; }
+
+.spark-message__icon + .spark-message__content {
+  margin-left: .5rem; }
+
+.spark-message__heading {
+  font-size: 1.66667rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0; }
+
+.spark-message--lg .spark-message__icon {
+  font-size: 1.66667rem;
+  height: 5rem;
+  min-height: 5rem;
+  min-width: 5rem;
+  padding: 0 1rem;
+  width: 5rem; }
+
+.spark-message--info {
+  background-color: transparent;
+  color: #333; }
+  .spark-message--info .spark-message__icon {
+    background-color: #4a5767;
+    border: 2px solid #37414d;
+    color: #fff; }
+  .spark-message--info h1, .spark-message--info h2, .spark-message--info h3, .spark-message--info h4, .spark-message--info h5, .spark-message--info h6, .spark-message--info b, .spark-message--info strong {
+    color: #4a5767; }
+
+.spark-message--warning {
+  background-color: transparent;
+  color: #333; }
+  .spark-message--warning .spark-message__icon {
+    background-color: #cd8511;
+    border: 2px solid #b97811;
+    color: #fff; }
+  .spark-message--warning h1, .spark-message--warning h2, .spark-message--warning h3, .spark-message--warning h4, .spark-message--warning h5, .spark-message--warning h6, .spark-message--warning b, .spark-message--warning strong {
+    color: #b3740e; }
+
+.spark-message--error {
+  background-color: transparent;
+  color: #333; }
+  .spark-message--error .spark-message__icon {
+    background-color: #ac0000;
+    border: 2px solid #910000;
+    color: #fff; }
+  .spark-message--error h1, .spark-message--error h2, .spark-message--error h3, .spark-message--error h4, .spark-message--error h5, .spark-message--error h6, .spark-message--error b, .spark-message--error strong {
+    color: #ac0000; }
+
+.spark-message--success {
+  background-color: transparent;
+  color: #333; }
+  .spark-message--success .spark-message__icon {
+    background-color: #6f991c;
+    border: 2px solid #577c10;
+    color: #fff; }
+  .spark-message--success h1, .spark-message--success h2, .spark-message--success h3, .spark-message--success h4, .spark-message--success h5, .spark-message--success h6, .spark-message--success b, .spark-message--success strong {
+    color: #63871a; }
+
+@font-face {
+  font-family: "spark-icon-line";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/spark/spark-icon-line.eot?#iefix') format('embedded-opentype'), url('./fonts/spark/spark-icon-line.woff') format('woff'), url('./fonts/spark/spark-icon-line.svg#spark-icon-line') format('svg'), url('./fonts/spark/spark-icon-line.ttf') format('truetype'); }
+
+@font-face {
+  font-family: "spark-icon-fill";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/spark/spark-icon-fill.eot?#iefix') format('embedded-opentype'), url('./fonts/spark/spark-icon-fill.woff') format('woff'), url('./fonts/spark/spark-icon-fill.svg#spark-icon-fill') format('svg'), url('./fonts/spark/spark-icon-fill.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('./fonts/roboto/Roboto_700.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_700.woff') format('woff'), url('./fonts/roboto/Roboto_700.woff2') format('woff2'), url('./fonts/roboto/Roboto_700.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_700.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('./fonts/roboto/Roboto_400.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_400.woff') format('woff'), url('./fonts/roboto/Roboto_400.woff2') format('woff2'), url('./fonts/roboto/Roboto_400.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_400.ttf') format('truetype'); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url('./fonts/roboto/Roboto_300.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_300.woff') format('woff'), url('./fonts/roboto/Roboto_300.woff2') format('woff2'), url('./fonts/roboto/Roboto_300.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_300.ttf') format('truetype'); }

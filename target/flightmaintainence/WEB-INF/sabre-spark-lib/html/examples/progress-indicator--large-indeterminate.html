@@ -1,0 +1,14 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Progress Indicator - Large Indeterminate" %}
+
+{% block example %}
+<div class="spark-progress spark-progress--integrated spark-progress--lg" role="progressbar">
+  <progress></progress>
+  <span class="spark-progress__text" role="status">Fetching stuff</span>
+  <span class="spark-progress__meter"></span>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/modal.js" %}
+{% endblock %}

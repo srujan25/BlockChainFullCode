@@ -1,0 +1,140 @@
+////
+/// ## Step Indicator Configuration
+///	@group config/components
+////
+
+/// Step-indicator title background-color
+/// @type {Color}
+$step-indicator__title__background-color: map-get($blue-color-steps, 200) !default;
+
+/// Step-indicator title color
+/// @type {Color}
+$step-indicator__title__color: $white !default;
+
+/// Step-indicator body background-color
+/// @type {Color}
+$step-indicator__body__background-color: $white !default;
+
+/// Step-indicator body border
+/// @type {Color}
+$step-indicator__body__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Step-indicator subtitle color
+/// @type {Color}
+$step-indicator__subtitle__color: map-get($blue-color-steps, 400) !default;
+
+/// Step-indicator item color
+/// @type {Color}
+$step-indicator__item__color: map-get($gray-color-steps, 800) !default;
+
+/// Step-indicator item hover color
+/// @type {Color}
+$step-indicator__item--hover__color: map-get($gray-color-steps, 900) !default;
+
+/// Step-indicator item dropdown hover background color
+/// @type {Color}
+$step-indicator__item--dropdown--hover__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Step-indicator item focus color
+/// @type {Color}
+$step-indicator__item--focus__color: map-get($gray-color-steps, 800) !default;
+
+/// Step-indicator icon border radius
+/// @type {Number}
+$step-indicator__icon__border-radius: 50% !default;
+
+/// Step-indicator icon border
+/// @type {String}
+$step-indicator__icon__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Step-indicator icon background-color
+/// @type {Color}
+$step-indicator__icon__background-color: $white !default;
+
+/// Step-indicator icon connection line color
+/// @type {Color}
+$step-indicator__icon__connection-line__color: map-get($gray-color-steps, 400) !default;
+
+/// Step-indicator icon hover border
+/// @type {String}
+$step-indicator__icon--hover__border: 1px solid map-get($gray-color-steps, 500) !default;
+
+/// Step-indicator icon completed backgound color
+/// @type {Color}
+$step-indicator__icon--completed__background-color: map-get($blue-color-steps, 150) !default;
+
+/// Step-indicator icon completed color
+/// @type {Color}
+$step-indicator__icon--completed__color: $white !default;
+
+/// Step-indicator icon completed border color
+/// @type {Color}
+$step-indicator__icon--completed__border-color: map-get($blue-color-steps, 150) !default;
+
+/// Step-indicator icon current backgound color
+/// @type {Color}
+$step-indicator__icon--current__background-color: map-get($blue-color-steps, 400) !default;
+
+/// Step-indicator icon current color
+/// @type {Color}
+$step-indicator__icon--current__color: $white !default;
+
+/// Step-indicator icon current border color
+/// @type {Color}
+$step-indicator__icon--current__border-color: map-get($blue-color-steps, 400) !default;
+
+/// Step-indicator icon focus box-shadow
+/// @type {String}
+$step-indicator__icon--focus__box-shadow: 0 0 0 4px map-get($blue-color-steps, 100) !default;
+
+/// Step-indicator icon disabled color
+/// @type {Color}
+$step-indicator__icon--disabled__color: map-get($gray-color-steps, 500) !default;
+
+/// Step-indicator icon disabled border color
+/// @type {Color}
+$step-indicator__icon--disabled__border-color: map-get($gray-color-steps, 400) !default;
+
+/// Step-indicator text completed color
+/// @type {Color}
+$step-indicator__text--completed__color: map-get($gray-color-steps, 800) !default;
+
+/// Step-indicator text current color
+/// @type {Color}
+$step-indicator__text--current__color: map-get($blue-color-steps, 400) !default;
+
+/// Step-indicator text disabled color
+/// @type {Color}
+$step-indicator__text--disabled__color: map-get($gray-color-steps, 500) !default;
+
+/// Step-indicator list dropdown background-color
+/// @type {String}
+$step-indicator__list--dropdown__background-color: $white !default;
+
+/// Step-indicator list dropdown box-shadow
+/// @type {String}
+$step-indicator__list--dropdown__box-shadow: 1px 1px 5px map-get($gray-color-steps, 400) !default;
+
+/// Step-indicator list dropdown border
+/// @type {String}
+$step-indicator__list--dropdown__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Step-indicator list dropdown border on hover
+/// @type {String}
+$step-indicator__list--dropdown--hover__border: 1px solid map-get($gray-color-steps, 500) !default;
+
+/// Step-indicator list dropdown border on focus
+/// @type {String}
+$step-indicator__list--dropdown--focus__border: 1px solid map-get($gray-color-steps, 700) !default;
+
+/// Step-indicator item dropdown expand background-color
+/// @type {String}
+$step-indicator__item--dropdown--expand__background-color: map-get($gray-color-steps, 100) !default;
+
+/// Step-indicator item dropdown expand background-color
+/// @type {String}
+$step-indicator__item--dropdown__header__border: 1px solid map-get($gray-color-steps, 400) !default;
+
+/// Step-indicator label dropdown arrow color
+/// @type {Color}
+$spark-step-indicator__label--dropdown__arrow__border-color: map-get($gray-color-steps, 800) !default;

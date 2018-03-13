@@ -1,0 +1,199 @@
+////
+/// ## Toggle
+/// @group components/toggle
+////
+
+
+/// Wrapper around the checkbox or radio input. Generally a label so that
+/// clicking on any part of the container triggers the checkbox or radio.
+.spark-toggle,
+.spark-toggle-switch {
+  touch-callout: none;
+  user-select: none;
+
+  // Hide the actual element from view.
+  .spark-toggle__input {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    //the second selector here has added specificity to override another style
+    &:focus, &:focus:checked:nth-child(n) {
+      ~ .spark-label, ~ .spark-toggle-switch__handle {
+        box-shadow: $toggle--focus__box-shadow;
+        z-index: 6;
+      }
+    }
+  }
+}
+
+/// A pill-style toggle
+.spark-toggle {
+  display: inline-block;
+  float: left;
+
+  // The label is used to create the clickable box
+  .spark-label {
+    background-color: $toggle__background-color;
+    border: $toggle__border;
+    border-left-width: 0;
+    border-bottom-width: 2px;
+    border-radius: .25rem;
+    color: $toggle__color;
+    cursor: pointer;
+    display: block; // Changed to display:block to fix spacing underneath toggle issue caused by inline-block
+    @include fontsize(zeta);
+    @include useFont($weight: $body__font-weight--bold);
+    line-height: 1rem;
+    margin-top: 0;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 100ms $ease-in-out-quint;
+    width: 100%;
+    z-index: 5;
+
+    [data-icon],
+    [class^='spark-icon-'],
+    [class*=' spark-icon-'] {
+      line-height: 1rem;
+    }
+  }
+
+  // When the toggle is checked, create a depressed appearance
+  // @todo remove the nth-child chack when iOS Chrome/Webviews fix this issue
+  // http://stackoverflow.com/questions/14201694/chrome-webkit-not-rendering-css-display-change-on-inputchecked-element-elem
+  .spark-toggle__input:checked ~ .spark-label:nth-child(n) {
+    border-color: $toggle--active__border-color;
+    background-color: $toggle--active__background-color;
+    color: $toggle--active__color;
+
+    // Fill icon when checked
+    [data-icon],
+    [class^='spark-icon-'],
+    [class*=' spark-icon-'] {
+      &::before{
+        font-family: $icon__font-family--fill !important;
+      }
+    }
+  }
+
+
+  // When the toggle is disabled, all borders should only be 1px and the colors lighter
+  // @todo remove the nth-child chack when iOS Chrome/Webviews fix this issue
+  // http://stackoverflow.com/questions/14201694/chrome-webkit-not-rendering-css-display-change-on-inputchecked-element-elem
+  .spark-toggle__input:disabled ~ .spark-label:nth-child(n) {
+    background-color: $toggle--disabled__background-color;
+    border: $toggle--disabled__border;
+    color: $toggle--disabled__color;
+    cursor: not-allowed;
+  }
+}
+
+/// A group of toggles
+.spark-toggle-group {
+  margin: 0;
+
+  .spark-toggle {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    // Don't round the corners on the labels in a group
+    .spark-label {
+      border-radius: 0;
+    }
+
+    // First toggle in a group has no rounding on the right
+    &:first-child {
+      .spark-label {
+        border-left-width: 1px;
+        border-radius: .25rem 0 0 .25rem;
+      }
+    }
+
+    // Last toggle in a group has no rounding on the left
+    &:last-child {
+      .spark-label {
+        border-radius: 0 .25rem .25rem 0;
+      }
+    }
+  }
+}
+
+/// A toggle switch
+.spark-toggle-switch {
+  cursor: pointer;
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 3.5em;
+
+  // The track on which the handle slides
+  .spark-toggle-switch__track {
+    background-color: $toggle__track__background-color;
+    border: $toggle__track__border;
+    border-radius: .75em;
+    content: '';
+    display: inline-block;
+    height: 1.35em;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 100ms $ease-in-out-quint;
+    width: 3.5em;
+    z-index: 0;
+  }
+
+  // The circular handle
+  .spark-toggle-switch__handle {
+    background-color: $toggle__handle__background-color;
+    border: $toggle__handle__border;
+    border-radius: 50%;
+    box-shadow: $toggle__handle__box-shadow;
+    content: '';
+    display: inline-block;
+    height: 2em;
+    left: 0;
+    position: relative;
+    transition: all 100ms $ease-in-out-quint;
+    width: 2em;
+    z-index: 5;
+  }
+
+  // When the input is checked, move the handle to the right and color the border
+  // @todo remove the nth-child chack when iOS Chrome/Webviews fix this issue
+  // http://stackoverflow.com/questions/14201694/chrome-webkit-not-rendering-css-display-change-on-inputchecked-element-elem
+  .spark-toggle__input:checked ~ .spark-toggle-switch__handle:nth-child(n) {
+    border: $toggle--active__handle__border;
+    box-shadow: $toggle--active__handle__box-shadow;
+    left: 1.5em;
+  }
+
+  // When the input is checked, color the track
+  // @todo remove the nth-child chack when iOS Chrome/Webviews fix this issue
+  // http://stackoverflow.com/questions/14201694/chrome-webkit-not-rendering-css-display-change-on-inputchecked-element-elem
+  .spark-toggle__input:checked ~ .spark-toggle-switch__track:nth-child(n) {
+    background-color: $toggle--active__track__background-color;
+    border: $toggle--active__track__border;
+  }
+
+  // When the input is disabled, gray out the handle
+  // @todo remove the nth-child chack when iOS Chrome/Webviews fix this issue
+  // http://stackoverflow.com/questions/14201694/chrome-webkit-not-rendering-css-display-change-on-inputchecked-element-elem
+  .spark-toggle__input:disabled ~ .spark-toggle-switch__handle:nth-child(n) {
+    background-color: $toggle--disabled__handle__background-color;
+    border: $toggle--disabled__handle__border;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  // When the input is disabled, gray out the track
+  // @todo remove the nth-child chack when iOS Chrome/Webviews fix this issue
+  // http://stackoverflow.com/questions/14201694/chrome-webkit-not-rendering-css-display-change-on-inputchecked-element-elem
+  .spark-toggle__input:disabled ~ .spark-toggle-switch__track:nth-child(n) {
+    background-color: $toggle--disabled__track__background-color;
+    border: $toggle--disabled__track__border;
+    cursor: not-allowed;
+  }
+}

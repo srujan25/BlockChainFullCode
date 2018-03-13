@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <title>Sabre Spark</title>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/cayman.min.css">
+    <link rel="stylesheet" href="../../../css/prism.min.css">
+    <link rel="stylesheet" href="../../../css/index.min.css">
+    <link rel="stylesheet" href="../../../css/docs.min.css">
+    <link rel="stylesheet" href="../../../css/bootstrap-responsive.min.css">
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a class="brand">Mr. Doc</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right sponsored"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="overview" class="jumbotron subhead">
+      <div class="container">
+        <h1>Sabre Spark</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="../../../index.html">Main</a></li>
+            <li><a href="../../../dist/components/base.js.html">dist/components/base.js</a></li>
+            <li><a href="../../../dist/components/calendar-popover.js.html">dist/components/calendar-popover.js</a></li>
+            <li><a href="../../../dist/components/carousel.js.html">dist/components/carousel.js</a></li>
+            <li><a href="../../../dist/components/date-input.js.html">dist/components/date-input.js</a></li>
+            <li><a href="../../../dist/components/date-select.js.html">dist/components/date-select.js</a></li>
+            <li><a href="../../../dist/components/date-typeahead.js.html">dist/components/date-typeahead.js</a></li>
+            <li><a href="../../../dist/components/expand.js.html">dist/components/expand.js</a></li>
+            <li><a href="../../../dist/components/filter-module.js.html">dist/components/filter-module.js</a></li>
+            <li><a href="../../../dist/components/filter.js.html">dist/components/filter.js</a></li>
+            <li><a href="../../../dist/components/header.js.html">dist/components/header.js</a></li>
+            <li><a href="../../../dist/components/menu.js.html">dist/components/menu.js</a></li>
+            <li><a href="../../../dist/components/modal.js.html">dist/components/modal.js</a></li>
+            <li><a href="../../../dist/components/multi-select-input.js.html">dist/components/multi-select-input.js</a></li>
+            <li><a href="../../../dist/components/number-selector.js.html">dist/components/number-selector.js</a></li>
+            <li><a href="../../../dist/components/popover.js.html">dist/components/popover.js</a></li>
+            <li><a href="../../../dist/components/progress-indicator.js.html">dist/components/progress-indicator.js</a></li>
+            <li><a href="../../../dist/components/range-slider.js.html">dist/components/range-slider.js</a></li>
+            <li><a href="../../../dist/components/scroll-to-top.js.html">dist/components/scroll-to-top.js</a></li>
+            <li><a href="../../../dist/components/select-input.js.html">dist/components/select-input.js</a></li>
+            <li><a href="../../../dist/components/slider.js.html">dist/components/slider.js</a></li>
+            <li><a href="../../../dist/components/step-indicator.js.html">dist/components/step-indicator.js</a></li>
+            <li><a href="../../../dist/components/table.js.html">dist/components/table.js</a></li>
+            <li><a href="../../../dist/components/tabs.js.html">dist/components/tabs.js</a></li>
+            <li><a href="../../../dist/components/text-input.js.html">dist/components/text-input.js</a></li>
+            <li><a href="../../../dist/components/toggle-switch.js.html">dist/components/toggle-switch.js</a></li>
+            <li><a href="../../../dist/components/toolbar.js.html">dist/components/toolbar.js</a></li>
+            <li><a href="../../../dist/components/tooltip.js.html">dist/components/tooltip.js</a></li>
+            <li><a href="../../../dist/components/typeahead.js.html">dist/components/typeahead.js</a></li>
+            <li><a href="../../../dist/helpers/animation/cancel.js.html">dist/helpers/animation/cancel.js</a></li>
+            <li><a href="../../../dist/helpers/animation/height.js.html">dist/helpers/animation/height.js</a></li>
+            <li><a href="../../../dist/helpers/animation/request.js.html">dist/helpers/animation/request.js</a></li>
+            <li><a href="../../../dist/helpers/animation/scroll-to.js.html">dist/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../../dist/helpers/animation/tween.js.html">dist/helpers/animation/tween.js</a></li>
+            <li><a href="../../../dist/helpers/css/transform.js.html">dist/helpers/css/transform.js</a></li>
+            <li><a href="../../../dist/helpers/date/date.js.html">dist/helpers/date/date.js</a></li>
+            <li><a href="../../../dist/helpers/date/parse-format.js.html">dist/helpers/date/parse-format.js</a></li>
+            <li><a href="../../../dist/helpers/dom/add-class.js.html">dist/helpers/dom/add-class.js</a></li>
+            <li><a href="../../../dist/helpers/dom/breakpoint.js.html">dist/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../../dist/helpers/dom/has-class.js.html">dist/helpers/dom/has-class.js</a></li>
+            <li><a href="../../../dist/helpers/dom/make-element.js.html">dist/helpers/dom/make-element.js</a></li>
+            <li><a href="../../../dist/helpers/dom/offset.js.html">dist/helpers/dom/offset.js</a></li>
+            <li><a href="../../../dist/helpers/dom/outer-height.js.html">dist/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../../dist/helpers/dom/outer-width.js.html">dist/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../../dist/helpers/dom/parse-attribute.js.html">dist/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../../dist/helpers/dom/remove-class.js.html">dist/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../../dist/helpers/dom/toggle-class.js.html">dist/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../../dist/helpers/dom/trigger-event.js.html">dist/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../../dist/helpers/form/build-select.js.html">dist/helpers/form/build-select.js</a></li>
+            <li><a href="../../../dist/helpers/form/form-data.js.html">dist/helpers/form/form-data.js</a></li>
+            <li><a href="../../../dist/helpers/form/set-caret.js.html">dist/helpers/form/set-caret.js</a></li>
+            <li><a href="../../../dist/helpers/manipulation/append-children.js.html">dist/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../../dist/helpers/manipulation/copy-attributes.js.html">dist/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../../dist/helpers/manipulation/insert-before.js.html">dist/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../../dist/helpers/manipulation/wrap-element.js.html">dist/helpers/manipulation/wrap-element.js</a></li>
+            <li class="active"><a href="../../../dist/helpers/position/affix.js.html">dist/helpers/position/affix.js</a></li>
+            <li><a href="../../../dist/helpers/position/box-position.js.html">dist/helpers/position/box-position.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/get-child.js.html">dist/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/get-children.js.html">dist/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/get-index.js.html">dist/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/get-parent.js.html">dist/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/get-parents.js.html">dist/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/get-sibling-after.js.html">dist/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/get-sibling-before.js.html">dist/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/has-parent.js.html">dist/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../../dist/helpers/traversal/matches.js.html">dist/helpers/traversal/matches.js</a></li>
+            <li><a href="../../../dist/helpers/util/debounce.js.html">dist/helpers/util/debounce.js</a></li>
+            <li><a href="../../../dist/helpers/util/each.js.html">dist/helpers/util/each.js</a></li>
+            <li><a href="../../../dist/helpers/util/mixin.js.html">dist/helpers/util/mixin.js</a></li>
+            <li><a href="../../../dist/helpers/util/pad.js.html">dist/helpers/util/pad.js</a></li>
+            <li><a href="../../../dist/helpers/util/range.js.html">dist/helpers/util/range.js</a></li>
+            <li><a href="../../../dist/helpers/util/round.js.html">dist/helpers/util/round.js</a></li>
+            <li><a href="../../../dist/helpers/util/trim.js.html">dist/helpers/util/trim.js</a></li>
+            <li><a href="../../../dist/js/src/components/calendar-popover.js.html">dist/js/src/components/calendar-popover.js</a></li>
+            <li><a href="../../../dist/js/src/components/filter-module.js.html">dist/js/src/components/filter-module.js</a></li>
+            <li><a href="../../../dist/js/src/components/filter.js.html">dist/js/src/components/filter.js</a></li>
+            <li><a href="../../../dist/js/src/components/modal.js.html">dist/js/src/components/modal.js</a></li>
+            <li><a href="../../../dist/js/src/components/typeahead.js.html">dist/js/src/components/typeahead.js</a></li>
+            <li><a href="../../../dist/js/src/spark.js.html">dist/js/src/spark.js</a></li>
+            <li><a href="../../../dist/mixins/messaging.js.html">dist/mixins/messaging.js</a></li>
+            <li><a href="../../../dist/mixins/validation.js.html">dist/mixins/validation.js</a></li>
+            <li><a href="../../../dist/spark.jquery.js.html">dist/spark.jquery.js</a></li>
+            <li><a href="../../../dist/spark.js.html">dist/spark.js</a></li>
+            <li><a href="../../../src/components/base.js.html">src/components/base.js</a></li>
+            <li><a href="../../../src/components/calendar-popover.js.html">src/components/calendar-popover.js</a></li>
+            <li><a href="../../../src/components/carousel.js.html">src/components/carousel.js</a></li>
+            <li><a href="../../../src/components/date-input.js.html">src/components/date-input.js</a></li>
+            <li><a href="../../../src/components/date-select.js.html">src/components/date-select.js</a></li>
+            <li><a href="../../../src/components/date-typeahead.js.html">src/components/date-typeahead.js</a></li>
+            <li><a href="../../../src/components/expand.js.html">src/components/expand.js</a></li>
+            <li><a href="../../../src/components/header.js.html">src/components/header.js</a></li>
+            <li><a href="../../../src/components/menu.js.html">src/components/menu.js</a></li>
+            <li><a href="../../../src/components/modal.js.html">src/components/modal.js</a></li>
+            <li><a href="../../../src/components/multi-select-input.js.html">src/components/multi-select-input.js</a></li>
+            <li><a href="../../../src/components/number-selector.js.html">src/components/number-selector.js</a></li>
+            <li><a href="../../../src/components/popover.js.html">src/components/popover.js</a></li>
+            <li><a href="../../../src/components/progress-indicator.js.html">src/components/progress-indicator.js</a></li>
+            <li><a href="../../../src/components/range-slider.js.html">src/components/range-slider.js</a></li>
+            <li><a href="../../../src/components/scroll-to-top.js.html">src/components/scroll-to-top.js</a></li>
+            <li><a href="../../../src/components/select-input.js.html">src/components/select-input.js</a></li>
+            <li><a href="../../../src/components/slider.js.html">src/components/slider.js</a></li>
+            <li><a href="../../../src/components/step-indicator.js.html">src/components/step-indicator.js</a></li>
+            <li><a href="../../../src/components/table.js.html">src/components/table.js</a></li>
+            <li><a href="../../../src/components/tabs.js.html">src/components/tabs.js</a></li>
+            <li><a href="../../../src/components/text-input.js.html">src/components/text-input.js</a></li>
+            <li><a href="../../../src/components/toggle-switch.js.html">src/components/toggle-switch.js</a></li>
+            <li><a href="../../../src/components/toolbar.js.html">src/components/toolbar.js</a></li>
+            <li><a href="../../../src/components/tooltip.js.html">src/components/tooltip.js</a></li>
+            <li><a href="../../../src/components/typeahead.js.html">src/components/typeahead.js</a></li>
+            <li><a href="../../../src/helpers/animation/cancel.js.html">src/helpers/animation/cancel.js</a></li>
+            <li><a href="../../../src/helpers/animation/height.js.html">src/helpers/animation/height.js</a></li>
+            <li><a href="../../../src/helpers/animation/request.js.html">src/helpers/animation/request.js</a></li>
+            <li><a href="../../../src/helpers/animation/scroll-to.js.html">src/helpers/animation/scroll-to.js</a></li>
+            <li><a href="../../../src/helpers/animation/tween.js.html">src/helpers/animation/tween.js</a></li>
+            <li><a href="../../../src/helpers/css/transform.js.html">src/helpers/css/transform.js</a></li>
+            <li><a href="../../../src/helpers/date/date.js.html">src/helpers/date/date.js</a></li>
+            <li><a href="../../../src/helpers/date/parse-format.js.html">src/helpers/date/parse-format.js</a></li>
+            <li><a href="../../../src/helpers/dom/add-class.js.html">src/helpers/dom/add-class.js</a></li>
+            <li><a href="../../../src/helpers/dom/breakpoint.js.html">src/helpers/dom/breakpoint.js</a></li>
+            <li><a href="../../../src/helpers/dom/has-class.js.html">src/helpers/dom/has-class.js</a></li>
+            <li><a href="../../../src/helpers/dom/make-element.js.html">src/helpers/dom/make-element.js</a></li>
+            <li><a href="../../../src/helpers/dom/offset.js.html">src/helpers/dom/offset.js</a></li>
+            <li><a href="../../../src/helpers/dom/outer-height.js.html">src/helpers/dom/outer-height.js</a></li>
+            <li><a href="../../../src/helpers/dom/outer-width.js.html">src/helpers/dom/outer-width.js</a></li>
+            <li><a href="../../../src/helpers/dom/parse-attribute.js.html">src/helpers/dom/parse-attribute.js</a></li>
+            <li><a href="../../../src/helpers/dom/remove-class.js.html">src/helpers/dom/remove-class.js</a></li>
+            <li><a href="../../../src/helpers/dom/toggle-class.js.html">src/helpers/dom/toggle-class.js</a></li>
+            <li><a href="../../../src/helpers/dom/trigger-event.js.html">src/helpers/dom/trigger-event.js</a></li>
+            <li><a href="../../../src/helpers/form/build-select.js.html">src/helpers/form/build-select.js</a></li>
+            <li><a href="../../../src/helpers/form/form-data.js.html">src/helpers/form/form-data.js</a></li>
+            <li><a href="../../../src/helpers/form/set-caret.js.html">src/helpers/form/set-caret.js</a></li>
+            <li><a href="../../../src/helpers/manipulation/append-children.js.html">src/helpers/manipulation/append-children.js</a></li>
+            <li><a href="../../../src/helpers/manipulation/copy-attributes.js.html">src/helpers/manipulation/copy-attributes.js</a></li>
+            <li><a href="../../../src/helpers/manipulation/insert-before.js.html">src/helpers/manipulation/insert-before.js</a></li>
+            <li><a href="../../../src/helpers/manipulation/wrap-element.js.html">src/helpers/manipulation/wrap-element.js</a></li>
+            <li><a href="../../../src/helpers/position/affix.js.html">src/helpers/position/affix.js</a></li>
+            <li><a href="../../../src/helpers/position/box-position.js.html">src/helpers/position/box-position.js</a></li>
+            <li><a href="../../../src/helpers/traversal/get-child.js.html">src/helpers/traversal/get-child.js</a></li>
+            <li><a href="../../../src/helpers/traversal/get-children.js.html">src/helpers/traversal/get-children.js</a></li>
+            <li><a href="../../../src/helpers/traversal/get-index.js.html">src/helpers/traversal/get-index.js</a></li>
+            <li><a href="../../../src/helpers/traversal/get-parent.js.html">src/helpers/traversal/get-parent.js</a></li>
+            <li><a href="../../../src/helpers/traversal/get-parents.js.html">src/helpers/traversal/get-parents.js</a></li>
+            <li><a href="../../../src/helpers/traversal/get-sibling-after.js.html">src/helpers/traversal/get-sibling-after.js</a></li>
+            <li><a href="../../../src/helpers/traversal/get-sibling-before.js.html">src/helpers/traversal/get-sibling-before.js</a></li>
+            <li><a href="../../../src/helpers/traversal/has-parent.js.html">src/helpers/traversal/has-parent.js</a></li>
+            <li><a href="../../../src/helpers/traversal/matches.js.html">src/helpers/traversal/matches.js</a></li>
+            <li><a href="../../../src/helpers/util/debounce.js.html">src/helpers/util/debounce.js</a></li>
+            <li><a href="../../../src/helpers/util/each.js.html">src/helpers/util/each.js</a></li>
+            <li><a href="../../../src/helpers/util/mixin.js.html">src/helpers/util/mixin.js</a></li>
+            <li><a href="../../../src/helpers/util/pad.js.html">src/helpers/util/pad.js</a></li>
+            <li><a href="../../../src/helpers/util/range.js.html">src/helpers/util/range.js</a></li>
+            <li><a href="../../../src/helpers/util/round.js.html">src/helpers/util/round.js</a></li>
+            <li><a href="../../../src/helpers/util/trim.js.html">src/helpers/util/trim.js</a></li>
+            <li><a href="../../../src/mixins/messaging.js.html">src/mixins/messaging.js</a></li>
+            <li><a href="../../../src/mixins/validation.js.html">src/mixins/validation.js</a></li>
+            <li><a href="../../../src/spark.jquery.js.html">src/spark.jquery.js</a></li>
+            <li><a href="../../../src/spark.js.html">src/spark.js</a></li>
+          </ul>
+          <div class="scrollspy">
+            <ul class="nav nav-list bs-docs-sidenav affix-top">
+              <li><a href="#Affix"><i class="alert alert-info"></i><span>Affix</span></a>
+              </li>
+              <li><a href="#Affix"><i class="alert alert-info"></i><span>Affix</span></a>
+              </li>
+              <li><a href="#remove"><i class="alert alert-info"></i><span>remove</span></a>
+              </li>
+              <li><a href="#update"><i class="alert alert-info"></i><span>update</span></a>
+              </li>
+              <li><a href="#_addEventListeners"><i class="alert alert-info"></i><span>_addEventListeners</span></a>
+              </li>
+              <li><a href="#_removeEventListeners"><i class="alert alert-info"></i><span>_removeEventListeners</span></a>
+              </li>
+              <li><a href="#_insertEl"><i class="alert alert-info"></i><span>_insertEl</span></a>
+              </li>
+              <li><a href="#_removeEl"><i class="alert alert-info"></i><span>_removeEl</span></a>
+              </li>
+              <li><a href="#_setPosition"><i class="alert alert-info"></i><span>_setPosition</span></a>
+              </li>
+              <li><a href="#_calculatePosition"><i class="alert alert-info"></i><span>_calculatePosition</span></a>
+              </li>
+              <li><a href="#_getNewAnchorY"><i class="alert alert-info"></i><span>_getNewAnchorY</span></a>
+              </li>
+              <li><a href="#_getNewAnchorX"><i class="alert alert-info"></i><span>_getNewAnchorX</span></a>
+              </li>
+              <li><a href="#_positionCaret"><i class="alert alert-info"></i><span>_positionCaret</span></a>
+              </li>
+              <li><a href="#_getRootEl"><i class="alert alert-info"></i><span>_getRootEl</span></a>
+              </li>
+              <li><a href="#_onResize"><i class="alert alert-info"></i><span>_onResize</span></a>
+              </li>
+              <li><a href="#_onScroll"><i class="alert alert-info"></i><span>_onScroll</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <section id="Affix">
+            <h1>Affix</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>Affix()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><h1>Affix</h1>
+<p>Affix one element to another.</p></div>
+          <pre><code class="language-javascript">var Affix = function () {</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">new Affix({
+  el: el,
+  targetEl: el2,
+  caretEl: el3,
+  anchorY: 'top', // 'middle', 'bottom'
+  anchorX: 'left', // 'center', 'right'
+})</code></pre>
+          <section id="Affix">
+            <h1>Affix</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">function</div><span>&nbsp;</span><span>Affix()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Store the reference elements and position.</p></div>
+          <pre><code class="language-javascript">function Affix() {
+  var params = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+
+  _classCallCheck(this, Affix);
+
+  this.el = params.el;
+  this.targetEl = params.targetEl;
+  this.caretEl = params.caretEl;
+  this.anchorY = params.anchorY || 'top';
+  this.anchorX = params.anchorX || 'center';
+  this.isFixed = params.isFixed || false;
+
+  this._addEventListeners();
+  this._insertEl();
+  this._setPosition();
+  this._updateDebounced = (0, _debounce2.default)(this.update.bind(this), 500);
+}</code></pre>
+          <section id="remove">
+            <h1>remove</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype.remove()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>params</td>
+                <td>Object</td>
+                <td><p>Optional</p></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Object</td>
+                <td><p>this</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Stop listening and clean up event listeners</p></div>
+          <pre><code class="language-javascript">Affix.prototype.remove = function remove() {
+  var params = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+
+  if (!params.keepEl) this._removeEl();
+  this._removeEventListeners();
+  return this;
+};</code></pre>
+          <section id="update">
+            <h1>update</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype.update()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Update the position.</p></div>
+          <pre><code class="language-javascript">Affix.prototype.update = function update() {
+  this._setPosition();
+  return this;
+};</code></pre>
+          <section id="_addEventListeners">
+            <h1>_addEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._addEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Listen for window resizes to update the position.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._addEventListeners = function _addEventListeners() {
+  this._onResizeBound = this._onResize.bind(this);
+  this._onScrollBound = this._onScroll.bind(this);
+  window.addEventListener('resize', this._onResizeBound);
+  window.addEventListener('scroll', this._onScrollBound);
+};</code></pre>
+          <section id="_removeEventListeners">
+            <h1>_removeEventListeners</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._removeEventListeners()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove event listeners</p></div>
+          <pre><code class="language-javascript">Affix.prototype._removeEventListeners = function _removeEventListeners() {
+  window.removeEventListener('resize', this._onResizeBound);
+  window.removeEventListener('scroll', this._onScrollBound);
+};</code></pre>
+          <section id="_insertEl">
+            <h1>_insertEl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._insertEl()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Insert the element into the DOM.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._insertEl = function _insertEl() {
+  this.el.setAttribute('data-affixed', '');
+  this._getRootEl().appendChild(this.el);
+};</code></pre>
+          <section id="_removeEl">
+            <h1>_removeEl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._removeEl()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Remove the element from the DOM.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._removeEl = function _removeEl() {
+  this.el.parentNode.removeChild(this.el);
+  this.el.removeAttribute('data-affixed');
+};</code></pre>
+          <section id="_setPosition">
+            <h1>_setPosition</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._setPosition()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Set the position of the target element.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._setPosition = function _setPosition() {
+
+  // Fixed position
+  this.el.style.setProperty('position', this.isFixed ? 'fixed' : 'absolute', 'important');
+
+  // Target element properties
+
+  var _offset = (0, _offset3.default)(this.targetEl, this.isFixed);
+
+  var targetTop = _offset.top;
+  var targetLeft = _offset.left;
+
+  var targetWidth = this.targetEl.offsetWidth;
+  var targetHeight = this.targetEl.offsetHeight;
+
+  // Element to affix properties
+  var elWidth = this.el.offsetWidth;
+  var elHeight = this.el.offsetHeight;
+
+  // Maxes
+  var docHeight = document.documentElement.offsetHeight;
+  var docWidth = document.documentElement.offsetWidth;
+
+  // Get the values
+
+  var _calculatePosition2 = this._calculatePosition({
+    anchorX: this.anchorX,
+    anchorY: this.anchorY,
+    targetTop: targetTop,
+    targetLeft: targetLeft,
+    elHeight: elHeight,
+    elWidth: elWidth,
+    targetHeight: targetHeight,
+    targetWidth: targetWidth,
+    minX: 0,
+    minY: 0,
+    maxX: docWidth - elWidth,
+    maxY: Math.max(docHeight - elHeight, 0)
+  });
+
+  var elTop = _calculatePosition2.elTop;
+  var elLeft = _calculatePosition2.elLeft;
+
+  // Position the caret
+
+  var _positionCaret2 = this._positionCaret({
+    elLeft: elLeft,
+    elTop: elTop,
+    elWidth: elWidth,
+    elHeight: elHeight,
+    targetHeight: targetHeight,
+    targetWidth: targetWidth,
+    targetLeft: targetLeft,
+    targetTop: targetTop
+  });
+
+  var extraLeft = _positionCaret2.extraLeft;
+  var extraTop = _positionCaret2.extraTop;
+
+  // Set the position
+
+  this.el.style.left = elLeft + extraLeft + 'px';
+  this.el.style.top = elTop + extraTop + 'px';
+};</code></pre>
+          <section id="_calculatePosition">
+            <h1>_calculatePosition</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._calculatePosition()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>p</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Get the proper top position for an anchor direction.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._calculatePosition = function _calculatePosition(p) {
+
+  // Keep track of what we're trying to do here, so on subsequent, nested calls to this
+  // method we can see what has already been tried.
+  p.previousAttempts = (p.previousAttempts || 0) + 1;
+  p.previousChecks = p.previousChecks || [];
+
+  var finalCheck = p.previousAttempts &gt; 3;
+  var top = void 0;
+  var left = void 0;
+
+  // Y-axis check
+  switch (p.anchorY) {
+    case 'bottom':
+      top = p.targetTop + p.targetHeight;
+      break;
+    case 'middle':
+      top = p.targetTop - (p.elHeight - p.targetHeight) / 2;
+      break;
+    default:
+      top = p.targetTop - p.elHeight;
+      break;
+  }
+
+  // Under min
+  if (top &lt; p.minY) {
+
+    if (!finalCheck &amp;&amp; p.previousChecks.indexOf('overY') === -1) {
+      p.previousChecks.push('underY');
+      p.anchorY = this._getNewAnchorY(true, p.anchorY, p.anchorX);
+      return this._calculatePosition(p);
+    } else {
+      top = p.minY;
+    }
+  }
+
+  // Don't check for being too tall because causing a vertical scroll
+  // bar down is okay and this saves us from some real positioning hell.</code></pre>
+          <div class="description"><p>if (top &gt; p.maxY) {<br />       if (!finalCheck &amp;&amp; p.previousChecks.indexOf(&#39;underY&#39;) === -1) {<br />        p.previousChecks.push(&#39;overY&#39;);<br />        p.anchorY = this._getNewAnchorY(false, p.anchorY, p.anchorX);<br />        return this._calculatePosition(p);<br />      }<br />      // On a final check, bottom wins because at least we can scroll<br />      else if (!(finalCheck &amp;&amp; p.anchorY === &#39;bottom&#39;)) {<br />        top = p.maxY;<br />      }<br />    }</p></div>
+          <pre><code class="language-javascript">// X-axis check
+switch (p.anchorX) {
+  case 'right':
+    left = p.targetLeft + (p.anchorY !== 'middle' &amp;&amp; !p.isOverlapping ? 0 : p.targetWidth);
+    break;
+  case 'center':
+    left = p.targetLeft - (p.elWidth - p.targetWidth) / 2;
+    break;
+  default:
+    left = p.targetLeft - p.elWidth + (p.anchorY !== 'middle' ? p.targetWidth : 0);
+    break;
+}
+
+// Under min
+if (left &lt; p.minX) {
+
+  if (!finalCheck &amp;&amp; p.previousChecks.indexOf('overX') === -1) {
+    p.previousChecks.push('underX');
+    p.anchorX = this._getNewAnchorX(true, p.anchorX, p.anchorY);
+    return this._calculatePosition(p);
+  } else {
+    left = p.minX;
+  }
+}
+
+// Over max
+if (left &gt; p.maxX) {
+
+  if (!finalCheck &amp;&amp; p.previousChecks.indexOf('underX') === -1) {
+    p.previousChecks.push('overX');
+    p.anchorX = this._getNewAnchorX(false, p.anchorX, p.anchorY);
+    return this._calculatePosition(p);
+  } else {
+    left = p.maxX;
+  }
+}
+
+// One element is covering another. Try to fix that, but bail out after four tries.
+if ((0, _boxPosition2.default)({ width: p.elWidth, height: p.elHeight, left: left, top: top }, { width: p.targetWidth, height: p.targetHeight, left: p.targetLeft, top: p.targetTop }) === 'overlap') {
+
+  p.isOverlapping = true;
+
+  // Try Y
+  if (p.repositionY !== false) {
+
+    // Will start undefined, then true, then false. This limits us to entering
+    // this loop twice, once to try moving in each direction.
+    p.repositionY = !p.repositionY;
+
+    // First try to put above, then try to put below.
+    p.anchorY = this._getNewAnchorY(p.repositionY, 'middle', p.anchorX);
+
+    // Give us one more shot at positioning
+    p.previousAttempts--;
+
+    return this._calculatePosition(p);
+  }
+  // Try X
+  else if (p.repositionX !== false) {
+
+      // Will start undefined, then true, then false. This limits us to entering
+      // this loop twice, once to try moving in each direction.
+      p.repositionX = !p.repositionX;
+
+      // First try to put above, then try to put below.
+      p.anchorX = this._getNewAnchorX(p.repositionX, 'center', p.anchorY);
+
+      // Give us one more shot at positioning
+      p.previousAttempts--;
+
+      return this._calculatePosition(p);
+    }
+}
+
+return { elTop: top, elLeft: left, anchorX: p.anchorX, anchorY: p.anchorY };
+  };</code></pre>
+          <section id="_getNewAnchorY">
+            <h1>_getNewAnchorY</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._getNewAnchorY()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>underMin</td>
+                <td>Boolean</td>
+                <td><p>Under the min?</p></td>
+              </tr>
+              <tr>
+                <td>anchorY</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>anchorX</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Determine the new y-axis anchor</p></div>
+          <pre><code class="language-javascript">Affix.prototype._getNewAnchorY = function _getNewAnchorY(underMin, anchorY, anchorX) {
+
+  // If the x-axis is anchored in the center, skip
+  // trying to anchor to the middle because then we'd
+  // be overlaying the button.
+  if (anchorX === 'center' || anchorY === 'middle') {
+    return underMin ? 'bottom' : 'top';
+  } else {
+    return 'middle';
+  }
+};</code></pre>
+          <section id="_getNewAnchorX">
+            <h1>_getNewAnchorX</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._getNewAnchorX()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>underMin</td>
+                <td>Boolean</td>
+                <td><p>Under the min?</p></td>
+              </tr>
+              <tr>
+                <td>anchorY</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>anchorX</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>String</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Determine the new y-axis anchor</p></div>
+          <pre><code class="language-javascript">Affix.prototype._getNewAnchorX = function _getNewAnchorX(underMin, anchorX, anchorY) {
+
+  // If the y-axis is anchored in the center, skip
+  // trying to anchor to the middle because then we'd
+  // be overlaying the button.
+  if (anchorY === 'middle' || anchorX === 'center') {
+    return underMin ? 'left' : 'right';
+  } else {
+    return 'center';
+  }
+};</code></pre>
+          <section id="_positionCaret">
+            <h1>_positionCaret</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._positionCaret()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="width:20%">Option name</th>
+                <th style="width:20%">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>p</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>return</td>
+                <td>Object</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="description"><p>Set the position of the caret.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._positionCaret = function _positionCaret() {
+  var p = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+
+
+  if (!this.caretEl) return;
+
+  var caretPosition = (0, _boxPosition2.default)({ width: p.elWidth, height: p.elHeight, left: p.elLeft, top: p.elTop }, { width: p.targetWidth, height: p.targetHeight, left: p.targetLeft, top: p.targetTop });
+
+  var caretDimensions = this.caretEl.getBoundingClientRect();
+  var caretWidth = caretDimensions.width;
+  var caretHeight = caretDimensions.height;
+  var left = Math.min(p.elWidth, Math.max(0, p.targetLeft - p.elLeft + p.targetWidth / 2));
+  var top = Math.min(p.elHeight, Math.max(0, p.targetTop - p.elTop + p.targetHeight / 2));
+
+  this.caretEl.style.left = Math.round(left) + 'px';
+  this.caretEl.style.top = Math.round(top) + 'px';
+
+  var extraLeft = 0;
+  var extraTop = 0;
+
+  this.caretEl.setAttribute('data-position', caretPosition);
+
+  switch (caretPosition) {
+    case 'above':
+      extraTop = -caretWidth / 2;
+      break;
+    case 'below':
+      extraTop = caretWidth / 2;
+      break;
+    case 'left':
+      extraLeft = -caretHeight / 2;
+      break;
+    default:
+      extraLeft = caretHeight / 2;
+      break;
+  }
+
+  return {
+    extraLeft: extraLeft,
+    extraTop: extraTop
+  };
+};</code></pre>
+          <section id="_getRootEl">
+            <h1>_getRootEl</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._getRootEl()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>Get the root element. Want to check if there&#39;s a top-level form for working<br />with ASP .NET pages.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._getRootEl = function _getRootEl() {
+  var form = document.querySelector('body &gt; form');
+  return form &amp;&amp; form.getAttribute('data-affixed') === null ? form : document.body;
+};</code></pre>
+          <section id="_onResize">
+            <h1>_onResize</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._onResize()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>On resize, update the position.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._onResize = function _onResize() {
+  this.update();
+};</code></pre>
+          <section id="_onScroll">
+            <h1>_onScroll</h1>
+            <h5 class="subheader"></h5>
+            <p>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Affix.prototype._onScroll()</span><span>&nbsp;</span>
+            </p>
+          </section>
+          <div class="description"><p>When the window scrolls, ensure the proper position of the popover.</p></div>
+          <pre><code class="language-javascript">Affix.prototype._onScroll = function _onScroll() {
+  this._updateDebounced();
+};
+
+return Affix;
+}();
+
+exports.default = Affix;
+module.exports = exports['default'];
+//# sourceMappingURL=affix.js.map</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Documentation generated with <a href="https://github.com/mr-doc/mr-doc">Mr. Doc </a> created by <a href="https://twitter.com/FGRibreau" data-show-count="false" class="twitter-follow-button">Francois-Guillaume Ribreau </a></p>
+        <p>Mr. Doc is sponsored by <a href="http://bringr.net/?btt" title="Outil d'analyse des réseaux sociaux" class="bringr">Bringr </a> and <a href="https://redsmin.com/?btt" title="Full Redis GUI" class="redsmin">Redsmin</a></p>
+        <p>Theme borrowed from Twitter Bootstrap</p>
+      </div>
+    </footer>
+    <script src="../../../js/twitter-widget.min.js"></script>
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-transition.min.js"></script>
+    <script src="../../../js/bootstrap-scrollspy.min.js"></script>
+    <script src="../../../js/bootstrap-dropdown.min.js"></script>
+    <script src="../../../js/bootstrap-collapse.min.js"></script>
+    <script src="../../../js/bootstrap-affix.min.js"></script>
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/index.min.js"></script>
+  </body>
+</html>

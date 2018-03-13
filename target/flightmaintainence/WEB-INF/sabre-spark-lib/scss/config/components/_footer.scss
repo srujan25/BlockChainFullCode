@@ -1,0 +1,32 @@
+////
+/// ## Footer Configuration
+///	@group config/components
+////
+
+/// Footer `background-color`
+/// @type {Color}
+$footer__background-color: $black !default;
+
+/// Footer `color`
+/// @type {Color}
+$footer__color: $white !default;
+
+/// Footer link `color`
+/// @type {Color}
+$footer__link--color: map-get($gray-color-steps, 400) !default;
+
+/// Footer link `color` on hover
+/// @type {Color}
+$footer__link--hover__color: $white !default;
+
+/// Footer link `color` when active
+/// @type {Color}
+$footer__link--active__color: map-get($gray-color-steps, 500) !default;
+
+/// Footer icon `color`
+/// @type {Color}
+$footer__icon--color: map-get($gray-color-steps, 800) !default;
+
+/// Footer icon `color` on hover
+/// @type {Color}
+$footer__icon--hover__color: map-get($gray-color-steps, 500) !default;

@@ -1,0 +1,25 @@
+{% extends "examples/layouts/" + (layoutName if layoutName else "primary") + ".html" %}
+{% set title = "Select - Native Multi w/ No Title" %}
+
+{% block example %}
+<label class="spark-multi-select spark-multi-select--no-title">
+  <select class="spark-multi-select__input" multiple size="5">
+    <option>Don't pick this one.</option>
+    <optgroup label="Group 1">
+      <option>Don't pick this one.</option>
+      <option>A decent choice.</option>
+      <option>The best option.</option>
+    </optgroup>
+    <optgroup label="Group 2">
+      <option>Still more options.</option>
+      <option>You have a choice.</option>
+      <option>The power is yours.</option>
+    </optgroup>
+    <option>Pick this one.</option>
+  </select>
+</label>
+{% endblock %}
+
+{% block scripts %}
+{% include "examples/partials/scripts/multi-select.js" %}
+{% endblock %}
