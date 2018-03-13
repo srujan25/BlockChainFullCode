@@ -30,11 +30,9 @@
 
     <%@include file="menubar.jsp" %>
     <table align='center' width='100%'>
-        <tr><td width='30%'></td><td align='center' >
+        <tr><td width='10%'></td><td align='center' >
 
     <div class="container container-spacing">
-        <div class="heading-content-container container sb-full-max-width spark-padding-top--sm spark-padding-bottom--sm">
-        <div class="row"><div class="col-xs-12 property-id-container spark-text-right spark-bold">
         <div class="pms-page-title title-spacing"><h3>Aircraft Component</h3></div>
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
 

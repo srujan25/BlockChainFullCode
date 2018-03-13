@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="resources/ui/common-spark.css"/>
     <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Airline page</title>
+    <title>Airline</title>
 
 </head>
 <body>
