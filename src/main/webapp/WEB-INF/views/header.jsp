@@ -51,7 +51,7 @@
                            <a href="servicerequest" class="spark-menu__list-link">Service Request</a>
                         </li>
                         <li class="spark-menu__list-item" role="menuitem">
-                           <a href="serviceover" class="spark-menu__list-link">Service open</a>
+                           <a href="serviceover" class="spark-menu__list-link">Service Over</a>
                         </li>
                      </ul>
                   </li>

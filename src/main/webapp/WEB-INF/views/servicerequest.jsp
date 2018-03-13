@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="resources/ui/common-spark.css"/>
     <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>AirCraft page</title>
+    <title>Service Request</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
