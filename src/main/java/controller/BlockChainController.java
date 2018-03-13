@@ -52,8 +52,11 @@ public class BlockChainController {
         componentMap.put("componentName", aircraft.getComponentName());
         componentMap.put("componentModel", aircraft.getComponentModel());
         componentMap.put("componentManufacturer", aircraft.getComponentManufacturer());
-        componentMap.put("componentManufacturingDate", aircraft.getComponentManufacturingDate());
-        componentMap.put("componentExpiryDate", aircraft.getComponentExpiryDate());
+        componentMap.put("componentManufacturingDate", aircraft.getComponentManufacturingDay()+"/"+
+                aircraft.getComponentManufacturingMonth()+"/"+aircraft.getComponentManufacturingYear());
+        componentMap.put("componentExpiryDate", aircraft.getComponentExpiryDay()+"/"
+                +aircraft.getComponentExpiryMonth()+"/"
+                +aircraft.getComponentExpiryYear());
         componentMap.put("airline", "org.sabre.biznet.Airline#"+aircraft.getAirline());
         restTemplate.postForEntity(COMPONENT_URL,componentMap,String.class );
         return "aircraft";

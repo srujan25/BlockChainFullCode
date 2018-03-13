@@ -16,7 +16,7 @@
     <%@include file="menubar.jsp" %>
 
         <table align='center' width='100%'>
-            <tr><td width='30%'></td><td align='center' >
+            <tr><td width='10%'></td><td align='center' >
 
             <div class="container container-spacing">
 
