@@ -129,6 +129,25 @@ public class BlockChainController {
         return array.toJSONString();
     }
 
+    @RequestMapping(path={"/aircraftComponents"},method=RequestMethod.POST)
+    @ResponseBody
+    public String getaircraftComponents(Model model) {
+        RestTemplate restTemplate = new RestTemplate();
+        AircraftComponents[] aircraftComponents = restTemplate.getForObject(COMPONENT_URL, AircraftComponents[].class);
+        if(aircraftComponents == null || aircraftComponents.length == 0 ) {
+            return "";
+        }
+        JSONArray array = new JSONArray();
+        JSONObject json;
+        for (int i = 0; i < aircraftComponents.length; i++) {
+            json = new JSONObject();
+            json.put("serialNo", aircraftComponents[i].getSerialNo());
+            json.put("componentName", aircraftComponents[i].getComponentName());
+            array.add(json);
+        }
+        return array.toJSONString();
+    }
+
 
     @RequestMapping(path={"/airline"},method=RequestMethod.GET)
     public String getAirline(Model model) {
@@ -222,32 +241,28 @@ public class BlockChainController {
     public String saveServiceRequest(@ModelAttribute("serviceTransaction") ServiceTransaction serviceTransaction) throws Exception{
 
         RestTemplate restTemplate = new RestTemplate();
+        AircraftComponents[] aircraftComponent = restTemplate.getForObject(COMPONENT_URL
+                        +"?serialNo="+serviceTransaction.getSerialNo()
+                , AircraftComponents[].class);
+
         Map<String, String> componentMap = new HashMap<String, String>();
         componentMap.put("$class","org.sabre.biznet.ServiceTransaction");
-        componentMap.put("serialNo", serviceTransaction.getSerialNo());
-        componentMap.put("flightNo", serviceTransaction.getFlightNo());
-        componentMap.put("componentName", serviceTransaction.getComponentName());
-        componentMap.put("componentModel", serviceTransaction.getComponentModel());
-        componentMap.put("componentManufacturer", serviceTransaction.getComponentModel());
-        componentMap.put("componentManufacturingDate", serviceTransaction.getComponentManufacturingDate());
-        componentMap.put("componentExpiryDate", serviceTransaction.getComponentExpiryDate());
+        componentMap.put("serialNo", aircraftComponent[0].getSerialNo());
+        componentMap.put("flightNo", aircraftComponent[0].getFlightNo());
         componentMap.put("serviceRequestId", serviceTransaction.getServiceRequestId());
+        componentMap.put("componentName", aircraftComponent[0].getComponentName());
+        componentMap.put("componentModel", aircraftComponent[0].getComponentModel());
+        componentMap.put("componentManufacturer", aircraftComponent[0].getComponentModel());
+        componentMap.put("componentManufacturingDate", aircraftComponent[0].getComponentManufacturingDate());
+        componentMap.put("componentExpiryDate", aircraftComponent[0].getComponentExpiryDate());
         componentMap.put("serviceRequestDate", serviceTransaction.getServiceRequestDay()+"/"
                 +serviceTransaction.getServiceRequestMonth() +"/"+serviceTransaction.getServiceRequestYear());
-        componentMap.put("nextServiceDate", serviceTransaction.getNextServiceDay()+"/"
-                +serviceTransaction.getNextServiceMonth() +"/"+serviceTransaction.getNextServiceYear());
 
-        componentMap.put("serviceOverDate", serviceTransaction.getServiceOverDay()+"/"
-                +serviceTransaction.getServiceOverMonth() +"/"+serviceTransaction.getServiceOverYear());
-
-        componentMap.put("serviceEngineer", serviceTransaction.getServiceEngineer());
-        componentMap.put("comments", serviceTransaction.getComments());
         componentMap.put("transactionType", "ServiceRequest");
-        componentMap.put("serviceVerifiedBy", serviceTransaction.getServiceVerifiedBy());
-        componentMap.put("designation", serviceTransaction.getDesignation());
-        componentMap.put("airline", "org.sabre.biznet.Airline#"+serviceTransaction.getAirline());
-        componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponent#"+serviceTransaction.getAircraftComponent());
-        componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
+        componentMap.put("flightMode", "In Service");
+        componentMap.put("airline", "org.sabre.biznet.Airline#"+aircraftComponent[0].getAirline());
+        componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#"+aircraftComponent[0].getSerialNo());
+        componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getSerialNo());
         componentMap.put("transactionId", "");
 
         ObjectMapper mapper = new ObjectMapper();
