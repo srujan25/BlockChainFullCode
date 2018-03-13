@@ -62,14 +62,14 @@
             </div>
         </nav>
     </header>
-    <div class="spark-table__scroll">
-        <script id="itemTemplate" type="text/x-jquery-tmpl">
+    <div class="spark-table__scroll" id="transactionTable">
+        <%--<script id="itemTemplate" type="text/x-jquery-tmpl">
             <tr>
                 <td>${flightNo}</td>
                 <td>${aircraftComponent}</td>
             </tr>
         </script>
-        <table role="grid" id="itemList">
+        <table role="grid">
             <thead>
             <tr>
                 <th data-sort="asc">
@@ -80,9 +80,9 @@
                 </th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="itemList">
             </tbody>
-        </table>
+        </table>--%>
     </div>
 </section>
 
@@ -98,9 +98,25 @@
 
     $(document).ready(function () {
         $.post("transactionHistoryObjects", function(data){
-            var data = data;
-            alert("Data: " + data );
-            $( "#itemTemplate" ).tmpl(data).appendTo( "#itemList tbody" );
+            var temp = JSON.parse(data);
+            alert("Data: " + temp );
+
+            var count=Object.keys(temp).length;
+            alert("length: " + count );
+
+            var content = "<table role='grid'>";
+            content += "<tr> <th data-sort='asc'>Flight No. </th> <th>Aircraft Component </th> </tr>";
+
+            for(i=0; i<count; i++){
+                content += '<tr><td>' + temp[i].flightNo + '</td>';
+                content += '<td>' + temp[i].aircraftComponent + '</td></tr>';
+            }
+            content += "</table>"
+
+            $('#transactionTable').append(content);
+
+
+           /* $( "#itemTemplate" ).tmpl(data).appendTo( "#itemList" );*/
         });
 
     })
