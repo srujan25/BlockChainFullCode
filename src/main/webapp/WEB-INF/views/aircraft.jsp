@@ -68,8 +68,6 @@
                     <select name="airline" class="spark-select__input"> <!-- This has to be before .spark-label! -->
                         <option></option>
                         <option>LH</option>
-                        <option>EY</option>
-                        <option>VS</option>
                     </select>
                     <span class="spark-label">Select Airline</span>
                 </label>
