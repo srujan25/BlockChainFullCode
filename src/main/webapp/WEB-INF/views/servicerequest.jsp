@@ -149,7 +149,6 @@
                         <div class="spark-margin-top">
                             <label class="spark-select">
                                 <select name="vendor" id="vendor" class="spark-select__input"> <!-- This has to be before .spark-label! -->
-                                 <option value="-1"><option>
                                 </select>
                                 <span class="spark-label">Select Vendor</span>
                             </label>

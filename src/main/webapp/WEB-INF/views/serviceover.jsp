@@ -57,7 +57,7 @@ $(document).ready(function(){
             <div class="container container-spacing">
 
 
-        <div class="pms-page-title title-spacing"><h3>Service Over</h3></div>
+        <div class="pms-page-title title-spacing"><h3>Service Done</h3></div>
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <section>
 
