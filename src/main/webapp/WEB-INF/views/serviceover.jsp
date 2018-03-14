@@ -281,7 +281,8 @@ $(document).ready(function(){
 
 
     <div class="row btn-spacing">
-        <div><button class="spark-btn spark-btn--md spark-btn--secondary btn-left-airline-clear-spacing">Clear</button></div>
+        <div><button class="spark-btn spark-btn--md spark-btn--secondary btn-left1-airline-clear-spacing">Clear
+        </button></div>
         <div><button class="sb-btn spark-btn btn-save-spacing" onclick="location.href='/serviceoversave'">Save</button></div>
     </div>
 
