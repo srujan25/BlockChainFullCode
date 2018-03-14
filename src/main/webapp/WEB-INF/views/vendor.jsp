@@ -23,25 +23,15 @@
                 <div class="pms-page-title title-spacing"><h3>Vendor</h3></div>
                 <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <section>
+
+                        <label class="spark-input">
+                            <input class="spark-input__field" name="vendorName" id="vendorName" role="textbox" value="">
+                            <span class="spark-label">Vendor Name</span>
+                        </label>
                         <label class="spark-input">
                             <input class="spark-input__field" name="regnNo" id="regnNo" role="textbox" value="">
                             <span class="spark-label">Reg No</span>
                         </label>
-
-
-                        <div class="spark-margin-top">
-                            <label class="spark-select">
-                                <select name="vendorName" class="spark-select__input"> <!-- This has to be before .spark-label! -->
-                                    <option></option>
-                                    <option>Tata Motors</option>
-                                    <option>HAL</option>
-                                    <option>L&T</option>
-                                </select>
-                                <span class="spark-label">Select Vendor</span>
-                            </label>
-                        </div>
-
-
 
                         <div class="rsv-guest-details-info__phone-number">
                             <section>

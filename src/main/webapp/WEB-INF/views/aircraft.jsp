@@ -14,11 +14,15 @@
             $.post("airlines", function( data ) {
                 var temp = JSON.parse(data);
                 var airlineCombo = document.getElementById("airline");
+                var option = document.createElement("option");
+                option.text = "";
+                option.value = "";
+                airlineCombo.add(option,0);
                 for (var i in temp) {
-                    var option = document.createElement("option");
+                    option = document.createElement("option");
                     option.text = temp[i].fullName;
                     option.value = temp[i].carrierCode;
-                    airlineCombo.add(option,i);
+                    airlineCombo.add(option,i+1);
                 }
             });
         });

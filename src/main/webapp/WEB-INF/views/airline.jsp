@@ -23,18 +23,11 @@
         <div class="pms-page-title title-spacing"><h3>Airline</h3></div>
         <div class="sb-pad-0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <section>
-                <div class="spark-margin-top">
-                    <label class="spark-select">
-                        <select name="carrierCode" class="spark-select__input"> <!-- This has to be before .spark-label! -->
-                            <option></option>
-                            <option>LH</option>
-                            <option>VS</option>
-                            <option>AC</option>
-                            <option>EY</option>
-                        </select>
-                        <span class="spark-label">Select Airline</span>
-                    </label>
-                </div>
+
+                <label class="spark-input">
+                                    <input class="spark-input__field" name="carrierCode" id="carrierCode" role="textbox" value="">
+                                    <span class="spark-label">Carrier Code</span>
+                                </label>
 
                 <label class="spark-input">
                     <input class="spark-input__field" name="fullName" id="fullName" role="textbox" value="">
@@ -52,9 +45,9 @@
                                     class="spark-select spark-select--no-label rsv-guest-details-info-address__label">
                                 <select
                                         class="spark-select__input rsv-guest-details-info-address__select" name="phoneType">
+                                     <option value="L">Landline</option>
                                     <option value="M">MOBILE</option>
                                     <option value="F">FAX</option>
-                                    <option value="L">Landline</option>
                                 </select><span class="spark-label"></span></label></div>
 
                             <div class="col-xs-6"><label class="spark-input">

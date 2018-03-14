@@ -15,22 +15,30 @@
             $.post("vendors", function( data ) {
                 var temp = JSON.parse(data);
                 var venderCombo = document.getElementById("vendor");
+                  var option = document.createElement("option");
+                  option.text = "";
+                  option.value = "";
+                   venderCombo.add(option,0);
                 for (var i in temp) {
-                    var option = document.createElement("option");
+                    option = document.createElement("option");
                     option.text = temp[i].vendorName;
                     option.value = temp[i].regnNo;
-                    venderCombo.add(option,i);
+                    venderCombo.add(option,i+1);
                 }
             });
 
             $.post("aircraftComponents", function( data ) {
                 var temp = JSON.parse(data);
                 var aircraftCombo = document.getElementById("serialNo");
+                 var option = document.createElement("option");
+                  option.text = "";
+                  option.value = "";
+                   aircraftCombo.add(option,0);
                 for (var i in temp) {
                     var option = document.createElement("option");
                     option.text = temp[i].componentName;
                     option.value = temp[i].serialNo;
-                    aircraftCombo.add(option,i);
+                    aircraftCombo.add(option,i+1);
                 }
             });
         });
@@ -135,12 +143,13 @@
                                 </select>
                                 <span class="spark-label">Year</span>
                             </label>
-                            <span class="spark-label">service Request Date</span>
+                            <span class="spark-label">Service Request Date</span>
                         </div>
 
                         <div class="spark-margin-top">
                             <label class="spark-select">
                                 <select name="vendor" id="vendor" class="spark-select__input"> <!-- This has to be before .spark-label! -->
+                                 <option value="-1"><option>
                                 </select>
                                 <span class="spark-label">Select Vendor</span>
                             </label>
