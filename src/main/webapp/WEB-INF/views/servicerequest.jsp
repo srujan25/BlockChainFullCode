@@ -53,8 +53,14 @@ $(document).ready(function(){
 
                  <label class="spark-input">
                         <input class="spark-input__field" name="serviceRequestId" id="serviceRequestId" role="textbox" value="">
-                        <span class="spark-label">Service Request Id</span>
+                        <span class="spark-label">Service Request ID</span>
                   </label>
+
+                  <label class="spark-input">
+                      <input class="spark-input__field" name="flightNo" id="flightNo" role="textbox" value="">
+                      <span class="spark-label">Aircraft ID</span>
+                  </label>
+
                   <div class="spark-margin-top">
                          <label class="spark-select">
                              <select name="serialNo" id="serialNo" class="spark-select__input">
@@ -122,58 +128,10 @@ $(document).ready(function(){
                     <label class="spark-select">
                         <select name="serviceRequestYear" class="spark-select__input">
                             <option></option>
-                            <option>1967</option>
-                            <option>1968</option>
-                            <option>1969</option>
-                            <option>1970</option>
-                            <option>1971</option>
-                            <option>1972</option>
-                            <option>1973</option>
-                            <option>1974</option>
-                            <option>1975</option>
-                            <option>1976</option>
-                            <option>1977</option>
-                            <option>1978</option>
-                            <option>1979</option>
-                            <option>1980</option>
-                            <option>1981</option>
-                            <option>1982</option>
-                            <option>1983</option>
-                            <option>1984</option>
-                            <option>1985</option>
-                            <option>1986</option>
-                            <option>1987</option>
-                            <option>1988</option>
-                            <option>1989</option>
-                            <option>1990</option>
-                            <option>1991</option>
-                            <option>1992</option>
-                            <option>1993</option>
-                            <option>1994</option>
-                            <option>1995</option>
-                            <option>1996</option>
-                            <option>1997</option>
-                            <option>1998</option>
-                            <option>1999</option>
-                            <option>2000</option>
-                            <option>2001</option>
-                            <option>2002</option>
-                            <option>2003</option>
-                            <option>2004</option>
-                            <option>2005</option>
-                            <option>2006</option>
-                            <option>2007</option>
-                            <option>2008</option>
-                            <option>2009</option>
-                            <option>2010</option>
-                            <option>2011</option>
-                            <option>2012</option>
-                            <option>2013</option>
-                            <option>2014</option>
-                            <option>2015</option>
-                            <option>2016</option>
-                            <option>2017</option>
-                            <option>2018</option>
+                               <option>2018</option>
+                               <option>2017</option>
+                               <option>2016</option>
+                               <option>2015</option>
                         </select>
                         <span class="spark-label">Year</span>
                     </label>

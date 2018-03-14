@@ -1,6 +1,5 @@
 package controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.sabre.biznet.AircraftComponents;
@@ -53,8 +52,11 @@ public class BlockChainController {
         componentMap.put("componentName", aircraft.getComponentName());
         componentMap.put("componentModel", aircraft.getComponentModel());
         componentMap.put("componentManufacturer", aircraft.getComponentManufacturer());
-        componentMap.put("componentManufacturingDate", aircraft.getComponentManufacturingDate());
-        componentMap.put("componentExpiryDate", aircraft.getComponentExpiryDate());
+        componentMap.put("componentManufacturingDate", aircraft.getComponentManufacturingDay()+"/"+
+                aircraft.getComponentManufacturingMonth()+"/"+aircraft.getComponentManufacturingYear());
+        componentMap.put("componentExpiryDate", aircraft.getComponentExpiryDay()+"/"
+                +aircraft.getComponentExpiryMonth()+"/"
+                +aircraft.getComponentExpiryYear());
         componentMap.put("airline", "org.sabre.biznet.Airline#"+aircraft.getAirline());
         restTemplate.postForEntity(COMPONENT_URL,componentMap,String.class );
         return "aircraft";
@@ -305,15 +307,11 @@ public class BlockChainController {
                 +serviceTransaction.getServiceRequestMonth() +"/"+serviceTransaction.getServiceRequestYear());
 
         componentMap.put("transactionType", "ServiceRequest");
-        componentMap.put("flightMode", "In Maintainence");
+        componentMap.put("flightMode", "Maintainence Mode");
         componentMap.put("airline",  aircraftComponent[0].getAirline());
         componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#"+aircraftComponent[0].getSerialNo());
         componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
         componentMap.put("transactionId", "");
-
-        ObjectMapper mapper = new ObjectMapper();
-        String jsonResult = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(componentMap);
-
         restTemplate.postForEntity( SERVICE_URL,componentMap,String.class );
         return "servicerequest";
     }
@@ -322,10 +320,6 @@ public class BlockChainController {
     public String saveServiceOver(@ModelAttribute("serviceTransaction") ServiceTransaction serviceTransaction) throws Exception{
 
         RestTemplate restTemplate = new RestTemplate();
-       /* AircraftComponents[] aircraftComponent = restTemplate.getForObject(COMPONENT_URL
-                        +"?serialNo="+serviceTransaction.getSerialNo()
-                , AircraftComponents[].class);*/
-
         Map<String, String> componentMap = new HashMap<String, String>();
         componentMap.put("$class","org.sabre.biznet.ServiceTransaction");
         componentMap.put("serialNo", serviceTransaction.getSerialNo());
@@ -343,16 +337,12 @@ public class BlockChainController {
                 "/"+serviceTransaction.getNextServiceMonth()+"/"+serviceTransaction.getNextServiceYear());
         componentMap.put("serviceEngineer", serviceTransaction.getServiceEngineer());
         componentMap.put("comments", serviceTransaction.getComments());
-        componentMap.put("flightMode", "In Ready");
-        componentMap.put("transactionType", "ServiceOver");
+        componentMap.put("flightMode", "Ready Mode");
+        componentMap.put("transactionType", "ServiceDone");
         componentMap.put("airline",  "org.sabre.biznet.Airline#"+serviceTransaction.getAirline());
         componentMap.put("aircraftComponent", "org.sabre.biznet.AircraftComponents#"+serviceTransaction.getSerialNo());
         componentMap.put("vendor", "org.sabre.biznet.Vendor#"+serviceTransaction.getVendor());
         componentMap.put("transactionId", "");
-
-        ObjectMapper mapper = new ObjectMapper();
-        String jsonResult = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(componentMap);
-
         restTemplate.postForEntity( SERVICE_URL,componentMap,String.class );
         return "serviceover";
     }

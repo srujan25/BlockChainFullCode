@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="resources/ui/common-spark.css"/>
     <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Airline page</title>
+    <title>Airline</title>
 
 </head>
 <body>
@@ -16,7 +16,7 @@
     <%@include file="menubar.jsp" %>
 
         <table align='center' width='100%'>
-            <tr><td width='30%'></td><td align='center' >
+            <tr><td width='10%'></td><td align='center' >
 
             <div class="container container-spacing">
 
