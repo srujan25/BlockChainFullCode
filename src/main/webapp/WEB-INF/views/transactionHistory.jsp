@@ -16,9 +16,6 @@
 </head>
 <body>
 <%@include file="menubar.jsp" %>
-<table align='center' width='100%'>
-    <tr><td width='30%'></td><td align='center' >
-
 <section class="spark-table col-xs-12">
     <header class="spark-table__header">
         <h4 class="spark-table__title">
