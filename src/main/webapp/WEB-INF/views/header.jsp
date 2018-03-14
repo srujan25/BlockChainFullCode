@@ -4,7 +4,7 @@
                <i class="spark-icon--fill spark-icon-menu-hamburger spark-icon--md"></i>
             </button>
             <span class="spark-header__logo"><i class="spark-logo spark-logo--sabre spark-logo--sm">Sabre</i></span>
-            <a href="#" class="spark-header__title">Flight Maintenance</a>
+            <a href="#" class="spark-header__title">Aircraft Maintenance</a>
             <div class="spark-menu spark-header__menu" role="menu">
                <div class="spark-menu__header">
                   <button class="spark-menu__toggle" title="Hide Navigation">

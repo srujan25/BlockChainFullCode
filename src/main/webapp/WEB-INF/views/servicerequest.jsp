@@ -66,7 +66,7 @@
 
                         <label class="spark-input">
                             <input class="spark-input__field" name="flightNo" id="flightNo" role="textbox" value="">
-                            <span class="spark-label">Aircraft ID</span>
+                            <span class="spark-label">Aircraft Reg No</span>
                         </label>
 
                         <div class="spark-margin-top">

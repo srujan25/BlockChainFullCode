@@ -79,7 +79,7 @@
                     var count=Object.keys(temp).length;
 
                     var content = "<table role='grid'><thead>";
-                    content += "<tr> <th data-sort>Component Serial No </th> <th data-sort='asc'>Aircraft ID. </th> <th data-sort>Component Name </th><th data-sort>Model </th>";
+                    content += "<tr> <th data-sort>Component Serial No </th> <th data-sort='asc'>Aircraft Reg No. </th> <th data-sort>Component Name </th><th data-sort>Model </th>";
                     content += "<th data-sort>Manufacturer </th><th data-sort>Manufacturing Date</th><th data-sort>Expiry Date </th><th data-sort>Service Request ID </th>"
                     content += "<th data-sort>Service request Date </th><th data-sort>Service over date</th><th data-sort>Next service Date </th><th data-sort>Service Engineer </th>"
                     content += "<th data-sort>Comments </th><th data-sort>transaction type</th>"
