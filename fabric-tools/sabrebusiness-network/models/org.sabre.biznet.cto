@@ -1,0 +1,68 @@
+/**
+ * Sabre Airline maintainence network
+ */
+namespace org.sabre.biznet
+asset AircraftComponents identified by serialNo {
+
+    o String serialNo
+    o String flightNo
+    o String flightMode
+
+    o String componentName
+    o String componentModel
+    o String componentManufacturer
+    o String componentManufacturingDate
+    o String componentExpiryDate
+    --> Airline airline
+}
+
+participant Airline identified by carrierCode {
+    o String carrierCode
+    o String fullName
+    o String address optional
+    o String state optional
+    o String zipcode optional
+    o String country optional
+    o String city optional
+    o String addressType optional
+    o String phonenumber optional
+    o String phoneType optional
+}
+
+participant Vendor identified by regnNo {
+    o String regnNo
+    o String vendorName
+    o String address optional
+    o String state optional
+    o String zipcode optional
+    o String country optional
+    o String city optional
+    o String addressType optional
+    o String phonenumber optional
+    o String phoneType optional
+}
+
+transaction ServiceTransaction {
+   
+    o String serialNo
+    o String flightNo
+    o String componentName
+    o String componentModel
+    o String componentManufacturer
+    o String componentManufacturingDate
+    o String componentExpiryDate
+
+    o String serviceRequestId
+    o String serviceRequestDate optional
+    o String serviceOverDate optional
+    o String nextServiceDate optional
+
+    o String serviceEngineer optional
+    o String comments optional
+    o String transactionType optional
+    o String serviceVerifiedBy optional
+    o String designation optional
+    --> Airline airline
+    --> AircraftComponents aircraftComponent
+    --> Vendor vendor
+}

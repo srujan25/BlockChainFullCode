@@ -1,0 +1,15 @@
+/** Sample queries for Commodity Trading business network
+*/
+
+query selectServiceRequest {
+  description: "Select all selectServiceRequest"
+  statement:
+      SELECT org.sabre.biznet.ServiceTransaction WHERE (transactionType == "ServiceRequest")
+}
+
+
+query selectServiceOver {
+  description: "Select all selectServiceRequest"
+  statement:
+      SELECT org.sabre.biznet.ServiceTransaction WHERE (transactionType == "ServiceOver")
+}

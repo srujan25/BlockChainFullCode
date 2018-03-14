@@ -1,0 +1,22 @@
+{
+  "name": "sabrebusiness-network",
+  "version": "0.0.1",
+  "description": "Sabre Flight maintainence blockchain",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Ajay Biswal",
+  "email": "ajay.biswal@sabre.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "latest",
+    "composer-connector-embedded": "latest",
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest"
+  }
+}
