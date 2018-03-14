@@ -13,18 +13,11 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
-'</head>
+</head>
 <body>
 <%@include file="menubar.jsp" %>
-
-        <label class="spark-input">
-            <input class="spark-input__field" name="aircraftID" id="aircraftID" role="textbox" value="">
-            <span class="spark-label">Aircraft ID</span>
-        </label>
-
-        <div class="row btn-spacing">
-        <div><button class="sb-btn spark-btn btn-save-spacing" onclick="location.href='./transactionHistory'">Search</button></div>
-        </div>
+<table align='center' width='100%'>
+    <tr><td width='30%'></td><td align='center' >
 
 <section class="spark-table col-xs-12">
     <header class="spark-table__header">
@@ -84,10 +77,7 @@
         <script type="text/javascript">
 
             $(document).ready(function () {
-                $( "#aircraftID").change(function(event) {
-                var txt =  $( "#aircraftID").val()
-                alert("aircraft ID "+txt);
-                $.post("transactionHistoryObjects", {aircraftID: txt}, function(data){
+                $.post("transactionHistoryObjects", function(data){
                     var temp = JSON.parse(data);
                     var count=Object.keys(temp).length;
 
@@ -116,7 +106,7 @@
                     content += "</table>"
 
                     $('#transactionTable').append(content);
-                });
+
 
                     /* $( "#itemTemplate" ).tmpl(data).appendTo( "#itemList" );*/
                 });
