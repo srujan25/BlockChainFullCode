@@ -9,16 +9,22 @@
     <link rel="stylesheet" type="text/css" href="resources/ui/framework-sass.css"/>
     <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Transaction History page</title>
+    <title>Service Transaction History</title>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
-</head>
+'</head>
 <body>
 <%@include file="menubar.jsp" %>
-<table align='center' width='100%'>
-    <tr><td width='30%'></td><td align='center' >
 
+        <label class="spark-input">
+            <input class="spark-input__field" name="aircraftID" id="aircraftID" role="textbox" value="">
+            <span class="spark-label">Aircraft ID</span>
+        </label>
+
+        <div class="row btn-spacing">
+        <div><button class="sb-btn spark-btn btn-save-spacing" onclick="location.href='./transactionHistory'">Search</button></div>
+        </div>
 
 <section class="spark-table col-xs-12">
     <header class="spark-table__header">
@@ -65,58 +71,60 @@
         </nav>
     </header>
     <div class="spark-table__scroll" id="transactionTable">
+
+
+        <style type="text/css">
+
+        </style>
+
+
+
+
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                $( "#aircraftID").change(function(event) {
+                var txt =  $( "#aircraftID").val()
+                alert("aircraft ID "+txt);
+                $.post("transactionHistoryObjects", {aircraftID: txt}, function(data){
+                    var temp = JSON.parse(data);
+                    var count=Object.keys(temp).length;
+
+                    var content = "<table role='grid'><thead>";
+                    content += "<tr> <th data-sort>Component Serial No </th> <th data-sort='asc'>Aircraft ID. </th> <th data-sort>Component Name </th><th data-sort>Model </th>";
+                    content += "<th data-sort>Manufacturer </th><th data-sort>Manufacturing Date</th><th data-sort>Expiry Date </th><th data-sort>Service Request ID </th>"
+                    content += "<th data-sort>Service request Date </th><th data-sort>Service over date</th><th data-sort>Next service Date </th><th data-sort>Service Engineer </th>"
+                    content += "<th data-sort>Comments </th><th data-sort>transaction type</th>"
+                    content += " </tr></thead>";
+                    for(i=0; i<count; i++){
+                        content += '<tr><td>' + temp[i].serialNo + '</td>';
+                        content += '<td>' + temp[i].flightNo + '</td>';
+                        content += '<td>' + temp[i].componentName + '</td>';
+                        content += '<td>' + temp[i].componentModel + '</td>';
+                        content += '<td>' + temp[i].componentManufacturer + '</td>';
+                        content += '<td>' + temp[i].componentManufacturingDate + '</td>';
+                        content += '<td>' + temp[i].componentExpiryDate + '</td>';
+                        content += '<td>' + temp[i].serviceRequestId + '</td>';
+                        content += '<td>' + temp[i].serviceRequestDate + '</td>';
+                        content += '<td>' + temp[i].serviceOverDate + '</td>';
+                        content += '<td>' + temp[i].nextServiceDate + '</td>';
+                        content += '<td>' + temp[i].serviceEngineer + '</td>';
+                        content += '<td>' + temp[i].comments + '</td>';
+                        content += '<td>' + temp[i].transactionType + '</td></tr>';
+                    }
+                    content += "</table>"
+
+                    $('#transactionTable').append(content);
+                });
+
+                    /* $( "#itemTemplate" ).tmpl(data).appendTo( "#itemList" );*/
+                });
+
+            })
+
+        </script>
     </div>
 </section>
-
-<style type="text/css">
-
-</style>
-
-
-
-
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        $.post("transactionHistoryObjects", function(data){
-            var temp = JSON.parse(data);
-            var count=Object.keys(temp).length;
-
-            var content = "<table role='grid'><thead>";
-            content += "<tr> <th data-sort>Component Serial No </th> <th data-sort='asc'>Aircraft ID. </th> <th data-sort>Component Name </th><th data-sort>Model </th>";
-            content += "<th data-sort>Manufacturer </th><th data-sort>Manufacturing Date</th><th data-sort>Expiry Date </th><th data-sort>Service Request ID </th>"
-            content += "<th data-sort>Service request Date </th><th data-sort>Service over date</th><th data-sort>Next service Date </th><th data-sort>Service Engineer </th>"
-            content += "<th data-sort>Comments </th><th data-sort>transaction type</th>"
-            content += " </tr></thead>";
-            for(i=0; i<count; i++){
-                content += '<tr><td>' + temp[i].serialNo + '</td>';
-                content += '<td>' + temp[i].flightNo + '</td>';
-                content += '<td>' + temp[i].componentName + '</td>';
-                content += '<td>' + temp[i].componentModel + '</td>';
-                content += '<td>' + temp[i].componentManufacturer + '</td>';
-                content += '<td>' + temp[i].componentManufacturingDate + '</td>';
-                content += '<td>' + temp[i].componentExpiryDate + '</td>';
-                content += '<td>' + temp[i].serviceRequestId + '</td>';
-                content += '<td>' + temp[i].serviceRequestDate + '</td>';
-                content += '<td>' + temp[i].serviceOverDate + '</td>';
-                content += '<td>' + temp[i].nextServiceDate + '</td>';
-                content += '<td>' + temp[i].serviceEngineer + '</td>';
-                content += '<td>' + temp[i].comments + '</td>';
-                content += '<td>' + temp[i].transactionType + '</td></tr>';
-            }
-            content += "</table>"
-
-            $('#transactionTable').append(content);
-
-
-           /* $( "#itemTemplate" ).tmpl(data).appendTo( "#itemList" );*/
-        });
-
-    })
-
-</script>
-    </td></tr></table>
-
 </body>
 </html>

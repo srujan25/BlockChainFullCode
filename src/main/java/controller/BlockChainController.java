@@ -62,9 +62,22 @@ public class BlockChainController {
 
     @RequestMapping(path={"/transactionHistoryObjects"},method=RequestMethod.POST)
     @ResponseBody
-    public String getTransactionHistoryObjects(Model model) {
+    public String getTransactionHistoryObjects(@ModelAttribute("aircraftID") String aircraftID) {
         RestTemplate restTemplate = new RestTemplate();
-        ServiceTransaction[] serviceTransactions = restTemplate.getForObject(SERVICE_URL, ServiceTransaction[].class);
+        ServiceTransaction[] serviceTransactions = restTemplate.getForObject(SERVICE_URL + "?flightNo="+aircraftID, ServiceTransaction[].class);
+
+        /*ServiceTransaction[] serviceTransactions = new ServiceTransaction[2];
+        ServiceTransaction serviceTransaction = new ServiceTransaction();
+        serviceTransaction.setFlightNo("12");
+        serviceTransaction.setSerialNo("5");
+        serviceTransaction.setComponentName("Engine");
+        serviceTransactions[0] = serviceTransaction;
+
+        ServiceTransaction serviceTransaction2 = new ServiceTransaction();
+        serviceTransaction2.setFlightNo("20");
+        serviceTransaction2.setSerialNo("500");
+        serviceTransaction2.setComponentName("Wing");
+        serviceTransactions[1] = serviceTransaction2;*/
 
         if(serviceTransactions == null || serviceTransactions.length == 0 )
         {
@@ -208,6 +221,11 @@ public class BlockChainController {
 
     @RequestMapping(path={"/transactionHistory"},method=RequestMethod.GET)
     public String getTransactionHistory(Model model) {
+        return "transactionHistory";
+    }
+
+    @RequestMapping(path={"/searchTransactionHistory"},method=RequestMethod.POST)
+    public String searchTransactionHistory(Model model) {
         return "transactionHistory";
     }
 
