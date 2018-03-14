@@ -66,7 +66,14 @@ public class BlockChainController {
     @ResponseBody
     public String getTransactionHistoryObjects(@ModelAttribute("aircraftID") String aircraftID) {
         RestTemplate restTemplate = new RestTemplate();
-        ServiceTransaction[] serviceTransactions = restTemplate.getForObject(SERVICE_URL + "?flightNo="+aircraftID, ServiceTransaction[].class);
+        ServiceTransaction[] serviceTransactions;
+        if(aircraftID == null || aircraftID == "")
+        {
+            serviceTransactions = restTemplate.getForObject(SERVICE_URL, ServiceTransaction[].class);
+        }
+        else {
+           serviceTransactions = restTemplate.getForObject(SERVICE_URL + "?flightNo=" + aircraftID, ServiceTransaction[].class);
+        }
 
         /*ServiceTransaction[] serviceTransactions = new ServiceTransaction[2];
         ServiceTransaction serviceTransaction = new ServiceTransaction();
